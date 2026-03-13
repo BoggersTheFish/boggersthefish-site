@@ -2,56 +2,77 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>BoggersTheFish</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoggersTheFish – TS Portal</title>
+<meta name="description" content="Interactive TS portal exploring the Strongest Node Framework with live network visualisations and projects.">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- vis.js for the interactive graph -->
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-
 </head>
 <body>
 
 <header>
-<h1>BoggersTheFish</h1>
-<p>TS Framework | GOAT-TS | Systems Thinking</p>
+  <h1>TS – The Strongest Node Framework</h1>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#projects">Projects</a>
+    <a href="#graph">Explore Nodes</a>
+    <a href="#insights">Insights</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<main>
-
-<section id="about">
-<h2>About</h2>
-<p>Independent systems thinker exploring TS (Thinking Wave) and building experimental software like GOAT-TS.</p>
+<!-- TS Overview -->
+<section id="overview">
+  <h2>TS Overview</h2>
+  <ul>
+    <li><strong>Strongest Node:</strong> The kernel is the central node driving system behavior.</li>
+    <li><strong>Emergence:</strong> Secondary nodes self-organize dynamically around the core.</li>
+    <li><strong>Convergence:</strong> The system stabilizes over time through node interactions.</li>
+    <li><strong>Applications:</strong> Optimizing logistics, thought modeling, and meta-framework systems.</li>
+  </ul>
 </section>
 
+<!-- TS Projects -->
 <section id="projects">
-<h2>Projects</h2>
-<ul>
-<li><a href="https://github.com/BoggersTheFish/GOAT-TS" target="_blank">GOAT-TS</a></li>
-<li><a href="https://github.com/BoggersTheFish/GOAT-TS-LITE" target="_blank">GOAT-TS Lite</a></li>
-<li><a href="https://github.com/BoggersTheFish/GOAT-TS-SUPERLITE" target="_blank">GOAT-TS Superlite</a></li>
-</ul>
+  <h2>TS Projects</h2>
+  <div class="project-node">
+    <h3>GOAT-TS</h3>
+    <p>System optimization via node-weight logic: scheduling, cost reduction, and emergent logistics.</p>
+    <a href="https://github.com/BoggersTheFish/GOAT-TS" target="_blank">View Repo</a>
+  </div>
+  <div class="project-node">
+    <h3>BoggersTheOS</h3>
+    <p>TS-driven operating system skeleton with hierarchical nodes and kernel-first architecture.</p>
+    <a href="https://github.com/BoggersTheFish/BoggersTheOS" target="_blank">View Repo</a>
+  </div>
 </section>
 
-<section id="graph-section">
-<h2>Interactive TS Graph</h2>
-<div id="graph"></div>
-
-<div id="node-info">
-<h3 id="node-title">Click a node to see info</h3>
-<p id="node-desc"></p>
-</div>
-
-<input id="ideaInput" placeholder="Enter a new idea"/>
-<button id="addIdeaBtn">Add Idea</button>
+<!-- TS Node Graph -->
+<section id="graph">
+  <h2>Explore TS Nodes</h2>
+  <div id="ts-network" style="width: 100%; height: 500px; border: 2px solid #ff3366;"></div>
+  <h3 id="node-title"></h3>
+  <p id="node-desc"></p>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: <a href="mailto:boggersthefish@boggersthefish.com">boggersthefish@boggersthefish.com</a></p>
+<!-- TS Insights -->
+<section id="insights">
+  <h2>TS Insights</h2>
+  <p>Thought experiments, meta-framework logic, and applications in real-world systems. <a href="blog.html">Read More</a></p>
 </section>
 
-</main>
+<!-- Footer / Contact -->
+<footer id="contact">
+  <h2>Connect to the Network</h2>
+  <p>Email: <a href="mailto:boggersthefish@boggersthefish.com">boggersthefish@boggersthefish.com</a></p>
+  <p>GitHub: <a href="https://github.com/BoggersTheFish" target="_blank">github.com/BoggersTheFish</a></p>
+</footer>
 
+<!-- Scripts -->
 <script src="graph.js"></script>
+<script src="network.js"></script>
 
 </body>
 </html>
