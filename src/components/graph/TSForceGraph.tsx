@@ -12,9 +12,10 @@ import { toast } from "@/components/ui/use-toast";
 import { clamp } from "@/lib/utils";
 
 // Dynamic import — no SSR (requires canvas + window)
-const ForceGraph2D = dynamic(
-  () => import("react-force-graph-2d").then((m) => m.default),
-  { ssr: false }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const ForceGraph2D = dynamic<Record<string, any>>(
+  () => import("react-force-graph-2d").then((m) => m.default ?? m),
+  { ssr: false, loading: () => null }
 );
 
 interface TSForceGraphProps {

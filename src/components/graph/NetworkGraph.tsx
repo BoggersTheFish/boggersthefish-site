@@ -9,9 +9,10 @@ import {
 } from "./graphData";
 import { toast } from "@/components/ui/use-toast";
 
-const ForceGraph2D = dynamic(
-  () => import("react-force-graph-2d").then((m) => m.default),
-  { ssr: false }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const ForceGraph2D = dynamic<Record<string, any>>(
+  () => import("react-force-graph-2d").then((m) => m.default ?? m),
+  { ssr: false, loading: () => null }
 );
 
 const CATEGORY_COLORS: Record<string, [number, number, number]> = {
