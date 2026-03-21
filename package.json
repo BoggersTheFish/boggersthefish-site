@@ -24,9 +24,7 @@
     "tailwind-merge": "^2.6.0",
     "zustand": "^4.5.5",
     "react-force-graph-2d": "^1.28.0",
-    "@octokit/rest": "^21.1.0",
-    "next-mdx-remote": "^5.0.0",
-    "gray-matter": "^4.0.3"
+    "@octokit/rest": "^21.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
