@@ -93,7 +93,7 @@ export const HERO_GRAPH_NODES: GraphNode[] = [
     baseStrength: 0.75,
     section: "projects",
     cluster: "ai",
-    edges: ["ts-core", "self-improve", "multimodal", "dashboard", "wave-12"],
+    edges: ["ts-core", "self-improve", "multimodal", "dashboard", "wave-17"],
   },
   {
     id: "self-improve",
@@ -190,8 +190,8 @@ export const HERO_GRAPH_NODES: GraphNode[] = [
 
   // Meta cluster
   {
-    id: "wave-12",
-    label: "Wave 12 — LIVE",
+    id: "wave-17",
+    label: "Wave 17 — Evidence",
     activation: 0.95,
     stability: 0.9,
     baseStrength: 0.8,
@@ -230,7 +230,7 @@ export const HERO_GRAPH_NODES: GraphNode[] = [
     section: "home",
     isVisitor: true,
     cluster: "visitor",
-    edges: ["wave-12", "ts-philosophy", "boggerstheai"],
+    edges: ["wave-17", "ts-philosophy", "boggerstheai"],
   },
 ];
 
@@ -253,7 +253,7 @@ export const HERO_GRAPH_LINKS: GraphLink[] = [
   { source: "boggerstheai", target: "self-improve", strength: 0.75 },
   { source: "boggerstheai", target: "multimodal", strength: 0.7 },
   { source: "boggerstheai", target: "dashboard", strength: 0.65 },
-  { source: "boggerstheai", target: "wave-12", strength: 0.85 },
+  { source: "boggerstheai", target: "wave-17", strength: 0.85 },
 
   // Self improve
   { source: "self-improve", target: "qlora", strength: 0.8 },
@@ -274,7 +274,7 @@ export const HERO_GRAPH_LINKS: GraphLink[] = [
   { source: "truth", target: "complexity", strength: 0.6 },
 
   // Visitor connections (weak)
-  { source: "visitor", target: "wave-12", strength: 0.3 },
+  { source: "visitor", target: "wave-17", strength: 0.3 },
   { source: "visitor", target: "ts-philosophy", strength: 0.25 },
   { source: "visitor", target: "boggerstheai", strength: 0.25 },
 ];

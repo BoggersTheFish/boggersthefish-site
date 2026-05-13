@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Waves — BoggersTheFish",
   description:
-    "The complete evolution log of the Thinking System — Wave 1 through Wave 12 LIVE, plus roadmap nodes.",
+    "The complete evolution log of the Thinking System — Wave 1 through Wave 17 evidence cleanup, plus roadmap nodes.",
 };
 
 const STATUS_CONFIG = {
@@ -21,36 +21,12 @@ const STATUS_CONFIG = {
 
 const ROADMAP_NODES = [
   {
-    id: "docker",
-    title: "Docker One-Click",
-    wave: 14,
-    stability: 0.3,
-    description: "Single `docker-compose up` to spin up the full TS-OS stack — graph engine, LLM, dashboard, TUI. Zero local Python setup.",
-    status: "roadmap" as const,
-  },
-  {
-    id: "sharding",
-    title: "Distributed Sharding (>10k nodes)",
-    wave: 13,
+    id: "external-replication",
+    title: "External Replication",
+    wave: 18,
     stability: 0.35,
-    description: "Horizontal graph sharding for graphs exceeding 10k nodes. Consistent hashing + cross-shard activation propagation.",
+    description: "Larger held-out TAC controls, external benchmarks, and the full Path A GPU run.",
     status: "next" as const,
-  },
-  {
-    id: "wasm",
-    title: "WebAssembly Port",
-    wave: 15,
-    stability: 0.2,
-    description: "TS-OS core compiled to WASM. Run the wave cycle in the browser, no install required. This site becomes the runtime.",
-    status: "roadmap" as const,
-  },
-  {
-    id: "multi-agent",
-    title: "Multi-Agent Coordination",
-    wave: 16,
-    stability: 0.15,
-    description: "Multiple TS instances share a global graph layer. Agents negotiate activation via competitive edge weighting.",
-    status: "roadmap" as const,
   },
 ];
 

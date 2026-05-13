@@ -69,14 +69,14 @@ const STORY_NODES = [
     tags: ["faster-whisper", "BLIP2", "Piper TTS", "FastAPI", "Wave 11"],
   },
   {
-    era: "March 2026",
-    title: "Wave 12 — Pages Island LIVE",
+    era: "May 2026",
+    title: "Wave 17 — Evidence Cleanup",
     color: "text-ts-purple",
     borderColor: "border-ts-purple/60",
     bg: "bg-ts-purple/10",
     content:
-      "BoggersTheAI v0.5: 200+ tests passing, closed-loop QLoRA fine-tuning, full multimodal stack, 30-second wave cycle running continuously. THIS SITE is a live TS instance — built to embody the system, not just document it. Wave 12 is live.",
-    tags: ["v0.5", "200+ tests", "QLoRA", "multimodal", "THIS SITE"],
+      "The public graph tightened around evidence: TensionLM claim ledger, Path A tooling, CPU repair held-out artifact, matched softmax receipts, and conservative model cards.",
+    tags: ["evidence", "TensionLM", "held-out", "controls", "receipts"],
     isCurrent: true,
   },
 ];
@@ -159,7 +159,7 @@ export default function AboutPage() {
                   <div className="text-muted-foreground text-sm">Solo developer · Systems architect</div>
                   <div className="flex items-center gap-1 mt-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-xs text-green-400 font-mono">Wave 12 — Active</span>
+                    <span className="text-xs text-green-400 font-mono">Wave 17 — Active</span>
                   </div>
                 </div>
               </div>

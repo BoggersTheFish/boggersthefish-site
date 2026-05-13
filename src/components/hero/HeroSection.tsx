@@ -68,9 +68,9 @@ export function HeroSection() {
         >
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-ts-purple/50 bg-black/70 backdrop-blur-sm text-xs font-mono text-ts-purple-light">
             <span className="w-1.5 h-1.5 rounded-full bg-ts-purple animate-ping-slow" />
-            Wave 12 — Pages Island LIVE
+            Wave 17 — Evidence Cleanup
             <span className="text-ts-purple/40">|</span>
-            <span className="text-muted-foreground">Click any node to activate</span>
+            <span className="text-muted-foreground">claims tied to receipts</span>
           </div>
         </motion.div>
 
@@ -117,9 +117,9 @@ export function HeroSection() {
             </a>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="/lab">
+            <Link href="/evidence">
               <Play className="w-4 h-4" />
-              Run the Live Demo
+              See the Evidence
             </Link>
           </Button>
           <Button size="lg" variant="secondary" asChild>

@@ -59,7 +59,7 @@ export function WaveProgress() {
           </h2>
           <p className="text-muted-foreground max-w-xl">
             Every wave is a completed node. The graph grows with each cycle.
-            Currently on Wave 12 — fully live.
+            Currently on Wave 17 — public evidence cleanup.
           </p>
         </motion.div>
 
@@ -71,10 +71,10 @@ export function WaveProgress() {
           className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10"
         >
           {[
-            { label: "Waves Complete", value: "12" },
+            { label: "Waves Complete", value: "16" },
             { label: "Tests Passing", value: "200+" },
             { label: "Repos Live", value: "8" },
-            { label: "Current Wave", value: "#12 LIVE" },
+            { label: "Current Wave", value: "#17 LIVE" },
           ].map((stat) => (
             <div
               key={stat.label}

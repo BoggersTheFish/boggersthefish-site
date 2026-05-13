@@ -6,9 +6,9 @@
 export const TS_PHILOSOPHY = {
   headline: "TS — Thinking System / Thinking Wave",
   subheadline:
-    "A meta-framework that runs on your laptop and on reality itself.",
+    "Constraint graphs first. Language second. Evidence receipts close the loop.",
   manifesto: [
-    "TS is not a theory or a tool. It is the operating logic of reality itself.",
+    "TS is the project language for stable clusters of constraints.",
     "Everything that exists = stable clusters of constraints (nodes + edges)",
     "Change = wave propagation through the graph",
     "Complexity = pure emergence from local interactions",
@@ -68,6 +68,26 @@ export const TECH_STACK = [
 ] as const;
 
 export const REPOS = [
+  {
+    id: "bozo",
+    name: "bozo",
+    description: "TensionLM: sigmoid tension instead of softmax attention, with public evidence boundaries, Path A repair tooling, and safetensors artifacts.",
+    url: "https://github.com/BoggersTheFish/bozo",
+    pinned: true,
+    stability: 0.9,
+    wave: 17,
+    tags: ["llm", "tension", "evidence"],
+  },
+  {
+    id: "ts-proof-ranker",
+    name: "ts-proof-ranker",
+    description: "Verifier-backed Horn proof-control ladder, published as Hugging Face artifacts v0-v4 plus matched tension-vs-softmax receipts.",
+    url: "https://huggingface.co/BoggersTheFish/ts-proof-ranker-v4",
+    pinned: true,
+    stability: 0.86,
+    wave: 17,
+    tags: ["proof", "verifier", "receipts"],
+  },
   {
     id: "boggerstheai",
     name: "BoggersTheAI",
@@ -212,6 +232,7 @@ export const SOCIAL_LINKS = [
 
 export const NAV_LINKS = [
   { href: "/", label: "Home", section: "home" },
+  { href: "/evidence", label: "Evidence", section: "evidence" },
   { href: "/about", label: "About", section: "about" },
   { href: "/ts-os", label: "TS-OS", section: "ts-os" },
   { href: "/projects", label: "Projects", section: "projects" },
@@ -232,21 +253,24 @@ export const WAVE_LOG = [
   { wave: 9, name: "Memory Layer", date: "2025-04", status: "complete", description: "BoggersTheMind: episodic + semantic memory." },
   { wave: 10, name: "Core Engine", date: "2025-07", status: "complete", description: "TS-Core extracted as standalone library." },
   { wave: 11, name: "Pulse + Observability", date: "2025-10", status: "complete", description: "FastAPI dashboard, Cytoscape.js, Chart.js, Rich TUI." },
-  { wave: 12, name: "Pages Island LIVE", date: "2026-03", status: "current", description: "BoggersTheAI v0.5: 200+ tests, QLoRA, multimodal. THIS SITE." },
-  { wave: 13, name: "Distributed Graph", date: "2026-Q2", status: "next", description: "Sharding for >10k nodes. Multi-agent coordination." },
-  { wave: 14, name: "Docker One-Click", date: "2026-Q3", status: "roadmap", description: "Single docker-compose up to spin up the full OS." },
-  { wave: 15, name: "WASM Port", date: "2026-Q4", status: "roadmap", description: "WebAssembly version. TS-OS in the browser, no install." },
+  { wave: 12, name: "Pages Island LIVE", date: "2026-03", status: "complete", description: "BoggersTheAI v0.5: 200+ tests, QLoRA, multimodal. THIS SITE." },
+  { wave: 13, name: "Distributed Graph", date: "2026-Q2", status: "complete", description: "Sharding + multi-agent APIs in BoggersTheAI-Dev." },
+  { wave: 14, name: "Docker One-Click", date: "2026-Q3", status: "complete", description: "docker compose path for spinning up the full stack." },
+  { wave: 15, name: "WASM Port", date: "2026-Q4", status: "complete", description: "WaveGraph browser runtime with TypeScript/Rust mirrors." },
+  { wave: 16, name: "Multi-Agent Coordination", date: "2026-Q4", status: "complete", description: "AgentRegistry + AgentNegotiator: tension-based bidding and live coordination." },
+  { wave: 17, name: "Evidence Cleanup", date: "2026-05", status: "current", description: "Public claim ledger, source cleanup, CPU repair artifact, and evidence-bounded wording." },
+  { wave: 18, name: "External Replication", date: "next", status: "next", description: "Larger held-out TAC controls, Path A GPU run, and external benchmark receipts." },
 ] as const;
 
 export const SITE_META = {
   title: "BoggersTheFish — Thinking System / Thinking Wave",
   description:
-    "TS is not a theory or a tool. It is the operating logic of reality itself. A living meta-framework: constraint graphs, wave propagation, and self-improving AI.",
+    "TS-native AI work by BoggersTheFish: graph-first reasoning substrates, TensionLM, verifier-backed proof loops, and evidence-bounded research receipts.",
   url: "https://boggersthefish.com",
   author: "BoggersTheFish",
   twitter: "@BoggersTheFish",
-  lastWave: "March 21, 2026",
-  currentWave: 12,
-  waveName: "Pages Island LIVE",
+  lastWave: "May 13, 2026",
+  currentWave: 17,
+  waveName: "Evidence Cleanup",
   ogImage: "https://boggersthefish.com/og.png",
 } as const;

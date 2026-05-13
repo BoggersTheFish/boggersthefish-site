@@ -2,7 +2,7 @@
 
 > *This site is not "about" TS — it IS a running instance of TS.*
 
-Live at [boggersthefish.com](https://boggersthefish.com) · Wave 12 — Pages Island LIVE · March 21, 2026
+Live at [boggersthefish.com](https://boggersthefish.com) · Wave 17 — Evidence Cleanup · May 13, 2026
 
 ---
 

@@ -51,7 +51,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-muted-foreground text-xs leading-relaxed mb-4">
-              TS is not a theory or a tool. It is the operating logic of reality itself — constraint graphs, wave propagation, and self-improving AI.
+              Graph-first AI research: TensionLM, verifier-backed proof loops, and evidence-bounded TS receipts.
             </p>
             {/* Social links */}
             <div className="flex flex-wrap gap-2">
