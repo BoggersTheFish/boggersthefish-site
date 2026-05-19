@@ -40,6 +40,17 @@
       radial-gradient(circle at center, transparent 0, rgba(16, 32, 21, 0.38) 72%);
   }
 
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(184, 148, 77, 0.08), transparent 18%, transparent 82%, rgba(184, 148, 77, 0.08)),
+      linear-gradient(180deg, rgba(5, 13, 8, 0.35), transparent 18%, transparent 82%, rgba(5, 13, 8, 0.42));
+  }
+
   ::selection {
     background: rgba(184, 148, 77, 0.45);
     color: #1f1a12;
@@ -61,6 +72,21 @@
   .paper-tab:hover,
   .paper-tab:focus-visible {
     @apply border-gold/35 bg-parchment text-ink shadow-paper outline-none;
+  }
+
+  .paper-tab::before {
+    content: "";
+    position: absolute;
+    inset: 4px 7px auto;
+    height: 1px;
+    background: rgba(184, 148, 77, 0.22);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .paper-tab:hover::before,
+  .paper-tab:focus-visible::before {
+    opacity: 1;
   }
 
   .brand-mark {
@@ -100,6 +126,25 @@
       0 14px 30px rgba(4, 11, 7, 0.28);
   }
 
+  .parchment-card::before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    pointer-events: none;
+    border: 1px solid rgba(90, 61, 34, 0.14);
+    border-radius: inherit;
+  }
+
+  .parchment-card::after {
+    content: "◇";
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    color: rgba(90, 61, 34, 0.28);
+    font-family: var(--font-serif), serif;
+    font-size: 1rem;
+  }
+
   .forest-panel {
     border-color: rgba(184, 148, 77, 0.38);
     background:
@@ -108,12 +153,40 @@
       linear-gradient(135deg, #20351f, #102015);
   }
 
+  .forest-panel::before {
+    border-color: rgba(184, 148, 77, 0.18);
+  }
+
+  .forest-panel::after {
+    color: rgba(184, 148, 77, 0.5);
+  }
+
   .diagram-icon {
     @apply flex h-12 w-12 items-center justify-center rounded-md border border-brown/30 bg-forest/10 text-brown;
   }
 
   .page-shell {
     @apply mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8;
+  }
+
+  .archive-ledger {
+    @apply p-0;
+  }
+
+  .ledger-cell {
+    @apply border-b border-gold/20 p-5 md:border-b-0 md:border-r;
+  }
+
+  .ledger-cell:last-child {
+    @apply border-b-0 md:border-r-0;
+  }
+
+  .receipt-field {
+    @apply rounded-md border border-brown/20 bg-parchment-light/45 p-4;
+  }
+
+  .archive-manifesto {
+    @apply min-h-full;
   }
 
   .page-intro {
@@ -145,9 +218,22 @@
 
 .field-guide-scene {
   background:
+    repeating-linear-gradient(100deg, rgba(239, 225, 184, 0.035) 0 1px, transparent 1px 8px),
     linear-gradient(180deg, rgba(239, 225, 184, 0.24), rgba(79, 111, 57, 0.22) 42%, rgba(16, 32, 21, 0.62)),
     #20351f;
-  box-shadow: 0 28px 70px rgba(5, 13, 8, 0.36);
+  box-shadow:
+    inset 0 0 0 8px rgba(16, 32, 21, 0.36),
+    inset 0 0 0 9px rgba(184, 148, 77, 0.22),
+    0 28px 70px rgba(5, 13, 8, 0.36);
+}
+
+.field-guide-scene::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px dashed rgba(239, 225, 184, 0.18);
 }
 
 .scene-sky {
@@ -164,6 +250,50 @@
   right: -5%;
   height: 44%;
   border-radius: 50% 50% 0 0;
+}
+
+.scene-tree {
+  position: absolute;
+  bottom: 29%;
+  z-index: 1;
+  width: 8rem;
+  height: 18rem;
+  opacity: 0.72;
+}
+
+.scene-tree::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0.8rem;
+  height: 14rem;
+  border-radius: 999px;
+  background: linear-gradient(#5a3d22, #1f1a12);
+  transform: translateX(-50%);
+}
+
+.scene-tree::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 7.5rem;
+  height: 10rem;
+  border-radius: 50% 50% 44% 44%;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(184, 148, 77, 0.18), transparent 1.3rem),
+    linear-gradient(135deg, rgba(79, 111, 57, 0.88), rgba(16, 32, 21, 0.94));
+  transform: translateX(-50%);
+}
+
+.scene-tree-left {
+  left: -1rem;
+}
+
+.scene-tree-right {
+  right: -1.5rem;
+  transform: scaleX(-1);
 }
 
 .scene-hills-back {
@@ -278,4 +408,24 @@
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.16em;
+}
+
+@media (max-width: 640px) {
+  .field-guide-scene {
+    min-height: 500px;
+  }
+
+  .scene-tree {
+    opacity: 0.35;
+  }
+
+  .book-stack {
+    right: 0.75rem;
+  }
+
+  .book-stack span {
+    min-width: 118px;
+    padding-inline: 10px;
+    font-size: 0.62rem;
+  }
 }

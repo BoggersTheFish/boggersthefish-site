@@ -5,6 +5,8 @@ export function FieldGuideScene() {
       aria-label="Illustrated field-guide scene of TS notes, graph nodes, books, and labels"
     >
       <div className="scene-sky" />
+      <div className="scene-tree scene-tree-left" aria-hidden="true" />
+      <div className="scene-tree scene-tree-right" aria-hidden="true" />
       <div className="scene-hills scene-hills-back" />
       <div className="scene-hills scene-hills-front" />
 
@@ -44,6 +46,15 @@ export function FieldGuideScene() {
         <span className="edge e4" />
       </div>
 
+      <div className="absolute bottom-[8%] left-[6%] h-14 w-14 rotate-[-18deg] rounded-full border-4 border-brown/55 bg-transparent shadow-paper" aria-hidden="true">
+        <span className="absolute -bottom-6 left-10 h-8 w-2 rotate-[-38deg] rounded bg-brown/70" />
+      </div>
+
+      <div className="absolute bottom-[23%] left-[44%] rotate-[7deg] rounded-md border border-gold/45 bg-parchment-light px-3 py-2 text-center shadow-paper">
+        <p className="field-label text-brown">TS-01</p>
+        <p className="mt-1 text-xs font-semibold text-ink/75">inspectable field</p>
+      </div>
+
       <div className="absolute bottom-[15%] right-[14%] w-48 rotate-[-4deg] rounded border border-brown/40 bg-parchment p-3 shadow-paper">
         <div className="notebook-lines" />
         <p className="relative text-center font-serif text-lg font-semibold text-ink">
@@ -56,6 +67,8 @@ export function FieldGuideScene() {
         <span>CONSTRAINTS</span>
         <span>TRUTH</span>
       </div>
+
+      <div className="absolute bottom-[4%] right-[31%] h-12 w-20 rotate-[8deg] rounded-[50%] border border-gold/35 bg-moss/35 shadow-scene" aria-hidden="true" />
 
       <div className="absolute bottom-[9%] left-[36%] rounded-full border border-gold/50 bg-moss/45 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-cream shadow-scene">
         substrate · surface · grounding

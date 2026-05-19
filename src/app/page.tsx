@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { BGCNotice } from "@/components/BGCNotice";
+import { ContributorPaths } from "@/components/ContributorPaths";
+import { CurrentStatus } from "@/components/CurrentStatus";
 import { Hero } from "@/components/Hero";
 import { ParchmentCard } from "@/components/ParchmentCard";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -49,6 +51,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <CurrentStatus />
+
       <section className="page-shell pt-2">
         <SectionHeading eyebrow="Research focus" title="What the archive is trying to make measurable">
           <p>
@@ -86,6 +90,8 @@ export default function HomePage() {
         <BGCNotice />
         <QuickLinks />
       </section>
+
+      <ContributorPaths />
     </>
   );
 }

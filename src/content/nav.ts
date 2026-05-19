@@ -28,13 +28,13 @@ export const quickLinks = [
   {
     label: "GitHub",
     href: "https://github.com/BoggersTheFish",
-    note: "TODO: replace with the final organization/project index if needed.",
+    note: "Source repositories, experiments, and project code.",
     external: true,
   },
   {
     label: "Hugging Face",
     href: "https://huggingface.co/BoggersTheFish",
-    note: "TODO: replace with the canonical model collection if needed.",
+    note: "Model artifacts, checkpoints, and research receipts.",
     external: true,
   },
   {
