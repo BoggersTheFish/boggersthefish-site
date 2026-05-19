@@ -6,10 +6,26 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/content/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
+        forest: {
+          DEFAULT: "#162719",
+          dark: "#102015",
+          mid: "#20351f",
+        },
+        moss: "#4f6f39",
+        parchment: {
+          DEFAULT: "#d9c89e",
+          light: "#efe1b8",
+        },
+        ink: "#1f1a12",
+        gold: "#b8944d",
+        brown: "#5a3d22",
+        cream: "#f3ead0",
+        sienna: "#9a4f32",
         "ts-purple": {
           DEFAULT: "#A020F0",
           light: "#C060FF",
@@ -60,6 +76,7 @@ const config: Config = {
           "monospace",
         ],
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "EB Garamond", "Cormorant Garamond", "Georgia", "serif"],
       },
       animation: {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",

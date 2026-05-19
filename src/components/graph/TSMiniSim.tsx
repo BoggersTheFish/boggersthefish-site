@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Zap, RefreshCw, Play, Pause } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { clamp, lerp } from "@/lib/utils";

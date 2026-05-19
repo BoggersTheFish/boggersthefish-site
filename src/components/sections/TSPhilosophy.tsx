@@ -127,7 +127,7 @@ export function TSPhilosophy() {
                           </span>
                           {parts[1] && (
                             <span className="text-muted-foreground/60 text-xs italic">
-                              //{parts[1]}
+                              {`//${parts[1]}`}
                             </span>
                           )}
                         </div>

@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import { Nav } from "@/components/layout/Nav";
-import { Footer } from "@/components/layout/Footer";
-import { Toaster } from "@/components/ui/toaster";
-import { Providers } from "@/components/providers/Providers";
-import { SITE_META } from "@/lib/tsData";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import { site } from "@/content/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,56 +11,45 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-mono",
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: SITE_META.title,
-    template: "%s | BoggersTheFish — TS",
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
   },
-  description: SITE_META.description,
-  metadataBase: new URL(SITE_META.url),
+  description: site.description,
+  metadataBase: new URL(site.url),
   keywords: [
-    "Thinking System",
-    "TS-OS",
     "BoggersTheFish",
-    "BoggersTheAI",
+    "Thinking System",
     "constraint graph",
-    "wave propagation",
-    "self-improving AI",
-    "cognitive architecture",
-    "living graph",
-    "QLoRA",
-    "FastAPI",
+    "tension dynamics",
+    "constraint propagation",
+    "interpretable AI systems",
+    "provenance-aware knowledge graphs",
+    "proof ranking",
+    "reproducible experiments",
+    "open-source research",
   ],
-  authors: [{ name: SITE_META.author, url: SITE_META.url }],
-  creator: SITE_META.author,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: SITE_META.url,
-    title: SITE_META.title,
-    description: SITE_META.description,
-    siteName: "BoggersTheFish — TS",
-    images: [
-      {
-        url: SITE_META.ogImage,
-        width: 1200,
-        height: 630,
-        alt: "TS — Thinking System / Thinking Wave",
-      },
-    ],
+    locale: "en_GB",
+    url: site.url,
+    title: `${site.name} | ${site.tagline}`,
+    description: site.description,
+    siteName: site.name,
   },
   twitter: {
-    card: "summary_large_image",
-    title: SITE_META.title,
-    description: SITE_META.description,
-    creator: SITE_META.twitter,
-    images: [SITE_META.ogImage],
+    card: "summary",
+    title: `${site.name} | ${site.tagline}`,
+    description: site.description,
   },
   robots: {
     index: true,
@@ -76,7 +63,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#102015",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -90,16 +77,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${inter.variable} ${ebGaramond.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-black text-[#F0F0F0] font-sans antialiased min-h-screen overflow-x-hidden">
-        <Providers>
-          <Nav />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <Toaster />
-        </Providers>
+      <body className="min-h-screen overflow-x-hidden bg-forest-dark font-sans text-cream antialiased">
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );

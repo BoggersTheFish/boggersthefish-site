@@ -19,5 +19,15 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "src/components/graph/**",
+    "src/components/hero/**",
+    "src/components/layout/**",
+    "src/components/providers/**",
+    "src/components/sections/**",
+    "src/hooks/**",
+    "src/store/**"
+  ]
 }

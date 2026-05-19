@@ -8,13 +8,7 @@
   }
 
   * {
-    border-color: rgba(160, 32, 240, 0.2);
-  }
-
-  body {
-    @apply bg-black text-[#F0F0F0];
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
   }
 
   html {
@@ -22,174 +16,266 @@
     color-scheme: dark;
   }
 
-  /* Purple scrollbar */
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 14% 12%, rgba(184, 148, 77, 0.12), transparent 24rem),
+      radial-gradient(circle at 88% 24%, rgba(79, 111, 57, 0.18), transparent 28rem),
+      linear-gradient(90deg, rgba(239, 225, 184, 0.035) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(239, 225, 184, 0.025) 1px, transparent 1px),
+      #102015;
+    background-attachment: fixed;
+    background-size: auto, auto, 44px 44px, 44px 44px, auto;
   }
-  ::-webkit-scrollbar-track {
-    background: #000;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #A020F0;
-    border-radius: 2px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #C060FF;
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.48;
+    background:
+      repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 9px),
+      radial-gradient(circle at center, transparent 0, rgba(16, 32, 21, 0.38) 72%);
   }
 
   ::selection {
-    background: rgba(160, 32, 240, 0.3);
-    color: #fff;
+    background: rgba(184, 148, 77, 0.45);
+    color: #1f1a12;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: 0;
   }
 }
 
 @layer components {
-  /* Animated purple grid background */
-  .ts-grid-bg {
-    background-image:
-      linear-gradient(rgba(160, 32, 240, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(160, 32, 240, 0.04) 1px, transparent 1px);
-    background-size: 50px 50px;
+  .paper-tab {
+    @apply relative rounded-t-md border border-transparent px-3 py-2 font-serif text-base font-semibold text-cream/85 transition;
   }
 
-  /* Node glow shell */
-  .ts-node {
-    @apply relative rounded-full border border-ts-purple/30;
-    box-shadow: 0 0 10px rgba(160, 32, 240, 0.3), inset 0 0 10px rgba(160, 32, 240, 0.1);
-  }
-  .ts-node.active {
-    box-shadow: 0 0 20px rgba(160, 32, 240, 0.8), 0 0 40px rgba(160, 32, 240, 0.4), inset 0 0 20px rgba(160, 32, 240, 0.2);
-    border-color: rgba(160, 32, 240, 0.8);
+  .paper-tab:hover,
+  .paper-tab:focus-visible {
+    @apply border-gold/35 bg-parchment text-ink shadow-paper outline-none;
   }
 
-  /* Text glow */
-  .ts-text-glow {
-    text-shadow: 0 0 10px rgba(160, 32, 240, 0.5), 0 0 20px rgba(160, 32, 240, 0.3);
-  }
-  .ts-text-glow-strong {
-    text-shadow: 0 0 10px #A020F0, 0 0 20px #A020F0, 0 0 40px rgba(160, 32, 240, 0.5);
+  .brand-mark {
+    @apply flex h-11 w-16 shrink-0 flex-col items-center justify-center rounded-md border border-gold/45 bg-forest/80 text-xs font-bold leading-none text-gold shadow-scene;
   }
 
-  /* Card */
-  .ts-card {
-    @apply bg-[#080808] border border-[rgba(160,32,240,0.2)] rounded-lg;
-    box-shadow: 0 0 0 1px rgba(160, 32, 240, 0.08), 0 4px 20px rgba(0, 0, 0, 0.6);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  .ts-card:hover {
-    border-color: rgba(160, 32, 240, 0.35);
-    box-shadow: 0 0 0 1px rgba(160, 32, 240, 0.2), 0 8px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(160, 32, 240, 0.08);
+  .field-label {
+    @apply text-xs font-bold uppercase tracking-[0.18em];
   }
 
-  /* Gradient text */
-  .ts-gradient-text {
-    background: linear-gradient(135deg, #C060FF 0%, #A020F0 50%, #8B00FF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .ts-gradient-text-animated {
-    background: linear-gradient(135deg, #C060FF, #A020F0, #8B00FF, #A020F0, #C060FF);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: wave-flow 5s ease-in-out infinite;
+  .field-chip {
+    @apply rounded-full border border-brown/25 bg-forest/10 px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-brown;
   }
 
-  /* Section spacing */
-  .ts-section {
-    @apply py-24 px-4 sm:px-6 lg:px-8 relative;
+  .plaque-button {
+    @apply inline-flex min-h-11 items-center gap-2 rounded-md border border-gold/55 bg-forest/80 px-5 py-3 text-sm font-bold uppercase tracking-[0.12em] text-cream shadow-scene transition hover:-translate-y-0.5 hover:border-gold hover:bg-moss/75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
   }
 
-  /* Horizontal divider */
-  .ts-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(160, 32, 240, 0.35), transparent);
+  .plaque-button.secondary {
+    @apply bg-brown/80;
   }
 
-  /* Activation ring (click effect) */
-  .ts-activation-ring {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(160, 32, 240, 0.6);
-    pointer-events: none;
-    animation: propagate 1.2s ease-out forwards;
+  .brass-link {
+    @apply inline-flex items-center gap-2 text-sm font-bold text-brown underline decoration-gold/45 underline-offset-4 transition hover:text-forest;
   }
 
-  /* Code block */
-  .ts-code {
-    @apply font-mono text-sm bg-[#0A0A0A] border border-[rgba(160,32,240,0.2)] rounded-lg p-4;
-    color: #C060FF;
+  .parchment-card {
+    position: relative;
+    border-color: rgba(90, 61, 34, 0.38);
+    color: #1f1a12;
+    background:
+      radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.32), transparent 11rem),
+      repeating-linear-gradient(105deg, rgba(90, 61, 34, 0.035) 0 1px, transparent 1px 7px),
+      linear-gradient(135deg, #efe1b8 0%, #d9c89e 100%);
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+      0 14px 30px rgba(4, 11, 7, 0.28);
+  }
+
+  .forest-panel {
+    border-color: rgba(184, 148, 77, 0.38);
+    background:
+      radial-gradient(circle at 20% 10%, rgba(184, 148, 77, 0.16), transparent 12rem),
+      repeating-linear-gradient(115deg, rgba(239, 225, 184, 0.03) 0 1px, transparent 1px 8px),
+      linear-gradient(135deg, #20351f, #102015);
+  }
+
+  .diagram-icon {
+    @apply flex h-12 w-12 items-center justify-center rounded-md border border-brown/30 bg-forest/10 text-brown;
+  }
+
+  .page-shell {
+    @apply mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8;
+  }
+
+  .page-intro {
+    @apply mb-10 max-w-3xl;
+  }
+
+  .page-intro h1 {
+    @apply font-serif text-5xl font-semibold leading-tight text-cream sm:text-6xl;
+  }
+
+  .page-intro p {
+    @apply mt-5 text-base leading-8 text-cream/80 sm:text-lg;
   }
 }
 
-/* ──────────────────────────────────────────────
-   Custom keyframes (not covered by Tailwind config)
-   ────────────────────────────────────────────── */
-@keyframes wave-flow {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes propagate {
-  0%   { transform: scale(1);   opacity: 1; }
-  100% { transform: scale(3.5); opacity: 0; }
-}
-
-@keyframes grid-pulse {
-  0%, 100% { opacity: 0.4; }
-  50%       { opacity: 0.9; }
-}
-
-@keyframes float-node {
-  0%, 100% { transform: translateY(0px); }
-  33%       { transform: translateY(-10px); }
-  66%       { transform: translateY(5px); }
-}
-
-@keyframes pulse-ring {
-  0%   { transform: scale(0.8); opacity: 1; }
-  100% { transform: scale(2.5); opacity: 0; }
-}
-
-/* ──────────────────────────────────────────────
-   Light mode — stability flip (purple stays)
-   ────────────────────────────────────────────── */
-html.light {
-  body {
-    background-color: #0a0a12;
-    color: #e8e8f0;
+@layer utilities {
+  .shadow-paper {
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+      0 12px 20px rgba(31, 26, 18, 0.2);
   }
-  .ts-card {
-    background-color: #0f0f1a;
-    border-color: rgba(160, 32, 240, 0.25);
-  }
-  .ts-grid-bg {
-    background-image:
-      linear-gradient(rgba(160, 32, 240, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(160, 32, 240, 0.06) 1px, transparent 1px);
+
+  .shadow-scene {
+    box-shadow:
+      0 18px 40px rgba(3, 10, 6, 0.34),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   }
 }
 
-/* ──────────────────────────────────────────────
-   Utility overrides
-   ────────────────────────────────────────────── */
-.font-mono {
-  font-feature-settings: "liga" 1, "calt" 1;
+.field-guide-scene {
+  background:
+    linear-gradient(180deg, rgba(239, 225, 184, 0.24), rgba(79, 111, 57, 0.22) 42%, rgba(16, 32, 21, 0.62)),
+    #20351f;
+  box-shadow: 0 28px 70px rgba(5, 13, 8, 0.36);
 }
 
-/* Scroll-triggered reveal */
-@keyframes reveal-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+.scene-sky {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 52% 15%, rgba(239, 225, 184, 0.32), transparent 14rem),
+    linear-gradient(180deg, rgba(166, 183, 143, 0.58), transparent 46%);
 }
-.reveal-up {
-  animation: reveal-up 0.6s ease-out forwards;
+
+.scene-hills {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  height: 44%;
+  border-radius: 50% 50% 0 0;
+}
+
+.scene-hills-back {
+  top: 32%;
+  background: linear-gradient(135deg, rgba(79, 111, 57, 0.88), rgba(32, 53, 31, 0.78));
+  clip-path: polygon(0 80%, 12% 46%, 24% 70%, 38% 32%, 55% 68%, 72% 38%, 88% 66%, 100% 44%, 100% 100%, 0 100%);
+}
+
+.scene-hills-front {
+  top: 45%;
+  background: linear-gradient(135deg, rgba(22, 39, 25, 0.96), rgba(79, 111, 57, 0.72));
+  clip-path: polygon(0 62%, 18% 35%, 31% 66%, 48% 31%, 64% 61%, 80% 38%, 100% 65%, 100% 100%, 0 100%);
+}
+
+.fish-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 7.5rem;
+  height: 4.8rem;
+  border: 2px solid currentColor;
+  border-radius: 55% 45% 45% 55%;
+  font-family: var(--font-serif), serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.fish-mark::before,
+.fish-mark::after {
+  content: "";
+  position: absolute;
+  right: -1.75rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.fish-mark::before {
+  top: 0.35rem;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.fish-mark::after {
+  bottom: 0.35rem;
+  border-left: 0;
+  border-top: 0;
+}
+
+.fish-mark .crown {
+  position: absolute;
+  top: -2.1rem;
+  font-size: 1.45rem;
+}
+
+.graph-sketch {
+  width: 170px;
+  height: 130px;
+}
+
+.graph-sketch .node,
+.graph-sketch .edge {
+  position: absolute;
+  display: block;
+}
+
+.graph-sketch .node {
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #5a3d22;
+  border-radius: 999px;
+  background: #d9c89e;
+}
+
+.graph-sketch .n1 { left: 12px; top: 50px; }
+.graph-sketch .n2 { left: 76px; top: 12px; }
+.graph-sketch .n3 { left: 130px; top: 70px; }
+.graph-sketch .n4 { left: 58px; top: 98px; }
+
+.graph-sketch .edge {
+  height: 2px;
+  transform-origin: left center;
+  background: rgba(90, 61, 34, 0.75);
+}
+
+.graph-sketch .e1 { left: 26px; top: 57px; width: 74px; transform: rotate(-31deg); }
+.graph-sketch .e2 { left: 89px; top: 27px; width: 80px; transform: rotate(47deg); }
+.graph-sketch .e3 { left: 70px; top: 107px; width: 75px; transform: rotate(-24deg); }
+.graph-sketch .e4 { left: 24px; top: 61px; width: 70px; transform: rotate(44deg); }
+
+.notebook-lines {
+  position: absolute;
+  inset: 0.8rem;
+  background: repeating-linear-gradient(0deg, transparent 0 11px, rgba(90, 61, 34, 0.16) 11px 12px);
+}
+
+.book-stack {
+  display: grid;
+  gap: 4px;
+}
+
+.book-stack span {
+  display: block;
+  min-width: 140px;
+  border: 1px solid rgba(184, 148, 77, 0.55);
+  border-radius: 4px;
+  background: linear-gradient(90deg, #5a3d22, #20351f);
+  padding: 7px 14px;
+  color: #d9c89e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
 }

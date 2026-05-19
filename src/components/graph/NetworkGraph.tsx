@@ -145,7 +145,7 @@ export function NetworkGraph() {
           onNodeClick={handleNodeClick}
           onNodeHover={handleNodeHover}
           linkColor={() => "rgba(160,32,240,0.2)"}
-          linkWidth={(link) => (link as NetworkLink).strength * 1.5}
+          linkWidth={(link: NetworkLink) => link.strength * 1.5}
           linkDirectionalParticles={1}
           linkDirectionalParticleWidth={1}
           linkDirectionalParticleColor={() => "rgba(160,32,240,0.7)"}
