@@ -21,7 +21,7 @@ export function ProofCard({ proof }: { proof: Proof }) {
         Claim: {proof.claim}
       </p>
       <div className="mt-4 flex flex-wrap gap-2">
-        {proof.tags.map((tag) => (
+        {proof.tags.slice(0, 4).map((tag) => (
           <span key={tag} className="field-chip">
             {tag}
           </span>

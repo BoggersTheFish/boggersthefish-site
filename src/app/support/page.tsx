@@ -1,14 +1,26 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { HeartHandshake } from "lucide-react";
 import { BGCNotice } from "@/components/BGCNotice";
 import { ParchmentCard } from "@/components/ParchmentCard";
-import { bgcFullNotice, site } from "@/content/site";
+import { bgcFullNotice, links } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Support / BGC",
   description: "Support information and legally cautious Boggers Credits explanation.",
-};
+  path: "/support",
+});
+
+const terms = [
+  "Donations are donations.",
+  "BGC is not cryptocurrency.",
+  "BGC is not an investment.",
+  "BGC is not legal tender.",
+  "BGC is not redeemable for cash.",
+  "BGC does not promise future token conversion.",
+  "BGC may remain an off-chain community credit forever.",
+  "Nothing on this site is financial advice.",
+];
 
 export default function SupportPage() {
   return (
@@ -22,14 +34,26 @@ export default function SupportPage() {
         </p>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-[1fr_0.7fr]">
+      <div className="grid gap-5 lg:grid-cols-[1fr_0.8fr]">
         <BGCNotice full />
         <ParchmentCard>
           <p className="field-label mb-3 text-brown">Plain terms</p>
           <p className="text-sm leading-7 text-ink/80">{bgcFullNotice}</p>
-          <Link href={`mailto:${site.email}`} className="plaque-button mt-6 bg-forest text-cream">
+          <div className="mt-5 space-y-2">
+            {terms.map((term) => (
+              <p key={term} className="flex gap-2 text-sm leading-6 text-ink/75">
+                <span aria-hidden="true" className="text-brown">☑</span>
+                {term}
+              </p>
+            ))}
+          </div>
+          <div className="mt-6 rounded-md border border-brown/25 bg-forest/10 p-4 text-sm font-semibold leading-7 text-ink/80">
+            By supporting, you understand this is a donation to independent research,
+            not a purchase of an investment product.
+          </div>
+          <Link href={links.email} className="plaque-button mt-6 bg-forest text-cream">
             <HeartHandshake className="h-4 w-4" />
-            Support / Donate
+            Support / Donate by email
           </Link>
         </ParchmentCard>
       </div>

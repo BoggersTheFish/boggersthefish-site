@@ -1,64 +1,69 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { ExternalLink, Github, Mail } from "lucide-react";
 import { ParchmentCard } from "@/components/ParchmentCard";
-import { SectionHeading } from "@/components/SectionHeading";
-import { site } from "@/content/site";
+import { links, site } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About",
-  description:
-    "About BoggersTheFish, an independent AI research website for TS graph/tension work.",
-};
+  description: "About Ben Michalek / BoggersTheFish, an independent UK AI researcher and solo developer.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
     <section className="page-shell">
       <div className="page-intro">
-        <p className="field-label text-gold">About BoggersTheFish</p>
-        <h1>Independent AI research, kept close to the evidence.</h1>
+        <p className="field-label text-gold">About</p>
+        <h1>Ben Michalek / BoggersTheFish.</h1>
         <p>
-          BoggersTheFish is the public home for TS research: graph-based reasoning,
-          tension dynamics, constraint propagation, interpretable AI systems, and
-          proof-oriented engineering.
+          Independent AI researcher and solo developer based in the UK, focused
+          on graph-based reasoning, interpretable AI, constraint dynamics,
+          provenance-aware knowledge systems, and proof/ranking tools.
         </p>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-        <ParchmentCard tone="dark">
-          <p className="field-label mb-3 text-gold">Research stance</p>
-          <p className="text-sm leading-7 text-cream/80">
-            TS is presented as a useful engineering and research lens. Public
-            pages separate measured artifacts, source-backed results, and open
-            hypotheses so the archive can stay expressive without overstating
-            what has been shown.
-          </p>
-          <Link href={`mailto:${site.email}`} className="plaque-button mt-6">
-            <Mail className="h-4 w-4" />
-            Contact
-          </Link>
-        </ParchmentCard>
-
+      <div className="grid gap-5 lg:grid-cols-[1fr_0.8fr]">
         <ParchmentCard>
-          <SectionHeading title="What this site is for" className="mb-5">
-            <p className="text-ink/80">
-              A readable field manual for TS experiments, project notes, proof-bank
-              receipts, and documentation.
-            </p>
-          </SectionHeading>
+          <h2 className="font-serif text-3xl font-semibold text-ink">Research stance</h2>
+          <p className="mt-4 text-sm leading-7 text-ink/80">
+            The work is open-source and evidence-led: projects should connect
+            to GitHub repos, Hugging Face artifacts, proof-bank receipts, and
+            explicit limits. TS is presented as an engineering lens, not a
+            finished AGI claim.
+          </p>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              "Reproducible experiments",
-              "Open-source research",
-              "Constraint graphs",
-              "Tension telemetry",
-              "Proof ranking",
-              "Provenance-aware knowledge graphs",
-            ].map((item) => (
-              <span key={item} className="field-chip">
-                {item}
-              </span>
-            ))}
+              "graph-based reasoning",
+              "interpretable AI",
+              "constraint dynamics",
+              "provenance-aware knowledge systems",
+              "proof/ranking tools",
+              "small model experiments",
+            ].map((item) => <span key={item} className="field-chip">{item}</span>)}
+          </div>
+        </ParchmentCard>
+
+        <ParchmentCard tone="dark">
+          <p className="field-label mb-4 text-gold">Contact</p>
+          <div className="space-y-3">
+            <Link href={links.github} target="_blank" rel="noopener noreferrer" className="plaque-button">
+              <Github className="h-4 w-4" />
+              GitHub
+              <ExternalLink className="h-4 w-4" />
+            </Link>
+            <Link href={links.huggingFace} target="_blank" rel="noopener noreferrer" className="plaque-button">
+              Hugging Face
+              <ExternalLink className="h-4 w-4" />
+            </Link>
+            <Link href={links.email} className="plaque-button">
+              <Mail className="h-4 w-4" />
+              {site.email}
+            </Link>
+            <Link href={links.home} target="_blank" rel="noopener noreferrer" className="plaque-button">
+              Website
+              <ExternalLink className="h-4 w-4" />
+            </Link>
           </div>
         </ParchmentCard>
       </div>

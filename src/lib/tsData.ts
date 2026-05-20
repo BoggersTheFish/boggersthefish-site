@@ -182,8 +182,8 @@ export const SOCIAL_LINKS = [
   {
     id: "email",
     label: "Email",
-    url: "mailto:boggersthefish@boggersthefish.com",
-    handle: "boggersthefish@boggersthefish.com",
+    url: "mailto:boggersthefish@gmail.com",
+    handle: "boggersthefish@gmail.com",
     icon: "mail",
     primary: true,
   },
@@ -266,11 +266,11 @@ export const SITE_META = {
   title: "BoggersTheFish — Thinking System / Thinking Wave",
   description:
     "TS-native AI work by BoggersTheFish: graph-first reasoning substrates, TensionLM, verifier-backed proof loops, and evidence-bounded research receipts.",
-  url: "https://boggersthefish.com",
+  url: "https://www.boggersthefish.com",
   author: "BoggersTheFish",
   twitter: "@BoggersTheFish",
   lastWave: "May 13, 2026",
   currentWave: 17,
   waveName: "Evidence Cleanup",
-  ogImage: "https://boggersthefish.com/og.png",
+  ogImage: "https://www.boggersthefish.com/og-image.svg",
 } as const;

@@ -134,7 +134,7 @@ export function Nav() {
               </Link>
 
               <Button size="sm" asChild>
-                <Link href="mailto:boggersthefish@boggersthefish.com">
+                <Link href="mailto:boggersthefish@gmail.com">
                   <Zap className="w-3.5 h-3.5" />
                   Vibe-Code Me
                 </Link>
@@ -202,7 +202,7 @@ export function Nav() {
                   GitHub
                 </Link>
                 <Link
-                  href="mailto:boggersthefish@boggersthefish.com"
+                  href="mailto:boggersthefish@gmail.com"
                   className="flex items-center gap-2 text-sm text-ts-purple hover:text-ts-purple-light transition-colors"
                 >
                   <Zap className="w-4 h-4" />

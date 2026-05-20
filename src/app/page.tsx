@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BGCNotice } from "@/components/BGCNotice";
 import { ContributorPaths } from "@/components/ContributorPaths";
 import { CurrentStatus } from "@/components/CurrentStatus";
@@ -10,12 +11,14 @@ import { QuickLinks } from "@/components/QuickLinks";
 import { SectionHeading } from "@/components/SectionHeading";
 import { projects } from "@/content/projects";
 import { proofs } from "@/content/proofs";
-import { site } from "@/content/site";
+import { links, site } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: site.title,
   description: site.description,
-};
+  path: "/",
+});
 
 const researchFocus = [
   {
@@ -33,11 +36,27 @@ const researchFocus = [
 ];
 
 export default function HomePage() {
+  const latestProofs = proofs.slice(0, 4);
+
   return (
     <>
       <Hero />
 
       <section className="page-shell">
+        <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["4 core projects", "Runtime, model, graph, proof-control."],
+            [`${proofs.length}+ proof-bank notes`, "Claim, setup, result, limit."],
+            ["Published model ladder", "TensionLM and proof-ranker artifacts."],
+            ["Open-source archive", "GitHub, Hugging Face, receipts."],
+          ].map(([label, body]) => (
+            <ParchmentCard key={label}>
+              <p className="field-label text-brown">{label}</p>
+              <p className="mt-2 text-sm leading-6 text-ink/70">{body}</p>
+            </ParchmentCard>
+          ))}
+        </div>
+
         <SectionHeading eyebrow="Core projects" title="The TS workbench">
           <p>
             Four public workstreams hold the current research surface: the graph
@@ -73,17 +92,36 @@ export default function HomePage() {
       </section>
 
       <section className="page-shell pt-2">
-        <SectionHeading eyebrow="Proof bank preview" title="Receipts before claims">
+        <SectionHeading eyebrow="Latest receipts" title="Receipts before claims">
           <p>
             Each proof note is prepared as a reproducible record: setup, observed
             behavior, limits, and replay path where available.
           </p>
         </SectionHeading>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {proofs.map((proof) => (
+          {latestProofs.map((proof) => (
             <ProofCard key={proof.id} proof={proof} />
           ))}
         </div>
+      </section>
+
+      <section className="page-shell grid gap-3 pt-2 md:grid-cols-2 lg:grid-cols-4">
+        {[
+          ["Start with the sober map", "/start-here"],
+          ["Explore models on Hugging Face", links.huggingFace],
+          ["View source on GitHub", links.github],
+          ["Support independent research", "/support"],
+        ].map(([label, href]) => (
+          <Link
+            key={label}
+            href={href}
+            target={href.startsWith("http") ? "_blank" : undefined}
+            rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+            className="plaque-button justify-center text-center"
+          >
+            {label}
+          </Link>
+        ))}
       </section>
 
       <section className="page-shell grid gap-5 pt-2 lg:grid-cols-[1.35fr_0.65fr]">

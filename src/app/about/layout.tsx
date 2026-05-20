@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — BoggersTheFish",
+  title: "About",
   description:
-    "From Minecraft OG Network base-builder to cognitive OS engineer — the story behind TS and BoggersTheAI.",
+    "About Ben Michalek / BoggersTheFish, an independent UK AI researcher and solo developer.",
 };
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {

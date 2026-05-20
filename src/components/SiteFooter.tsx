@@ -23,7 +23,7 @@ export function SiteFooter() {
         <div>
           <p className="field-label mb-3 text-gold">Archive</p>
           <div className="grid grid-cols-2 gap-2 text-sm">
-            {navItems.slice(1, 7).map((item) => (
+            {navItems.slice(1).map((item) => (
               <Link key={item.href} href={item.href} className="text-cream/70 hover:text-gold">
                 {item.label}
               </Link>
@@ -34,7 +34,7 @@ export function SiteFooter() {
         <div>
           <p className="field-label mb-3 text-gold">Contact</p>
           <div className="space-y-2 text-sm">
-            <Link href={site.github} className="flex items-center gap-2 text-cream/70 hover:text-gold">
+            <Link href={site.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cream/70 hover:text-gold">
               <Github className="h-4 w-4" /> GitHub
             </Link>
             <Link href={`mailto:${site.email}`} className="flex items-center gap-2 text-cream/70 hover:text-gold">

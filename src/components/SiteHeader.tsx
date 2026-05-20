@@ -23,7 +23,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden max-w-4xl flex-wrap items-center justify-end gap-1 lg:flex">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="paper-tab">
               {item.label}

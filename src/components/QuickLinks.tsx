@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, FileCheck2, Github, NotebookTabs, PlayCircle } from "lucide-react";
+import { ArrowUpRight, BookOpen, FileCheck2, Github, Home, NotebookTabs, PlayCircle } from "lucide-react";
 import { quickLinks } from "@/content/nav";
 import { ParchmentCard } from "@/components/ParchmentCard";
 
-const icons = [PlayCircle, FileCheck2, Github, NotebookTabs, BookOpen];
+const icons = [PlayCircle, FileCheck2, Github, NotebookTabs, Home, BookOpen];
 
 export function QuickLinks() {
   return (

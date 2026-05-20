@@ -133,7 +133,7 @@ export function HeroSection() {
             </Link>
           </Button>
           <Button size="lg" variant="ghost" asChild>
-            <Link href="mailto:boggersthefish@boggersthefish.com">
+            <Link href="mailto:boggersthefish@gmail.com">
               <ArrowRight className="w-4 h-4" />
               Vibe-Code Me
             </Link>

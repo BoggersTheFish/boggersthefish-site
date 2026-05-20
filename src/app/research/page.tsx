@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
+import { ClaimDiscipline } from "@/components/ClaimDiscipline";
 import { ParchmentCard } from "@/components/ParchmentCard";
 import { SectionHeading } from "@/components/SectionHeading";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Research",
   description: "Research overview for TS graph/tension/information-transfer work.",
-};
+  path: "/research",
+});
 
 const areas = [
   {
@@ -37,6 +39,8 @@ export default function ResearchPage() {
           their telemetry, run controlled comparisons, and report measured results.
         </p>
       </div>
+
+      <ClaimDiscipline />
 
       <div className="grid gap-5 md:grid-cols-2">
         {areas.map((area) => (

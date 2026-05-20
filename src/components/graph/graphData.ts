@@ -308,7 +308,7 @@ export interface NetworkLink {
 
 export const NETWORK_GRAPH_DATA = {
   nodes: [
-    { id: "me", label: "BoggersTheFish", url: "https://boggersthefish.com", category: "misc" as const, activation: 1.0 },
+    { id: "me", label: "BoggersTheFish", url: "https://www.boggersthefish.com", category: "misc" as const, activation: 1.0 },
     { id: "github-profile", label: "GitHub Profile", url: "https://github.com/BoggersTheFish", category: "github" as const, activation: 0.9 },
     { id: "boggerstheai-repo", label: "BoggersTheAI", url: "https://github.com/BoggersTheFish/BoggersTheAI", category: "github" as const, activation: 0.85 },
     { id: "goat-ts-repo", label: "GOAT-TS", url: "https://github.com/BoggersTheFish/GOAT-TS", category: "github" as const, activation: 0.75 },
@@ -317,7 +317,7 @@ export const NETWORK_GRAPH_DATA = {
     { id: "boggerspulse-repo", label: "BoggersThePulse", url: "https://github.com/BoggersTheFish/BoggersThePulse", category: "github" as const, activation: 0.65 },
     { id: "boggeros-alpha-repo", label: "BoggersTheOS-Alpha", url: "https://github.com/BoggersTheFish/BoggersTheOS-Alpha", category: "github" as const, activation: 0.55 },
     { id: "boggeros-beta-repo", label: "BoggersTheOS-Beta", url: "https://github.com/BoggersTheFish/BoggersTheOS-Beta", category: "github" as const, activation: 0.62 },
-    { id: "email", label: "Email", url: "mailto:boggersthefish@boggersthefish.com", category: "social" as const, activation: 0.8 },
+    { id: "email", label: "Email", url: "mailto:boggersthefish@gmail.com", category: "social" as const, activation: 0.8 },
     { id: "youtube", label: "YouTube", url: "https://youtube.com/@BoggersTheFish", category: "content" as const, activation: 0.7 },
     { id: "instagram", label: "Instagram", url: "https://instagram.com/boggersthefish", category: "social" as const, activation: 0.65 },
     { id: "threads", label: "Threads", url: "https://threads.net/@boggersthefish", category: "social" as const, activation: 0.6 },

@@ -1,7 +1,12 @@
+import { links } from "@/content/site";
+
+export type ProofStatus = "receipt" | "draft" | "replication" | "toy" | "benchmark" | "planned";
+export type ConfidenceLevel = "Low" | "Medium" | "Strong within toy scope" | "Strong within benchmark scope";
+
 export type Proof = {
   id: string;
   title: string;
-  status: "Receipt" | "Draft" | "Replication";
+  status: ProofStatus;
   summary: string;
   claim: string;
   setup: string;
@@ -12,103 +17,308 @@ export type Proof = {
     label: string;
     href: string;
   };
+  relatedArtifacts: {
+    label: string;
+    href: string;
+  }[];
+  confidence: ConfidenceLevel;
   tags: string[];
+  updatedAt: string;
   route: string;
 };
+
+const route = (id: string) => `/proof-bank#${id.toLowerCase()}`;
 
 export const proofs: Proof[] = [
   {
     id: "TS-003",
-    title: "Local relaxation",
-    status: "Receipt",
-    summary:
-      "Small graph relaxation run showing how local constraint pressure settles after propagation and decay.",
-    claim:
-      "Local graph updates can be tracked as activation, pressure, and relaxation telemetry rather than opaque state changes.",
-    setup:
-      "Run a small TS-Core-style graph with node activation, weighted edges, propagation, decay, and tension logging enabled.",
-    result:
-      "The receipt records pressure settling after propagation, including changed node activations and relaxation steps.",
-    limit:
-      "This is a mechanism receipt, not a broad reasoning benchmark. It shows inspectability of a local runtime pattern.",
-    reproduce:
-      "Rebuild the small graph, run a fixed-seed propagation/relaxation cycle, and compare the emitted telemetry JSON.",
-    relatedRepo: {
-      label: "TS-Core",
-      href: "https://github.com/BoggersTheFish/TS-Core",
-    },
-    tags: ["relaxation", "graphs", "telemetry"],
-    route: "/proof-bank#ts-003",
+    title: "Local relaxation can generate global coherence",
+    status: "receipt",
+    summary: "Toy constraint graph receipt showing a large tension reduction through local relaxation.",
+    claim: "Local relaxation supports the narrow claim that local constraint updates can reduce global tension in a bounded graph.",
+    setup: "Fixed-seed quadratic constraint graph with local update rules and tension telemetry.",
+    result: "Tension fell from 156.216618 to 11.862658, a 92.4063% reduction.",
+    limit: "Quadratic constraint graph only; this is not a full-scale reasoning benchmark.",
+    reproduce: "Run the fixed-seed local relaxation script and compare initial/final tension.",
+    relatedRepo: { label: "TS-Core", href: links.repos.tsCore },
+    relatedArtifacts: [],
+    confidence: "Strong within toy scope",
+    tags: ["relaxation", "graphs", "telemetry", "ts-core"],
+    updatedAt: "2026-05-20",
+    route: route("TS-003"),
   },
   {
-    id: "TS-010",
-    title: "Tension telemetry",
-    status: "Receipt",
-    summary:
-      "Run log format for recording tension, activation, graph size, and stability over a wave cycle.",
-    claim:
-      "Tension should be reported as first-class runtime evidence: graph size, activation movement, and relaxation steps belong in the receipt.",
-    setup:
-      "Instrument graph/tension experiments with per-run metadata and a stable schema for wall time, memory, graph counts, and checkpoints.",
-    result:
-      "The proof-bank format captures the fields needed to replay or audit a TS experiment without relying on narrative claims.",
-    limit:
-      "Telemetry quality depends on the experiment harness. Missing seeds, commits, or checkpoint hashes weaken the receipt.",
-    reproduce:
-      "Use the receipt schema on a fixed run and verify that logs include setup, metrics, outputs, limits, and replay command.",
-    relatedRepo: {
-      label: "bozo / TensionLM",
-      href: "https://github.com/BoggersTheFish/bozo",
-    },
-    tags: ["tension telemetry", "receipts", "runtime"],
-    route: "/proof-bank#ts-010",
+    id: "TS-004",
+    title: "Attractors emerge from local constraint relaxation",
+    status: "toy",
+    summary: "Hopfield-style binary graph receipt for noisy recovery and context-biased recovery.",
+    claim: "Local relaxation can recover stable attractor states in a toy binary graph.",
+    setup: "Hopfield-style binary graph with 30% noise and a context-bias condition.",
+    result: "30% noise recovery was around 87%; context bias improved recovery to about 98%.",
+    limit: "Toy attractor graph; requires replication beyond synthetic binary states.",
+    reproduce: "Replay the seeded attractor graph with and without context bias.",
+    relatedRepo: { label: "TS-Core", href: links.repos.tsCore },
+    relatedArtifacts: [],
+    confidence: "Strong within toy scope",
+    tags: ["attractor", "relaxation", "toy"],
+    updatedAt: "2026-05-20",
+    route: route("TS-004"),
+  },
+  {
+    id: "TS-005",
+    title: "Contradiction localizes as residual/provenance tension",
+    status: "receipt",
+    summary: "Small graph receipt where a planted contradiction ranks first by residual energy and relief-if-removed.",
+    claim: "Contradictions can localize as residual graph tension in a provenance-aware toy graph.",
+    setup: "9 nodes and 16 constraints with one planted contradiction.",
+    result: "The planted contradiction ranked #1 by residual energy and relief-if-removed; removing the bad edge reduced tension near zero.",
+    limit: "Small planted contradiction test; requires larger messy-source replication.",
+    reproduce: "Replay the 9-node graph, compute residual energy by edge, remove the top edge, and compare tension.",
+    relatedRepo: { label: "CIG", href: links.repos.cig },
+    relatedArtifacts: [],
+    confidence: "Strong within toy scope",
+    tags: ["cig", "contradiction", "provenance"],
+    updatedAt: "2026-05-20",
+    route: route("TS-005"),
+  },
+  {
+    id: "TS-006",
+    title: "Break/Evolve through context splitting",
+    status: "receipt",
+    summary: "Mechanism receipt showing incompatible regimes become stable after context splitting.",
+    claim: "Break/Evolve-style context splitting supports the narrow claim that mixed regimes can be separated to reduce tension.",
+    setup: "Two incompatible regimes: y-x approximately +2 and y-x approximately -2.",
+    result: "Single global relation tension was 786.8852; context split tension was 0.5270, a 99.933% reduction.",
+    limit: "Synthetic two-regime setup; not evidence of general unsupervised concept discovery.",
+    reproduce: "Fit one global relation, then split by context and compare tension plus complexity penalty.",
+    relatedRepo: { label: "TS-Core", href: links.repos.tsCore },
+    relatedArtifacts: [],
+    confidence: "Strong within toy scope",
+    tags: ["break evolve", "contexts", "relaxation"],
+    updatedAt: "2026-05-20",
+    route: route("TS-006"),
+  },
+  {
+    id: "TS-008",
+    title: "Coherence vs complexity",
+    status: "toy",
+    summary: "Synthetic MDL-style receipt where three contexts beat underfit and overfit alternatives.",
+    claim: "A tension-plus-complexity penalty can prefer a compact context split over both underfit and overfit variants.",
+    setup: "K=1..6 context candidates evaluated under MDL/tension plus complexity penalty.",
+    result: "K=3 was best under the combined penalty.",
+    limit: "Synthetic data; requires replication on public datasets.",
+    reproduce: "Replay K=1..6 context scoring and verify the minimum at K=3.",
+    relatedRepo: { label: "TS-Core", href: links.repos.tsCore },
+    relatedArtifacts: [],
+    confidence: "Medium",
+    tags: ["coherence", "complexity", "mdl"],
+    updatedAt: "2026-05-20",
+    route: route("TS-008"),
+  },
+  {
+    id: "TS-009",
+    title: "Provenance-weighted coherence",
+    status: "receipt",
+    summary: "Provenance weighting improves error and catches bad sources in a controlled setup.",
+    claim: "Source provenance can support more coherent aggregation than flat averaging in a bounded setup.",
+    setup: "Mixed-source aggregation with trusted, noisy, and adversarial sources.",
+    result: "Flat averaging error was 2.3185; provenance-weighted error was 0.7714; median error was 0.1996; suspicion caught 12/12 bad sources.",
+    limit: "Controlled source model; real source correlation and incentives are harder.",
+    reproduce: "Replay the seeded aggregation and suspicion-scoring script.",
+    relatedRepo: { label: "CIG", href: links.repos.cig },
+    relatedArtifacts: [],
+    confidence: "Strong within toy scope",
+    tags: ["cig", "provenance", "sources"],
+    updatedAt: "2026-05-20",
+    route: route("TS-009"),
+  },
+  {
+    id: "TS-011",
+    title: "Strategic Stabilization Graph",
+    status: "toy",
+    summary: "Toy planning graph receipt for reducing tension across selected public research assets.",
+    claim: "A strategic graph can identify high-pressure documentation and proof-bank work without pretending the toy model is the real system.",
+    setup: "Selected proof-bank docs, Start Here page, Obsidian vault, research statement, and demo video as nodes in a stabilization graph.",
+    result: "Weighted tension energy fell from 452.05 to 10.7258.",
+    limit: "Strategic toy model; not a real productivity benchmark.",
+    reproduce: "Replay the weighted stabilization graph with the selected asset nodes.",
+    relatedRepo: { label: "boggersthefish-site", href: `${links.github}/boggersthefish-site` },
+    relatedArtifacts: [],
+    confidence: "Medium",
+    tags: ["strategy", "site", "stabilization"],
+    updatedAt: "2026-05-20",
+    route: route("TS-011"),
+  },
+  {
+    id: "TS-013",
+    title: "Bayesian update rigidity under regime change",
+    status: "draft",
+    summary: "Bayesian-style test showing decay/forgetting is needed when regimes change.",
+    claim: "Overconfident priors can create rigidity under regime changes unless decay or revision pressure is present.",
+    setup: "Synthetic regime-change sequence with fixed and decayed priors.",
+    result: "Decay/forgetting was needed to adapt after the regime shift.",
+    limit: "Synthetic Bayesian-style test; requires public replay artifact.",
+    reproduce: "Replay fixed-prior and decayed-prior update curves under a regime switch.",
+    relatedRepo: { label: "CIG", href: links.repos.cig },
+    relatedArtifacts: [],
+    confidence: "Medium",
+    tags: ["bayesian", "revision", "rigidity"],
+    updatedAt: "2026-05-20",
+    route: route("TS-013"),
+  },
+  {
+    id: "TS-014",
+    title: "CIG source correlation matters",
+    status: "draft",
+    summary: "CIG-style note showing correlated sources should not be treated as independent votes.",
+    claim: "Dependency-aware consensus is needed because source correlation can inflate apparent agreement.",
+    setup: "Claim/evidence graph with correlated source branches and confidence updates.",
+    result: "Source correlation changed confidence behavior compared with flat independent-source assumptions.",
+    limit: "Draft receipt until backed by a public dataset and replay command.",
+    reproduce: "Build correlated and independent source graphs, then compare confidence propagation.",
+    relatedRepo: { label: "CIG", href: links.repos.cig },
+    relatedArtifacts: [],
+    confidence: "Medium",
+    tags: ["cig", "consensus", "source correlation"],
+    updatedAt: "2026-05-20",
+    route: route("TS-014"),
+  },
+  {
+    id: "TS-015",
+    title: "Free-energy-style mixed-regime split",
+    status: "draft",
+    summary: "Free-energy-style framing for why context splits can solve mixed regimes.",
+    claim: "Context splitting can reduce residual pressure when one model is forced across incompatible regimes.",
+    setup: "Mixed regimes scored with pressure, fit, and complexity terms.",
+    result: "Context split solved the mixed-regime pressure in the bounded setup; overconfident priors caused rigidity.",
+    limit: "Framing receipt, not a general theory proof.",
+    reproduce: "Replay mixed-regime scoring with and without context split and prior decay.",
+    relatedRepo: { label: "TS-Core", href: links.repos.tsCore },
+    relatedArtifacts: [],
+    confidence: "Medium",
+    tags: ["free energy", "contexts", "revision"],
+    updatedAt: "2026-05-20",
+    route: route("TS-015"),
   },
   {
     id: "TS-016",
-    title: "Seeded language engine",
-    status: "Draft",
-    summary:
-      "Language experiment notes for seeded generation with inspectable attention/tension traces.",
-    claim:
-      "Language experiments are more useful when the model surface is paired with inspectable tension or attention traces.",
-    setup:
-      "Run seeded generation with a fixed prompt set and export pairwise tension fields or comparable attention diagnostics.",
-    result:
-      "The draft records the desired evidence shape for comparing generated text with the internal trace that produced it.",
-    limit:
-      "This entry is not a completed capability claim. It is a scaffold for controlled TensionLM language receipts.",
-    reproduce:
-      "Use a fixed checkpoint, fixed prompts, deterministic decoding where available, and export the trace alongside outputs.",
-    relatedRepo: {
-      label: "TensionLM",
-      href: "https://github.com/BoggersTheFish/bozo",
-    },
-    tags: ["language", "tension", "modeling"],
-    route: "/proof-bank#ts-016",
+    title: "Seeded Word-Function parser",
+    status: "draft",
+    summary: "Seeded parser line for semantic-frame accuracy under a toy grammar.",
+    claim: "Seeded word-function structure can improve inspectability of parser decisions in a toy/synthetic grammar.",
+    setup: "Synthetic grammar with seeded semantic-frame parser and fixed evaluation prompts.",
+    result: "Records semantic-frame accuracy and trace structure for the seeded parser direction.",
+    limit: "Toy/synthetic grammar; not a natural-language capability benchmark.",
+    reproduce: "Replay fixed prompts against seeded parser exports and compare semantic frames.",
+    relatedRepo: { label: "TensionLM", href: links.repos.tensionlm },
+    relatedArtifacts: [{ label: "TensionLM models", href: links.huggingFace }],
+    confidence: "Low",
+    tags: ["language", "seeded parser", "toy grammar"],
+    updatedAt: "2026-05-20",
+    route: route("TS-016"),
+  },
+  {
+    id: "TS-018",
+    title: "Learned tension weights",
+    status: "draft",
+    summary: "Seeded operator line testing learned tension weights under controlled negatives.",
+    claim: "Learned tension weights can become a useful diagnostic signal when paired with hard negatives.",
+    setup: "Seeded operator/word-function examples with learned local tension weights.",
+    result: "The receipt captures the lesson that hard-negative mining matters for meaningful tension weights.",
+    limit: "Synthetic grammar and small models; requires benchmark expansion.",
+    reproduce: "Train with and without hard negatives and compare failed-step/tension localization.",
+    relatedRepo: { label: "TensionLM", href: links.repos.tensionlm },
+    relatedArtifacts: [{ label: "TensionLM-Phase2-TSNative", href: links.models.tensionlmPhase2TSNative }],
+    confidence: "Low",
+    tags: ["tension weights", "hard negatives", "language"],
+    updatedAt: "2026-05-20",
+    route: route("TS-018"),
+  },
+  {
+    id: "TS-019",
+    title: "Hard-negative mining lesson",
+    status: "draft",
+    summary: "Negative examples are required before local tension/failure signals become meaningful.",
+    claim: "Failure localization receipts are weak without hard negatives that pressure the model into mistakes.",
+    setup: "Proof/language traces compared under easy negatives and hard negatives.",
+    result: "Hard negatives exposed local tension behavior that easy negatives did not.",
+    limit: "Lesson receipt; not a published full benchmark.",
+    reproduce: "Run the same detector with easy negatives and hard negatives, then compare localization quality.",
+    relatedRepo: { label: "Proof Ranker", href: links.repos.proofRanker },
+    relatedArtifacts: [{ label: "ts-proof-ranker-v2", href: links.models.proofRankerV2 }],
+    confidence: "Medium",
+    tags: ["proof ranker", "hard negatives", "localization"],
+    updatedAt: "2026-05-20",
+    route: route("TS-019"),
+  },
+  {
+    id: "TS-020",
+    title: "Seeded Operator LM direction",
+    status: "planned",
+    summary: "Planned receipt path for seeded operator language-model experiments.",
+    claim: "Seeded operator structure is a research direction, not yet a benchmark claim.",
+    setup: "Operator-token traces, local tension telemetry, and fixed prompts.",
+    result: "Next result should report parser/frame accuracy, tension diagnostics, and failure modes.",
+    limit: "No broad claim until public benchmark receipts exist.",
+    reproduce: "Pending: publish fixed prompts, checkpoint, seed, and export script.",
+    relatedRepo: { label: "TensionLM", href: links.repos.tensionlm },
+    relatedArtifacts: [{ label: "TensionLM model ladder", href: links.huggingFace }],
+    confidence: "Low",
+    tags: ["operator lm", "planned", "language"],
+    updatedAt: "2026-05-20",
+    route: route("TS-020"),
+  },
+  {
+    id: "TS-021",
+    title: "TS-pi independent route audit",
+    status: "draft",
+    summary: "Audit-line receipt for independent pi routes and block-level tension.",
+    claim: "Independent derivation routes can expose block tension and corruption pressure in a bounded audit.",
+    setup: "Multiple independent pi routes with block tension and provenance notes.",
+    result: "Block tension highlighted disagreement locations for inspection.",
+    limit: "Audit toy line; route independence must be proven, not assumed.",
+    reproduce: "Replay independent route generation and compare block tension by segment.",
+    relatedRepo: { label: "CIG", href: links.repos.cig },
+    relatedArtifacts: [],
+    confidence: "Medium",
+    tags: ["audit", "pi", "provenance"],
+    updatedAt: "2026-05-20",
+    route: route("TS-021"),
+  },
+  {
+    id: "TS-022",
+    title: "TS-pi corruption localization and selective repair",
+    status: "draft",
+    summary: "Audit-line receipt for identifying corrupted blocks and repairing selectively.",
+    claim: "Block tension can support selective repair in a bounded corruption-localization setup.",
+    setup: "Injected corruption in a pi audit route with block-level consensus checks.",
+    result: "Corruption localized to high-tension blocks and selective repair targeted those blocks.",
+    limit: "Requires stricter dependency-aware consensus tests.",
+    reproduce: "Inject known block corruption, run audit tension, repair top blocks, and compare consensus.",
+    relatedRepo: { label: "CIG", href: links.repos.cig },
+    relatedArtifacts: [],
+    confidence: "Medium",
+    tags: ["audit", "repair", "consensus"],
+    updatedAt: "2026-05-20",
+    route: route("TS-022"),
   },
   {
     id: "TS-023",
-    title: "Dependency-aware consensus",
-    status: "Replication",
-    summary:
-      "Design note for weighing agreement by dependency structure, source provenance, and contradiction pressure.",
-    claim:
-      "Agreement between claims should be weighted by dependency structure, evidence provenance, and contradiction pressure.",
-    setup:
-      "Represent claims, sources, dependencies, and contradictions in a CIG-style graph with confidence and revision metadata.",
-    result:
-      "The replication note defines how consensus can be tracked as graph structure rather than a simple vote count.",
-    limit:
-      "This remains a design/replication target until backed by a public CIG dataset and replayable contradiction tests.",
-    reproduce:
-      "Create a small claim/evidence graph, introduce conflicting evidence, and verify dependency-aware confidence updates.",
-    relatedRepo: {
-      label: "CIG",
-      href: "https://github.com/BoggersTheFish",
-    },
+    title: "Provenance consensus and dependency limits",
+    status: "replication",
+    summary: "Consensus note where provenance helps, but dependency-aware consensus remains the hard part.",
+    claim: "Agreement should be weighted by provenance and dependency structure, not treated as simple vote count.",
+    setup: "Claim/evidence graph with independent and dependent sources, contradictions, and provenance edges.",
+    result: "Provenance consensus improved over flat voting, while dependency-aware consensus remained the limitation.",
+    limit: "Needs public CIG dataset and replayable contradiction tests before strong benchmark claims.",
+    reproduce: "Create a small claim/evidence graph, introduce conflicting evidence, and verify dependency-aware confidence updates.",
+    relatedRepo: { label: "CIG", href: links.repos.cig },
+    relatedArtifacts: [],
+    confidence: "Medium",
     tags: ["cig", "provenance", "consensus"],
-    route: "/proof-bank#ts-023",
+    updatedAt: "2026-05-20",
+    route: route("TS-023"),
   },
 ];
 
-export const proofFilters = ["All", "Receipts", "Drafts", "Replication", "Tension", "CIG"];
+export const proofFilters = ["All", "receipt", "draft", "replication", "toy", "benchmark", "planned", "cig", "tensionlm", "ts-core"];
