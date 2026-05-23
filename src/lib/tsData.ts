@@ -4,16 +4,16 @@
  */
 
 export const TS_PHILOSOPHY = {
-  headline: "TS — Thinking System / Thinking Wave",
+  headline: "TS — inspectable reasoning traces",
   subheadline:
-    "Constraint graphs first. Language second. Evidence receipts close the loop.",
+    "Here is a small bounded reasoning system. Here are the traces. Here are the failures. Here is what changed from v3 to v10.",
   manifesto: [
-    "TS is the project language for stable clusters of constraints.",
-    "Everything that exists = stable clusters of constraints (nodes + edges)",
-    "Change = wave propagation through the graph",
-    "Complexity = pure emergence from local interactions",
-    "Truth = the most stable configuration the constraints allow",
-    "The framework itself is non-static and self-improving",
+    "TS-Reasoner is a bounded control loop, not a general intelligence claim.",
+    "Every run emits candidate chains, local tension, global tension, and rejected alternatives.",
+    "The useful artifact is the trace: what was accepted, what was repaired, and what failed.",
+    "TensionLM is tested as a candidate proposer inside the verifier loop.",
+    "CIG and TS-Codex-OS sit behind the trace contract as provenance and release-control infrastructure.",
+    "Progress is measured by receipts, deltas, and visible failure modes.",
   ],
   os: {
     name: "TS-OS",
@@ -91,12 +91,32 @@ export const REPOS = [
   {
     id: "boggerstheai",
     name: "BoggersTheAI",
-    description: "The live TS-OS instance. v0.5: 200+ tests, closed-loop QLoRA, multimodal (whisper/BLIP2/TTS), FastAPI dashboard.",
+    description: "The local TS-OS runtime: graph-wave reasoning, modular interfaces, tests, and an installable Python package.",
     url: "https://github.com/BoggersTheFish/BoggersTheAI",
     pinned: true,
     stability: 0.92,
-    wave: 12,
+    wave: 18,
     tags: ["core", "ai", "live"],
+  },
+  {
+    id: "boggersthecig",
+    name: "BoggersTheCIG",
+    description: "Contextual Information Generator workbench for TS context, memory, and local automation experiments.",
+    url: "https://github.com/BoggersTheFish/BoggersTheCIG",
+    pinned: true,
+    stability: 0.82,
+    wave: 18,
+    tags: ["context", "automation"],
+  },
+  {
+    id: "tensionlm",
+    name: "TensionLM",
+    description: "Public tension-model experiment with a reproducible CPU runner and verifier bridge receipts.",
+    url: "https://github.com/BoggersTheFish/TensionLM",
+    pinned: true,
+    stability: 0.78,
+    wave: 17,
+    tags: ["llm", "tension"],
   },
   {
     id: "goat-ts",
@@ -161,11 +181,11 @@ export const REPOS = [
   {
     id: "site",
     name: "boggersthefish-site",
-    description: "This site — a living TS instance built in Next.js 15. The website IS the system.",
+    description: "This site: public map for TS repos, model artifacts, and the current local-first automation surface.",
     url: "https://github.com/BoggersTheFish/boggersthefish-site",
     pinned: false,
-    stability: 0.6,
-    wave: 12,
+    stability: 0.7,
+    wave: 18,
     tags: ["site", "meta"],
   },
 ] as const;
@@ -178,6 +198,24 @@ export const SOCIAL_LINKS = [
     handle: "@BoggersTheFish",
     icon: "github",
     primary: true,
+  },
+  {
+    id: "huggingface",
+    label: "Hugging Face",
+    url: "https://huggingface.co/BoggersTheFish",
+    handle: "BoggersTheFish",
+    icon: "external",
+    primary: true,
+    note: "TensionLM and proof-ranker model artifacts",
+  },
+  {
+    id: "tensionlm-collection",
+    label: "TensionLM Models",
+    url: "https://huggingface.co/collections/BoggersTheFish/tensionlm-reasoning-line-6a0b3732559a93805439f8c2",
+    handle: "TensionLM Reasoning Line",
+    icon: "external",
+    primary: false,
+    note: "Current reasoning artifacts in order",
   },
   {
     id: "email",
@@ -230,12 +268,89 @@ export const SOCIAL_LINKS = [
   },
 ] as const;
 
+export const PUBLIC_RECEIPTS = [
+  {
+    id: "ts-reasoner-v1",
+    title: "TS-Reasoner v1.0.0 — stable trace contract",
+    claim: "The public JSON trace shape is stable enough for outside inspection and downstream tools.",
+    command: "python3 scripts/evaluate_v1_baseline.py",
+    artifact: "artifacts/v1_baseline_report.json",
+    limitation: "Stable trace contract only; not a broad reasoning benchmark or large model claim.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/v1_baseline_report.json",
+  },
+  {
+    id: "ts-reasoner-v09",
+    title: "TS-Reasoner v0.9.0 — proof-chain gap closed",
+    claim: "The existing small proof-chain failures now pass through explicit positive all/all bridge support.",
+    command: "python3 scripts/evaluate_v09_proof_chains.py",
+    artifact: "artifacts/v09_proof_chain_report.json",
+    limitation: "Only positive universal all/all chains are covered.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/v09_proof_chain_report.json",
+  },
+  {
+    id: "tensionlm-runner",
+    title: "TensionLM public CPU runner",
+    claim: "A public Hugging Face checkpoint can be downloaded, loaded, and sampled from a CPU script.",
+    command:
+      'python3 scripts/run_public_tensionlm.py --repo-id BoggersTheFish/TensionLM-Curriculum-13M --prompt "If all mammals are animals and all whales are mammals then"',
+    artifact: "scripts/run_public_tensionlm.py",
+    limitation: "Raw narrow checkpoint; output quality is limited and not instruction tuned.",
+    link: "https://github.com/BoggersTheFish/TensionLM/blob/main/scripts/run_public_tensionlm.py",
+  },
+  {
+    id: "tensionlm-bridge",
+    title: "TS-Reasoner + TensionLM bridge",
+    claim: "TensionLM proposes candidate text while TS-Reasoner verifies, repairs, ranks, or rejects it.",
+    command: "python3 scripts/run_tensionlm_bridge.py --tensionlm-path ../TensionLM",
+    artifact: "artifacts/tensionlm_bridge_smoke.json",
+    limitation: "Bridge receipt verifies the control path, not neural generation quality.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/docs/tensionlm_bridge.md",
+  },
+  {
+    id: "ts-codex-os",
+    title: "TS-Codex-OS release-control inspection",
+    claim: "A local project graph can emit status, next actions, and release-control receipts.",
+    command: "python3 scripts/demo_ts_codex_os.py",
+    artifact: "artifacts/release_receipt.json",
+    limitation: "Local heuristic project substrate; not an autonomous coding agent.",
+    link: "https://github.com/BoggersTheFish/TS-Codex-OS/blob/main/docs/receipts.md",
+  },
+  {
+    id: "technical-tour",
+    title: "20-minute technical tour",
+    claim: "The public route can be inspected through a short tour: start route, proof receipt, TensionLM run, and limits.",
+    command: "Read docs/technical_tour_20_min.md and run the listed commands",
+    artifact: "docs/technical_tour_20_min.md",
+    limitation: "Tour script only; the recording is separate from the runnable artifacts.",
+    link: "https://github.com/BoggersTheFish/TS-Start-Here/blob/main/docs/technical_tour_20_min.md",
+  },
+  {
+    id: "cig-provenance",
+    title: "CIG provenance / contradiction handling",
+    claim: "CIG stores claim provenance, confidence, bridge nodes, and heuristic contradiction signals.",
+    command: 'python src/main.py --input "Alice supports the claim that gravity affects light." --no-llm',
+    artifact: "memory/, graphs/, obsidian/TS-Knowledge-Vault/",
+    limitation: "Extraction and contradiction detection are heuristic and incomplete.",
+    link: "https://github.com/BoggersTheFish/BoggersTheCIG/blob/main/docs/FIRST_CONTACT.md",
+  },
+  {
+    id: "proof-bank",
+    title: "Proof-bank experiments",
+    claim: "The CIG/TS engine can generate an inspectable proof-bank report from a prebuilt graph.",
+    command: "python examples/generate_proof_report.py",
+    artifact: "docs/proof_bank/TS-012-prebuilt-concept-graph.md",
+    limitation: "Prebuilt deterministic graph; not a learned or formal proof system.",
+    link: "https://github.com/BoggersTheFish/cig-ts-engine/blob/main/docs/proof_bank/TS-012-prebuilt-concept-graph.md",
+  },
+] as const;
+
 export const NAV_LINKS = [
   { href: "/", label: "Home", section: "home" },
   { href: "/evidence", label: "Evidence", section: "evidence" },
   { href: "/about", label: "About", section: "about" },
   { href: "/ts-os", label: "TS-OS", section: "ts-os" },
   { href: "/projects", label: "Projects", section: "projects" },
+  { href: "/receipts", label: "Receipts", section: "receipts" },
   { href: "/lab", label: "Lab", section: "lab" },
   { href: "/waves", label: "Waves", section: "waves" },
   { href: "/network", label: "Network", section: "network" },
@@ -263,9 +378,9 @@ export const WAVE_LOG = [
 ] as const;
 
 export const SITE_META = {
-  title: "BoggersTheFish — Thinking System / Thinking Wave",
+  title: "BoggersTheFish — TS Reasoning Receipts",
   description:
-    "TS-native AI work by BoggersTheFish: graph-first reasoning substrates, TensionLM, verifier-backed proof loops, and evidence-bounded research receipts.",
+    "Small bounded TS reasoning systems with inspectable traces, tension receipts, controlled model comparisons, and visible failures.",
   url: "https://www.boggersthefish.com",
   author: "BoggersTheFish",
   twitter: "@BoggersTheFish",

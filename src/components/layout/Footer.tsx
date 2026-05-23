@@ -22,6 +22,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   twitter: Twitter,
   "at-sign": AtSign,
   crown: Crown,
+  external: ExternalLink,
 };
 
 export function Footer() {
@@ -78,7 +79,7 @@ export function Footer() {
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title={s.label + (s.note ? ` — ${s.note}` : "")}
+                    title={s.label + ("note" in s ? ` — ${s.note}` : "")}
                     className="w-8 h-8 rounded-md border border-white/10 flex items-center justify-center text-muted-foreground hover:text-ts-purple-light hover:border-ts-purple/40 hover:bg-ts-purple/10 transition-all duration-200"
                   >
                     <Icon className="w-3.5 h-3.5" />

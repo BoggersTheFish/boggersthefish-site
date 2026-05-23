@@ -1,16 +1,16 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 import { TS_PHILOSOPHY, WAVE_CYCLE_STEPS } from "@/lib/tsData";
 import { cn } from "@/lib/utils";
 
-const FADE_UP = {
+const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" },
   }),
 };
 
@@ -24,9 +24,6 @@ export function TSPhilosophy() {
       id="philosophy"
       className="ts-section relative overflow-hidden"
     >
-      {/* Background decoration */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-ts-purple/3 blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -38,14 +35,14 @@ export function TSPhilosophy() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ts-purple/30 bg-ts-purple/5 text-xs font-mono text-ts-purple mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-ts-purple" />
-            Core Philosophy
+            Public framing
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            The Operating Logic of Reality
+            Receipts Before Claims
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Not a framework you use — a framework that describes everything that
-            already exists, including itself.
+            The current route starts with a bounded reasoner, its trace schema,
+            known failures, and controlled model comparisons.
           </p>
         </motion.div>
 

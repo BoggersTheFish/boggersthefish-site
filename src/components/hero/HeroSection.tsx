@@ -1,19 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Github, Zap, Play, ChevronDown } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
+import { ChevronDown, FileSearch, FlaskConical, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TSForceGraph } from "@/components/graph/TSForceGraph";
 import { TS_PHILOSOPHY } from "@/lib/tsData";
 import { useWaveStore } from "@/store/waveStore";
 
-const FADE_UP = {
+const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
   }),
 };
 
@@ -68,7 +68,7 @@ export function HeroSection() {
         >
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-ts-purple/50 bg-black/70 backdrop-blur-sm text-xs font-mono text-ts-purple-light">
             <span className="w-1.5 h-1.5 rounded-full bg-ts-purple animate-ping-slow" />
-            Wave 17 — Evidence Cleanup
+            TS-Reasoner v1.0 — bounded trace receipts
             <span className="text-ts-purple/40">|</span>
             <span className="text-muted-foreground">claims tied to receipts</span>
           </div>
@@ -83,10 +83,10 @@ export function HeroSection() {
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 leading-none"
         >
           <span className="ts-gradient-text-animated block drop-shadow-[0_0_30px_rgba(160,32,240,0.5)]">
-            Thinking System
+            Small Bounded Reasoning
           </span>
           <span className="text-white/80 text-2xl sm:text-3xl md:text-4xl font-light tracking-widest block mt-3 uppercase">
-            / Thinking Wave
+            traces, failures, receipts
           </span>
         </motion.h1>
 
@@ -111,31 +111,29 @@ export function HeroSection() {
           className="flex flex-wrap items-center justify-center gap-3 mb-12 pointer-events-auto"
         >
           <Button size="lg" asChild>
-            <a href="#philosophy">
-              <Zap className="w-4 h-4" />
-              Enter the Graph
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" asChild>
-            <Link href="/evidence">
-              <Play className="w-4 h-4" />
-              See the Evidence
-            </Link>
-          </Button>
-          <Button size="lg" variant="secondary" asChild>
             <Link
-              href="https://github.com/BoggersTheFish"
+              href="https://github.com/BoggersTheFish/TS-Reasoner-v0#one-command-run"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="w-4 h-4" />
-              GitHub
+              <Terminal className="w-4 h-4" />
+              Run TS-Reasoner locally
             </Link>
           </Button>
-          <Button size="lg" variant="ghost" asChild>
-            <Link href="mailto:boggersthefish@gmail.com">
-              <ArrowRight className="w-4 h-4" />
-              Vibe-Code Me
+          <Button size="lg" variant="outline" asChild>
+            <Link
+              href="https://github.com/BoggersTheFish/TensionLM#experiment-1--tensionlm-vs-transformer-wikitext-2-11m-params"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FlaskConical className="w-4 h-4" />
+              Read the TensionLM controlled comparison
+            </Link>
+          </Button>
+          <Button size="lg" variant="secondary" asChild>
+            <Link href="/receipts">
+              <FileSearch className="w-4 h-4" />
+              Inspect a tension receipt
             </Link>
           </Button>
         </motion.div>
@@ -165,12 +163,12 @@ export function HeroSection() {
           <div className="w-px h-3 bg-ts-purple/20" />
           <div className="flex items-center gap-1.5">
             <span className="text-ts-purple/50">nodes</span>
-            <span className="text-ts-purple-light">19</span>
+            <span className="text-ts-purple-light">v1.0</span>
           </div>
           <div className="w-px h-3 bg-ts-purple/20" />
           <div className="flex items-center gap-1.5">
             <span className="text-ts-purple/50">tests</span>
-            <span className="text-green-400">200+ ✓</span>
+            <span className="text-green-400">34 pass</span>
           </div>
         </motion.div>
       </div>
