@@ -19,9 +19,7 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="https://github.com/BoggersTheFish/TS-Reasoner-v0#one-command-run"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/run-ts-reasoner"
               className="plaque-button"
             >
               <Terminal className="h-4 w-4" />

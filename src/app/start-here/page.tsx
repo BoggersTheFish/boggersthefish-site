@@ -29,10 +29,10 @@ const isNotItems = [
 ];
 
 const nextRoutes = [
+  { title: "10-minute repro", body: "Run TS-Reasoner, inspect one JSON trace, and follow the TensionLM bridge.", href: "/run-ts-reasoner", secondHref: "/receipts" },
   { title: "For researchers", body: "Start with research framing and proof-bank receipts.", href: "/research", secondHref: "/proof-bank" },
   { title: "For engineers", body: "Inspect project structure, source repos, and replay paths.", href: "/projects", secondHref: links.github },
   { title: "For funders/collaborators", body: "Read the grounded bio, roadmap, and contact route.", href: "/about", secondHref: "/contact" },
-  { title: "For casual readers", body: "Read the plain-language primer and field notes.", href: "/blog", secondHref: "/docs/primer" },
 ];
 
 export default function StartHerePage() {
