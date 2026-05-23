@@ -1,9 +1,9 @@
 export const site = {
   name: "BoggersTheFish",
   tagline: "Building Thinking Systems",
-  title: "Building the Thinking System.",
+  title: "Small bounded reasoning, inspected.",
   description:
-    "BoggersTheFish is an independent AI research archive exploring graph-based reasoning, tension dynamics, constraint propagation, provenance-aware knowledge graphs, and proof-ranking systems.",
+    "TS-Reasoner emits candidate chains, local and global tension, accepted or rejected alternatives, benchmark receipts, and visible failure modes.",
   url: "https://www.boggersthefish.com",
   email: "boggersthefish@gmail.com",
   github: "https://github.com/BoggersTheFish",
