@@ -54,7 +54,7 @@ export function HeroSection() {
       />
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-forest-dark to-transparent pointer-events-none" />
 
       {/* Hero content — layered above graph */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 py-32 pointer-events-none">
@@ -66,7 +66,7 @@ export function HeroSection() {
           variants={FADE_UP}
           className="flex items-center justify-center gap-2 mb-8 pointer-events-auto"
         >
-          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-ts-purple/50 bg-black/70 backdrop-blur-sm text-xs font-mono text-ts-purple-light">
+          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-ts-purple/50 bg-forest-dark/75 backdrop-blur-sm text-xs font-mono text-ts-purple-light">
             <span className="w-1.5 h-1.5 rounded-full bg-ts-purple animate-ping-slow" />
             TS-Reasoner v1.0 — bounded trace receipts
             <span className="text-ts-purple/40">|</span>
@@ -82,7 +82,7 @@ export function HeroSection() {
           variants={FADE_UP}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 leading-none"
         >
-          <span className="ts-gradient-text-animated block drop-shadow-[0_0_30px_rgba(160,32,240,0.5)]">
+          <span className="ts-gradient-text-animated block drop-shadow-[0_0_30px_rgba(184,148,77,0.45)]">
             Small Bounded Reasoning
           </span>
           <span className="text-white/80 text-2xl sm:text-3xl md:text-4xl font-light tracking-widest block mt-3 uppercase">
@@ -144,7 +144,7 @@ export function HeroSection() {
           initial="hidden"
           animate="show"
           variants={FADE_UP}
-          className="inline-flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-muted-foreground bg-black/60 backdrop-blur-sm border border-ts-purple/20 rounded-full px-6 py-2.5"
+          className="inline-flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-muted-foreground bg-forest-dark/70 backdrop-blur-sm border border-ts-purple/20 rounded-full px-6 py-2.5"
         >
           <div className="flex items-center gap-1.5">
             <span className="text-ts-purple/50">cycle</span>

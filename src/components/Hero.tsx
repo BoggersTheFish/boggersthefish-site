@@ -3,6 +3,13 @@ import { FileSearch, FlaskConical, Terminal } from "lucide-react";
 import { site } from "@/content/site";
 import { FieldGuideScene } from "@/components/FieldGuideScene";
 
+const reasonerCommand = `git clone https://github.com/BoggersTheFish/TS-Reasoner-v0
+cd TS-Reasoner-v0
+python3 inference.py \\
+  --question "If some artists are makers and all makers are creators, are all artists creators?" \\
+  --premise "Some artists are makers." \\
+  --premise "All makers are creators."`;
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-gold/25">
@@ -17,6 +24,12 @@ export function Hero() {
             Here is a small bounded reasoning system. Here are the traces. Here
             are the failures. Here is what changed from v3 to v10.
           </p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-cream/55">
+            TS means Thinking System Reasoner here, not time-series TS-Reasoner.
+          </p>
+          <pre className="mt-6 max-w-full overflow-x-auto rounded-md border border-gold/35 bg-forest-dark/85 px-4 py-3 text-xs leading-6 text-cream shadow-inner">
+            <code>{reasonerCommand}</code>
+          </pre>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/run-ts-reasoner"

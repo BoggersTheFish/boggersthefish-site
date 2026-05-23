@@ -27,7 +27,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-ts-purple/20 bg-black overflow-hidden">
+    <footer className="relative border-t border-ts-purple/20 bg-forest-dark overflow-hidden">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 ts-grid-bg opacity-30"

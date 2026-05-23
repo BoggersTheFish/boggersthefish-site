@@ -120,7 +120,7 @@ export function WaveProgress() {
                         ? "border-ts-purple bg-ts-purple/30 shadow-ts animate-pulse-glow"
                         : wave.status === "complete"
                         ? "border-green-500/60 bg-green-500/10"
-                        : "border-ts-purple/30 bg-black"
+                        : "border-ts-purple/30 bg-forest-dark"
                     )}
                   >
                     <Icon className={cn("w-2.5 h-2.5", config.color)} />

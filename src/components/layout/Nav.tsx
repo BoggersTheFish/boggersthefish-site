@@ -43,7 +43,7 @@ export function Nav() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
-            ? "bg-black/95 backdrop-blur-md border-b border-ts-purple/20 shadow-ts-card"
+            ? "bg-forest-dark/95 backdrop-blur-md border-b border-ts-purple/20 shadow-ts-card"
             : "bg-transparent"
         )}
       >
@@ -161,7 +161,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-16 left-0 right-0 z-40 bg-black/97 backdrop-blur-lg border-b border-ts-purple/20 shadow-ts-card"
+            className="fixed top-16 left-0 right-0 z-40 bg-forest-dark/95 backdrop-blur-lg border-b border-ts-purple/20 shadow-ts-card"
           >
             <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {NAV_LINKS.map((link) => {

@@ -124,7 +124,7 @@ export function TSMiniSim() {
 
   const getColor = (activation: number) => {
     const alpha = 0.3 + activation * 0.7;
-    return `rgba(160,32,240,${alpha})`;
+    return `rgba(184,148,77,${alpha})`;
   };
 
   return (
@@ -154,7 +154,7 @@ export function TSMiniSim() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 sm:divide-x sm:divide-ts-purple/20">
         {/* Graph SVG */}
-        <div className="p-4 bg-black/30">
+        <div className="p-4 bg-forest-dark/30">
           <svg
             viewBox={`0 0 ${svgWidth} ${svgHeight}`}
             className="w-full h-48"
@@ -173,7 +173,7 @@ export function TSMiniSim() {
                   y1={from.y}
                   x2={to.x}
                   y2={to.y}
-                  stroke={`rgba(160,32,240,${edge.weight * avgAct * 0.6})`}
+                  stroke={`rgba(184,148,77,${edge.weight * avgAct * 0.6})`}
                   strokeWidth={edge.weight * avgAct * 1.2}
                 />
               );
@@ -190,7 +190,7 @@ export function TSMiniSim() {
                     cx={node.x}
                     cy={node.y}
                     r={r * 2.5}
-                    fill={`rgba(160,32,240,${node.activation * 0.15})`}
+                    fill={`rgba(184,148,77,${node.activation * 0.15})`}
                   />
                   {/* Core */}
                   <circle
@@ -198,7 +198,7 @@ export function TSMiniSim() {
                     cy={node.y}
                     r={r}
                     fill={getColor(node.activation)}
-                    stroke={`rgba(192,96,255,${node.activation * 0.9})`}
+                    stroke={`rgba(239,225,184,${node.activation * 0.9})`}
                     strokeWidth={0.5}
                     style={{ cursor: "pointer", transition: "r 0.3s, fill 0.3s" }}
                     onClick={() => activateNode(node.id)}
@@ -210,7 +210,7 @@ export function TSMiniSim() {
                       cy={node.y}
                       r={r * 3}
                       fill="none"
-                      stroke="rgba(160,32,240,0.5)"
+                      stroke="rgba(184,148,77,0.5)"
                       strokeWidth={0.5}
                       style={{ animation: "propagate 1s ease-out forwards" }}
                     />
@@ -221,7 +221,7 @@ export function TSMiniSim() {
                     y={node.y + r + 4}
                     textAnchor="middle"
                     fontSize="4"
-                    fill={`rgba(192,96,255,${node.activation * 0.9})`}
+                    fill={`rgba(239,225,184,${node.activation * 0.9})`}
                     style={{ pointerEvents: "none", fontFamily: "monospace" }}
                   >
                     {node.label}

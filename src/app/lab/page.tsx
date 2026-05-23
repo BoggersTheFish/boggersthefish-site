@@ -116,7 +116,7 @@ function PushNodeForm() {
             placeholder="e.g. 'What if nodes could merge across sessions?'&#10;'Build a distributed version of UniversalLivingGraph'&#10;'Why does tension spike at node merges?'"
             className={cn(
               "w-full h-28 px-3 py-2 rounded-lg text-sm font-mono",
-              "bg-black border border-ts-purple/20 text-foreground",
+              "bg-forest-dark border border-ts-purple/20 text-foreground",
               "placeholder:text-muted-foreground/40",
               "focus:outline-none focus:border-ts-purple/50 focus:ring-1 focus:ring-ts-purple/30",
               "resize-none transition-colors"
@@ -168,7 +168,7 @@ function PushNodeForm() {
 
 export default function LabPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-forest-dark">
       {/* Hero */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 ts-grid-bg opacity-25" style={{ backgroundSize: "50px 50px" }} />

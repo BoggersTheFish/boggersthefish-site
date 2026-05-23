@@ -31,9 +31,9 @@ const STORY_NODES = [
   {
     era: "2020–2022",
     title: "First Code, First Systems",
-    color: "text-blue-400",
-    borderColor: "border-blue-500/30",
-    bg: "bg-blue-500/5",
+    color: "text-moss",
+    borderColor: "border-moss/30",
+    bg: "bg-moss/5",
     content:
       "Started coding. Immediately drawn to systems that model themselves — not just tools, but frameworks that describe the space they operate in. Began asking: what's the minimum structure needed for intelligence to emerge?",
     tags: ["self-taught", "systems thinking", "emergence", "Python"],
@@ -82,7 +82,7 @@ const STORY_NODES = [
 ];
 
 const FADE_UP: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 1, y: 0 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
@@ -95,18 +95,14 @@ export default function AboutPage() {
   const inView = useInView(timelineRef, { once: true, margin: "-100px" });
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-forest-dark">
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 ts-grid-bg opacity-30" style={{ backgroundSize: "50px 50px" }} />
         <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-ts-purple/5 blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={false}>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ts-purple/30 bg-ts-purple/5 text-xs font-mono text-ts-purple mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-ts-purple animate-pulse" />
               Creator Node — Active
@@ -226,7 +222,7 @@ export default function AboutPage() {
                     className={`absolute left-1.5 top-5 w-5 h-5 rounded-full border-2 flex items-center justify-center
                       ${node.isCurrent
                         ? "border-ts-purple bg-ts-purple/30 shadow-ts animate-pulse-glow"
-                        : "border-ts-purple/40 bg-black"
+                        : "border-ts-purple/40 bg-forest-dark"
                       }`}
                   >
                     <span className="w-2 h-2 rounded-full bg-ts-purple/70" />
@@ -283,8 +279,8 @@ export default function AboutPage() {
               className="ts-card p-5 block group"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center">
-                  <Youtube className="w-4 h-4 text-red-400" />
+                <div className="w-9 h-9 rounded-lg bg-sienna/10 border border-sienna/30 flex items-center justify-center">
+                  <Youtube className="w-4 h-4 text-sienna" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-white group-hover:text-ts-purple-light transition-colors">YouTube</div>
@@ -305,8 +301,8 @@ export default function AboutPage() {
               className="ts-card p-5 block group"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-lg bg-pink-500/10 border border-pink-500/30 flex items-center justify-center">
-                  <Instagram className="w-4 h-4 text-pink-400" />
+                <div className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/30 flex items-center justify-center">
+                  <Instagram className="w-4 h-4 text-gold" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-white group-hover:text-ts-purple-light transition-colors">Instagram</div>

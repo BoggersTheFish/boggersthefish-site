@@ -14,7 +14,10 @@ export const metadata: Metadata = pageMetadata({
 
 const cloneCommand = `git clone https://github.com/BoggersTheFish/TS-Reasoner-v0
 cd TS-Reasoner-v0
-python3 inference.py --question "If some artists are makers and all makers are creators, are all artists creators?" --premise "Some artists are makers." --premise "All makers are creators."`;
+python3 inference.py \\
+  --question "If some artists are makers and all makers are creators, are all artists creators?" \\
+  --premise "Some artists are makers." \\
+  --premise "All makers are creators."`;
 
 const traceFields = [
   "question",

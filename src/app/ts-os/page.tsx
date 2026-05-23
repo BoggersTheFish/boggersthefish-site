@@ -268,14 +268,14 @@ export default function TSOSPage() {
   const closeAll = () => setOpenSections(new Set());
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-forest-dark">
       {/* Hero */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 ts-grid-bg opacity-25" style={{ backgroundSize: "50px 50px" }} />
         <div className="absolute right-1/4 top-1/2 w-80 h-80 rounded-full bg-ts-purple/5 blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={false}>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ts-purple/30 bg-ts-purple/5 text-xs font-mono text-ts-purple mb-6">
               <Zap className="w-3 h-3" />
               TS-OS Architecture

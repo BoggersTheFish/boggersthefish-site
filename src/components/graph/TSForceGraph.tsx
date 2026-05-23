@@ -27,11 +27,11 @@ interface TSForceGraphProps {
 }
 
 const CLUSTER_COLORS: Record<string, [number, number, number]> = {
-  core: [160, 32, 240],
-  ai: [180, 60, 255],
-  projects: [140, 20, 220],
-  meta: [200, 80, 255],
-  visitor: [100, 200, 255],
+  core: [184, 148, 77],
+  ai: [79, 111, 57],
+  projects: [154, 79, 50],
+  meta: [239, 225, 184],
+  visitor: [217, 200, 158],
 };
 
 export function TSForceGraph({
@@ -112,7 +112,7 @@ export function TSForceGraph({
 
       // Core fill
       const coreGrad = ctx.createRadialGradient(x, y, 0, x, y, radius);
-      coreGrad.addColorStop(0, `rgba(${Math.min(r + 60, 255)},${Math.min(g + 60, 255)},255,${activation * 0.95})`);
+      coreGrad.addColorStop(0, `rgba(${Math.min(r + 60, 255)},${Math.min(g + 60, 255)},${Math.min(b + 60, 255)},${activation * 0.95})`);
       coreGrad.addColorStop(0.5, `rgba(${r},${g},${b},${activation * 0.85})`);
       coreGrad.addColorStop(1, `rgba(${Math.max(r - 20, 0)},${Math.max(g - 20, 0)},${Math.max(b - 20, 0)},${activation * 0.7})`);
       ctx.beginPath();
@@ -123,7 +123,7 @@ export function TSForceGraph({
       // Border
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(${Math.min(r + 80, 255)},${Math.min(g + 80, 255)},255,${activation * (isHovered ? 1 : 0.7)})`;
+      ctx.strokeStyle = `rgba(${Math.min(r + 80, 255)},${Math.min(g + 80, 255)},${Math.min(b + 80, 255)},${activation * (isHovered ? 1 : 0.7)})`;
       ctx.lineWidth = (isHovered ? 2 : 1) / globalScale;
       ctx.stroke();
 
@@ -132,7 +132,7 @@ export function TSForceGraph({
         const fontSize = Math.max(8, (isCore ? 12 : 10) / globalScale);
         ctx.font = `${isCore ? "bold " : ""}${fontSize}px "JetBrains Mono", monospace`;
         const labelAlpha = clamp(activation * 1.3, 0.3, 1);
-        ctx.fillStyle = `rgba(${Math.min(r + 80, 255)},${Math.min(g + 100, 255)},255,${labelAlpha})`;
+        ctx.fillStyle = `rgba(${Math.min(r + 80, 255)},${Math.min(g + 100, 255)},${Math.min(b + 80, 255)},${labelAlpha})`;
         ctx.textAlign = "center";
         ctx.textBaseline = "top";
 
@@ -178,8 +178,8 @@ export function TSForceGraph({
       ctx.lineTo(tgt.x, tgt.y ?? 0);
 
       const grad = ctx.createLinearGradient(src.x, src.y ?? 0, tgt.x, tgt.y ?? 0);
-      grad.addColorStop(0, `rgba(160,32,240,${alpha * (src.activation ?? 0.5)})`);
-      grad.addColorStop(1, `rgba(160,32,240,${alpha * (tgt.activation ?? 0.5)})`);
+      grad.addColorStop(0, `rgba(184,148,77,${alpha * (src.activation ?? 0.5)})`);
+      grad.addColorStop(1, `rgba(184,148,77,${alpha * (tgt.activation ?? 0.5)})`);
 
       ctx.strokeStyle = grad;
       ctx.lineWidth = link.strength * avgActivation * 1.5;
@@ -240,7 +240,7 @@ export function TSForceGraph({
           onEngineStop={handleEngineStop}
           linkDirectionalParticles={2}
           linkDirectionalParticleWidth={1.5}
-          linkDirectionalParticleColor={() => "rgba(160,32,240,0.8)"}
+          linkDirectionalParticleColor={() => "rgba(184,148,77,0.8)"}
           linkDirectionalParticleSpeed={particleSpeed}
           d3VelocityDecay={0.45}
           d3AlphaDecay={0.015}

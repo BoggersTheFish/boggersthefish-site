@@ -16,10 +16,10 @@ const ForceGraph2D = dynamic<Record<string, any>>(
 );
 
 const CATEGORY_COLORS: Record<string, [number, number, number]> = {
-  github: [160, 32, 240],
-  social: [100, 160, 255],
-  content: [255, 100, 100],
-  misc: [160, 200, 100],
+  github: [184, 148, 77],
+  social: [79, 111, 57],
+  content: [154, 79, 50],
+  misc: [217, 200, 158],
 };
 
 export function NetworkGraph() {
@@ -66,7 +66,7 @@ export function NetworkGraph() {
 
       // Core
       const coreGrad = ctx.createRadialGradient(x, y, 0, x, y, radius);
-      coreGrad.addColorStop(0, `rgba(${Math.min(r + 80, 255)},${Math.min(g + 80, 255)},255,${activation * 0.95})`);
+      coreGrad.addColorStop(0, `rgba(${Math.min(r + 80, 255)},${Math.min(g + 80, 255)},${Math.min(b + 80, 255)},${activation * 0.95})`);
       coreGrad.addColorStop(1, `rgba(${r},${g},${b},${activation * 0.7})`);
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
@@ -76,7 +76,7 @@ export function NetworkGraph() {
       // Border
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(${Math.min(r + 100, 255)},${Math.min(g + 100, 255)},255,${isHovered ? 1 : activation * 0.7})`;
+      ctx.strokeStyle = `rgba(${Math.min(r + 100, 255)},${Math.min(g + 100, 255)},${Math.min(b + 100, 255)},${isHovered ? 1 : activation * 0.7})`;
       ctx.lineWidth = (isHovered ? 2 : 1) / globalScale;
       ctx.stroke();
 
@@ -84,7 +84,7 @@ export function NetworkGraph() {
       const fontSize = Math.max(8, (isCenter ? 11 : 9) / globalScale);
       ctx.font = `${isCenter ? "bold " : ""}${fontSize}px "JetBrains Mono", monospace`;
       const labelAlpha = Math.min(activation * 1.5, 1);
-      ctx.fillStyle = `rgba(${Math.min(r + 100, 255)},${Math.min(g + 100, 255)},255,${labelAlpha})`;
+      ctx.fillStyle = `rgba(${Math.min(r + 100, 255)},${Math.min(g + 100, 255)},${Math.min(b + 100, 255)},${labelAlpha})`;
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
       ctx.shadowColor = "rgba(0,0,0,0.8)";
@@ -144,11 +144,11 @@ export function NetworkGraph() {
           nodePointerAreaPaint={nodePointerAreaPaint}
           onNodeClick={handleNodeClick}
           onNodeHover={handleNodeHover}
-          linkColor={() => "rgba(160,32,240,0.2)"}
+          linkColor={() => "rgba(184,148,77,0.2)"}
           linkWidth={(link: object) => (link as NetworkLink).strength * 1.5}
           linkDirectionalParticles={1}
           linkDirectionalParticleWidth={1}
-          linkDirectionalParticleColor={() => "rgba(160,32,240,0.7)"}
+          linkDirectionalParticleColor={() => "rgba(184,148,77,0.7)"}
           linkDirectionalParticleSpeed={0.005}
           d3VelocityDecay={0.4}
           d3AlphaDecay={0.015}

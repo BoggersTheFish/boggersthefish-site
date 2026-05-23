@@ -3,6 +3,8 @@ import { blogPosts } from "@/content/blog";
 import { docs } from "@/content/docs";
 import { site } from "@/content/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
   const now = new Date("2026-05-20");

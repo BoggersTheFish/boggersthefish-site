@@ -189,6 +189,36 @@
     @apply min-h-full;
   }
 
+  .ts-card {
+    @apply rounded-md border border-gold/25 bg-forest/75 text-cream shadow-scene backdrop-blur-sm transition duration-200;
+  }
+
+  .ts-card:hover {
+    @apply border-gold/45;
+  }
+
+  .ts-gradient-text,
+  .ts-gradient-text-animated {
+    @apply bg-gradient-to-r from-parchment-light via-gold to-moss bg-clip-text text-transparent;
+  }
+
+  .ts-text-glow {
+    text-shadow:
+      0 0 10px rgba(184, 148, 77, 0.45),
+      0 0 24px rgba(79, 111, 57, 0.24);
+  }
+
+  .ts-grid-bg {
+    background-image:
+      linear-gradient(rgba(184, 148, 77, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(239, 225, 184, 0.035) 1px, transparent 1px);
+  }
+
+  .ts-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184, 148, 77, 0.35), transparent);
+  }
+
   .page-intro {
     @apply mb-10 max-w-3xl;
   }

@@ -23,12 +23,12 @@ export function Toaster() {
               "animate-slide-in-right",
               "backdrop-blur-md",
               t.variant === "wave"
-                ? "bg-black/90 border-ts-purple/50 shadow-ts"
+                ? "bg-forest-dark/90 border-ts-purple/50 shadow-ts"
                 : t.variant === "success"
-                ? "bg-black/90 border-green-500/40"
+                ? "bg-forest-dark/90 border-green-500/40"
                 : t.variant === "warning"
-                ? "bg-black/90 border-yellow-500/40"
-                : "bg-black/90 border-ts-purple/30"
+                ? "bg-forest-dark/90 border-yellow-500/40"
+                : "bg-forest-dark/90 border-ts-purple/30"
             )}
           >
             <div className="flex items-start gap-3">

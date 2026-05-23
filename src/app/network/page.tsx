@@ -18,9 +18,9 @@ import { Badge } from "@/components/ui/badge";
 
 const CATEGORY_LABELS: Record<string, { label: string; color: string }> = {
   github: { label: "GitHub", color: "text-ts-purple-light" },
-  social: { label: "Social", color: "text-blue-400" },
-  content: { label: "Content", color: "text-red-400" },
-  misc: { label: "Misc", color: "text-green-400" },
+  social: { label: "Social", color: "text-moss" },
+  content: { label: "Content", color: "text-sienna" },
+  misc: { label: "Misc", color: "text-parchment-light" },
 };
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -36,12 +36,12 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export default function NetworkPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-forest-dark">
       {/* Hero */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 ts-grid-bg opacity-25" style={{ backgroundSize: "50px 50px" }} />
         <div className="relative max-w-6xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={false}>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ts-purple/30 bg-ts-purple/5 text-xs font-mono text-ts-purple mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-ts-purple animate-ping-slow" />
               Network — Connection Nodes
@@ -93,7 +93,7 @@ export default function NetworkPage() {
             {/* Social */}
             <div>
               <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-blue-400" />
+                <span className="w-2 h-2 rounded-full bg-moss" />
                 Social
               </h2>
               <div className="space-y-2">
@@ -154,7 +154,7 @@ export default function NetworkPage() {
             {/* Content */}
             <div>
               <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-red-400" />
+                <span className="w-2 h-2 rounded-full bg-sienna" />
                 Content
               </h2>
               <div className="space-y-3">
@@ -166,7 +166,7 @@ export default function NetworkPage() {
                   className="block ts-card p-4 group"
                 >
                   <div className="flex items-center gap-3 mb-2">
-                    <Youtube className="w-5 h-5 text-red-400 flex-shrink-0" />
+                    <Youtube className="w-5 h-5 text-sienna flex-shrink-0" />
                     <span className="text-sm font-semibold text-white group-hover:text-ts-purple-light transition-colors">
                       @BoggersTheFish
                     </span>

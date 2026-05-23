@@ -27,41 +27,41 @@ const config: Config = {
         cream: "#f3ead0",
         sienna: "#9a4f32",
         "ts-purple": {
-          DEFAULT: "#A020F0",
-          light: "#C060FF",
-          dark: "#8B00FF",
-          dim: "#6600CC",
-          faint: "rgba(160, 32, 240, 0.1)",
+          DEFAULT: "#b8944d",
+          light: "#efe1b8",
+          dark: "#4f6f39",
+          dim: "#5a3d22",
+          faint: "rgba(184, 148, 77, 0.1)",
         },
-        border: "rgba(160, 32, 240, 0.2)",
-        background: "#000000",
-        foreground: "#F0F0F0",
-        muted: "#0D0D0D",
-        "muted-foreground": "#666666",
-        card: "#080808",
-        "card-foreground": "#F0F0F0",
-        accent: "#A020F0",
-        "accent-foreground": "#FFFFFF",
-        destructive: "#FF3333",
-        ring: "#A020F0",
-        input: "#1A1A1A",
-        popover: "#080808",
-        "popover-foreground": "#F0F0F0",
-        primary: "#A020F0",
-        "primary-foreground": "#FFFFFF",
-        secondary: "#1A1A1A",
-        "secondary-foreground": "#F0F0F0",
+        border: "rgba(184, 148, 77, 0.24)",
+        background: "#102015",
+        foreground: "#f3ead0",
+        muted: "#162719",
+        "muted-foreground": "rgba(243, 234, 208, 0.58)",
+        card: "#162719",
+        "card-foreground": "#f3ead0",
+        accent: "#b8944d",
+        "accent-foreground": "#1f1a12",
+        destructive: "#9a4f32",
+        ring: "#b8944d",
+        input: "#20351f",
+        popover: "#162719",
+        "popover-foreground": "#f3ead0",
+        primary: "#b8944d",
+        "primary-foreground": "#1f1a12",
+        secondary: "#20351f",
+        "secondary-foreground": "#f3ead0",
       },
       backgroundImage: {
         "grid-purple":
-          "linear-gradient(rgba(160, 32, 240, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(160, 32, 240, 0.04) 1px, transparent 1px)",
+          "linear-gradient(rgba(184, 148, 77, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 225, 184, 0.035) 1px, transparent 1px)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-ts":
-          "linear-gradient(135deg, #A020F0 0%, #8B00FF 50%, #6600CC 100%)",
+          "linear-gradient(135deg, #b8944d 0%, #4f6f39 52%, #102015 100%)",
         "gradient-ts-text":
-          "linear-gradient(135deg, #C060FF 0%, #A020F0 50%, #8B00FF 100%)",
+          "linear-gradient(135deg, #efe1b8 0%, #b8944d 48%, #4f6f39 100%)",
         "gradient-fade-up":
-          "linear-gradient(to top, #000000 0%, transparent 100%)",
+          "linear-gradient(to top, #102015 0%, transparent 100%)",
       },
       backgroundSize: {
         grid: "50px 50px",
@@ -96,11 +96,11 @@ const config: Config = {
         "pulse-glow": {
           "0%, 100%": {
             boxShadow:
-              "0 0 5px #A020F0, 0 0 10px #A020F0, 0 0 20px rgba(160, 32, 240, 0.3)",
+              "0 0 5px #b8944d, 0 0 10px rgba(184, 148, 77, 0.55), 0 0 20px rgba(79, 111, 57, 0.3)",
           },
           "50%": {
             boxShadow:
-              "0 0 15px #A020F0, 0 0 30px #A020F0, 0 0 60px rgba(160, 32, 240, 0.5)",
+              "0 0 15px rgba(184, 148, 77, 0.9), 0 0 30px rgba(79, 111, 57, 0.7), 0 0 60px rgba(184, 148, 77, 0.35)",
           },
         },
         propagate: {
@@ -123,16 +123,16 @@ const config: Config = {
         },
         "text-glow": {
           "0%, 100%": {
-            textShadow: "0 0 10px rgba(160, 32, 240, 0.5)",
+            textShadow: "0 0 10px rgba(184, 148, 77, 0.45)",
           },
           "50%": {
             textShadow:
-              "0 0 20px rgba(160, 32, 240, 0.8), 0 0 40px rgba(160, 32, 240, 0.4)",
+              "0 0 20px rgba(239, 225, 184, 0.55), 0 0 40px rgba(79, 111, 57, 0.35)",
           },
         },
         "border-glow": {
-          "0%, 100%": { borderColor: "rgba(160, 32, 240, 0.3)" },
-          "50%": { borderColor: "rgba(160, 32, 240, 0.8)" },
+          "0%, 100%": { borderColor: "rgba(184, 148, 77, 0.3)" },
+          "50%": { borderColor: "rgba(184, 148, 77, 0.8)" },
         },
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(24px)" },
@@ -148,14 +148,14 @@ const config: Config = {
         },
       },
       boxShadow: {
-        ts: "0 0 10px #A020F0, 0 0 20px rgba(160, 32, 240, 0.4)",
+        ts: "0 0 10px rgba(184, 148, 77, 0.65), 0 0 20px rgba(79, 111, 57, 0.36)",
         "ts-lg":
-          "0 0 20px #A020F0, 0 0 40px rgba(160, 32, 240, 0.5), 0 0 80px rgba(160, 32, 240, 0.2)",
-        "ts-inner": "inset 0 0 20px rgba(160, 32, 240, 0.2)",
+          "0 0 20px rgba(184, 148, 77, 0.8), 0 0 40px rgba(79, 111, 57, 0.45), 0 0 80px rgba(184, 148, 77, 0.16)",
+        "ts-inner": "inset 0 0 20px rgba(184, 148, 77, 0.18)",
         "ts-card":
-          "0 0 0 1px rgba(160, 32, 240, 0.15), 0 4px 20px rgba(0, 0, 0, 0.8)",
+          "0 0 0 1px rgba(184, 148, 77, 0.18), 0 4px 20px rgba(3, 10, 6, 0.55)",
         "ts-card-hover":
-          "0 0 0 1px rgba(160, 32, 240, 0.4), 0 8px 40px rgba(0, 0, 0, 0.9), 0 0 30px rgba(160, 32, 240, 0.15)",
+          "0 0 0 1px rgba(184, 148, 77, 0.4), 0 8px 40px rgba(3, 10, 6, 0.65), 0 0 30px rgba(79, 111, 57, 0.18)",
       },
       borderRadius: {
         lg: "var(--radius)",

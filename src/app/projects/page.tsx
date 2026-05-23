@@ -111,7 +111,7 @@ export default async function ProjectsPage() {
   const rest = repos.filter((r) => !r.pinned);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-forest-dark">
       {/* Hero */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 ts-grid-bg opacity-25" style={{ backgroundSize: "50px 50px" }} />
