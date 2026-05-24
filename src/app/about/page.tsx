@@ -15,68 +15,107 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SOCIAL_LINKS, SITE_META } from "@/lib/tsData";
+import { SOCIAL_LINKS } from "@/lib/tsData";
 
 const STORY_NODES = [
   {
-    era: "2012–2018",
-    title: "Minecraft / OG Network",
+    era: "Early background",
+    title: "Minecraft servers and systems thinking",
     color: "text-green-400",
     borderColor: "border-green-500/30",
     bg: "bg-green-500/5",
     content:
-      "Started building on the OG Minecraft Network. Survival constraint graphs — every base was a resource allocation problem. Every griefing defense was adversarial optimization. Didn't know it yet, but I was already thinking in nodes and edges.",
-    tags: ["Minecraft", "OG Network", "constraint graphs", "survival optimization"],
+      "Personal background only: Minecraft servers, base-building, resource constraints, and adversarial systems shaped the way I think about graphs and pressure. No exact public date is claimed here.",
+    tags: ["personal background", "approximate", "not GitHub-dated"],
+    source: "Approximate personal background",
   },
   {
-    era: "2020–2022",
-    title: "First Code, First Systems",
-    color: "text-moss",
-    borderColor: "border-moss/30",
-    bg: "bg-moss/5",
-    content:
-      "Started coding. Immediately drawn to systems that model themselves — not just tools, but frameworks that describe the space they operate in. Began asking: what's the minimum structure needed for intelligence to emerge?",
-    tags: ["self-taught", "systems thinking", "emergence", "Python"],
-  },
-  {
-    era: "2023",
-    title: "TS-OS Alpha — The Idea Crystallizes",
-    color: "text-yellow-400",
-    borderColor: "border-yellow-500/30",
-    bg: "bg-yellow-500/5",
-    content:
-      "First working TS prototype: a graph where nodes propagate activation like neurons, but with constraint-satisfaction instead of backprop. Realized this was something different — not ML in the traditional sense, but a general-purpose thinking substrate. BoggersTheOS-Alpha shipped.",
-    tags: ["TS-OS Alpha", "constraint satisfaction", "graph theory", "prototype"],
-  },
-  {
-    era: "2024",
-    title: "The Architecture Emerges",
-    color: "text-orange-400",
-    borderColor: "border-orange-500/30",
-    bg: "bg-orange-500/5",
-    content:
-      "UniversalLivingGraph. WaveCycleRunner. Self-improvement loop (trace → QLoRA → hot-swap). GOAT-TS theory consolidated. TS-Core extracted as a library. BoggersTheMind memory layer. The system was eating itself and growing. Waves 2–10 shipped across the year.",
-    tags: ["UniversalLivingGraph", "QLoRA", "GOAT-TS", "Waves 2-10"],
-  },
-  {
-    era: "2025",
-    title: "Multimodal + Observability",
+    era: "2026-03-09",
+    title: "GOAT-TS public theory repo opened",
     color: "text-ts-purple-light",
     borderColor: "border-ts-purple/40",
     bg: "bg-ts-purple/5",
     content:
-      "Added faster-whisper, BLIP2, Piper TTS. Built the FastAPI dashboard (Cytoscape.js + Chart.js + Rich TUI). The system could now hear, see, and speak. BoggersThePulse as the real-time event layer. Full observability stack.",
-    tags: ["faster-whisper", "BLIP2", "Piper TTS", "FastAPI", "Wave 11"],
+      "The first public repo in this timeline is GOAT-TS. This date is the GitHub repository creation date, so it is evidence for the public branch, not a claim about when the idea began.",
+    tags: ["GOAT-TS", "repo created_at", "historical branch"],
+    source: "BoggersTheFish/GOAT-TS repo.created_at",
   },
   {
-    era: "March 2026",
-    title: "Wave 12 — Pages Island LIVE",
+    era: "2026-03-16",
+    title: "BoggersTheCIG public provenance graph repo opened",
+    color: "text-ts-purple-light",
+    borderColor: "border-ts-purple/40",
+    bg: "bg-ts-purple/5",
+    content:
+      "CIG is the public concept/provenance graph branch: confidence-weighted claims, contradiction tracking, and inspectable knowledge memory.",
+    tags: ["CIG", "repo created_at", "provenance graph"],
+    source: "BoggersTheFish/BoggersTheCIG repo.created_at",
+  },
+  {
+    era: "2026-03-20",
+    title: "TS-Core and BoggersTheAI public branches opened",
+    color: "text-ts-purple-light",
+    borderColor: "border-ts-purple/40",
+    bg: "bg-ts-purple/5",
+    content:
+      "GitHub records TS-Core and BoggersTheAI as public repos on this date. Treat these as historical/experimental public branches, not as proof of a mature runtime.",
+    tags: ["TS-Core", "BoggersTheAI", "repo created_at"],
+    source: "BoggersTheFish/TS-Core and BoggersTheFish/BoggersTheAI repo.created_at",
+  },
+  {
+    era: "2026-04-10",
+    title: "TensionLM experiment repo opened",
+    color: "text-ts-purple-light",
+    borderColor: "border-ts-purple/40",
+    bg: "bg-ts-purple/5",
+    content:
+      "TensionLM became a public experiment branch for sigmoid pairwise tension attention and controlled comparison work.",
+    tags: ["TensionLM", "repo created_at", "experiment"],
+    source: "BoggersTheFish/TensionLM repo.created_at",
+  },
+  {
+    era: "2026-05-20",
+    title: "TS-Reasoner v0.1.0 and TS-Codex-OS v0.1.0 released",
     color: "text-ts-purple",
     borderColor: "border-ts-purple/60",
     bg: "bg-ts-purple/10",
     content:
-      "BoggersTheAI v0.5: 200+ tests passing, closed-loop QLoRA fine-tuning, full multimodal stack, 30-second wave cycle running continuously. THIS SITE is a live TS instance — built to embody the system, not just document it. Wave 12 is live.",
-    tags: ["v0.5", "200+ tests", "QLoRA", "multimodal", "THIS SITE"],
+      "GitHub releases verify the first TS-Reasoner public release and the TS-Codex-OS v0.1.0 local project substrate release on this date.",
+    tags: ["TS-Reasoner", "TS-Codex-OS", "GitHub releases"],
+    source: "release.published_at for v0.1.0 in both repos",
+  },
+  {
+    era: "2026-05-23",
+    title: "TS-Reasoner release ladder and v1 foundation",
+    color: "text-ts-purple",
+    borderColor: "border-ts-purple/60",
+    bg: "bg-ts-purple/10",
+    content:
+      "TS-Reasoner v0.9.0 was published as a proof-chain release, and the v1 foundation commit landed later the same day. This is the public foundation for inspectable traces, benchmark receipts, and explicit limitations.",
+    tags: ["v0.9.0 release", "v1 commit", "trace contract"],
+    source: "TS-Reasoner-v0 release.published_at and commit history",
+  },
+  {
+    era: "2026-05-23",
+    title: "TS-Start-Here ecosystem map",
+    color: "text-ts-purple",
+    borderColor: "border-ts-purple/60",
+    bg: "bg-ts-purple/10",
+    content:
+      "TS-Start-Here recorded the public route for the stack: what exists, what is toy-scope, how the repositories connect, and where the sober first-contact path begins.",
+    tags: ["TS-Start-Here", "ecosystem map", "commit verified"],
+    source: "TS-Start-Here commit 27a249457827",
+  },
+  {
+    era: "2026-05-23",
+    title: "Current focus: golden path and trace receipts",
+    color: "text-ts-purple",
+    borderColor: "border-ts-purple/60",
+    bg: "bg-ts-purple/10",
+    content:
+      "This site is the public routing layer for the TS stack: runnable demos, receipts, docs, repos, and limitations. The current focus is TS-Reasoner stable traces, the TensionLM bridge, Proof Bank receipts, and a reproducible website golden path.",
+    tags: ["website route", "receipts", "limitations"],
+    source: "boggersthefish-site commit 43068359b2c1",
     isCurrent: true,
   },
 ];
@@ -155,14 +194,15 @@ export default function AboutPage() {
                   <div className="text-muted-foreground text-sm">Solo developer · Systems architect</div>
                   <div className="flex items-center gap-1 mt-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-xs text-green-400 font-mono">Wave 12 — Active</span>
+                    <span className="text-xs text-green-400 font-mono">Public TS stack — active</span>
                   </div>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Building TS-OS — a cognitive operating system based on constraint graphs,
-                wave propagation, and self-improvement loops. The same mathematics that
-                describes neural activity, market dynamics, and physics.
+                Building an inspectable TS stack around constraint graphs, tension
+                telemetry, reasoning traces, provenance, and small reproducible demos.
+                This site is the public routing layer for runnable paths, receipts,
+                docs, repos, and limitations.
               </p>
             </div>
 
@@ -200,7 +240,7 @@ export default function AboutPage() {
               Evolution Arc
             </div>
             <h2 className="text-3xl font-bold text-white">
-              From Minecraft to Cognitive OS
+              From background to verified public milestones
             </h2>
           </div>
 
@@ -243,6 +283,9 @@ export default function AboutPage() {
                     <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                       {node.content}
                     </p>
+                    <p className="mb-3 text-[10px] font-mono uppercase tracking-widest text-ts-purple/70">
+                      Source: {node.source}
+                    </p>
                     <div className="flex flex-wrap gap-1.5">
                       {node.tags.map((tag) => (
                         <Badge key={tag} variant="outline" className="text-[10px]">
@@ -255,6 +298,10 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+          <p className="mt-8 rounded-md border border-ts-purple/25 bg-ts-purple/5 px-4 py-3 text-xs leading-6 text-muted-foreground">
+            Exact public milestone dates are verified from GitHub releases or commit
+            history. Personal background entries are intentionally approximate.
+          </p>
         </div>
       </section>
 

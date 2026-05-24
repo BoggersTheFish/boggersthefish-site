@@ -1,0 +1,566 @@
+{
+  "generatedAt": "2026-05-24T14:53:25.534Z",
+  "timeline": [
+    {
+      "title": "Early background: Minecraft servers and systems thinking",
+      "displayedDate": "Early background",
+      "repo": null,
+      "sourceType": "approximate personal background",
+      "sourceId": "not externally dated",
+      "githubUrl": null,
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.702Z",
+      "notes": "Personal background entry; intentionally approximate and not treated as a public milestone."
+    },
+    {
+      "title": "GOAT-TS public theory repo opened",
+      "displayedDate": "2026-03-09",
+      "repo": "BoggersTheFish/GOAT-TS",
+      "sourceType": "repo created_at",
+      "sourceId": "created_at",
+      "githubUrl": "https://github.com/BoggersTheFish/GOAT-TS",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.702Z",
+      "notes": "Repo creation date only; not a claim that project work began on this date. fetched=2026-03-09"
+    },
+    {
+      "title": "BoggersTheCIG provenance graph repo opened",
+      "displayedDate": "2026-03-16",
+      "repo": "BoggersTheFish/BoggersTheCIG",
+      "sourceType": "repo created_at",
+      "sourceId": "created_at",
+      "githubUrl": "https://github.com/BoggersTheFish/BoggersTheCIG",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.759Z",
+      "notes": "Repo creation date for the public CIG branch. fetched=2026-03-16"
+    },
+    {
+      "title": "TS-Core graph dynamics kernel repo opened",
+      "displayedDate": "2026-03-20",
+      "repo": "BoggersTheFish/TS-Core",
+      "sourceType": "repo created_at",
+      "sourceId": "created_at",
+      "githubUrl": "https://github.com/BoggersTheFish/TS-Core",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.761Z",
+      "notes": "Repo creation date for the public TS-Core branch. fetched=2026-03-20"
+    },
+    {
+      "title": "BoggersTheAI runtime repo opened",
+      "displayedDate": "2026-03-20",
+      "repo": "BoggersTheFish/BoggersTheAI",
+      "sourceType": "repo created_at",
+      "sourceId": "created_at",
+      "githubUrl": "https://github.com/BoggersTheFish/BoggersTheAI",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.762Z",
+      "notes": "Repo creation date for the public runtime branch. fetched=2026-03-20"
+    },
+    {
+      "title": "TensionLM experiment repo opened",
+      "displayedDate": "2026-04-10",
+      "repo": "BoggersTheFish/TensionLM",
+      "sourceType": "repo created_at",
+      "sourceId": "created_at",
+      "githubUrl": "https://github.com/BoggersTheFish/TensionLM",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.764Z",
+      "notes": "Repo creation date for public tension-attention experiments. fetched=2026-04-10"
+    },
+    {
+      "title": "TS-Reasoner v0.1.0 public release",
+      "displayedDate": "2026-05-20",
+      "repo": "BoggersTheFish/TS-Reasoner-v0",
+      "sourceType": "release",
+      "sourceId": "v0.1.0",
+      "githubUrl": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.1.0",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.765Z",
+      "notes": "Uses release.published_at. fetched=2026-05-20"
+    },
+    {
+      "title": "TS-Codex-OS v0.1.0 release",
+      "displayedDate": "2026-05-20",
+      "repo": "BoggersTheFish/TS-Codex-OS",
+      "sourceType": "release",
+      "sourceId": "v0.1.0",
+      "githubUrl": "https://github.com/BoggersTheFish/TS-Codex-OS/releases/tag/v0.1.0",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.767Z",
+      "notes": "Uses release.published_at. fetched=2026-05-20"
+    },
+    {
+      "title": "TS-Reasoner v0.9.0 proof-chain release",
+      "displayedDate": "2026-05-23",
+      "repo": "BoggersTheFish/TS-Reasoner-v0",
+      "sourceType": "release",
+      "sourceId": "v0.9.0",
+      "githubUrl": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.9.0",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.768Z",
+      "notes": "Uses release.published_at for the public release ladder. fetched=2026-05-23"
+    },
+    {
+      "title": "TS-Reasoner v1 foundation committed",
+      "displayedDate": "2026-05-23",
+      "repo": "BoggersTheFish/TS-Reasoner-v0",
+      "sourceType": "commit",
+      "sourceId": "677d94898f41",
+      "githubUrl": "https://github.com/BoggersTheFish/TS-Reasoner-v0/commit/677d94898f41691c9a9264597b0625f1d309efec",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.769Z",
+      "notes": "Uses commit.committer.date for the v1 foundation commit. fetched=2026-05-23"
+    },
+    {
+      "title": "TS-Start-Here public route committed",
+      "displayedDate": "2026-05-23",
+      "repo": "BoggersTheFish/TS-Start-Here",
+      "sourceType": "commit",
+      "sourceId": "27a249457827",
+      "githubUrl": "https://github.com/BoggersTheFish/TS-Start-Here/commit/27a249457827d13438ba4112e57d6b81a74ac3d7",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.771Z",
+      "notes": "Uses commit.committer.date for the public ecosystem map route. fetched=2026-05-23"
+    },
+    {
+      "title": "Website golden path committed",
+      "displayedDate": "2026-05-23",
+      "repo": "BoggersTheFish/boggersthefish-site",
+      "sourceType": "commit",
+      "sourceId": "43068359b2c1",
+      "githubUrl": "https://github.com/BoggersTheFish/boggersthefish-site/commit/43068359b2c12196f68bf0aea00e1fe5e80b0807",
+      "verified": true,
+      "fetchedAt": "2026-05-24T14:53:22.773Z",
+      "notes": "Uses commit.committer.date for the homepage-to-run-route golden path. fetched=2026-05-23"
+    }
+  ],
+  "repositoryAudit": [
+    {
+      "repo": "BoggersTheFish/TS-Reasoner-v0",
+      "createdAt": "2026-05-20T13:05:38Z",
+      "pushedAt": "2026-05-23T14:57:00Z",
+      "defaultBranch": "main",
+      "releases": [
+        {
+          "tagName": "v0.9.0",
+          "name": "TS-Reasoner v0.9.0 proof-chain support",
+          "publishedAt": "2026-05-23T10:11:37Z",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.9.0"
+        },
+        {
+          "tagName": "v0.8.0",
+          "name": "TS-Reasoner v0.8.0 - External Benchmark Harness",
+          "publishedAt": "2026-05-22T09:55:17Z",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.8.0"
+        },
+        {
+          "tagName": "v0.7.0",
+          "name": "TS-Reasoner v0.7.0 - Bounded Tension-Control Loop",
+          "publishedAt": "2026-05-22T09:37:08Z",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.7.0"
+        },
+        {
+          "tagName": "v0.3.0",
+          "name": "TS-Reasoner v0.3.0 - Learned Candidate Proposal",
+          "publishedAt": "2026-05-20T14:37:05Z",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.3.0"
+        },
+        {
+          "tagName": "v0.2.0",
+          "name": "TS-Reasoner v0.2.0 - Learned Tension Ranker",
+          "publishedAt": "2026-05-20T13:28:25Z",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.2.0"
+        },
+        {
+          "tagName": "v0.1.0",
+          "name": "TS-Reasoner-v0 v0.1.0",
+          "publishedAt": "2026-05-20T13:05:49Z",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v0.1.0"
+        }
+      ],
+      "tags": [
+        {
+          "name": "v0.9.0",
+          "sha": "b277ad2f8a11c0b390724f08fa1d876c14a9d5e1"
+        },
+        {
+          "name": "v0.8.0",
+          "sha": "e1918340a71417fb74c9811836b575803dce3349"
+        },
+        {
+          "name": "v0.7.0",
+          "sha": "e65ae1539c51d49a8d25953d8b90acfaaacbcb31"
+        },
+        {
+          "name": "v0.3.0",
+          "sha": "8e26cb69e81cd3e9162218bb7398439f4ca0fd31"
+        },
+        {
+          "name": "v0.2.0",
+          "sha": "729336094e3267382163143accd386547b915571"
+        },
+        {
+          "name": "v0.1.0",
+          "sha": "55f156a4402e19475f121254134b6ec47da09e52"
+        }
+      ],
+      "recentCommits": [
+        {
+          "sha": "677d94898f41691c9a9264597b0625f1d309efec",
+          "date": "2026-05-23T14:56:55Z",
+          "message": "Ship TS-Reasoner v1 foundation",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/commit/677d94898f41691c9a9264597b0625f1d309efec"
+        },
+        {
+          "sha": "b277ad2f8a11c0b390724f08fa1d876c14a9d5e1",
+          "date": "2026-05-23T10:07:28Z",
+          "message": "Ship v0.9 proof-chain receipt",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/commit/b277ad2f8a11c0b390724f08fa1d876c14a9d5e1"
+        },
+        {
+          "sha": "e1918340a71417fb74c9811836b575803dce3349",
+          "date": "2026-05-22T09:54:41Z",
+          "message": "Add v0.8 external benchmark harness",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/commit/e1918340a71417fb74c9811836b575803dce3349"
+        },
+        {
+          "sha": "e65ae1539c51d49a8d25953d8b90acfaaacbcb31",
+          "date": "2026-05-22T09:33:15Z",
+          "message": "Publish TS-Reasoner v0.7 control loop",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/commit/e65ae1539c51d49a8d25953d8b90acfaaacbcb31"
+        },
+        {
+          "sha": "8e26cb69e81cd3e9162218bb7398439f4ca0fd31",
+          "date": "2026-05-20T14:36:36Z",
+          "message": "Close v0.3 release-control receipts",
+          "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0/commit/8e26cb69e81cd3e9162218bb7398439f4ca0fd31"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/TS-Codex-OS",
+      "createdAt": "2026-05-20T14:30:14Z",
+      "pushedAt": "2026-05-23T10:08:00Z",
+      "defaultBranch": "main",
+      "releases": [
+        {
+          "tagName": "v0.1.0",
+          "name": "TS-Codex-OS v0.1.0 - Local TS Project Substrate",
+          "publishedAt": "2026-05-20T14:30:28Z",
+          "url": "https://github.com/BoggersTheFish/TS-Codex-OS/releases/tag/v0.1.0"
+        }
+      ],
+      "tags": [
+        {
+          "name": "v0.1.0",
+          "sha": "381224d46555d4d08c047fc84cd0d0049c0a259f"
+        }
+      ],
+      "recentCommits": [
+        {
+          "sha": "9f4ab4e7e7c970c94c286a97454a12aebdc863f4",
+          "date": "2026-05-23T10:07:50Z",
+          "message": "Add canonical TS route",
+          "url": "https://github.com/BoggersTheFish/TS-Codex-OS/commit/9f4ab4e7e7c970c94c286a97454a12aebdc863f4"
+        },
+        {
+          "sha": "4d1e615c919f6a0b947baa738a9412754f5e3aa9",
+          "date": "2026-05-22T16:03:38Z",
+          "message": "Standardize public README header",
+          "url": "https://github.com/BoggersTheFish/TS-Codex-OS/commit/4d1e615c919f6a0b947baa738a9412754f5e3aa9"
+        },
+        {
+          "sha": "381224d46555d4d08c047fc84cd0d0049c0a259f",
+          "date": "2026-05-20T14:30:09Z",
+          "message": "Release TS-Codex-OS v0.1.0",
+          "url": "https://github.com/BoggersTheFish/TS-Codex-OS/commit/381224d46555d4d08c047fc84cd0d0049c0a259f"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/TS-Start-Here",
+      "createdAt": "2026-05-20T14:40:53Z",
+      "pushedAt": "2026-05-23T17:41:41Z",
+      "defaultBranch": "main",
+      "releases": [],
+      "tags": [],
+      "recentCommits": [
+        {
+          "sha": "27a249457827d13438ba4112e57d6b81a74ac3d7",
+          "date": "2026-05-23T17:41:40Z",
+          "message": "Add TS public start route",
+          "url": "https://github.com/BoggersTheFish/TS-Start-Here/commit/27a249457827d13438ba4112e57d6b81a74ac3d7"
+        },
+        {
+          "sha": "ddd85d9aeb2709dc8d7872a21b9a25ace81085b1",
+          "date": "2026-05-23T10:12:34Z",
+          "message": "Record public metadata status",
+          "url": "https://github.com/BoggersTheFish/TS-Start-Here/commit/ddd85d9aeb2709dc8d7872a21b9a25ace81085b1"
+        },
+        {
+          "sha": "8c75c0a459b36e2d5cd02cfc6f3ba5fdcae6d63c",
+          "date": "2026-05-23T10:07:36Z",
+          "message": "Make TS-Start-Here the canonical route",
+          "url": "https://github.com/BoggersTheFish/TS-Start-Here/commit/8c75c0a459b36e2d5cd02cfc6f3ba5fdcae6d63c"
+        },
+        {
+          "sha": "99c9b898671f3271f2df96a93981c78afdcc024a",
+          "date": "2026-05-22T14:17:28Z",
+          "message": "Add TS ecosystem routing docs",
+          "url": "https://github.com/BoggersTheFish/TS-Start-Here/commit/99c9b898671f3271f2df96a93981c78afdcc024a"
+        },
+        {
+          "sha": "941ebb49d6a2f8dcf2adaea66d04d1c7870950e2",
+          "date": "2026-05-22T13:52:56Z",
+          "message": "Strengthen first-contact TS documentation",
+          "url": "https://github.com/BoggersTheFish/TS-Start-Here/commit/941ebb49d6a2f8dcf2adaea66d04d1c7870950e2"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/TensionLM",
+      "createdAt": "2026-04-10T12:08:13Z",
+      "pushedAt": "2026-05-23T10:06:46Z",
+      "defaultBranch": "main",
+      "releases": [],
+      "tags": [],
+      "recentCommits": [
+        {
+          "sha": "12dd5b10cafce6981e2d4497d279e94637ee601f",
+          "date": "2026-05-23T10:06:41Z",
+          "message": "Add public TensionLM runner",
+          "url": "https://github.com/BoggersTheFish/TensionLM/commit/12dd5b10cafce6981e2d4497d279e94637ee601f"
+        },
+        {
+          "sha": "b02d0de0b85f5c3716a61df0b60e2ff8a0b12334",
+          "date": "2026-05-22T14:43:07Z",
+          "message": "Standardize TensionLM public README header",
+          "url": "https://github.com/BoggersTheFish/TensionLM/commit/b02d0de0b85f5c3716a61df0b60e2ff8a0b12334"
+        },
+        {
+          "sha": "a7b87b9b8bce0d69821476f9809c57209eab8490",
+          "date": "2026-05-13T14:48:48Z",
+          "message": "Record prefix-only TAC v2 repair",
+          "url": "https://github.com/BoggersTheFish/TensionLM/commit/a7b87b9b8bce0d69821476f9809c57209eab8490"
+        },
+        {
+          "sha": "c0cfbbe22f6ec14e973a489b929e0d71e2ee458b",
+          "date": "2026-05-13T13:35:11Z",
+          "message": "Add answer-prefix repair mode",
+          "url": "https://github.com/BoggersTheFish/TensionLM/commit/c0cfbbe22f6ec14e973a489b929e0d71e2ee458b"
+        },
+        {
+          "sha": "8b8fc5d9c4f30a4fff828a73a0b560f86fc381c1",
+          "date": "2026-05-13T13:18:00Z",
+          "message": "Fix repair shard budget split",
+          "url": "https://github.com/BoggersTheFish/TensionLM/commit/8b8fc5d9c4f30a4fff828a73a0b560f86fc381c1"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/TS-Core",
+      "createdAt": "2026-03-20T12:27:30Z",
+      "pushedAt": "2026-05-23T10:08:00Z",
+      "defaultBranch": "master",
+      "releases": [],
+      "tags": [],
+      "recentCommits": [
+        {
+          "sha": "601f4fcba4a6831019c267f5aa4b4c5a48e75c5d",
+          "date": "2026-05-23T10:07:50Z",
+          "message": "Add canonical TS route",
+          "url": "https://github.com/BoggersTheFish/TS-Core/commit/601f4fcba4a6831019c267f5aa4b4c5a48e75c5d"
+        },
+        {
+          "sha": "989eca40142e318e9de29f3c0ce5ff81e0999ca8",
+          "date": "2026-05-22T14:43:07Z",
+          "message": "Standardize TS-Core public README header",
+          "url": "https://github.com/BoggersTheFish/TS-Core/commit/989eca40142e318e9de29f3c0ce5ff81e0999ca8"
+        },
+        {
+          "sha": "fa28613a69f12834005e6ec8245956aa5ef1182a",
+          "date": "2026-05-06T20:47:23Z",
+          "message": "docs: major README cleanup + standardization (TS-Core)",
+          "url": "https://github.com/BoggersTheFish/TS-Core/commit/fa28613a69f12834005e6ec8245956aa5ef1182a"
+        },
+        {
+          "sha": "d79fc43137509ccf88985e42c1915f1a056521c6",
+          "date": "2026-03-20T14:59:28Z",
+          "message": "feat: TS-Native LLM pipeline (data gen, Ollama plugin, native-only eval, README)",
+          "url": "https://github.com/BoggersTheFish/TS-Core/commit/d79fc43137509ccf88985e42c1915f1a056521c6"
+        },
+        {
+          "sha": "ff451e8491d06536b5f3dbce97963abd7ed10487",
+          "date": "2026-03-20T14:21:49Z",
+          "message": "docs: README — exact system definition, limits, expansion; ship scripts/agi",
+          "url": "https://github.com/BoggersTheFish/TS-Core/commit/ff451e8491d06536b5f3dbce97963abd7ed10487"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/BoggersTheCIG",
+      "createdAt": "2026-03-16T22:48:56Z",
+      "pushedAt": "2026-05-24T12:13:06Z",
+      "defaultBranch": "main",
+      "releases": [],
+      "tags": [],
+      "recentCommits": [
+        {
+          "sha": "63e2bf003be4f727b8a2956578d2229542b6c577",
+          "date": "2026-05-24T12:13:05Z",
+          "message": "TS auto-evolve: graph builder update [10min]",
+          "url": "https://github.com/BoggersTheFish/BoggersTheCIG/commit/63e2bf003be4f727b8a2956578d2229542b6c577"
+        },
+        {
+          "sha": "19e0dc8d99880a7ec4636304439ecec3faae342d",
+          "date": "2026-05-24T12:04:01Z",
+          "message": "TS auto-evolve: +.md\"+2_+2_.md\"+A.md\" (coherence +0%)",
+          "url": "https://github.com/BoggersTheFish/BoggersTheCIG/commit/19e0dc8d99880a7ec4636304439ecec3faae342d"
+        },
+        {
+          "sha": "d37cf90db4a5c5e87430ab3d9a1ed16f6ba4c8c4",
+          "date": "2026-05-24T09:47:44Z",
+          "message": "TS auto-evolve: graph builder update [10min]",
+          "url": "https://github.com/BoggersTheFish/BoggersTheCIG/commit/d37cf90db4a5c5e87430ab3d9a1ed16f6ba4c8c4"
+        },
+        {
+          "sha": "53f2181294daa4fc3f32a85bccff6c8330543b73",
+          "date": "2026-05-24T08:37:08Z",
+          "message": "TS auto-evolve: +.md\"+2_+2_.md\"+A.md\" (coherence +0%)",
+          "url": "https://github.com/BoggersTheFish/BoggersTheCIG/commit/53f2181294daa4fc3f32a85bccff6c8330543b73"
+        },
+        {
+          "sha": "1656b5eaefff5e9036d261fb22e5e5e11ac1ca7d",
+          "date": "2026-05-24T04:46:47Z",
+          "message": "TS auto-evolve: graph builder update [10min]",
+          "url": "https://github.com/BoggersTheFish/BoggersTheCIG/commit/1656b5eaefff5e9036d261fb22e5e5e11ac1ca7d"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/BoggersTheAI",
+      "createdAt": "2026-03-20T20:29:52Z",
+      "pushedAt": "2026-05-06T20:47:15Z",
+      "defaultBranch": "main",
+      "releases": [],
+      "tags": [],
+      "recentCommits": [
+        {
+          "sha": "bd24559a300ece06955eb2181173fa726f5bc5ea",
+          "date": "2026-05-06T20:47:15Z",
+          "message": "docs: major README cleanup + standardization for BoggersTheAI",
+          "url": "https://github.com/BoggersTheFish/BoggersTheAI/commit/bd24559a300ece06955eb2181173fa726f5bc5ea"
+        },
+        {
+          "sha": "7984b02e9ea6861be830bdb83508a8032a2ddf96",
+          "date": "2026-03-23T00:27:26Z",
+          "message": "Wave 052 — grok-ts-agent-live-github-ts-eval-recheck | README demo + .gitkeep for traces + final loop polish | stability +0.04",
+          "url": "https://github.com/BoggersTheFish/BoggersTheAI/commit/7984b02e9ea6861be830bdb83508a8032a2ddf96"
+        },
+        {
+          "sha": "f932e5165321c57b5eed219509051471c738eb96",
+          "date": "2026-03-23T00:21:43Z",
+          "message": "Wave 051 — grok-ts-agent-live-github-ts-eval-recheck | embedded auto-paste block + live TUI refresh + pytest fix | stability +0.11",
+          "url": "https://github.com/BoggersTheFish/BoggersTheAI/commit/f932e5165321c57b5eed219509051471c738eb96"
+        },
+        {
+          "sha": "fd85da00773982d8454d729ed9211e411d5fc8d6",
+          "date": "2026-03-23T00:10:42Z",
+          "message": "Wave 050 — grok-ts-agent-live-github-ts-eval-real-sync | closed auto-paste loop + CPU dashboard viz + live wave nodes | stability +0.12",
+          "url": "https://github.com/BoggersTheFish/BoggersTheAI/commit/fd85da00773982d8454d729ed9211e411d5fc8d6"
+        },
+        {
+          "sha": "c631602fc4e21e559a366f7a2fb73044c61967db",
+          "date": "2026-03-23T00:01:32Z",
+          "message": "Wave 049 — grok-ts-agent-live-github-ts-eval-correction | auto-prompt generation + CPU distillora track + waves.jsonl graph fold | stability +0.14",
+          "url": "https://github.com/BoggersTheFish/BoggersTheAI/commit/c631602fc4e21e559a366f7a2fb73044c61967db"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/GOAT-TS",
+      "createdAt": "2026-03-09T00:34:11Z",
+      "pushedAt": "2026-03-13T21:03:41Z",
+      "defaultBranch": "main",
+      "releases": [],
+      "tags": [
+        {
+          "name": "v0.1.0",
+          "sha": "4c0ce5562db0c9b823fcf0c07d2929a76f111c0c"
+        }
+      ],
+      "recentCommits": [
+        {
+          "sha": "43fc453a167844404ab7f86b6272456823558323",
+          "date": "2026-03-13T21:03:20Z",
+          "message": "sussy baka",
+          "url": "https://github.com/BoggersTheFish/GOAT-TS/commit/43fc453a167844404ab7f86b6272456823558323"
+        },
+        {
+          "sha": "4c0ce5562db0c9b823fcf0c07d2929a76f111c0c",
+          "date": "2026-03-13T19:43:36Z",
+          "message": "docs: Step 5 community growth - CI, issue templates, notebook, promotion drafts, v0.1.0",
+          "url": "https://github.com/BoggersTheFish/GOAT-TS/commit/4c0ce5562db0c9b823fcf0c07d2929a76f111c0c"
+        },
+        {
+          "sha": "3ae1e2ba86d5a9de6e31656819db3cd6741160fb",
+          "date": "2026-03-13T19:33:29Z",
+          "message": "feat: add benchmarks, runner, and evaluation tests",
+          "url": "https://github.com/BoggersTheFish/GOAT-TS/commit/3ae1e2ba86d5a9de6e31656819db3cd6741160fb"
+        },
+        {
+          "sha": "47b3ba8d6952e15d21dc0e141a6600471e397f82",
+          "date": "2026-03-13T19:24:33Z",
+          "message": "feat: advanced reasoning features and integrations",
+          "url": "https://github.com/BoggersTheFish/GOAT-TS/commit/47b3ba8d6952e15d21dc0e141a6600471e397f82"
+        },
+        {
+          "sha": "923325ccf485cf29637ce770b3b47c5cc5c3db92",
+          "date": "2026-03-13T19:14:03Z",
+          "message": "stop this war, its the end of reality",
+          "url": "https://github.com/BoggersTheFish/GOAT-TS/commit/923325ccf485cf29637ce770b3b47c5cc5c3db92"
+        }
+      ]
+    },
+    {
+      "repo": "BoggersTheFish/boggersthefish-site",
+      "createdAt": "2026-03-13T12:43:14Z",
+      "pushedAt": "2026-05-23T19:15:54Z",
+      "defaultBranch": "main",
+      "releases": [],
+      "tags": [],
+      "recentCommits": [
+        {
+          "sha": "667baf9fa1865d03ac72e5b72d4a2a9e2c155d90",
+          "date": "2026-05-23T19:15:53Z",
+          "message": "Use Node 24 native checkout and setup-node actions",
+          "url": "https://github.com/BoggersTheFish/boggersthefish-site/commit/667baf9fa1865d03ac72e5b72d4a2a9e2c155d90"
+        },
+        {
+          "sha": "a8c8594e4d6951687852277e3e129ec5216718f5",
+          "date": "2026-05-23T19:13:41Z",
+          "message": "Move Pages deploy to Node 24 and unify site theme",
+          "url": "https://github.com/BoggersTheFish/boggersthefish-site/commit/a8c8594e4d6951687852277e3e129ec5216718f5"
+        },
+        {
+          "sha": "43068359b2c12196f68bf0aea00e1fe5e80b0807",
+          "date": "2026-05-23T18:44:15Z",
+          "message": "Add TS-Reasoner golden path",
+          "url": "https://github.com/BoggersTheFish/boggersthefish-site/commit/43068359b2c12196f68bf0aea00e1fe5e80b0807"
+        },
+        {
+          "sha": "f83e32278a988c599234752175b0ba2ff2d0b915",
+          "date": "2026-05-23T17:47:57Z",
+          "message": "Route homepage to TS receipts",
+          "url": "https://github.com/BoggersTheFish/boggersthefish-site/commit/f83e32278a988c599234752175b0ba2ff2d0b915"
+        },
+        {
+          "sha": "10fef54435bce92856dff3000746469099830912",
+          "date": "2026-05-23T17:43:48Z",
+          "message": "Harden public TS homepage route",
+          "url": "https://github.com/BoggersTheFish/boggersthefish-site/commit/10fef54435bce92856dff3000746469099830912"
+        }
+      ]
+    }
+  ]
+}
