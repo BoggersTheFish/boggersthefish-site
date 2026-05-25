@@ -1,0 +1,174 @@
+{
+  "generated_at_utc": "2026-05-25T00:21:07Z",
+  "website_repo": {
+    "path": "/home/boggersthefish/workspace/boggersthefish-site",
+    "branch": "site-truth-sync-v10-v11",
+    "base_commit_sha": "4e8c08adbdd4480675d60164d6d651887099d0d3",
+    "dirty_worktree_at_start": true
+  },
+  "detected_routes": [
+    "/",
+    "/about",
+    "/blog",
+    "/blog/[slug]",
+    "/contact",
+    "/docs",
+    "/docs/[slug]",
+    "/evidence",
+    "/lab",
+    "/latest",
+    "/network",
+    "/projects",
+    "/projects/cig",
+    "/projects/proof-ranker",
+    "/projects/tensionlm",
+    "/projects/ts-core",
+    "/proof-bank",
+    "/receipts",
+    "/research",
+    "/roadmap",
+    "/run-ts-reasoner",
+    "/start-here",
+    "/support",
+    "/ts-os",
+    "/waves"
+  ],
+  "external_links_checked": [
+    {
+      "url": "https://www.boggersthefish.com/",
+      "status": "accessible",
+      "notes": "Public deployed homepage still showed pre-sync copy including accepted/rejected alternatives and v10 route language."
+    },
+    {
+      "url": "https://www.boggersthefish.com/projects",
+      "status": "accessible",
+      "notes": "Public deployed projects page included older project graph copy and historical wave framing."
+    },
+    {
+      "url": "https://github.com/BoggersTheFish/TS-Reasoner-v0",
+      "status": "verified",
+      "notes": "GitHub API reports public repo, default branch main, created_at 2026-05-20T13:05:38Z, pushed_at 2026-05-23T14:57:00Z."
+    },
+    {
+      "url": "https://github.com/BoggersTheFish/TS-Start-Here",
+      "status": "verified",
+      "notes": "GitHub API reports public repo, default branch main, created_at 2026-05-20T14:40:53Z, pushed_at 2026-05-23T17:41:41Z."
+    },
+    {
+      "url": "https://huggingface.co/BoggersTheFish/TensionLM-117M-TS-Reasoner-v10",
+      "status": "verified",
+      "notes": "HF API/card verified id, public visibility, lastModified 2026-05-16T18:14:28.000Z, MIT license, eval files, and v10 model-card receipts."
+    },
+    {
+      "url": "https://huggingface.co/BoggersTheFish/TensionLM-TS-Trace-Distilled-v11",
+      "status": "verified",
+      "notes": "HF API/card verified id, public visibility, lastModified 2026-05-16T18:28:57.000Z, MIT license, trace-distillation data/eval files, and v11 limitation text."
+    }
+  ],
+  "ts_reasoner_status": {
+    "local_path": "/home/boggersthefish/workspace/TS-Reasoner-v0",
+    "local_branch": "main",
+    "local_commit_sha": "677d94898f41691c9a9264597b0625f1d309efec",
+    "local_tags": ["v0.7.0", "v0.3.0", "v0.2.0", "v0.1.0"],
+    "github_public_tags_seen": ["v0.9.0", "v0.8.0", "v0.7.0", "v0.3.0", "v0.2.0", "v0.1.0"],
+    "local_readme_command_verified": "python3 inference.py --question \"If some artists are makers and all makers are creators, are all artists creators?\"",
+    "local_command_result": "Answer: Not enough information.; Selected chain: candidate_cautious; Global tension: 0.0000; Trace: artifacts/latest_trace.json"
+  },
+  "huggingface_model_status": [
+    {
+      "id": "BoggersTheFish/TensionLM-117M-TS-Reasoner-v10",
+      "status": "verified",
+      "sha": "a242aa14c7e456cc5bcc18b46b4092be9be57c34",
+      "last_modified": "2026-05-16T18:14:28.000Z",
+      "card_claims_verified": [
+        "Supports graph/transitivity, arithmetic traces, code traces, boolean logic, set operations, and string transforms.",
+        "TAC v2/v3/v4 120/120 each.",
+        "Public v10 examples 30/30.",
+        "New-family generated receipts include 3000/3000 and all-family mixed 6000/6000 scores.",
+        "Scores are system scores over generated formal families, not raw LLM scores."
+      ]
+    },
+    {
+      "id": "BoggersTheFish/TensionLM-TS-Trace-Distilled-v11",
+      "status": "verified",
+      "sha": "790ca8250f61fd89b82dabc8deca867ed14d81a7",
+      "last_modified": "2026-05-16T18:28:57.000Z",
+      "card_claims_verified": [
+        "First trace-distillation artifact from the TS reasoner line.",
+        "Dataset total 1920; train 1632; val 144; test 144.",
+        "Student about 1.1M parameters; training steps 580; validation perplexity 2.45.",
+        "Held-out raw exact answer hits 0/48 and raw exact rule hits 0/48.",
+        "Raw exact answer/rule generation is not solved yet."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim": "TS-Reasoner emits candidate chains, local/global tension, rejected alternatives, abstention/repair decisions, benchmark receipts, and visible failure modes.",
+      "locations": ["src/content/site.ts:6", "src/app/page.tsx:90"],
+      "status": "verified",
+      "basis": "Local TS-Reasoner README, TRACE_SCHEMA, and local golden-path trace."
+    },
+    {
+      "claim": "TensionLM v10 and v11 are HF-visible current model-line artifacts.",
+      "locations": ["src/content/site.ts:40", "src/content/site.ts:41", "src/app/latest/page.tsx:18", "src/app/latest/page.tsx:26"],
+      "status": "verified",
+      "basis": "Hugging Face API/model cards."
+    },
+    {
+      "claim": "v10 formal-family receipt numbers including 120/120, 30/30, 3000/3000, and 6000/6000.",
+      "locations": ["src/app/latest/page.tsx:22"],
+      "status": "verified",
+      "basis": "Hugging Face v10 model card; scope explicitly system/generated-family only."
+    },
+    {
+      "claim": "v11 dataset/training/eval numbers: 1920 rows, 1632/144/144 split, about 1.1M parameters, 580 steps, 2.45 validation perplexity, 0/48 raw exact answer/rule hits.",
+      "locations": ["src/app/page.tsx:51", "src/app/latest/page.tsx:30", "src/app/latest/page.tsx:31"],
+      "status": "verified",
+      "basis": "Hugging Face v11 model card and training summary JSON."
+    },
+    {
+      "claim": "TS-Reasoner v1.0 trace contract and 20-task local receipt.",
+      "locations": ["src/app/page.tsx:63", "src/app/page.tsx:65", "src/components/hero/HeroSection.tsx:71", "src/lib/tsData.ts:274"],
+      "status": "locally asserted but not externally verified",
+      "basis": "Local TS-Reasoner artifacts/release_receipt_v1.0.0.json and v1_baseline_report.json. GitHub tags API did not show v1.0.0."
+    },
+    {
+      "claim": "Proof Ranker has a published artifact ladder.",
+      "locations": ["src/app/page.tsx:39", "src/app/page.tsx:41", "src/content/projects.ts:137"],
+      "status": "locally asserted but not externally verified",
+      "basis": "Site/source links exist; exact current HF status was not rechecked in this audit."
+    },
+    {
+      "claim": "Proof-bank and blog dates/results dated 2026-05-20.",
+      "locations": ["src/content/proofs.ts:53", "src/content/proofs.ts:70", "src/content/proofs.ts:87", "src/content/proofs.ts:104", "src/content/proofs.ts:121", "src/content/proofs.ts:138", "src/content/proofs.ts:155", "src/content/proofs.ts:172", "src/content/proofs.ts:189", "src/content/proofs.ts:206", "src/content/proofs.ts:223", "src/content/proofs.ts:240", "src/content/proofs.ts:257", "src/content/proofs.ts:274", "src/content/proofs.ts:291", "src/content/proofs.ts:308", "src/content/proofs.ts:325", "src/content/blog.ts:21", "src/content/blog.ts:45", "src/content/blog.ts:69"],
+      "status": "locally asserted but not externally verified",
+      "basis": "Local content only; not independently rechecked."
+    },
+    {
+      "claim": "Historical wave dates, Wave 12, 200+ tests, and live-site-as-TS-instance framing.",
+      "locations": ["README.md:3", "src/lib/tsData.ts:646", "src/components/layout/Footer.tsx:168"],
+      "status": "should be softened",
+      "basis": "Softened/removed in this update; local archive labels now replace hard date/test/live-instance claims."
+    },
+    {
+      "claim": "BGC support safety terms.",
+      "locations": ["src/content/site.ts:16", "src/content/site.ts:19", "src/app/support/page.tsx:16", "src/app/support/page.tsx:24", "src/app/support/page.tsx:25"],
+      "status": "verified",
+      "basis": "Site language now explicitly says BGC is experimental, off-chain, not cryptocurrency, not investment, not legal tender, not redeemable for cash, may remain off-chain forever, and support funds work rather than return."
+    }
+  ],
+  "softened_or_removed": [
+    "Public-site wording 'accepted or rejected alternatives' changed to 'rejected alternatives, abstention/repair decisions'.",
+    "README live TS instance claim removed.",
+    "Legacy Wave 12 / 200+ tests / THIS SITE framing moved to local archive / needs receipt language.",
+    "Footer 'living TS instance' language softened to public research archive with local archive wave label.",
+    "About page reframed as personal origin story and historical project arc with verified vs approximate dates."
+  ],
+  "remaining_tensions": [
+    "Exact Proof Ranker HF artifact health was not rechecked in this pass.",
+    "Proof-bank dates and metrics remain local content unless paired with per-receipt artifacts.",
+    "TS-Reasoner v1.0 is local-artifact verified but not visible as a GitHub tag from the public tags API.",
+    "Public deployed site still shows old content until this branch is built and deployed."
+  ]
+}

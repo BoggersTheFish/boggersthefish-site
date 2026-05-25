@@ -68,7 +68,7 @@ export function HeroSection() {
         >
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-ts-purple/50 bg-forest-dark/75 backdrop-blur-sm text-xs font-mono text-ts-purple-light">
             <span className="w-1.5 h-1.5 rounded-full bg-ts-purple animate-ping-slow" />
-            TS-Reasoner v1.0 — bounded trace receipts
+            TS-Reasoner v1.0 local trace receipt
             <span className="text-ts-purple/40">|</span>
             <span className="text-muted-foreground">claims tied to receipts</span>
           </div>
@@ -131,7 +131,7 @@ export function HeroSection() {
             </Link>
           </Button>
           <Button size="lg" variant="secondary" asChild>
-            <Link href="/receipts">
+            <Link href="/proof-bank">
               <FileSearch className="w-4 h-4" />
               Inspect a tension receipt
             </Link>
@@ -163,12 +163,12 @@ export function HeroSection() {
           <div className="w-px h-3 bg-ts-purple/20" />
           <div className="flex items-center gap-1.5">
             <span className="text-ts-purple/50">nodes</span>
-            <span className="text-ts-purple-light">v1.0</span>
+            <span className="text-ts-purple-light">local</span>
           </div>
           <div className="w-px h-3 bg-ts-purple/20" />
           <div className="flex items-center gap-1.5">
-            <span className="text-ts-purple/50">tests</span>
-            <span className="text-green-400">34 pass</span>
+            <span className="text-ts-purple/50">status</span>
+            <span className="text-green-400">receipt-bound</span>
           </div>
         </motion.div>
       </div>
