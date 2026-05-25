@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Github, Mail, Radio } from "lucide-react";
+import { FishCrestIcon } from "@/components/ArchiveIcons";
 import { navItems } from "@/content/nav";
 import { site } from "@/content/site";
 
@@ -9,9 +10,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
         <div>
           <div className="mb-3 flex items-center gap-3 text-gold">
-            <span className="text-xl" aria-hidden="true">
-              ♕
-            </span>
+            <FishCrestIcon className="h-9 w-14" />
             <span className="font-serif text-2xl font-semibold">{site.name}</span>
           </div>
           <p className="max-w-md text-sm leading-6 text-cream/70">
@@ -38,7 +37,10 @@ export function SiteFooter() {
               <Github className="h-4 w-4" /> GitHub
             </Link>
             <Link href={`mailto:${site.email}`} className="flex items-center gap-2 text-cream/70 hover:text-gold">
-              <Mail className="h-4 w-4" /> Email
+              <Mail className="h-4 w-4" /> Primary email
+            </Link>
+            <Link href={`mailto:${site.domainEmail}`} className="flex items-center gap-2 text-cream/70 hover:text-gold">
+              <Mail className="h-4 w-4" /> Domain alias
             </Link>
             <Link href="/proof-bank" className="flex items-center gap-2 text-cream/70 hover:text-gold">
               <Radio className="h-4 w-4" /> Proof Bank

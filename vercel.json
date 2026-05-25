@@ -3,8 +3,16 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "outputDirectory": ".next",
+  "outputDirectory": "out",
   "regions": ["iad1"],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "boggersthefish.com" }],
+      "destination": "https://www.boggersthefish.com/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

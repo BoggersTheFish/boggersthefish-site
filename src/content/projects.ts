@@ -86,7 +86,7 @@ export const projects: Project[] = [
       { label: "TensionLM-TS-Trace-Distilled-v11", href: links.models.traceDistilledV11 },
     ],
     proofIds: ["TS-010", "TS-016", "TS-018", "TS-019", "TS-020"],
-    installCommand: "git clone https://github.com/BoggersTheFish/bozo && cd bozo",
+    installCommand: "git clone https://github.com/BoggersTheFish/TensionLM && cd TensionLM",
     inspectCommand: "Inspect model cards and fixed-prompt traces before treating any claim as broad evidence.",
     currentState: "Public repo and HF-visible v10/v11 model artifacts exist; matched benchmark receipts still need tightening.",
     nextMilestone: "Trace-distillation receipts paired with verifier-loop improvements or explicit failures.",

@@ -1,17 +1,22 @@
+"use client";
+
 import Link from "next/link";
-import { Crown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { FishCrestIcon } from "@/components/ArchiveIcons";
 import { navItems } from "@/content/nav";
 import { site } from "@/content/site";
 import { MobileNav } from "@/components/MobileNav";
+import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
-    <header className="sticky top-0 z-50 border-b border-gold/25 bg-forest-dark/92 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-gold/30 bg-forest-dark/94 shadow-scene backdrop-blur-md">
+      <nav className="mx-auto flex max-w-[96rem] items-center justify-between gap-5 px-4 py-2.5 sm:px-6 lg:px-8">
         <Link href="/" className="group flex min-w-0 items-center gap-3">
           <span className="brand-mark" aria-hidden="true">
-            <Crown className="h-3.5 w-3.5" />
-            <span>{">°))>"}</span>
+            <FishCrestIcon className="h-10 w-14" />
           </span>
           <span className="min-w-0">
             <span className="block truncate font-serif text-2xl font-semibold leading-none text-gold">
@@ -23,15 +28,25 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <div className="hidden max-w-4xl flex-wrap items-center justify-end gap-1 lg:flex">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="paper-tab">
-              {item.label}
-            </Link>
-          ))}
+        <div className="hidden min-w-0 flex-nowrap items-center justify-end gap-1 xl:flex">
+          {navItems.map((item) => {
+            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            const support = item.href === "/support";
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn("paper-tab", support && "support-tab", active && "paper-tab-active")}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </div>
 
-        <MobileNav />
+        <div className="xl:hidden">
+          <MobileNav />
+        </div>
       </nav>
     </header>
   );

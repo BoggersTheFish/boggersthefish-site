@@ -1,77 +1,60 @@
 export function FieldGuideScene() {
+  const nodes = [
+    { label: "local", className: "left-[12%] top-[18%]" },
+    { label: "global", className: "right-[10%] top-[22%]" },
+    { label: "repair", className: "bottom-[18%] left-[17%]" },
+    { label: "refuse", className: "bottom-[16%] right-[13%]" },
+  ];
+
   return (
     <figure
-      className="field-guide-scene relative min-h-[420px] overflow-hidden rounded-md border border-gold/45"
-      aria-label="Illustrated field-guide scene of TS notes, graph nodes, books, and labels"
+      className="field-guide-scene relative min-h-[470px] overflow-hidden rounded-md border border-gold/45"
+      aria-label="Dark TS research engine visual with tension rings, constraint nodes, and trace receipts"
     >
-      <div className="scene-sky" />
-      <div className="scene-tree scene-tree-left" aria-hidden="true" />
-      <div className="scene-tree scene-tree-right" aria-hidden="true" />
-      <div className="scene-hills scene-hills-back" />
-      <div className="scene-hills scene-hills-front" />
+      <div className="engine-grid" aria-hidden="true" />
+      <div className="engine-orbit engine-orbit-one" aria-hidden="true" />
+      <div className="engine-orbit engine-orbit-two" aria-hidden="true" />
 
-      <div className="absolute left-[8%] top-[12%] rotate-[-5deg] rounded-md border border-gold/45 bg-parchment px-4 py-3 shadow-paper">
-        <div className="text-xs font-bold uppercase tracking-[0.18em] text-brown">Field note</div>
-        <div className="mt-2 space-y-1 text-sm font-semibold text-ink">
-          <p>Propagate</p>
-          <p>Relax</p>
-          <p>Break</p>
-          <p>Evolve</p>
+      <div className="engine-core" aria-hidden="true">
+        <div className="engine-core-mark">TS</div>
+      </div>
+
+      {nodes.map((node) => (
+        <div key={node.label} className={`constraint-node ${node.className}`}>
+          <span />
+          {node.label}
+        </div>
+      ))}
+
+      <div className="receipt-panel receipt-panel-left">
+        <p className="field-label text-gold/85">trace receipt</p>
+        <div className="mt-3 space-y-2 font-mono text-[0.68rem] leading-5 text-cream/78">
+          <p>candidate: direct_chain</p>
+          <p>local_tension: 0.85</p>
+          <p>issue: quantifier_jump</p>
         </div>
       </div>
 
-      <div className="absolute right-[10%] top-[13%] w-36 rotate-[4deg] rounded-md border border-brown/35 bg-parchment-light p-4 shadow-paper">
-        <p className="field-label text-brown">Local constraint truth</p>
-        <div className="mt-3 h-px bg-brown/30" />
-        <p className="mt-3 text-xs leading-5 text-ink/75">
-          Stable nodes hold until pressure changes the graph.
-        </p>
-      </div>
-
-      <div className="absolute left-[35%] top-[9%] flex h-44 w-44 items-center justify-center rounded-full border border-gold/30 bg-forest/35 shadow-scene">
-        <div className="fish-mark text-gold" aria-hidden="true">
-          <span className="crown">♕</span>
-          <span className="fish">BTF</span>
+      <div className="receipt-panel receipt-panel-right">
+        <p className="field-label text-gold/85">settlement</p>
+        <div className="mt-3 space-y-2 font-mono text-[0.68rem] leading-5 text-cream/78">
+          <p>rejected: overclaim</p>
+          <p>repair_path: abstain</p>
+          <p>answer: insufficient</p>
         </div>
       </div>
 
-      <div className="graph-sketch absolute bottom-[22%] left-[13%]" aria-hidden="true">
-        <span className="node n1" />
-        <span className="node n2" />
-        <span className="node n3" />
-        <span className="node n4" />
-        <span className="edge e1" />
-        <span className="edge e2" />
-        <span className="edge e3" />
-        <span className="edge e4" />
-      </div>
-
-      <div className="absolute bottom-[8%] left-[6%] h-14 w-14 rotate-[-18deg] rounded-full border-4 border-brown/55 bg-transparent shadow-paper" aria-hidden="true">
-        <span className="absolute -bottom-6 left-10 h-8 w-2 rotate-[-38deg] rounded bg-brown/70" />
-      </div>
-
-      <div className="absolute bottom-[23%] left-[44%] rotate-[7deg] rounded-md border border-gold/45 bg-parchment-light px-3 py-2 text-center shadow-paper">
-        <p className="field-label text-brown">TS-01</p>
-        <p className="mt-1 text-xs font-semibold text-ink/75">inspectable field</p>
-      </div>
-
-      <div className="absolute bottom-[15%] right-[14%] w-48 rotate-[-4deg] rounded border border-brown/40 bg-parchment p-3 shadow-paper">
-        <div className="notebook-lines" />
-        <p className="relative text-center font-serif text-lg font-semibold text-ink">
-          Tension → relaxation
-        </p>
-      </div>
-
-      <div className="book-stack absolute bottom-[12%] right-[4%]" aria-hidden="true">
-        <span>TENSION</span>
-        <span>CONSTRAINTS</span>
-        <span>TRUTH</span>
-      </div>
-
-      <div className="absolute bottom-[4%] right-[31%] h-12 w-20 rotate-[8deg] rounded-[50%] border border-gold/35 bg-moss/35 shadow-scene" aria-hidden="true" />
-
-      <div className="absolute bottom-[9%] left-[36%] rounded-full border border-gold/50 bg-moss/45 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-cream shadow-scene">
-        substrate · surface · grounding
+      <div className="terminal-panel">
+        <div className="mb-3 flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-gold" />
+          <span className="h-2 w-2 rounded-full bg-gold/45" />
+          <span className="h-2 w-2 rounded-full bg-cream/35" />
+        </div>
+        <pre className="font-mono text-[0.69rem] leading-5 text-cream/78">
+          <code>{`$ python3 inference.py --question ...
+trace -> artifacts/latest_trace.json
+settled_answer: Not enough information`}</code>
+        </pre>
       </div>
     </figure>
   );

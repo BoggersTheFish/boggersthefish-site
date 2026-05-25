@@ -26,7 +26,7 @@ export const links = {
   domainEmail: `mailto:${site.domainEmail}`,
   repos: {
     tsCore: "https://github.com/BoggersTheFish/TS-Core",
-    tensionlm: "https://github.com/BoggersTheFish/bozo",
+    tensionlm: "https://github.com/BoggersTheFish/TensionLM",
     cig: "https://github.com/BoggersTheFish",
     proofRanker: "https://github.com/BoggersTheFish",
   },

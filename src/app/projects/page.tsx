@@ -1,205 +1,76 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Github, Star, GitFork, ExternalLink, Zap, Code2, ArrowRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { fetchGitHubRepos, type EnrichedRepo } from "@/lib/github";
-import { cn } from "@/lib/utils";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { ProjectCard } from "@/components/ProjectCard";
+import { ParchmentCard } from "@/components/ParchmentCard";
+import { SectionHeading } from "@/components/SectionHeading";
+import { projects, secondaryProjects, tsFrameworkStatement } from "@/content/projects";
+import { links } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Projects — BoggersTheFish",
-  description:
-    "All TS-OS repositories: BoggersTheAI, GOAT-TS, TS-Core, BoggersTheMind and more. Living constraint graph nodes.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Projects",
+  description: "Canonical TS project map: TS-Core, TensionLM, CIG, and Proof Ranker with bounded status and evidence routes.",
+  path: "/projects",
+});
 
-export const revalidate = 3600;
-
-function RepoCard({ repo }: { repo: EnrichedRepo }) {
+export default function ProjectsPage() {
   return (
-    <div className={cn("ts-card p-5 flex flex-col h-full group", repo.pinned ? "border-ts-purple/40" : "")}>
-      {/* Header */}
-      <div className="flex items-start justify-between gap-2 mb-3">
-        <div className="flex flex-wrap gap-1.5 flex-1">
-          {repo.pinned && (
-            <Badge variant="current" className="text-[10px]">Pinned</Badge>
-          )}
-          {repo.tags.slice(0, 2).map((tag) => (
-            <Badge key={tag} variant="default" className="text-[10px]">{tag}</Badge>
-          ))}
-        </div>
-        <div className="flex items-center gap-2 flex-shrink-0 text-xs text-muted-foreground/60">
-          {repo.stars > 0 && (
-            <span className="flex items-center gap-1">
-              <Star className="w-3 h-3" />
-              {repo.stars}
-            </span>
-          )}
-          {repo.forks > 0 && (
-            <span className="flex items-center gap-1">
-              <GitFork className="w-3 h-3" />
-              {repo.forks}
-            </span>
-          )}
-        </div>
+    <section className="page-shell">
+      <div className="page-intro">
+        <p className="field-label text-gold">Projects</p>
+        <h1>The canonical TS workbench.</h1>
+        <p>{tsFrameworkStatement}</p>
       </div>
 
-      {/* Name */}
-      <h3 className="font-mono font-bold text-sm text-ts-purple-light mb-2 group-hover:text-ts-purple transition-colors">
-        {repo.name}
-      </h3>
-
-      {/* Description */}
-      <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">
-        {repo.description || "No description available."}
-      </p>
-
-      {/* Wave + stability */}
-      <div className="space-y-2 mb-4">
-        <div className="flex justify-between text-[10px] font-mono text-muted-foreground/60">
-          <span>stability</span>
-          <span className="text-ts-purple/70">{(repo.stability * 100).toFixed(0)}%</span>
-        </div>
-        <div className="h-1 rounded-full bg-ts-purple/10 overflow-hidden">
-          <div
-            className="h-full rounded-full bg-ts-purple transition-all duration-700 group-hover:shadow-ts"
-            style={{ width: `${repo.stability * 100}%` }}
-          />
-        </div>
+      <div className="mb-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {projects.map((project) => (
+          <ProjectCard key={project.slug} project={project} />
+        ))}
       </div>
 
-      {/* Footer */}
-      <div className="flex items-center justify-between gap-2">
-        <div className="flex items-center gap-2 text-[10px] text-muted-foreground/60 font-mono">
-          {repo.language && (
-            <span className="flex items-center gap-1">
-              <Code2 className="w-3 h-3" />
-              {repo.language}
-            </span>
-          )}
-          {repo.wave > 0 && <span>Wave {repo.wave}</span>}
-        </div>
-        <div className="flex items-center gap-1.5">
-          {repo.homepage && (
-            <Link
-              href={repo.homepage}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 rounded border border-ts-purple/20 text-muted-foreground hover:text-ts-purple-light hover:border-ts-purple/40 transition-all"
-              title="Live site"
-            >
-              <ExternalLink className="w-3 h-3" />
-            </Link>
-          )}
-          <Link
-            href={repo.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-1.5 rounded border border-ts-purple/20 text-muted-foreground hover:text-ts-purple-light hover:border-ts-purple/40 transition-all"
-            title="GitHub"
-          >
-            <Github className="w-3 h-3" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default async function ProjectsPage() {
-  const repos = await fetchGitHubRepos();
-  const pinned = repos.filter((r) => r.pinned);
-  const rest = repos.filter((r) => !r.pinned);
-
-  return (
-    <div className="min-h-screen bg-forest-dark">
-      {/* Hero */}
-      <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 ts-grid-bg opacity-25" style={{ backgroundSize: "50px 50px" }} />
-        <div className="relative max-w-6xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-ts-purple/30 bg-ts-purple/5 text-xs font-mono text-ts-purple mb-6">
-            <Github className="w-3 h-3" />
-            Projects Cluster — {repos.length} nodes
-          </div>
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <h1 className="text-5xl sm:text-6xl font-bold text-white mb-4">
-                The <span className="ts-gradient-text">Repository</span>
-                <br />Graph
-              </h1>
-              <p className="text-muted-foreground max-w-xl">
-                Every repo is a node in the TS graph. Pinned = highest stability.
-                Hover to see activation levels. Click to open on GitHub.
-              </p>
-            </div>
-            <Button asChild variant="outline">
-              <Link
-                href="https://github.com/BoggersTheFish"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-4 h-4" />
-                View all on GitHub
+      <SectionHeading title="Evidence route">
+        <p>
+          Each project page keeps the same structure: problem, method, evidence,
+          limits, public resources, current state, and next narrow milestone.
+        </p>
+      </SectionHeading>
+      <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+        <ParchmentCard tone="dark">
+          <p className="field-label mb-3 text-gold">Serious routing</p>
+          <div className="grid gap-3 md:grid-cols-2">
+            {projects.map((project) => (
+              <Link key={project.slug} href={project.href} className="rounded-md border border-gold/25 bg-forest-dark/45 p-4 transition hover:border-gold">
+                <p className="font-serif text-2xl font-semibold text-cream">{project.title}</p>
+                <p className="mt-2 text-sm leading-6 text-cream/72">{project.evidence}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-gold">
+                  Open project <ArrowRight className="h-4 w-4" />
+                </span>
               </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <div className="ts-divider mx-auto max-w-6xl" />
-
-      {/* Pinned repos */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 mb-6">
-            <Zap className="w-4 h-4 text-ts-purple" />
-            <h2 className="text-xl font-bold text-white">Core Nodes</h2>
-            <span className="text-xs text-muted-foreground font-mono">({pinned.length} pinned)</span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {pinned.map((repo) => (
-              <RepoCard key={repo.id} repo={repo} />
             ))}
           </div>
-        </div>
-      </section>
+        </ParchmentCard>
 
-      {/* All other repos */}
-      {rest.length > 0 && (
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center gap-2 mb-6">
-              <Github className="w-4 h-4 text-muted-foreground" />
-              <h2 className="text-xl font-bold text-white">All Nodes</h2>
-              <span className="text-xs text-muted-foreground font-mono">({rest.length} repos)</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {rest.map((repo) => (
-                <RepoCard key={repo.id} repo={repo} />
-              ))}
-            </div>
+        <ParchmentCard>
+          <p className="field-label mb-3 text-brown">Satellite branches</p>
+          <p className="text-sm leading-7 text-ink/75">
+            These repos are useful context but are not the first-contact path for
+            the current TS stack. Treat them as historical or experimental unless
+            a receipt links them directly.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {secondaryProjects.map((project) => (
+              <Link key={project.name} href={project.href} target="_blank" rel="noopener noreferrer" className="field-chip hover:border-brown/50">
+                {project.name}
+              </Link>
+            ))}
           </div>
-        </section>
-      )}
-
-      {/* Install CTA */}
-      <div className="ts-divider mx-auto max-w-6xl" />
-      <section className="py-16 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-4">Run Locally in 60 Seconds</h2>
-          <div className="ts-code text-xs mb-6 text-left">
-            <pre>{`git clone https://github.com/BoggersTheFish/BoggersTheAI
-cd BoggersTheAI
-python3 -m pip install -e ".[dev]"
-python3 -m BoggersTheAI`}</pre>
-          </div>
-          <Button asChild>
-            <Link href="/lab">
-              Go to the Lab
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
-        </div>
-      </section>
-    </div>
+          <Link href={links.github} target="_blank" rel="noopener noreferrer" className="brass-link mt-5">
+            View GitHub profile
+            <ExternalLink className="h-4 w-4" />
+          </Link>
+        </ParchmentCard>
+      </div>
+    </section>
   );
 }

@@ -69,10 +69,10 @@ export const TECH_STACK = [
 
 export const REPOS = [
   {
-    id: "bozo",
-    name: "bozo",
+    id: "tensionlm",
+    name: "TensionLM",
     description: "TensionLM: sigmoid tension instead of softmax attention, with public evidence boundaries, Path A repair tooling, and safetensors artifacts.",
-    url: "https://github.com/BoggersTheFish/bozo",
+    url: "https://github.com/BoggersTheFish/TensionLM",
     pinned: true,
     stability: 0.9,
     wave: 17,

@@ -35,6 +35,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <p className="field-label text-gold">{post.date}</p>
         <h1>{post.title}</h1>
         <p>{post.deck}</p>
+        <p className="text-xs font-bold uppercase tracking-[0.14em] text-cream/55">
+          Date source: {post.date_source.source_label}. {post.date_source.display_note}
+        </p>
       </div>
 
       <ParchmentCard>

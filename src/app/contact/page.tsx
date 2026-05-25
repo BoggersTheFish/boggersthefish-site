@@ -37,7 +37,11 @@ export default function ContactPage() {
           <div className="space-y-3">
             <Link href={links.email} className="plaque-button">
               <Mail className="h-4 w-4" />
-              {site.email}
+              Primary: {site.email}
+            </Link>
+            <Link href={links.domainEmail} className="plaque-button secondary">
+              <Mail className="h-4 w-4" />
+              Domain alias: {site.domainEmail}
             </Link>
             <Link href={links.github} target="_blank" rel="noopener noreferrer" className="plaque-button">
               <Github className="h-4 w-4" />

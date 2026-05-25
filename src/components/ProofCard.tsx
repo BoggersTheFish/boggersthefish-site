@@ -17,9 +17,11 @@ export function ProofCard({ proof }: { proof: Proof }) {
         <h3 className="font-serif text-xl font-semibold text-ink">{proof.title}</h3>
       </div>
       <p className="text-sm leading-6 text-ink/75">{proof.summary}</p>
-      <p className="mt-4 border-l-2 border-brown/35 pl-3 text-xs font-semibold leading-5 text-ink/70">
-        Claim: {proof.claim}
-      </p>
+      <div className="mt-4 grid gap-2 text-xs leading-5 text-ink/70">
+        <p className="border-l-2 border-brown/35 pl-3"><strong>Claim:</strong> {proof.claim}</p>
+        <p className="border-l-2 border-brown/25 pl-3"><strong>Result:</strong> {proof.result}</p>
+        <p className="border-l-2 border-brown/25 pl-3"><strong>Limit:</strong> {proof.limit}</p>
+      </div>
       <div className="mt-4 flex flex-wrap gap-2">
         {proof.tags.slice(0, 4).map((tag) => (
           <span key={tag} className="field-chip">

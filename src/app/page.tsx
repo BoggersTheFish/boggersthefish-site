@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ExternalLink, FileJson, Terminal } from "lucide-react";
+import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
 import { ContributorPaths } from "@/components/ContributorPaths";
+import { Hero } from "@/components/Hero";
 import { ParchmentCard } from "@/components/ParchmentCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { links, site } from "@/content/site";
@@ -78,60 +79,7 @@ const receipts = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-gold/25 bg-forest-dark">
-        <div className="absolute inset-0 ts-grid-bg bg-grid opacity-60" aria-hidden="true" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(201,164,92,0.16),transparent_24rem),linear-gradient(180deg,rgba(16,23,13,0.2),#10170d_88%)]" aria-hidden="true" />
-        <div className="relative mx-auto grid min-h-[72vh] max-w-7xl content-center gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-          <div className="max-w-3xl">
-            <p className="field-label text-gold">BoggersTheFish / TS research archive</p>
-            <h1 className="mt-5 font-serif text-5xl font-semibold leading-tight text-cream sm:text-7xl">
-              Small bounded reasoning, inspected.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-cream/82">
-              TS-Reasoner emits candidate chains, local and global tension,
-              rejected alternatives, abstention/repair decisions, benchmark
-              receipts, and visible failure modes.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/run-ts-reasoner" className="plaque-button">
-                <Terminal className="h-4 w-4" />
-                Run TS-Reasoner locally
-              </Link>
-              <Link href="/latest" className="plaque-button secondary">
-                <FileJson className="h-4 w-4" />
-                Inspect latest receipt
-              </Link>
-              <Link href="/start-here" className="plaque-button secondary">
-                Read the sober TS map
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-
-          <ParchmentCard tone="dark" className="self-center">
-            <div className="mb-4 flex flex-wrap gap-2">
-              {["verified", "bounded", "external", "local"].map((tag) => (
-                <span key={tag} className="rounded-full border border-gold/35 bg-gold/10 px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gold">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <pre className="overflow-x-auto rounded-md border border-gold/25 bg-black/35 p-4 text-xs leading-6 text-cream/82">
-              <code>{`python3 inference.py --question \\
-  "If some artists are makers and all makers are creators, are all artists creators?"
-
-Trace: artifacts/latest_trace.json
-candidate_direct.local_tension.s1 = 0.85
-rejected_alternatives[0].issue_kinds = ["unsupported_conclusion", "quantifier_jump"]
-settled_answer = "Not enough information."`}</code>
-            </pre>
-            <p className="mt-4 text-sm leading-7 text-cream/72">
-              The interesting behavior is not an overconfident answer. It is the
-              refusal to force a universal conclusion when support is missing.
-            </p>
-          </ParchmentCard>
-        </div>
-      </section>
+      <Hero />
 
       <section className="page-shell">
         <SectionHeading eyebrow="Current stack" title="Verifier first, models second">

@@ -3,6 +3,11 @@ export type BlogPost = {
   title: string;
   deck: string;
   date: string;
+  date_source: {
+    source_label: string;
+    confidence: "verified" | "approximate" | "draft";
+    display_note: string;
+  };
   tags: string[];
   body: string[];
   links: { label: string; href: string }[];
@@ -14,6 +19,11 @@ export const blogPosts: BlogPost[] = [
     title: "Building Thinking Systems",
     deck: "Why the public archive is being reorganized around projects, proofs, docs, and cautious claims.",
     date: "2026-05-20",
+    date_source: {
+      source_label: "Manual site archive record",
+      confidence: "verified",
+      display_note: "Displayed as the archive post date, not a research milestone date.",
+    },
     tags: ["research archive", "TS", "project map"],
     body: [
       "A Thinking System is not useful because it sounds large. It becomes useful when the parts are inspectable: nodes, edges, activation, tension, provenance, relaxation, and the moment a claim has to split instead of pretending all contexts agree.",
@@ -33,6 +43,11 @@ export const blogPosts: BlogPost[] = [
     title: "Tension Telemetry as a Receipt",
     deck: "Why tension, relaxation steps, graph size, and outputs belong in the experiment record.",
     date: "2026-05-20",
+    date_source: {
+      source_label: "Manual site archive record",
+      confidence: "verified",
+      display_note: "Displayed as the archive post date, not a research milestone date.",
+    },
     tags: ["tension", "telemetry", "receipts"],
     body: [
       "A TS claim should not end at a paragraph. If the system says a graph relaxed, the receipt should show what moved: initial tension, final tension, active nodes, edge pressure, update count, seed, runtime, and the exact limit of the setup.",
@@ -52,6 +67,11 @@ export const blogPosts: BlogPost[] = [
     title: "From Claims to Proof Bank",
     deck: "The site should make every strong statement walk through claim, receipt, repo/model, replay command, and limitation.",
     date: "2026-05-20",
+    date_source: {
+      source_label: "Manual site archive record",
+      confidence: "verified",
+      display_note: "Displayed as the archive post date, not a research milestone date.",
+    },
     tags: ["proof bank", "claims", "provenance"],
     body: [
       "Most research websites fail at the same point: a strong claim appears, but the path behind it is foggy. There might be a repo somewhere, a model card somewhere else, and a result buried in a note. That is not enough for a serious archive.",

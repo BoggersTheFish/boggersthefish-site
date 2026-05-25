@@ -28,6 +28,29 @@ const areas = [
   },
 ];
 
+const researchSections = [
+  {
+    title: "Core question",
+    body: "Can small graph/tension mechanisms make reasoning state, contradiction pressure, and repair choices more inspectable without overstating capability?",
+  },
+  {
+    title: "Current hypotheses",
+    body: "Local relaxation can reduce bounded graph tension; provenance can improve claim handling; learned proposal models may be useful when verifier traces stay explicit.",
+  },
+  {
+    title: "What would falsify / weaken the claims",
+    body: "Matched baselines that erase the advantage, receipts that fail to reproduce, telemetry that does not localize errors, or benchmark gains that vanish outside toy setups.",
+  },
+  {
+    title: "Current receipts",
+    body: "Proof Bank entries currently support narrow toy and mechanism claims. Draft entries remain weaker until public artifacts and replay commands are attached.",
+  },
+  {
+    title: "Next benchmark pressure",
+    body: "Matched softmax-vs-sigmoid comparisons, stricter CIG contradiction tests, exact seeds/commits, and verifier-loop receipts for proof-ranker integrations.",
+  },
+];
+
 export default function ResearchPage() {
   return (
     <section className="page-shell">
@@ -41,6 +64,28 @@ export default function ResearchPage() {
       </div>
 
       <ClaimDiscipline />
+
+      <div className="mb-10 grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+        <ParchmentCard tone="dark">
+          <p className="field-label mb-3 text-gold">Research discipline</p>
+          <h2 className="font-serif text-3xl font-semibold text-cream">
+            Claims move only as far as the receipt allows.
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-cream/76">
+            The archive is intentionally built around pressure: what the system
+            claims, what the setup actually tested, what the result says, and
+            what would make the claim weaker.
+          </p>
+        </ParchmentCard>
+        <ParchmentCard>
+          <p className="field-label mb-3 text-brown">Current pressure</p>
+          <p className="text-sm leading-7 text-ink/75">
+            Strongest public evidence is currently mechanism-scale and
+            benchmark-bound. Broad architecture claims remain hypotheses until
+            paired with exact baselines, replay commands, and artifact hashes.
+          </p>
+        </ParchmentCard>
+      </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         {areas.map((area) => (
@@ -58,6 +103,16 @@ export default function ResearchPage() {
           receipts, replayable experiments, or source-linked evidence.
         </p>
       </SectionHeading>
+
+      <div className="grid gap-5 md:grid-cols-2">
+        {researchSections.map((section) => (
+          <ParchmentCard key={section.title}>
+            <p className="field-label mb-3 text-brown">Archive section</p>
+            <h2 className="font-serif text-2xl font-semibold text-ink">{section.title}</h2>
+            <p className="mt-3 text-sm leading-7 text-ink/75">{section.body}</p>
+          </ParchmentCard>
+        ))}
+      </div>
     </section>
   );
 }

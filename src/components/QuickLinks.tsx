@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, FileCheck2, Github, Home, NotebookTabs, PlayCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { FishCrestIcon, LinkGlyphIcon, NodeGraphIcon, ParchmentIcon } from "@/components/ArchiveIcons";
 import { quickLinks } from "@/content/nav";
 import { ParchmentCard } from "@/components/ParchmentCard";
 
-const icons = [PlayCircle, FileCheck2, Github, NotebookTabs, Home, BookOpen];
+const icons = [NodeGraphIcon, ParchmentIcon, LinkGlyphIcon, ParchmentIcon, FishCrestIcon, ParchmentIcon];
 
 export function QuickLinks() {
   return (

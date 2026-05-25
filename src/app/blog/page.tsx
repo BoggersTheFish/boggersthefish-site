@@ -18,12 +18,23 @@ export default function BlogPage() {
         <h1>Field notes with limits.</h1>
         <p>Short updates, build notes, and research reflections as the TS archive develops.</p>
       </div>
+      <ParchmentCard tone="dark" className="mb-8">
+        <p className="field-label mb-3 text-gold">Growing archive</p>
+        <p className="text-sm leading-7 text-cream/78">
+          These are field notes, not release announcements. Claims inside posts
+          should still route back to proof-bank entries, source repos, or visible
+          limitations.
+        </p>
+      </ParchmentCard>
       <div className="grid gap-5 md:grid-cols-3">
         {blogPosts.map((post) => (
           <ParchmentCard key={post.slug}>
             <p className="field-label mb-3 text-brown">{post.date}</p>
             <h2 className="font-serif text-2xl font-semibold text-ink">{post.title}</h2>
             <p className="mt-3 text-sm leading-7 text-ink/75">{post.deck}</p>
+            <p className="mt-3 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-ink/50">
+              Date source: {post.date_source.source_label}
+            </p>
             <Link href={`/blog/${post.slug}`} className="brass-link mt-5">
               Read post
               <ArrowRight className="h-4 w-4" />

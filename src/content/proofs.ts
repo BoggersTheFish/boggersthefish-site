@@ -29,6 +29,12 @@ export type Proof = {
 
 const route = (id: string) => `/proof-bank#${id.toLowerCase()}`;
 
+export const proofDateSource = {
+  source_label: "Manual proof-bank receipt record",
+  confidence: "verified" as const,
+  display_note: "Displayed as the receipt record update date; external artifact links are shown separately where available.",
+};
+
 export const proofs: Proof[] = [
   {
     id: "TS-003",

@@ -1,14 +1,15 @@
 import Link from "next/link";
-import { ArrowRight, Boxes, FlaskConical, ScrollText, Waypoints } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { CrownSketchIcon, FishCrestIcon, NodeGraphIcon, ParchmentIcon } from "@/components/ArchiveIcons";
 import type { Project } from "@/content/projects";
 import { ParchmentCard } from "@/components/ParchmentCard";
 import { cn } from "@/lib/utils";
 
 const iconMap = {
-  "ts-core": Waypoints,
-  tensionlm: FlaskConical,
-  cig: Boxes,
-  "proof-ranker": ScrollText,
+  "ts-core": NodeGraphIcon,
+  tensionlm: FishCrestIcon,
+  cig: CrownSketchIcon,
+  "proof-ranker": ParchmentIcon,
 };
 
 const statusClass: Record<Project["status"], string> = {
@@ -21,7 +22,7 @@ const statusClass: Record<Project["status"], string> = {
 };
 
 export function ProjectCard({ project, compact = false }: { project: Project; compact?: boolean }) {
-  const Icon = iconMap[project.slug as keyof typeof iconMap] ?? Waypoints;
+  const Icon = iconMap[project.slug as keyof typeof iconMap] ?? NodeGraphIcon;
 
   return (
     <ParchmentCard className="group flex h-full flex-col hover:-translate-y-1 hover:border-gold/80">

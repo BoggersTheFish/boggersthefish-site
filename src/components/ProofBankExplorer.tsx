@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ExternalLink, Search } from "lucide-react";
 import type { Proof } from "@/content/proofs";
-import { proofFilters } from "@/content/proofs";
+import { proofDateSource, proofFilters } from "@/content/proofs";
 import { ParchmentCard } from "@/components/ParchmentCard";
 import { ProofCard } from "@/components/ProofCard";
 
@@ -98,7 +98,7 @@ export function ProofBankExplorer({ proofs }: { proofs: Proof[] }) {
                 ["Result", proof.result],
                 ["Limit", proof.limit],
                 ["Reproduce", proof.reproduce],
-                ["Last updated", proof.updatedAt],
+                ["Date", `${proof.updatedAt}\nSource: ${proofDateSource.source_label}\n${proofDateSource.display_note}`],
               ].map(([label, body]) => (
                 <div key={label} className="receipt-field">
                   <p className="field-label text-brown">{label}</p>
@@ -120,7 +120,11 @@ export function ProofBankExplorer({ proofs }: { proofs: Proof[] }) {
                       {artifact.label}
                       <ExternalLink className="h-4 w-4" />
                     </Link>
-                  )) : <p className="text-sm leading-7 text-ink/65">No public artifact linked yet.</p>}
+                  )) : (
+                    <p className="w-fit rounded-md border border-sienna/35 bg-sienna/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-sienna">
+                      artifact pending
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

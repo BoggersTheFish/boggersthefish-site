@@ -163,7 +163,7 @@ export function TSPhilosophy() {
                 ))}
               </div>
               <a
-                href="/ts-os"
+                href="/projects/ts-core"
                 className="text-xs text-ts-purple hover:text-ts-purple-light font-mono transition-colors flex items-center gap-1 mt-1"
               >
                 View all 11 steps →
