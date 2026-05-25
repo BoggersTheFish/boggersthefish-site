@@ -318,7 +318,7 @@ export default function TSOSPage() {
                         ? "text-ts-purple-light font-medium"
                         : "text-ts-purple-light/70"
                     }>{code}</span>
-                    {comment && <span className="text-muted-foreground/50 text-xs italic">//{comment}</span>}
+                    {comment && <span className="text-muted-foreground/50 text-xs italic">{"//"}{comment}</span>}
                   </div>
                 );
               })}
