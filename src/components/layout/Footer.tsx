@@ -165,7 +165,7 @@ export function Footer() {
             <div className="flex items-center gap-1.5">
               <Activity className="w-3 h-3 text-ts-purple animate-pulse" />
               <span>
-                This site is a living TS instance — last wave:{" "}
+                Public TS research archive - last verified wave label:{" "}
                 <span className="text-ts-purple-light font-medium">
                   {SITE_META.lastWave}
                 </span>

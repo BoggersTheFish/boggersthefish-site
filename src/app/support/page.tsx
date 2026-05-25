@@ -13,12 +13,16 @@ export const metadata = pageMetadata({
 
 const terms = [
   "Donations are donations.",
+  "BGC is experimental.",
+  "BGC is off-chain.",
   "BGC is not cryptocurrency.",
   "BGC is not an investment.",
   "BGC is not legal tender.",
-  "BGC is not redeemable for cash.",
-  "BGC does not promise future token conversion.",
+  "BGC is not equity.",
+  "BGC is not redeemable for money or cash.",
+  "BGC is not guaranteed to convert to any future token.",
   "BGC may remain an off-chain community credit forever.",
+  "Supporting the work funds research, docs, compute, and time, not financial return.",
   "Nothing on this site is financial advice.",
 ];
 
@@ -51,9 +55,12 @@ export default function SupportPage() {
             By supporting, you understand this is a donation to independent research,
             not a purchase of an investment product.
           </div>
+          <p className="mt-5 w-fit rounded-md border border-brown/25 bg-forest/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] text-brown">
+            not crypto / not investment
+          </p>
           <Link href={links.email} className="plaque-button mt-6 bg-forest text-cream">
             <HeartHandshake className="h-4 w-4" />
-            Support / Donate by email
+            Support / Donate
           </Link>
         </ParchmentCard>
       </div>

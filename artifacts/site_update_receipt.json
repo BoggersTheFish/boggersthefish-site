@@ -1,0 +1,88 @@
+{
+  "generated_at_utc": "2026-05-25T00:21:07Z",
+  "branch": "site-truth-sync-v10-v11",
+  "base_commit_sha": "4e8c08adbdd4480675d60164d6d651887099d0d3",
+  "files_changed_by_this_pass": [
+    "README.md",
+    "artifacts/site_truth_audit.json",
+    "artifacts/site_update_receipt.json",
+    "docs/SITE_TRUTH_AUDIT.md",
+    "docs/SITE_UPDATE_RECEIPT.md",
+    "src/app/about/page.tsx",
+    "src/app/latest/page.tsx",
+    "src/app/page.tsx",
+    "src/app/run-ts-reasoner/page.tsx",
+    "src/app/sitemap.ts",
+    "src/app/support/page.tsx",
+    "src/components/hero/HeroSection.tsx",
+    "src/components/layout/Footer.tsx",
+    "src/content/nav.ts",
+    "src/content/projects.ts",
+    "src/content/site.ts",
+    "src/lib/tsData.ts"
+  ],
+  "routes_updated": [
+    "/",
+    "/latest",
+    "/run-ts-reasoner",
+    "/about",
+    "/support",
+    "/projects",
+    "/sitemap.xml"
+  ],
+  "commands_run": [
+    "find /home/boggersthefish -maxdepth 3 -name package.json -o -name next.config.js -o -name next.config.mjs",
+    "git status -sb",
+    "git switch -c site-truth-sync-v10-v11",
+    "curl -L --silent https://huggingface.co/api/models/BoggersTheFish/TensionLM-TS-Trace-Distilled-v11",
+    "curl -L --silent https://huggingface.co/api/models/BoggersTheFish/TensionLM-117M-TS-Reasoner-v10",
+    "curl -L --silent https://huggingface.co/BoggersTheFish/TensionLM-TS-Trace-Distilled-v11/raw/main/README.md",
+    "curl -L --silent https://huggingface.co/BoggersTheFish/TensionLM-TS-Trace-Distilled-v11/raw/main/eval/trace_distilled_v11_training_summary.json",
+    "curl -L --silent https://huggingface.co/BoggersTheFish/TensionLM-117M-TS-Reasoner-v10/raw/main/README.md",
+    "curl -L --silent https://api.github.com/repos/BoggersTheFish/TS-Reasoner-v0",
+    "curl -L --silent https://api.github.com/repos/BoggersTheFish/TS-Start-Here",
+    "curl -L --silent https://api.github.com/repos/BoggersTheFish/TS-Reasoner-v0/tags",
+    "curl -L --silent https://api.github.com/repos/BoggersTheFish/TS-Reasoner-v0/releases",
+    "python3 inference.py --question \"If some artists are makers and all makers are creators, are all artists creators?\"",
+    "node -e \"JSON.parse(require('fs').readFileSync('artifacts/site_truth_audit.json','utf8')); console.log('ok')\"",
+    "npm run lint",
+    "npm run build"
+  ],
+  "lint": {
+    "command": "npm run lint",
+    "result": "passed",
+    "notes": "Initial run failed on JSX quote escaping in src/app/run-ts-reasoner/page.tsx; fixed and reran successfully."
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "passed",
+    "notes": "Next.js 15.5.18 build compiled, generated 36 static pages, and exported successfully."
+  },
+  "external_facts_verified": [
+    "TS-Reasoner-v0 is a public GitHub repo with default branch main.",
+    "TS-Start-Here is a public GitHub repo with default branch main.",
+    "Public GitHub tags for TS-Reasoner-v0 include v0.9.0, v0.8.0, v0.7.0, v0.3.0, v0.2.0, and v0.1.0.",
+    "TensionLM-117M-TS-Reasoner-v10 is a public Hugging Face model with v10 card receipts and MIT license metadata.",
+    "TensionLM-TS-Trace-Distilled-v11 is a public Hugging Face model with trace-distillation data/eval files and MIT license metadata.",
+    "v11 card/training summary report raw exact answer hits 0/48 and raw exact rule hits 0/48.",
+    "The public deployed site was accessible and still showed pre-sync content before this branch deploys."
+  ],
+  "external_facts_not_verified": [
+    "Proof Ranker current Hugging Face artifact health.",
+    "Every proof-bank date and metric against external artifact hashes.",
+    "A public GitHub v1.0.0 tag for TS-Reasoner; local artifacts verify v1.0.0 but GitHub tags API did not show it."
+  ],
+  "claims_softened": [
+    "Removed README claim that the site is itself a running TS instance.",
+    "Changed legacy live-instance/wave/test-count language to local archive or receipt-needed wording.",
+    "Changed homepage framing to verifier-first bounded receipts and explicit non-claims.",
+    "Added explicit v11 limitation that raw exact answer/rule generation is not solved.",
+    "Added BGC support language that BGC is not cryptocurrency, not investment, not legal tender, not redeemable for cash, and may remain off-chain forever."
+  ],
+  "remaining_tensions": [
+    "Deploy is still needed for the public website to reflect these changes.",
+    "Proof Ranker should get a separate HF health/receipt sync.",
+    "Proof-bank entries should eventually pair each date/metric with artifact hashes or external receipts.",
+    "If TS-Reasoner v1.0.0 should be public-release visible, publish or tag it externally; until then the site labels it local."
+  ]
+}

@@ -1,8 +1,8 @@
-# BoggersTheFish — Thinking System / Thinking Wave
+# BoggersTheFish — TS Research Surface
 
-> *This site is not "about" TS — it IS a running instance of TS.*
+> Public archive for bounded TS reasoning receipts, current model artifacts, and sober project routing.
 
-Live at [boggersthefish.com](https://boggersthefish.com) · Wave 17 — Evidence Cleanup · May 13, 2026
+Live at [boggersthefish.com](https://boggersthefish.com) · truth-sync route for TS-Reasoner, TensionLM v10/v11, CIG, and Proof Ranker.
 
 ---
 
@@ -39,33 +39,27 @@ npm run start    # Start production server
 npx vercel --prod
 ```
 
-## Wave Structure
+## Site Structure
 
-The site is built in modular "waves" mirroring the TS-OS evolution cycle:
+The site is organized around current public evidence routes:
 
-| Wave | Status | Description |
-|------|--------|-------------|
-| **1 — Foundation** | ✅ Complete | Next.js 15, Tailwind, Zustand wave store, Nav/Footer, Hero |
-| **2 — Graph Hero** | 🔜 Next | Cytoscape.js / react-force-graph interactive hero |
-| **3 — About** | 🔜 Pending | Creator story, Minecraft → TS arc |
-| **4 — TS-OS Deep Dive** | 🔜 Pending | Full interactive wave cycle docs |
-| **5 — Projects** | 🔜 Pending | GitHub API repo grid |
-| **6 — Lab** | 🔜 Pending | Live demo, mini-simulator |
-| **7 — Waves Log** | 🔜 Pending | MDX blog / progress log |
-| **8 — Network** | 🔜 Pending | Force graph of all links |
-| **9 — Polish** | 🔜 Pending | GSAP scroll effects, SEO, a11y |
+- `/run-ts-reasoner`: one bounded command, one JSON trace, one refusal/repair path.
+- `/latest`: Hugging Face-visible TensionLM / TS-Reasoner v10 and TS Trace Distilled v11.
+- `/start-here`: sober TS map and claim boundaries.
+- `/projects`: TS-Reasoner/TensionLM/CIG/Proof Ranker routing and limits.
+- `/proof-bank`: bounded proof notes, receipts, and known limits.
+- `/support`: legally cautious support and BGC language.
 
 ## Tech Stack
 
 - **Next.js 15** App Router + TypeScript
-- **Tailwind CSS 3** with custom TS cyber-theme
+- **Tailwind CSS 3** with custom TS archive theme
 - **Framer Motion** — scroll + activation animations
 - **Zustand** — global wave cycle state
 - **shadcn/ui** — base UI components
 - **lucide-react** — icons
-- **react-force-graph-2d** (Wave 2)
-- **@octokit/rest** — GitHub API (Wave 5)
-- **next-mdx-remote** — blog/waves log (Wave 7)
+- **react-force-graph-2d** for graph views where enabled
+- **@octokit/rest** for GitHub-backed routes where configured
 
 ## TS Philosophy
 
@@ -78,7 +72,8 @@ while true:
     Evolve()   // spawn higher-stability nodes
 ```
 
-Everything that exists = stable clusters of constraints (nodes + edges). Change = wave propagation. Truth = the most stable configuration the constraints allow.
+Research claims remain bounded to receipts. Toy and narrow receipts are useful;
+they are not broad AGI, general reasoning, or production reliability claims.
 
 ---
 

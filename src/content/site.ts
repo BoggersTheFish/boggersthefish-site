@@ -3,25 +3,27 @@ export const site = {
   tagline: "Building Thinking Systems",
   title: "Small bounded reasoning, inspected.",
   description:
-    "TS-Reasoner emits candidate chains, local and global tension, accepted or rejected alternatives, benchmark receipts, and visible failure modes.",
+    "TS-Reasoner emits candidate chains, local and global tension, rejected alternatives, abstention/repair decisions, benchmark receipts, and visible failure modes.",
   url: "https://www.boggersthefish.com",
   email: "boggersthefish@gmail.com",
+  domainEmail: "boggersthefish@boggersthefish.com",
   github: "https://github.com/BoggersTheFish",
   huggingFace: "https://huggingface.co/BoggersTheFish",
   ogImage: "/og-image.svg",
 };
 
 export const bgcShortNotice =
-  "Boggers Credits (BGC) are experimental off-chain community credits. They are not cryptocurrency, not an investment, not legal tender, not redeemable for cash, and may remain off-chain forever.";
+  "Donations are donations. Boggers Credits (BGC) are experimental off-chain community credits: not cryptocurrency, not an investment, not legal tender, not equity, not redeemable for cash, may remain off-chain forever, and not financial advice.";
 
 export const bgcFullNotice =
-  "Donations support independent TS research, compute, hosting, writing, documentation, and open-source development. Supporters may receive Boggers Credits as non-financial community credits. BGC is experimental, off-chain, not cryptocurrency, not an investment, not legal tender, not equity, not redeemable for money, and not guaranteed to convert to any future token.";
+  "Donations support independent TS research, compute, hosting, writing, documentation, open-source development, and time. Donations are donations, not a promise of financial return. Supporters may receive Boggers Credits as non-financial community credits. BGC is experimental, off-chain, not cryptocurrency, not an investment, not legal tender, not equity, not redeemable for money or cash, may remain off-chain forever, not guaranteed to convert to any future token, and nothing on this site is financial advice.";
 
 export const links = {
   home: `${site.url}/`,
   github: site.github,
   huggingFace: site.huggingFace,
   email: `mailto:${site.email}`,
+  domainEmail: `mailto:${site.domainEmail}`,
   repos: {
     tsCore: "https://github.com/BoggersTheFish/TS-Core",
     tensionlm: "https://github.com/BoggersTheFish/bozo",
@@ -35,6 +37,8 @@ export const links = {
     tensionlm117MCurriculumStage2: "https://huggingface.co/BoggersTheFish/TensionLM-117M-Curriculum-Stage2",
     tensionlmCurriculum13M: "https://huggingface.co/BoggersTheFish/TensionLM-Curriculum-13M",
     tensionlmPhase2TSNative: "https://huggingface.co/BoggersTheFish/TensionLM-Phase2-TSNative",
+    tsReasonerV10: "https://huggingface.co/BoggersTheFish/TensionLM-117M-TS-Reasoner-v10",
+    traceDistilledV11: "https://huggingface.co/BoggersTheFish/TensionLM-TS-Trace-Distilled-v11",
     proofRankerV0: "https://huggingface.co/BoggersTheFish/ts-proof-ranker-v0",
     proofRankerV1: "https://huggingface.co/BoggersTheFish/ts-proof-ranker-v1",
     proofRankerV2: "https://huggingface.co/BoggersTheFish/ts-proof-ranker-v2",
@@ -45,12 +49,12 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Core",
-    body: "Graph/tension runtime for nodes, edges, activation, propagation, relaxation, and Break/Evolve cycles.",
+    label: "TS-Reasoner",
+    body: "Verifier/control loop for bounded reasoning traces, local/global tension, rejected alternatives, and abstention/repair.",
   },
   {
     label: "TensionLM",
-    body: "Sigmoid tension attention experiments with inspectable pairwise tension fields and controlled comparisons.",
+    body: "Model-line experiments around tension-field learning, including the HF-visible v10 reasoner artifact and v11 trace-distilled student.",
   },
   {
     label: "CIG",
