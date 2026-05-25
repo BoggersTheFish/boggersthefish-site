@@ -5,17 +5,12 @@ export type NavItem = {
 
 export const navItems: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/run-ts-reasoner", label: "Run TS-Reasoner" },
-  { href: "/latest", label: "Latest" },
   { href: "/start-here", label: "Start Here" },
   { href: "/research", label: "Research" },
   { href: "/projects", label: "Projects" },
   { href: "/proof-bank", label: "Proof Bank" },
   { href: "/docs", label: "Docs" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
-  { href: "/roadmap", label: "Roadmap" },
-  { href: "/contact", label: "Contact" },
   { href: "/support", label: "Support / BGC" },
 ];
 

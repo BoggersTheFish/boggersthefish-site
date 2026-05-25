@@ -190,12 +190,12 @@ export const HERO_GRAPH_NODES: GraphNode[] = [
 
   // Meta cluster
   {
-    id: "wave-17",
-    label: "Wave 17 — Evidence",
+    id: "evidence-cleanup",
+    label: "Evidence cleanup",
     activation: 0.95,
     stability: 0.9,
     baseStrength: 0.8,
-    section: "waves",
+    section: "roadmap",
     cluster: "meta",
     edges: ["boggerstheai", "ts-core"],
   },

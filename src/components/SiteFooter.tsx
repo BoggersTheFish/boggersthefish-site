@@ -4,6 +4,14 @@ import { FishCrestIcon } from "@/components/ArchiveIcons";
 import { navItems } from "@/content/nav";
 import { site } from "@/content/site";
 
+const secondaryLinks = [
+  { href: "/run-ts-reasoner", label: "Run TS-Reasoner" },
+  { href: "/latest", label: "Latest Models" },
+  { href: "/about", label: "About" },
+  { href: "/roadmap", label: "Roadmap" },
+  { href: "/contact", label: "Contact" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-gold/25 bg-forest-dark">
@@ -22,7 +30,7 @@ export function SiteFooter() {
         <div>
           <p className="field-label mb-3 text-gold">Archive</p>
           <div className="grid grid-cols-2 gap-2 text-sm">
-            {navItems.slice(1).map((item) => (
+            {[...navItems.slice(1), ...secondaryLinks].map((item) => (
               <Link key={item.href} href={item.href} className="text-cream/70 hover:text-gold">
                 {item.label}
               </Link>
@@ -49,7 +57,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-gold/15 px-4 py-4 text-center text-xs text-cream/60">
-        Truth is local. Tension is real. Information wants to be consistent.
+        Independent research. Bounded claims. Reproducible artifacts.
       </div>
     </footer>
   );

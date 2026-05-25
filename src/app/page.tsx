@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
+import { BGCNotice } from "@/components/BGCNotice";
 import { ContributorPaths } from "@/components/ContributorPaths";
 import { Hero } from "@/components/Hero";
 import { ParchmentCard } from "@/components/ParchmentCard";
+import { ProjectCard } from "@/components/ProjectCard";
+import { QuickLinks } from "@/components/QuickLinks";
 import { SectionHeading } from "@/components/SectionHeading";
+import { projects } from "@/content/projects";
 import { links, site } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -80,6 +84,20 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      <section className="page-shell pb-4">
+        <div className="grid gap-5 lg:grid-cols-[1.45fr_0.75fr]">
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} project={project} compact />
+            ))}
+          </div>
+          <QuickLinks />
+          <div className="lg:col-span-2">
+            <BGCNotice />
+          </div>
+        </div>
+      </section>
 
       <section className="page-shell">
         <SectionHeading eyebrow="Current stack" title="Verifier first, models second">

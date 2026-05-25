@@ -130,9 +130,9 @@ const INITIAL_NODES: Record<string, TSNode> = {
     status: "low-stability",
     section: "home",
   },
-  "wave-17": {
-    id: "wave-17",
-    label: "Wave 17 — Evidence Cleanup",
+  "evidence-cleanup": {
+    id: "evidence-cleanup",
+    label: "Evidence cleanup",
     activation: 0.95,
     stability: 0.9,
     baseStrength: 0.8,

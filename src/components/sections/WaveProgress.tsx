@@ -58,8 +58,8 @@ export function WaveProgress() {
             Evolution of the System
           </h2>
           <p className="text-muted-foreground max-w-xl">
-            Every wave is a completed node. The graph grows with each cycle.
-            Currently on Wave 17 — public evidence cleanup.
+            Historical project cycles are archive context, not public
+            capability claims. The current work is public evidence cleanup.
           </p>
         </motion.div>
 
@@ -71,10 +71,10 @@ export function WaveProgress() {
           className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10"
         >
           {[
-            { label: "Waves Complete", value: "16" },
-            { label: "Tests Passing", value: "200+" },
-            { label: "Repos Live", value: "8" },
-            { label: "Current Wave", value: "#17 LIVE" },
+            { label: "Archive cycles", value: "local" },
+            { label: "Tests", value: "receipt-needed" },
+            { label: "Repos", value: "public profile" },
+            { label: "Current work", value: "evidence" },
           ].map((stat) => (
             <div
               key={stat.label}
