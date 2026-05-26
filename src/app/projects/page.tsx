@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
   title: "Projects",
-  description: "Canonical TS project map: TS-Core, TensionLM, CIG, and Proof Ranker with bounded status and evidence routes.",
+  description: "Project index for TS-Reasoner, TS-Core, TensionLM, CIG, Proof Ranker, and related satellite branches.",
   path: "/projects",
 });
 

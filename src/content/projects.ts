@@ -36,6 +36,33 @@ export const tsFrameworkStatement =
 
 export const projects: Project[] = [
   {
+    slug: "ts-reasoner",
+    title: "TS-Reasoner v1.0.0",
+    name: "TS-Reasoner",
+    href: "/projects/ts-reasoner",
+    status: "Live",
+    summary: "TS-Core-backed typed tension reasoning with learned channel calibration, stress testing, structural repair, and machine-readable receipts.",
+    shortDescription: "Runnable typed tension traces with channel calibration, stress, repair, and receipts.",
+    problem: "Reasoning demos often blend proof completion, identity collapse, reverse inference, quantifier scope, contradiction, and confidence into one opaque score.",
+    method: "Represent reasoning work as typed tension channels over graph state. TensionLM is not in control here: TS-Reasoner verifies channel traces, resolver events, abstentions, and receipts.",
+    evidence: "v1.0.0 includes scoped evaluation, generalization stress testing, structural feature repair, and a unified release receipt.",
+    limits: "Synthetic, parser-controlled, and not natural-language robust. The next step is a candidate bridge where TensionLM proposes claims and TS-Reasoner remains verifier.",
+    repoUrl: links.repos.tsReasoner,
+    hfUrls: [],
+    proofIds: [],
+    installCommand: "git clone https://github.com/BoggersTheFish/TS-Reasoner-v0 && cd TS-Reasoner-v0",
+    inspectCommand: "python3 -m unittest discover && python3 scripts/generate_typed_channel_release_receipt.py",
+    currentState: "v1.0.0 release is live with typed-channel receipt assets.",
+    nextMilestone: "TS-Reasoner v1.1.0: TensionLM candidate bridge.",
+    tags: ["typed tension", "reasoning traces", "receipts"],
+    focus: ["Typed channels", "Learned calibration", "Release receipts"],
+    notes: [
+      "TS-Reasoner v1.0.0 demonstrates TS-Core-backed typed tension reasoning with learned channel calibration.",
+      "The release preserves trace validity while separating failures into transitivity, identity, directionality, quantifier scope, contradiction, confidence, and surface-structure channels.",
+      "TensionLM is next as a candidate proposal layer, not the reasoning authority.",
+    ],
+  },
+  {
     slug: "ts-core",
     title: "TS-Core",
     name: "TS-Core",
@@ -149,7 +176,7 @@ export const projects: Project[] = [
     installCommand: "Open the Hugging Face model cards and pair them with verifier scripts before use.",
     inspectCommand: "Compare v0-v4 model cards and verifier-loop notes.",
     currentState: "Published model ladder exists; repo-level routing still needs exact confirmation.",
-    nextMilestone: "TS-Reasoner / TensionProofLM integration.",
+    nextMilestone: "TS-Reasoner v1.1.0 candidate bridge where proposals are verified by typed channels.",
     tags: ["proof ranking", "verifiers", "repair"],
     focus: ["Proof scoring", "Trace repair", "Verifier-backed loops"],
     notes: [

@@ -25,6 +25,7 @@ export const links = {
   email: `mailto:${site.email}`,
   domainEmail: `mailto:${site.domainEmail}`,
   repos: {
+    tsReasoner: "https://github.com/BoggersTheFish/TS-Reasoner-v0",
     tsCore: "https://github.com/BoggersTheFish/TS-Core",
     tensionlm: "https://github.com/BoggersTheFish/TensionLM",
     cig: "https://github.com/BoggersTheFish",
@@ -49,8 +50,8 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner",
-    body: "Verifier/control loop for bounded reasoning traces, local/global tension, rejected alternatives, and abstention/repair.",
+    label: "TS-Reasoner v1.0.0",
+    body: "TS-Core-backed typed tension reasoning with learned channel calibration, stress testing, structural repair, and machine-readable receipts.",
   },
   {
     label: "TensionLM",
