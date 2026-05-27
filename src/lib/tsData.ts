@@ -271,12 +271,12 @@ export const SOCIAL_LINKS = [
 export const PUBLIC_RECEIPTS = [
   {
     id: "ts-reasoner-v1",
-    title: "TS-Reasoner v1.5.0 — exported sample boundary",
-    claim: "Real exported TensionLM-side candidate data can enter TS-Reasoner while remaining candidate data, not proof.",
-    command: "python3 scripts/evaluate_real_exported_tensionlm_sample.py",
-    artifact: "artifacts/real_exported_tensionlm_sample_receipt.json",
-    limitation: "Tiny exported sample set; not live model integration into the verifier.",
-    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/real_exported_tensionlm_sample_receipt.json",
+    title: "TS-Reasoner v1.6.0 — export set boundary",
+    claim: "Multiple exported TensionLM-side candidate samples can enter TS-Reasoner while remaining candidate data, not proof.",
+    command: "python3 scripts/evaluate_tensionlm_export_set.py",
+    artifact: "artifacts/tensionlm_export_set_receipt.json",
+    limitation: "Small exported set; deeper-chain support remains a recorded repair target.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/tensionlm_export_set_receipt.json",
   },
   {
     id: "ts-reasoner-v09",
@@ -299,12 +299,12 @@ export const PUBLIC_RECEIPTS = [
   },
   {
     id: "tensionlm-bridge",
-    title: "TS-Reasoner + TensionLM exported sample",
-    claim: "A real TensionLM-side eval artifact can be exported as candidate data and verified by typed channels.",
-    command: "python3 scripts/evaluate_real_exported_tensionlm_sample.py",
-    artifact: "artifacts/real_exported_tensionlm_sample_report.json",
+    title: "TS-Reasoner + TensionLM export set",
+    claim: "A small TensionLM-side export set can be verified with preserved failure reasons.",
+    command: "python3 scripts/evaluate_tensionlm_export_set.py",
+    artifact: "artifacts/tensionlm_export_set_report.json",
     limitation: "Exported candidate path only; model confidence remains metadata.",
-    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/docs/real_exported_tensionlm_sample.md",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/docs/tensionlm_export_set_evaluation.md",
   },
   {
     id: "ts-codex-os",

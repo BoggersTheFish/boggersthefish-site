@@ -22,7 +22,7 @@ const currentStack = [
   {
     name: "TS-Reasoner",
     role: "Verifier/control loop",
-    evidence: "v1.5 exported-sample receipt, typed-channel verification, zero candidate graph contamination.",
+    evidence: "v1.6 export-set receipt, typed-channel verification, zero candidate graph contamination.",
     href: "/projects/ts-reasoner",
     status: "verified local repo",
   },
@@ -65,10 +65,10 @@ const receipts = [
     href: links.models.tsReasonerV10,
   },
   {
-    title: "TS-Reasoner v1.5 exported sample boundary",
+    title: "TS-Reasoner v1.6 export set boundary",
     badge: "local verified",
-    body: "Release receipt shows real exported TensionLM-side candidate data consumed through the adapter with provenance preserved and verifier-over-confidence behavior intact.",
-    limit: "Tiny exported sample set; not live model integration into the verifier.",
+    body: "Release receipt shows multiple exported TensionLM-side candidates consumed through the adapter with malformed and deeper-chain failures preserved.",
+    limit: "Small exported sample set; not live model integration into the verifier.",
     href: "/projects/ts-reasoner",
   },
   {

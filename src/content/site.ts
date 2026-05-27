@@ -50,8 +50,8 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner v1.5.0",
-    body: "Real exported TensionLM-side candidate data enters through a typed verification boundary while remaining candidate data, not proof.",
+    label: "TS-Reasoner v1.6.0",
+    body: "Multiple exported TensionLM-side candidate samples enter through typed verification, with malformed and deeper-chain failures preserved.",
   },
   {
     label: "TensionLM",
