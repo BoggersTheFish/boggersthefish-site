@@ -68,7 +68,7 @@ export function HeroSection() {
         >
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-ts-purple/50 bg-forest-dark/75 backdrop-blur-sm text-xs font-mono text-ts-purple-light">
             <span className="w-1.5 h-1.5 rounded-full bg-ts-purple animate-ping-slow" />
-            TS-Reasoner v1.6 export set receipt
+            TS-Reasoner v2.0 learned candidate receipt
             <span className="text-ts-purple/40">|</span>
             <span className="text-muted-foreground">claims tied to receipts</span>
           </div>

@@ -40,6 +40,7 @@ export const links = {
     tensionlmPhase2TSNative: "https://huggingface.co/BoggersTheFish/TensionLM-Phase2-TSNative",
     tsReasonerV10: "https://huggingface.co/BoggersTheFish/TensionLM-117M-TS-Reasoner-v10",
     traceDistilledV11: "https://huggingface.co/BoggersTheFish/TensionLM-TS-Trace-Distilled-v11",
+    tsTinyVerifierV0: "https://huggingface.co/BoggersTheFish/TS-TinyVerifier-v0",
     proofRankerV0: "https://huggingface.co/BoggersTheFish/ts-proof-ranker-v0",
     proofRankerV1: "https://huggingface.co/BoggersTheFish/ts-proof-ranker-v1",
     proofRankerV2: "https://huggingface.co/BoggersTheFish/ts-proof-ranker-v2",
@@ -50,8 +51,8 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner v1.6.0",
-    body: "Multiple exported TensionLM-side candidate samples enter through typed verification, with malformed and deeper-chain failures preserved.",
+    label: "TS-Reasoner v2.0.0",
+    body: "A tiny learned candidate model proposes/ranks structured claims while typed channels remain proof authority.",
   },
   {
     label: "TensionLM",

@@ -29,7 +29,7 @@ const isNotItems = [
 ];
 
 const nextRoutes = [
-  { title: "10-minute repro", body: "Run TS-Reasoner, inspect one JSON trace, and read the v1.6 export-set boundary.", href: "/run-ts-reasoner", secondHref: "/projects/ts-reasoner" },
+  { title: "10-minute repro", body: "Run TS-Reasoner, inspect the v2.0 learned-candidate receipt, and check typed verifier authority.", href: "/run-ts-reasoner", secondHref: "/projects/ts-reasoner" },
   { title: "For researchers", body: "Start with research framing and proof-bank receipts.", href: "/research", secondHref: "/proof-bank" },
   { title: "For engineers", body: "Inspect project structure, source repos, and replay paths.", href: "/projects", secondHref: links.github },
   { title: "For funders/collaborators", body: "Read the grounded bio, roadmap, and contact route.", href: "/about", secondHref: "/contact" },
@@ -52,7 +52,7 @@ export default function StartHerePage() {
         <ParchmentCard tone="dark">
           <p className="field-label mb-4 text-gold">Public stack</p>
           <div className="space-y-4 text-sm leading-7 text-cream/80">
-            <p><strong className="text-gold">TS-Reasoner v1.6.0</strong> = typed verification boundary where exported TensionLM-side candidate sets preserve failures instead of hiding them.</p>
+            <p><strong className="text-gold">TS-Reasoner v2.0.0</strong> = learned candidate model where proposed claims stay candidate data until typed channels verify them.</p>
             <p><strong className="text-gold">TS-Core</strong> = graph/tension runtime.</p>
             <p><strong className="text-gold">TensionLM</strong> = sigmoid tension attention language model experiments.</p>
             <p><strong className="text-gold">CIG</strong> = persistent provenance-aware claim/evidence graph.</p>
@@ -83,15 +83,15 @@ export default function StartHerePage() {
       </div>
 
       <SectionHeading className="mt-14" title="Current Public Route">
-        <p>Start with the runnable v1.6.0 receipt before repairing the deeper-chain support gap it exposed.</p>
+        <p>Start with the runnable v2.0.0 receipt and verify that learned confidence never becomes proof authority.</p>
       </SectionHeading>
       <ParchmentCard>
         <div className="grid gap-4 text-sm leading-7 text-ink/75 md:grid-cols-5">
           <p><strong className="text-ink">Start Here</strong><br />Orient on the stack.</p>
           <p><strong className="text-ink">Run TS-Reasoner</strong><br />Generate a typed trace.</p>
-          <p><strong className="text-ink">Inspect Receipt</strong><br />Read v1.6.0 evidence.</p>
-          <p><strong className="text-ink">Read Limits</strong><br />Small exported set; parser-controlled verifier.</p>
-          <p><strong className="text-ink">Next</strong><br />Deeper-chain support repair.</p>
+          <p><strong className="text-ink">Inspect Receipt</strong><br />Read v2.0.0 evidence.</p>
+          <p><strong className="text-ink">Read Limits</strong><br />Structured data; parser-controlled verifier.</p>
+          <p><strong className="text-ink">Next</strong><br />Scale candidate sets without weakening verifier authority.</p>
         </div>
       </ParchmentCard>
 

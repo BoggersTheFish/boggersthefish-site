@@ -270,13 +270,13 @@ export const SOCIAL_LINKS = [
 
 export const PUBLIC_RECEIPTS = [
   {
-    id: "ts-reasoner-v1",
-    title: "TS-Reasoner v1.6.0 — export set boundary",
-    claim: "Multiple exported TensionLM-side candidate samples can enter TS-Reasoner while remaining candidate data, not proof.",
-    command: "python3 scripts/evaluate_tensionlm_export_set.py",
-    artifact: "artifacts/tensionlm_export_set_receipt.json",
-    limitation: "Small exported set; deeper-chain support remains a recorded repair target.",
-    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/tensionlm_export_set_receipt.json",
+    id: "ts-reasoner-v2",
+    title: "TS-Reasoner v2.0.0 — learned candidate model",
+    claim: "A tiny learned candidate model can propose/rank structured claims while typed channels remain proof authority.",
+    command: "python3 scripts/evaluate_learned_candidate_model.py",
+    artifact: "artifacts/learned_candidate_model_receipt.json",
+    limitation: "Structured synthetic examples; not a chatbot, theorem prover, or live TensionLM verifier integration.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/learned_candidate_model_receipt.json",
   },
   {
     id: "ts-reasoner-v09",
