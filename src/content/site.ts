@@ -50,8 +50,8 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner v1.0.0",
-    body: "TS-Core-backed typed tension reasoning with learned channel calibration, stress testing, structural repair, and machine-readable receipts.",
+    label: "TS-Reasoner v1.5.0",
+    body: "Real exported TensionLM-side candidate data enters through a typed verification boundary while remaining candidate data, not proof.",
   },
   {
     label: "TensionLM",

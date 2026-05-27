@@ -22,8 +22,8 @@ const currentStack = [
   {
     name: "TS-Reasoner",
     role: "Verifier/control loop",
-    evidence: "JSON traces, candidate scoring, local/global tension, refusal/repair path.",
-    href: "/run-ts-reasoner",
+    evidence: "v1.5 exported-sample receipt, typed-channel verification, zero candidate graph contamination.",
+    href: "/projects/ts-reasoner",
     status: "verified local repo",
   },
   {
@@ -65,11 +65,11 @@ const receipts = [
     href: links.models.tsReasonerV10,
   },
   {
-    title: "TS-Reasoner v1.0 trace contract",
+    title: "TS-Reasoner v1.5 exported sample boundary",
     badge: "local verified",
-    body: "Local receipt reports 20 tasks: 16 expected-pass tasks, 4 known-limit tasks, and a stable JSON trace contract.",
-    limit: "Local repo receipt only; not a broad reasoning benchmark.",
-    href: "/run-ts-reasoner",
+    body: "Release receipt shows real exported TensionLM-side candidate data consumed through the adapter with provenance preserved and verifier-over-confidence behavior intact.",
+    limit: "Tiny exported sample set; not live model integration into the verifier.",
+    href: "/projects/ts-reasoner",
   },
   {
     title: "Golden-path abstention trace",

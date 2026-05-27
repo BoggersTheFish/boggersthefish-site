@@ -271,12 +271,12 @@ export const SOCIAL_LINKS = [
 export const PUBLIC_RECEIPTS = [
   {
     id: "ts-reasoner-v1",
-    title: "TS-Reasoner v1.0.0 — stable trace contract",
-    claim: "The public JSON trace shape is stable enough for outside inspection and downstream tools.",
-    command: "python3 scripts/evaluate_v1_baseline.py",
-    artifact: "artifacts/v1_baseline_report.json",
-    limitation: "Stable trace contract only; not a broad reasoning benchmark or large model claim.",
-    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/v1_baseline_report.json",
+    title: "TS-Reasoner v1.5.0 — exported sample boundary",
+    claim: "Real exported TensionLM-side candidate data can enter TS-Reasoner while remaining candidate data, not proof.",
+    command: "python3 scripts/evaluate_real_exported_tensionlm_sample.py",
+    artifact: "artifacts/real_exported_tensionlm_sample_receipt.json",
+    limitation: "Tiny exported sample set; not live model integration into the verifier.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/real_exported_tensionlm_sample_receipt.json",
   },
   {
     id: "ts-reasoner-v09",
@@ -299,12 +299,12 @@ export const PUBLIC_RECEIPTS = [
   },
   {
     id: "tensionlm-bridge",
-    title: "TS-Reasoner + TensionLM bridge",
-    claim: "TensionLM proposes candidate text while TS-Reasoner verifies, repairs, ranks, or rejects it.",
-    command: "python3 scripts/run_tensionlm_bridge.py --tensionlm-path ../TensionLM",
-    artifact: "artifacts/tensionlm_bridge_smoke.json",
-    limitation: "Bridge receipt verifies the control path, not neural generation quality.",
-    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/docs/tensionlm_bridge.md",
+    title: "TS-Reasoner + TensionLM exported sample",
+    claim: "A real TensionLM-side eval artifact can be exported as candidate data and verified by typed channels.",
+    command: "python3 scripts/evaluate_real_exported_tensionlm_sample.py",
+    artifact: "artifacts/real_exported_tensionlm_sample_report.json",
+    limitation: "Exported candidate path only; model confidence remains metadata.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/docs/real_exported_tensionlm_sample.md",
   },
   {
     id: "ts-codex-os",

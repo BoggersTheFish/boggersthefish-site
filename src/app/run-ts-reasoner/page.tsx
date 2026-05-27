@@ -108,7 +108,7 @@ candidate_cautious:
 
       <div className="mt-8 flex flex-wrap gap-3">
         <Link href="/latest" className="plaque-button">
-          Latest TensionLM bridge
+          Latest TensionLM boundary
           <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/proof-bank" className="plaque-button secondary">

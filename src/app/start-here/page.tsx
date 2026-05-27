@@ -29,7 +29,7 @@ const isNotItems = [
 ];
 
 const nextRoutes = [
-  { title: "10-minute repro", body: "Run TS-Reasoner, inspect one JSON trace, and follow the TensionLM bridge.", href: "/run-ts-reasoner", secondHref: "/receipts" },
+  { title: "10-minute repro", body: "Run TS-Reasoner, inspect one JSON trace, and read the v1.5 exported-sample boundary.", href: "/run-ts-reasoner", secondHref: "/projects/ts-reasoner" },
   { title: "For researchers", body: "Start with research framing and proof-bank receipts.", href: "/research", secondHref: "/proof-bank" },
   { title: "For engineers", body: "Inspect project structure, source repos, and replay paths.", href: "/projects", secondHref: links.github },
   { title: "For funders/collaborators", body: "Read the grounded bio, roadmap, and contact route.", href: "/about", secondHref: "/contact" },
@@ -52,7 +52,7 @@ export default function StartHerePage() {
         <ParchmentCard tone="dark">
           <p className="field-label mb-4 text-gold">Public stack</p>
           <div className="space-y-4 text-sm leading-7 text-cream/80">
-            <p><strong className="text-gold">TS-Reasoner v1.0.0</strong> = TS-Core-backed typed tension traces, learned channel calibration, stress, structural repair, and receipts.</p>
+            <p><strong className="text-gold">TS-Reasoner v1.5.0</strong> = typed verification boundary where real exported TensionLM-side candidate data remains candidate data, not proof.</p>
             <p><strong className="text-gold">TS-Core</strong> = graph/tension runtime.</p>
             <p><strong className="text-gold">TensionLM</strong> = sigmoid tension attention language model experiments.</p>
             <p><strong className="text-gold">CIG</strong> = persistent provenance-aware claim/evidence graph.</p>
@@ -83,15 +83,15 @@ export default function StartHerePage() {
       </div>
 
       <SectionHeading className="mt-14" title="Current Public Route">
-        <p>Start with the runnable v1.0.0 receipt before moving up to language candidates.</p>
+        <p>Start with the runnable v1.5.0 receipt before moving up to larger exported TensionLM sample sets.</p>
       </SectionHeading>
       <ParchmentCard>
         <div className="grid gap-4 text-sm leading-7 text-ink/75 md:grid-cols-5">
           <p><strong className="text-ink">Start Here</strong><br />Orient on the stack.</p>
           <p><strong className="text-ink">Run TS-Reasoner</strong><br />Generate a typed trace.</p>
-          <p><strong className="text-ink">Inspect Receipt</strong><br />Read v1.0.0 evidence.</p>
-          <p><strong className="text-ink">Read Limits</strong><br />Synthetic and parser-controlled.</p>
-          <p><strong className="text-ink">Next</strong><br />TensionLM candidate bridge.</p>
+          <p><strong className="text-ink">Inspect Receipt</strong><br />Read v1.5.0 evidence.</p>
+          <p><strong className="text-ink">Read Limits</strong><br />Tiny exported set; parser-controlled verifier.</p>
+          <p><strong className="text-ink">Next</strong><br />TensionLM export set evaluation.</p>
         </div>
       </ParchmentCard>
 
