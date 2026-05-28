@@ -1,0 +1,17 @@
+{
+  "version": "v3.5.0-site-sync",
+  "ts_reasoner_release": "https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v3.5.0",
+  "core_line": [
+    "LLMs propose.",
+    "TS verifies.",
+    "Confidence is not proof.",
+    "Typed traces show why."
+  ],
+  "claim_boundary": {
+    "broad_nlp_claim": false,
+    "general_theorem_proving_claim": false,
+    "external_benchmark_victory_claim": false,
+    "live_tensionlm_runtime_integration": false,
+    "model_confidence_as_proof": false
+  }
+}
