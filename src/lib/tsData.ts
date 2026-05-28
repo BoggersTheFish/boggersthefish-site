@@ -271,7 +271,7 @@ export const SOCIAL_LINKS = [
 export const PUBLIC_RECEIPTS = [
   {
     id: "ts-reasoner-v2",
-    title: "TS-Reasoner v2.0.0 — learned candidate model",
+    title: "TS-Reasoner v3.5.0 — learned candidate model",
     claim: "A tiny learned candidate model can propose/rank structured claims while typed channels remain proof authority.",
     command: "python3 scripts/evaluate_learned_candidate_model.py",
     artifact: "artifacts/learned_candidate_model_receipt.json",

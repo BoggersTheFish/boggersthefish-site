@@ -37,7 +37,7 @@ export const tsFrameworkStatement =
 export const projects: Project[] = [
   {
     slug: "ts-reasoner",
-    title: "TS-Reasoner v2.0.0",
+    title: "TS-Reasoner v3.5.0",
     name: "TS-Reasoner",
     href: "/projects/ts-reasoner",
     status: "Live",
@@ -179,7 +179,7 @@ export const projects: Project[] = [
     installCommand: "Open the Hugging Face model cards and pair them with verifier scripts before use.",
     inspectCommand: "Compare v0-v4 model cards and verifier-loop notes.",
     currentState: "Published model ladder exists; repo-level routing still needs exact confirmation.",
-    nextMilestone: "TS-Reasoner v1.7.0 deeper-chain repair based on the failure preserved by the v1.6 export set receipt.",
+    nextMilestone: "TS-Reasoner v3.5.0 public verifier-first surface and proposer-boundary release.",
     tags: ["proof ranking", "verifiers", "repair"],
     focus: ["Proof scoring", "Trace repair", "Verifier-backed loops"],
     notes: [

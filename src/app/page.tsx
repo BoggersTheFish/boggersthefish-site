@@ -65,7 +65,7 @@ const receipts = [
     href: links.models.tsReasonerV10,
   },
   {
-    title: "TS-Reasoner v2.0 learned candidate model",
+    title: "TS-Reasoner v3.5 learned candidate model",
     badge: "local verified",
     body: "Release receipt shows a tiny learned candidate model proposing/ranking structured claims while typed channels retain verifier authority.",
     limit: "Structured synthetic examples; not a chatbot, theorem prover, or live model integration into the verifier.",
