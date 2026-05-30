@@ -37,7 +37,7 @@ export const tsFrameworkStatement =
 export const projects: Project[] = [
   {
     slug: "ts-reasoner",
-    title: "TS-Reasoner v3.5.0",
+    title: "TS-Reasoner v4.5.0 v3.5.0",
     name: "TS-Reasoner",
     href: "/projects/ts-reasoner",
     status: "Live",

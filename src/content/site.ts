@@ -3,7 +3,7 @@ export const site = {
   tagline: "Building Thinking Systems",
   title: "Small bounded reasoning, inspected.",
   description:
-    "TS-Reasoner emits candidate chains, local and global tension, rejected alternatives, abstention/repair decisions, benchmark receipts, and visible failure modes.",
+    "TS-Reasoner v4.5.0 emits candidate chains, local and global tension, rejected alternatives, abstention/repair decisions, benchmark receipts, and visible failure modes.",
   url: "https://www.boggersthefish.com",
   email: "boggersthefish@gmail.com",
   domainEmail: "boggersthefish@boggersthefish.com",
