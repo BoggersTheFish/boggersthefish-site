@@ -82,4 +82,4 @@ they are not broad AGI, general reasoning, or production reliability claims.
 
 ## Current TS-Reasoner flagship
 
-TS-Reasoner v3.5.0 is now the flagship verifier-first reasoning release: LLMs propose, TS verifies, confidence is not proof, and typed traces show why. Release: https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v3.5.0
+TS-Reasoner v10.0.0 is now the flagship verifier-first reasoning release: runtime policy contracts, replay, ledger, checkpoint/restore, recovery drill, and typed proof-boundary receipts. Release: https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v10.0.0

@@ -51,8 +51,8 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner v3.5.0",
-    body: "A tiny learned candidate model proposes/ranks structured claims while typed channels remain proof authority.",
+    label: "TS-Reasoner v10.0.0",
+    body: "Verifier-first runtime OS with policy contracts, replay, ledger, checkpoint/restore, recovery drill, and typed proof-boundary receipts.",
   },
   {
     label: "TensionLM",

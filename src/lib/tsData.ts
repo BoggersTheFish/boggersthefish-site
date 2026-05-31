@@ -271,12 +271,12 @@ export const SOCIAL_LINKS = [
 export const PUBLIC_RECEIPTS = [
   {
     id: "ts-reasoner-v2",
-    title: "TS-Reasoner v3.5.0 — learned candidate model",
-    claim: "A tiny learned candidate model can propose/rank structured claims while typed channels remain proof authority.",
-    command: "python3 scripts/evaluate_learned_candidate_model.py",
-    artifact: "artifacts/learned_candidate_model_receipt.json",
-    limitation: "Structured synthetic examples; not a chatbot, theorem prover, or live TensionLM verifier integration.",
-    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/learned_candidate_model_receipt.json",
+    title: "TS-Reasoner v10.0.0 — verifier-first runtime OS",
+    claim: "A bounded runtime OS can route candidate events through policy contracts, replay, ledger, checkpoint/restore, and recovery while typed verifier support remains proof authority.",
+    command: "python3 -m ts_reasoner.cli v10",
+    artifact: "artifacts/runtime_os_receipt.json",
+    limitation: "Runtime integrity is not claim truth; not a chatbot, theorem prover, or broad language-understanding claim.",
+    link: "https://github.com/BoggersTheFish/TS-Reasoner-v0/blob/main/artifacts/runtime_os_receipt.json",
   },
   {
     id: "ts-reasoner-v09",

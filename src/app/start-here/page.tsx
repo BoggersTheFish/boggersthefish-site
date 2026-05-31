@@ -29,7 +29,7 @@ const isNotItems = [
 ];
 
 const nextRoutes = [
-  { title: "10-minute repro", body: "Run TS-Reasoner, inspect the v3.5 proposer-boundary receipt, and check that confidence never becomes proof authority.", href: "/run-ts-reasoner", secondHref: "/projects/ts-reasoner" },
+  { title: "10-minute repro", body: "Run TS-Reasoner v10, inspect the runtime OS receipt, and check typed verifier authority.", href: "/run-ts-reasoner", secondHref: "/projects/ts-reasoner" },
   { title: "For researchers", body: "Start with research framing and proof-bank receipts.", href: "/research", secondHref: "/proof-bank" },
   { title: "For engineers", body: "Inspect project structure, source repos, and replay paths.", href: "/projects", secondHref: links.github },
   { title: "For funders/collaborators", body: "Read the grounded bio, roadmap, and contact route.", href: "/about", secondHref: "/contact" },
@@ -52,7 +52,7 @@ export default function StartHerePage() {
         <ParchmentCard tone="dark">
           <p className="field-label mb-4 text-gold">Public stack</p>
           <div className="space-y-4 text-sm leading-7 text-cream/80">
-            <p><strong className="text-gold">TS-Reasoner v3.5.0</strong> = verifier-first public surface where LLMs propose, TS verifies, confidence is not proof, and typed traces show why.</p>
+            <p><strong className="text-gold">TS-Reasoner v10.0.0</strong> = verifier-first runtime OS where candidate events stay non-proof until typed verifier support exists.</p>
             <p><strong className="text-gold">TS-Core</strong> = graph/tension runtime.</p>
             <p><strong className="text-gold">TensionLM</strong> = sigmoid tension attention language model experiments.</p>
             <p><strong className="text-gold">CIG</strong> = persistent provenance-aware claim/evidence graph.</p>
@@ -83,7 +83,7 @@ export default function StartHerePage() {
       </div>
 
       <SectionHeading className="mt-14" title="Current Public Route">
-        <p>Start with the runnable v2.0.0 receipt and verify that learned confidence never becomes proof authority.</p>
+        <p>Start with the runnable v10.0.0 receipt and verify that runtime integrity, generated text, and confidence never become proof authority.</p>
       </SectionHeading>
       <ParchmentCard>
         <div className="grid gap-4 text-sm leading-7 text-ink/75 md:grid-cols-5">

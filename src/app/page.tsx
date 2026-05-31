@@ -22,7 +22,7 @@ const currentStack = [
   {
     name: "TS-Reasoner",
     role: "Verifier/control loop",
-    evidence: "v2.0 learned-candidate receipt, typed-channel verification, zero candidate graph contamination.",
+    evidence: "v10 runtime OS receipt, policy contracts, checkpoint/restore, recovery drill, zero candidate graph contamination.",
     href: "/projects/ts-reasoner",
     status: "verified local repo",
   },
@@ -65,10 +65,10 @@ const receipts = [
     href: links.models.tsReasonerV10,
   },
   {
-    title: "TS-Reasoner v3.5 learned candidate model",
+    title: "TS-Reasoner v10 verifier-first runtime OS",
     badge: "local verified",
-    body: "Release receipt shows a tiny learned candidate model proposing/ranking structured claims while typed channels retain verifier authority.",
-    limit: "Structured synthetic examples; not a chatbot, theorem prover, or live model integration into the verifier.",
+    body: "Release receipt shows replay, policy contracts, tamper-evident ledger, checkpoint/restore, and recovery under typed verifier authority.",
+    limit: "Runtime integrity is not claim truth; not a chatbot, theorem prover, or broad language-understanding claim.",
     href: "/projects/ts-reasoner",
   },
   {

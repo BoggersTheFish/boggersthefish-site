@@ -71,13 +71,13 @@ Initial lint found JSX quote escaping in `/run-ts-reasoner`; fixed and reran suc
 - `TensionLM-TS-Trace-Distilled-v11` is public on Hugging Face, last modified `2026-05-16T18:28:57.000Z`.
 - v11 card/training summary reports 1,920 trace-distillation rows, 1,632/144/144 split, about 1.1M parameters, 580 steps, validation perplexity around 2.45, and `0/48` raw exact answer/rule hits.
 - Local TS-Reasoner command writes `artifacts/latest_trace.json` and abstains on the some/all trap.
-- TS-Reasoner GitHub tags API shows through `v0.9.0`; local artifacts show `v1.0.0`.
+- TS-Reasoner GitHub release page now shows `v10.0.0` as Latest.
 
 ## Not Verified
 
 - Current Proof Ranker Hugging Face artifact health.
 - Every proof-bank date/metric against external artifact hashes.
-- Public GitHub visibility for a `v1.0.0` TS-Reasoner tag.
+- None for the TS-Reasoner v10 release surface after publishing `v10.0.0`.
 
 ## Claims Softened
 

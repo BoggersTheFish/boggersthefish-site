@@ -3,9 +3,9 @@ import { ProjectDetail } from "@/components/ProjectDetail";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "TS-Reasoner v3.5.0",
+  title: "TS-Reasoner v10.0.0",
   description:
-    "Typed verification reasoner with a tiny learned candidate model, candidate containment, and proof-boundary traces.",
+    "Verifier-first reasoning runtime with policy contracts, replay, ledger, checkpoint, restore, recovery drill, and proof-boundary receipts.",
   path: "/projects/ts-reasoner",
 });
 

@@ -87,7 +87,7 @@ Observed output: `Answer: Not enough information.`, `Selected chain: candidate_c
 
 - Exact Proof Ranker HF artifact health was not rechecked.
 - Proof-bank dates and metrics remain local content unless paired with per-receipt artifacts.
-- TS-Reasoner v1.0 is local-artifact verified but not visible as a public GitHub tag from the tags API.
+- TS-Reasoner v10.0.0 is visible as the latest public GitHub release.
 - Public deployed site still shows old content until this branch is built and deployed.
 
 Machine-readable mirror: `artifacts/site_truth_audit.json`.
