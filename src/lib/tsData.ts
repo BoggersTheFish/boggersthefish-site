@@ -373,7 +373,7 @@ export const WAVE_LOG = [
   { wave: 14, name: "Docker One-Click", date: "draft/local", status: "draft", description: "Planned or local-only branch; no public date claim without receipt." },
   { wave: 15, name: "WASM Port", date: "draft/local", status: "draft", description: "Planned or local-only branch; no public date claim without receipt." },
   { wave: 16, name: "Multi-Agent Coordination", date: "draft/local", status: "draft", description: "Planned or local-only branch; no public date claim without receipt." },
-  { wave: 17, name: "Evidence Cleanup", date: "Current update", status: "current", description: "Public claim ledger, source cleanup, CPU repair artifact, and evidence-bounded wording." },
+  { wave: 17, name: "Evidence Cleanup", date: "2026-06-08", status: "current", description: "Public claim ledger, source cleanup, CPU repair artifact, and evidence-bounded wording." },
   { wave: 18, name: "External Replication", date: "next", status: "next", description: "Larger held-out TAC controls, Path A GPU run, and external benchmark receipts." },
 ] as const;
 
@@ -384,7 +384,7 @@ export const SITE_META = {
   url: "https://www.boggersthefish.com",
   author: "BoggersTheFish",
   twitter: "@BoggersTheFish",
-  lastWave: "Current update label",
+  lastWave: "2026-06-08 update",
   currentWave: 17,
   waveName: "Evidence Cleanup",
   ogImage: "https://www.boggersthefish.com/og-image.svg",

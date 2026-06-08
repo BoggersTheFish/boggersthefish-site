@@ -75,7 +75,7 @@ export const projects: Project[] = [
     method: "Use .bog/.bogpk/.bogbin as deterministic verification and receipt containers, not just compression.",
     evidence: "Provides verified archive/restore and package/store verification capabilities for the runtime.",
     limits: "BogK/BogOS is not a host kernel, not a full syscall sandbox, and not real physical firmware.",
-    repoUrl: links.repos.tsCore,
+    repoUrl: links.repos.bogbin,
     hfUrls: [],
     proofIds: [],
     installCommand: "Not publicly distributable yet.",

@@ -30,6 +30,7 @@ export const links = {
     tensionlm: "https://github.com/BoggersTheFish/TensionLM",
     cig: "https://github.com/BoggersTheFish",
     proofRanker: "https://github.com/BoggersTheFish",
+    bogbin: "https://github.com/BoggersTheFish/bogbin",
   },
   models: {
     tensionlm117M: "https://huggingface.co/BoggersTheFish/TensionLM-117M",

@@ -84,7 +84,7 @@ export default function StartHerePage() {
       </div>
 
       <SectionHeading className="mt-14" title="Current Public Route">
-        <p>Start with the runnable v10.0.0 receipt and verify that runtime integrity, generated text, and confidence never become proof authority.</p>
+        <p>Start with the ecosystem map, then verify that runtime integrity, generated text, and confidence never become proof authority.</p>
       </SectionHeading>
       <ParchmentCard>
         <div className="grid gap-4 text-sm leading-7 text-ink/75 md:grid-cols-4">
