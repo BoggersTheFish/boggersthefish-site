@@ -181,7 +181,7 @@ export function Footer() {
             </div>
           </div>
           <div className="font-mono text-[10px] text-muted-foreground/60">
-            © 2026 BoggersTheFish. All nodes reserved.
+            © BoggersTheFish. All nodes reserved.
           </div>
         </div>
       </div>

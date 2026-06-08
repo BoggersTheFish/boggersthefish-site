@@ -52,9 +52,10 @@ export default function StartHerePage() {
         <ParchmentCard tone="dark">
           <p className="field-label mb-4 text-gold">Public stack</p>
           <div className="space-y-4 text-sm leading-7 text-cream/80">
-            <p><strong className="text-gold">TS-Reasoner v10.0.0</strong> = verifier-first runtime OS where candidate events stay non-proof until typed verifier support exists.</p>
+            <p><strong className="text-gold">TS-Reasoner</strong> = Bounded verifier-first reasoning runtime with typed traces, answer arenas, TS-Chat repair loops, and explanation traces.</p>
+            <p><strong className="text-gold">BOGBIN / BOGVM / BogOS</strong> = Deterministic verified byte/container/runtime substrate and workspace/user-space kernel contract direction. Not a host kernel or physical firmware.</p>
+            <p><strong className="text-gold">TensionLM</strong> = Model/candidate/tension experiments connected to TS-Reasoner through exported/candidate outputs. The verifier remains proof authority.</p>
             <p><strong className="text-gold">TS-Core</strong> = graph/tension runtime.</p>
-            <p><strong className="text-gold">TensionLM</strong> = sigmoid tension attention language model experiments.</p>
             <p><strong className="text-gold">CIG</strong> = persistent provenance-aware claim/evidence graph.</p>
             <p><strong className="text-gold">Proof Ranker</strong> = proof scoring, repair, and verifier loop experiments.</p>
             <p><strong className="text-gold">BoggersTheAI / Mind / Pulse</strong> = experimental runtime/agent branches, secondary to the public core stack.</p>
@@ -86,12 +87,11 @@ export default function StartHerePage() {
         <p>Start with the runnable v10.0.0 receipt and verify that runtime integrity, generated text, and confidence never become proof authority.</p>
       </SectionHeading>
       <ParchmentCard>
-        <div className="grid gap-4 text-sm leading-7 text-ink/75 md:grid-cols-5">
-          <p><strong className="text-ink">Start Here</strong><br />Orient on the stack.</p>
-          <p><strong className="text-ink">Run TS-Reasoner</strong><br />Generate a typed trace.</p>
-          <p><strong className="text-ink">Inspect Receipt</strong><br />Read v2.0.0 evidence.</p>
-          <p><strong className="text-ink">Read Limits</strong><br />Structured data; parser-controlled verifier.</p>
-          <p><strong className="text-ink">Next</strong><br />Scale candidate sets without weakening verifier authority.</p>
+        <div className="grid gap-4 text-sm leading-7 text-ink/75 md:grid-cols-4">
+          <p><strong className="text-ink">Start Here</strong><br />Ecosystem map.</p>
+          <p><strong className="text-ink">TS-Reasoner</strong><br />Verifier-first reasoning runtime.</p>
+          <p><strong className="text-ink">BOGBIN/BOGVM/BogOS</strong><br />Deterministic verified container substrate.</p>
+          <p><strong className="text-ink">TensionLM</strong><br />Model/candidate experiments.</p>
         </div>
       </ParchmentCard>
 
