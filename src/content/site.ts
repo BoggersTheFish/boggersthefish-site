@@ -30,6 +30,7 @@ export const links = {
     tensionlm: "https://github.com/BoggersTheFish/TensionLM",
     cig: "https://github.com/BoggersTheFish",
     proofRanker: "https://github.com/BoggersTheFish",
+    bogbin: "https://github.com/BoggersTheFish/bogbin",
   },
   models: {
     tensionlm117M: "https://huggingface.co/BoggersTheFish/TensionLM-117M",
@@ -51,24 +52,24 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner v10.0.0",
-    body: "Verifier-first runtime OS with policy contracts, replay, ledger, checkpoint/restore, recovery drill, and typed proof-boundary receipts.",
+    label: "TS-Reasoner",
+    body: "Bounded verifier-first reasoning runtime with typed traces, answer arenas, TS-Chat repair loops, and explanation traces.",
+  },
+  {
+    label: "BOGBIN/BOGVM",
+    body: "Deterministic verified byte/container/runtime substrate. Verified archive/restore and package verification.",
+  },
+  {
+    label: "BogOS/BogK",
+    body: "Verified workspace/user-space kernel contract direction. Not a host kernel or physical firmware.",
   },
   {
     label: "TensionLM",
-    body: "Model-line experiments around tension-field learning, including the HF-visible v10 reasoner artifact and v11 trace-distilled student.",
+    body: "Model/candidate/tension experiments. The neural/model-side line connected to TS-Reasoner through exported/candidate outputs.",
   },
   {
-    label: "CIG",
-    body: "Provenance-aware knowledge graph work for claims, evidence, contradiction, confidence, and revision.",
-  },
-  {
-    label: "Proof Ranker",
-    body: "Proof scoring and repair ladder for evaluating and improving reasoning traces.",
-  },
-  {
-    label: "BGC",
-    body: "Off-chain community credit concept for non-financial proof-of-contribution support.",
+    label: "TS-Start-Here",
+    body: "Ecosystem map. Start Here → TS-Reasoner → BOGBIN/BOGVM/BogOS → TensionLM / experiments.",
   },
 ];
 

@@ -22,30 +22,37 @@ const currentStack = [
   {
     name: "TS-Reasoner",
     role: "Verifier/control loop",
-    evidence: "v10 runtime OS receipt, policy contracts, checkpoint/restore, recovery drill, zero candidate graph contamination.",
+    evidence: "Bounded verifier-first reasoning runtime with typed traces, answer arenas, TS-Chat repair loops, and explanation traces.",
     href: "/projects/ts-reasoner",
+    status: "verified local repo",
+  },
+  {
+    name: "BOGBIN/BOGVM",
+    role: "Deterministic runtime substrate",
+    evidence: "Deterministic verified byte/container/runtime substrate with verified archive/restore capabilities.",
+    href: "/projects/bogos",
+    status: "verified local repo",
+  },
+  {
+    name: "BogOS/BogK",
+    role: "Workspace/user-space kernel contract",
+    evidence: "Verified workspace/user-space kernel contract direction. Not a host kernel or physical firmware.",
+    href: "/projects/bogos",
     status: "verified local repo",
   },
   {
     name: "TensionLM",
     role: "Model-line experiments / tension-field learning",
-    evidence: "HF-visible v10 reasoner artifact and v11 trace-distilled student.",
+    evidence: "Model/candidate/tension experiments connected to TS-Reasoner through exported/candidate outputs.",
     href: "/latest",
     status: "verified HF metadata",
   },
   {
-    name: "CIG",
-    role: "Provenance-aware claim/evidence graph",
-    evidence: "Claim discipline, contradiction framing, and revision-oriented proof notes.",
-    href: "/projects/cig",
-    status: "bounded project claim",
-  },
-  {
-    name: "Proof Ranker",
-    role: "Proof scoring / repair ladder",
-    evidence: "Published artifact ladder is linked; exact receipt sync remains a TODO.",
-    href: "/projects/proof-ranker",
-    status: "receipt sync needed",
+    name: "TS-Start-Here",
+    role: "Ecosystem map",
+    evidence: "Start Here → TS-Reasoner → BOGBIN/BOGVM/BogOS → TensionLM / experiments.",
+    href: "/start-here",
+    status: "verified local repo",
   },
 ];
 
@@ -169,9 +176,11 @@ export default function HomePage() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              "No claim that TS proves AGI.",
-              "No claim that TensionLM beats transformers generally.",
-              "No broad benchmark numbers without linked receipts.",
+              "Not broad AGI.",
+              "Not physical firmware yet.",
+              "Not a real kernel yet.",
+              "Not neural text as proof.",
+              "Receipts/traces/verifiers are the authority.",
               "Dates and versions are verified or labelled local/draft.",
             ].map((item) => (
               <p key={item} className="flex gap-3 rounded-md border border-gold/20 bg-black/20 p-3 text-sm leading-6 text-cream/78">
