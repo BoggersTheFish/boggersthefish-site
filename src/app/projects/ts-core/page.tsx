@@ -5,10 +5,10 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "TS-Core",
   description:
-    "Minimal graph/tension runtime for nodes, edges, activation, constraint pressure, propagation, relaxation, and Break/Evolve cycles.",
+    "Reusable deterministic graph and tension primitives for propagation, relaxation, contradiction, and revision.",
   path: "/projects/ts-core",
 });
 
-export default function TSCorePage() {
+export default function ProjectPage() {
   return <ProjectDetail slug="ts-core" />;
 }

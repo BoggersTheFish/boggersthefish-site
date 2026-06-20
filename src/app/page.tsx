@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { BGCNotice } from "@/components/BGCNotice";
 import { ContributorPaths } from "@/components/ContributorPaths";
 import { Hero } from "@/components/Hero";
@@ -9,81 +8,55 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { QuickLinks } from "@/components/QuickLinks";
 import { SectionHeading } from "@/components/SectionHeading";
 import { projects } from "@/content/projects";
-import { links, site } from "@/content/site";
+import { lineageCount } from "@/content/lineage";
 import { pageMetadata } from "@/lib/metadata";
+import { site } from "@/content/site";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata = pageMetadata({
   title: site.title,
   description: site.description,
   path: "/",
 });
 
-const currentStack = [
+const programmes = [
   {
-    name: "TS-Reasoner",
-    role: "Verifier/control loop",
-    evidence: "Bounded verifier-first reasoning runtime with typed traces, answer arenas, TS-Chat repair loops, and explanation traces.",
-    href: "/projects/ts-reasoner",
-    status: "verified local repo",
+    title: "Reasoning and language",
+    body: "ts-chat-language compiles human input into explicit semantic state. TS-Reasoner decides what may be accepted, repaired, remembered, or rejected.",
+    route: "/projects/ts-chat-language",
   },
   {
-    name: "BOGBIN/BOGVM",
-    role: "Deterministic runtime substrate",
-    evidence: "Deterministic verified byte/container/runtime substrate with verified archive/restore capabilities.",
-    href: "/projects/bogos",
-    status: "verified local repo",
+    title: "Model science",
+    body: "Ten-SON-LM asks whether learned tension causally improves a recurrent semantic workspace. TensionLM remains the earlier attention-based evidence line.",
+    route: "/projects/ten-son-lm",
   },
   {
-    name: "BogOS/BogK",
-    role: "Workspace/user-space kernel contract",
-    evidence: "Verified workspace/user-space kernel contract direction. Not a host kernel or physical firmware.",
-    href: "/projects/bogos",
-    status: "verified local repo",
+    title: "Adaptive inference",
+    body: "TSQ explores precision escalation driven by tension and verifier failure. It does not claim an efficiency win until distinct numerical paths are measured.",
+    route: "/projects/tsq",
   },
   {
-    name: "TensionLM",
-    role: "Model-line experiments / tension-field learning",
-    evidence: "Model/candidate/tension experiments connected to TS-Reasoner through exported/candidate outputs.",
-    href: "/latest",
-    status: "verified HF metadata",
-  },
-  {
-    name: "TS-Start-Here",
-    role: "Ecosystem map",
-    evidence: "Start Here → TS-Reasoner → BOGBIN/BOGVM/BogOS → TensionLM / experiments.",
-    href: "/start-here",
-    status: "verified local repo",
+    title: "Verified computing",
+    body: "bogbin develops deterministic state, capabilities, persistence, and rollback. TensionForge tests verified training on legacy commodity hardware.",
+    route: "/projects/bogos",
   },
 ];
 
-const receipts = [
+const fieldNotes = [
   {
-    title: "TensionLM-TS-Trace-Distilled-v11",
-    badge: "external verified",
-    body: "HF API/card show a compact trace-distilled student, 1,920 v10 trace rows, 580 training steps, and raw held-out exact answer/rule hits of 0/48.",
-    limit: "The v11 card says raw exact answer/rule generation is not solved; v10 remains the working reasoner.",
-    href: links.models.traceDistilledV11,
+    title: "Ten-SON Milestone 1: Partial",
+    body: "Delayed recall, balanced brackets, and a synthetic next-token task learned. Copy missed threshold. Tension evidence is promising on one task and mixed elsewhere.",
   },
   {
-    title: "TensionLM-117M-TS-Reasoner-v10",
-    badge: "external verified",
-    body: "HF card lists deterministic graph, arithmetic, code, boolean, set, and string families with bounded system receipts.",
-    limit: "The card scopes the scores to generated formal families and says they are not raw LLM scores.",
-    href: links.models.tsReasonerV10,
+    title: "TensionForge: correct, currently slow",
+    body: "The RX 480 path has forward, backward, optimizer, and recurrent parity receipts, but the tested runtime is substantially slower than PyTorch CPU.",
   },
   {
-    title: "TS-Reasoner v10 verifier-first runtime OS",
-    badge: "local verified",
-    body: "Release receipt shows replay, policy contracts, tamper-evident ledger, checkpoint/restore, and recovery under typed verifier authority.",
-    limit: "Runtime integrity is not claim truth; not a chatbot, theorem prover, or broad language-understanding claim.",
-    href: "/projects/ts-reasoner",
+    title: "TSQ: runtime before quantization proof",
+    body: "Routing, repair, evaluation, data, and adapter tooling exist. Genuine adaptive-precision evidence waits for materially different low/high numerical backends.",
   },
   {
-    title: "Golden-path abstention trace",
-    badge: "local verified",
-    body: "A local run rejects the overstrong all-artists conclusion and settles on 'Not enough information.'",
-    limit: "Single bounded example, useful as a trace-contract demo rather than a capability claim.",
-    href: "/run-ts-reasoner",
+    title: "TSLC: language substrate before chatbot claims",
+    body: "MeaningGraph, graph-diff memory, language packs, and declarative rules exist. End-to-end verifier integration is the next credibility milestone.",
   },
 ];
 
@@ -95,7 +68,7 @@ export default function HomePage() {
       <section className="page-shell pb-4">
         <div className="grid gap-5 lg:grid-cols-[1.45fr_0.75fr]">
           <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {projects.map((project) => (
+            {projects.slice(0, 4).map((project) => (
               <ProjectCard key={project.slug} project={project} compact />
             ))}
           </div>
@@ -107,83 +80,100 @@ export default function HomePage() {
       </section>
 
       <section className="page-shell">
-        <SectionHeading eyebrow="Current stack" title="Verifier first, models second">
+        <SectionHeading eyebrow="Current architecture" title="Four programmes, one evidence rule">
           <p>
-            The public surface is organized around what can be inspected today,
-            not broad claims about general reasoning.
+            Each programme has a different job. None may convert fluency,
+            confidence, naming, or version count into proof.
           </p>
         </SectionHeading>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {currentStack.map((item) => (
-            <Link key={item.name} href={item.href} className="ts-card p-5 hover:-translate-y-0.5">
-              <div className="mb-4 flex items-center justify-between gap-3">
-                <h2 className="font-serif text-2xl font-semibold text-cream">{item.name}</h2>
-                <span className="rounded-full border border-gold/30 bg-gold/10 px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-gold">
-                  {item.status}
-                </span>
-              </div>
-              <p className="field-label text-gold/85">Role</p>
-              <p className="mt-2 text-sm leading-6 text-cream/78">{item.role}</p>
-              <p className="field-label mt-5 text-gold/85">Evidence</p>
-              <p className="mt-2 text-sm leading-6 text-cream/72">{item.evidence}</p>
+          {programmes.map((programme) => (
+            <Link
+              key={programme.title}
+              href={programme.route}
+              className="ts-card p-5 hover:-translate-y-0.5"
+            >
+              <h2 className="font-serif text-2xl font-semibold text-cream">
+                {programme.title}
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-cream/76">
+                {programme.body}
+              </p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-gold">
+                Open programme <ArrowRight className="h-4 w-4" />
+              </span>
             </Link>
           ))}
         </div>
       </section>
 
       <section className="page-shell pt-2">
-        <SectionHeading eyebrow="Receipts before claims" title="Latest visible receipts">
+        <SectionHeading eyebrow="Current evidence" title="Field notes, including the failures">
           <p>
-            These cards only state what is present in local artifacts or public
-            Hugging Face metadata/model cards. Broad AGI or general-reasoning
-            claims are deliberately absent.
+            The archive records what happened, not just what sounds impressive.
           </p>
         </SectionHeading>
         <div className="grid gap-5 md:grid-cols-2">
-          {receipts.map((receipt) => (
-            <ParchmentCard key={receipt.title} tone="dark">
-              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                <h2 className="font-serif text-2xl font-semibold text-cream">{receipt.title}</h2>
-                <span className="rounded-full border border-gold/35 bg-gold/10 px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gold">
-                  {receipt.badge}
-                </span>
-              </div>
-              <p className="text-sm leading-7 text-cream/78">{receipt.body}</p>
-              <p className="mt-4 border-l-2 border-gold/45 pl-3 text-sm leading-6 text-cream/70">
-                {receipt.limit}
-              </p>
-              <Link
-                href={receipt.href}
-                target={receipt.href.startsWith("http") ? "_blank" : undefined}
-                rel={receipt.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-gold"
-              >
-                Inspect receipt
-                {receipt.href.startsWith("http") ? <ExternalLink className="h-4 w-4" /> : <ArrowRight className="h-4 w-4" />}
-              </Link>
+          {fieldNotes.map((note) => (
+            <ParchmentCard key={note.title} tone="dark">
+              <h2 className="font-serif text-2xl font-semibold text-cream">
+                {note.title}
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-cream/76">{note.body}</p>
             </ParchmentCard>
           ))}
         </div>
       </section>
 
       <section className="page-shell pt-2">
-        <ParchmentCard tone="dark" className="grid gap-5 md:grid-cols-[0.8fr_1.2fr]">
+        <ParchmentCard
+          tone="dark"
+          className="grid gap-6 md:grid-cols-[0.75fr_1.25fr]"
+        >
+          <div>
+            <p className="field-label text-gold">Permanent lineage</p>
+            <h2 className="mt-3 font-serif text-3xl font-semibold text-cream">
+              {lineageCount} repositories become one readable history.
+            </h2>
+          </div>
+          <div>
+            <p className="text-sm leading-7 text-cream/78">
+              Old repositories can be deleted without pretending they never
+              existed. The lineage archive records each meaningful idea, what
+              survived, what failed, and which current project inherited it.
+            </p>
+            <Link href="/lineage" className="brass-link mt-5 text-gold">
+              Explore the project lineage
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </ParchmentCard>
+      </section>
+
+      <section className="page-shell pt-2">
+        <ParchmentCard
+          tone="dark"
+          className="grid gap-5 md:grid-cols-[0.8fr_1.2fr]"
+        >
           <div>
             <p className="field-label text-gold">Claim boundary</p>
             <h2 className="mt-3 font-serif text-3xl font-semibold text-cream">
-              Toy and bounded receipts are real. Broad claims are not.
+              Runnable mechanisms are real. Broad conclusions still need proof.
             </h2>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
-              "Not broad AGI.",
-              "Not physical firmware yet.",
-              "Not a real kernel yet.",
-              "Not neural text as proof.",
-              "Receipts/traces/verifiers are the authority.",
-              "Dates and versions are verified or labelled local/draft.",
+              "Not a finished AGI.",
+              "Not a general theorem prover.",
+              "Not a production operating system.",
+              "Not an adaptive-quantization win yet.",
+              "Verifier authority is separate from model confidence.",
+              "Negative results and regressions stay visible.",
             ].map((item) => (
-              <p key={item} className="flex gap-3 rounded-md border border-gold/20 bg-black/20 p-3 text-sm leading-6 text-cream/78">
+              <p
+                key={item}
+                className="flex gap-3 rounded-md border border-gold/20 bg-black/20 p-3 text-sm leading-6 text-cream/78"
+              >
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 {item}
               </p>

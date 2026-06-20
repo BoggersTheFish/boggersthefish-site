@@ -3,12 +3,12 @@ import { ProjectDetail } from "@/components/ProjectDetail";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "TS-Reasoner",
+  title: "TensionForge",
   description:
-    "Typed verifier authority, containment, repair, memory, risk gates, replay, and receipt-backed state transitions.",
-  path: "/projects/ts-reasoner",
+    "Verifier-first OpenCL training runtime for legacy AMD hardware with explicit parity and performance evidence.",
+  path: "/projects/tensionforge",
 });
 
 export default function ProjectPage() {
-  return <ProjectDetail slug="ts-reasoner" />;
+  return <ProjectDetail slug="tensionforge" />;
 }

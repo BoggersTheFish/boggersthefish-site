@@ -3,12 +3,12 @@ import { ProjectDetail } from "@/components/ProjectDetail";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "TS-Reasoner",
+  title: "TS Chat Language",
   description:
-    "Typed verifier authority, containment, repair, memory, risk gates, replay, and receipt-backed state transitions.",
-  path: "/projects/ts-reasoner",
+    "Deterministic text-to-MeaningGraph compilation, graph-diff memory, response planning, and rendering.",
+  path: "/projects/ts-chat-language",
 });
 
 export default function ProjectPage() {
-  return <ProjectDetail slug="ts-reasoner" />;
+  return <ProjectDetail slug="ts-chat-language" />;
 }

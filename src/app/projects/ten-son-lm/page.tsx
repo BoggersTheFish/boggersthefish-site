@@ -3,12 +3,12 @@ import { ProjectDetail } from "@/components/ProjectDetail";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "TS-Reasoner",
+  title: "Ten-SON-LM",
   description:
-    "Typed verifier authority, containment, repair, memory, risk gates, replay, and receipt-backed state transitions.",
-  path: "/projects/ts-reasoner",
+    "Recurrent semantic-workspace model testing whether learned tension is a useful causal control signal.",
+  path: "/projects/ten-son-lm",
 });
 
 export default function ProjectPage() {
-  return <ProjectDetail slug="ts-reasoner" />;
+  return <ProjectDetail slug="ten-son-lm" />;
 }

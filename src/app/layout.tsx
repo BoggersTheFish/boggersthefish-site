@@ -26,17 +26,22 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   keywords: [
     "BoggersTheFish",
+    "Ben Michalek",
     "Thinking System",
-    "constraint graph",
+    "verifier-first systems",
+    "typed verification",
+    "deterministic language",
+    "MeaningGraph",
+    "semantic workspace",
     "tension dynamics",
-    "constraint propagation",
-    "interpretable AI systems",
-    "provenance-aware knowledge graphs",
-    "proof ranking",
+    "adaptive precision",
+    "OpenCL training",
+    "verified computing",
+    "constraint graphs",
     "reproducible experiments",
     "open-source research",
   ],
-  authors: [{ name: site.name, url: site.url }],
+  authors: [{ name: "Ben Michalek / BoggersTheFish", url: site.url }],
   creator: site.name,
   openGraph: {
     type: "website",
@@ -45,7 +50,14 @@ export const metadata: Metadata = {
     title: `${site.name} | ${site.tagline}`,
     description: site.description,
     siteName: site.name,
-    images: [{ url: `${site.url}${site.ogImage}`, width: 1200, height: 630, alt: `${site.name} archive card` }],
+    images: [
+      {
+        url: `${site.url}${site.ogImage}`,
+        width: 1200,
+        height: 630,
+        alt: `${site.name} field archive card`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -56,7 +68,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
   },
   icons: {
     icon: "/favicon.svg",

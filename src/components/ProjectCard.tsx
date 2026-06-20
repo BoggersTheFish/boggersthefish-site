@@ -1,11 +1,23 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { CrownSketchIcon, FishCrestIcon, NodeGraphIcon, ParchmentIcon } from "@/components/ArchiveIcons";
+import {
+  CrownSketchIcon,
+  FishCrestIcon,
+  NodeGraphIcon,
+  ParchmentIcon,
+} from "@/components/ArchiveIcons";
 import type { Project } from "@/content/projects";
 import { ParchmentCard } from "@/components/ParchmentCard";
 import { cn } from "@/lib/utils";
 
 const iconMap = {
+  "ts-reasoner": ParchmentIcon,
+  "ts-chat-language": CrownSketchIcon,
+  "ten-son-lm": FishCrestIcon,
+  tensionforge: NodeGraphIcon,
+  tsq: ParchmentIcon,
+  bogos: CrownSketchIcon,
+  "ts-benchmarks": ParchmentIcon,
   "ts-core": NodeGraphIcon,
   tensionlm: FishCrestIcon,
   cig: CrownSketchIcon,
@@ -21,7 +33,13 @@ const statusClass: Record<Project["status"], string> = {
   Planned: "bg-brown/10 text-brown border-brown/30",
 };
 
-export function ProjectCard({ project, compact = false }: { project: Project; compact?: boolean }) {
+export function ProjectCard({
+  project,
+  compact = false,
+}: {
+  project: Project;
+  compact?: boolean;
+}) {
   const Icon = iconMap[project.slug as keyof typeof iconMap] ?? NodeGraphIcon;
 
   return (
@@ -39,7 +57,9 @@ export function ProjectCard({ project, compact = false }: { project: Project; co
           {project.status}
         </span>
       </div>
-      <h3 className="font-serif text-2xl font-semibold text-ink">{project.title}</h3>
+      <h3 className="font-serif text-2xl font-semibold text-ink">
+        {project.title}
+      </h3>
       <p className="mt-3 flex-1 text-sm leading-6 text-ink/80">
         {compact ? project.shortDescription : project.summary}
       </p>

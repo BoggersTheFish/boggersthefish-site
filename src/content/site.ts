@@ -1,9 +1,9 @@
 export const site = {
   name: "BoggersTheFish",
-  tagline: "Building Thinking Systems",
-  title: "Small bounded reasoning, inspected.",
+  tagline: "Verifier-First Systems & Experimental Computing",
+  title: "A field archive of systems, experiments, and evidence.",
   description:
-    "TS-Reasoner emits candidate chains, local and global tension, rejected alternatives, abstention/repair decisions, benchmark receipts, and visible failure modes.",
+    "Ben Michalek / BoggersTheFish builds verifier-first reasoning systems, tension-driven model experiments, deterministic language tools, and verified computing prototypes. This site is the canonical record of current work and historical ideas.",
   url: "https://www.boggersthefish.com",
   email: "boggersthefish@gmail.com",
   domainEmail: "boggersthefish@boggersthefish.com",
@@ -25,12 +25,20 @@ export const links = {
   email: `mailto:${site.email}`,
   domainEmail: `mailto:${site.domainEmail}`,
   repos: {
+    tsStartHere: "https://github.com/BoggersTheFish/TS-Start-Here",
     tsReasoner: "https://github.com/BoggersTheFish/TS-Reasoner-v0",
+    tsChatLanguage: "https://github.com/BoggersTheFish/ts-chat-language",
+    tenSon: "https://github.com/BoggersTheFish/Ten-SON-LM",
+    tensionForge: "https://github.com/BoggersTheFish/TensionForge",
+    tsq: "https://github.com/BoggersTheFish/tsq",
+    tsBenchmarks: "https://github.com/BoggersTheFish/TS-Benchmarks",
     tsCore: "https://github.com/BoggersTheFish/TS-Core",
     tensionlm: "https://github.com/BoggersTheFish/TensionLM",
-    cig: "https://github.com/BoggersTheFish",
+    cig: "https://github.com/BoggersTheFish/cig-ts-engine",
+    fullCig: "https://github.com/BoggersTheFish/BoggersTheCIG",
     proofRanker: "https://github.com/BoggersTheFish",
     bogbin: "https://github.com/BoggersTheFish/bogbin",
+    website: "https://github.com/BoggersTheFish/boggersthefish-site",
   },
   models: {
     tensionlm117M: "https://huggingface.co/BoggersTheFish/TensionLM-117M",
@@ -52,24 +60,20 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner",
-    body: "Bounded verifier-first reasoning runtime with typed traces, answer arenas, TS-Chat repair loops, and explanation traces.",
+    label: "Reasoning and language",
+    body: "TS-Reasoner provides typed verifier authority; ts-chat-language compiles human language into inspectable semantic state and response plans.",
   },
   {
-    label: "BOGBIN/BOGVM",
-    body: "Deterministic verified byte/container/runtime substrate. Verified archive/restore and package verification.",
+    label: "Model science",
+    body: "Ten-SON-LM tests whether learned tension causally improves recurrent semantic-workspace behaviour. TensionLM remains the earlier attention-based evidence line.",
   },
   {
-    label: "BogOS/BogK",
-    body: "Verified workspace/user-space kernel contract direction. Not a host kernel or physical firmware.",
+    label: "Adaptive inference",
+    body: "TSQ explores tension- and verifier-driven precision escalation, but efficiency claims wait for genuinely distinct numerical execution paths.",
   },
   {
-    label: "TensionLM",
-    body: "Model/candidate/tension experiments. The neural/model-side line connected to TS-Reasoner through exported/candidate outputs.",
-  },
-  {
-    label: "TS-Start-Here",
-    body: "Ecosystem map. Start Here → TS-Reasoner → BOGBIN/BOGVM/BogOS → TensionLM / experiments.",
+    label: "Verified computing",
+    body: "bogbin develops deterministic containers, filesystems, processes, persistent workspaces, journals, and receipts. TensionForge tests verified training on legacy AMD hardware.",
   },
 ];
 
@@ -77,21 +81,21 @@ export const contributorPaths = [
   {
     label: "I'm new",
     href: "/start-here",
-    body: "Read the plain-language map before opening project details.",
+    body: "Read the plain-language map before opening source repositories.",
   },
   {
-    label: "I'm technical",
+    label: "I want current work",
     href: "/projects",
-    body: "Inspect the runtime, model, graph, and proof-control surfaces.",
+    body: "Inspect the active programmes, evidence boundaries, and next experiments.",
+  },
+  {
+    label: "I want the full history",
+    href: "/lineage",
+    body: "See how 52 repositories became the current modular stack.",
   },
   {
     label: "I want evidence",
     href: "/proof-bank",
-    body: "Start with claims, setups, results, limits, and replay notes.",
-  },
-  {
-    label: "I want to support",
-    href: "/support",
-    body: "Support research, compute, writing, docs, and open-source work.",
+    body: "Start with claims, setups, results, limitations, and replay notes.",
   },
 ];

@@ -1,38 +1,82 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ParchmentCard } from "@/components/ParchmentCard";
-import { ProjectStackDiagram, TSCycleDiagram } from "@/components/Diagrams";
+import { TSCycleDiagram } from "@/components/Diagrams";
 import { SectionHeading } from "@/components/SectionHeading";
 import { projects } from "@/content/projects";
-import { links } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Start Here",
-  description: "A credibility-first guide to TS and the BoggersTheFish research archive.",
+  description:
+    "A plain-language guide to the current BoggersTheFish verifier-first systems research.",
   path: "/start-here",
 });
 
+const programmes = [
+  {
+    name: "Reasoning and language",
+    system: "ts-chat-language → TS-Reasoner",
+    question:
+      "Can human language become explicit semantic state, then pass through typed verification without a chatbot bypass?",
+  },
+  {
+    name: "Model science",
+    system: "Ten-SON-LM ← TensionLM",
+    question:
+      "Does a tension signal causally improve revision and routing, or is it only an ordinary learned gate with a dramatic name?",
+  },
+  {
+    name: "Adaptive inference",
+    system: "TSQ",
+    question:
+      "Can tension and verifier failures allocate precision more efficiently than always-low or always-high execution?",
+  },
+  {
+    name: "Verified computing",
+    system: "bogbin + TensionForge",
+    question:
+      "Can storage, execution, training, persistence, and rollback expose exact state transitions and receipts?",
+  },
+];
+
 const isItems = [
-  "Engineering framework",
-  "Experimental AI architecture lens",
-  "Graph/tension/provenance/reasoning substrate",
-  "A way to make internal model behaviour more inspectable",
+  "A verifier-first engineering programme",
+  "A collection of falsifiable model and runtime experiments",
+  "A way to expose semantic, graph, compute, and state transitions",
+  "A public archive that keeps negative results and superseded ideas visible",
 ];
 
 const isNotItems = [
-  "Not a finished AGI claim",
+  "Not a finished AGI",
   "Not a theory-of-everything proof",
-  "Not financial advice",
-  "Not claiming benchmarks are beaten until receipts exist",
-  "Not replacing normal scientific evidence",
+  "Not a general theorem prover",
+  "Not a production operating system",
+  "Not proof that tension beats standard methods",
+  "Not permission to treat confidence as evidence",
 ];
 
 const nextRoutes = [
-  { title: "10-minute repro", body: "Run TS-Reasoner v10, inspect the runtime OS receipt, and check typed verifier authority.", href: "/run-ts-reasoner", secondHref: "/projects/ts-reasoner" },
-  { title: "For researchers", body: "Start with research framing and proof-bank receipts.", href: "/research", secondHref: "/proof-bank" },
-  { title: "For engineers", body: "Inspect project structure, source repos, and replay paths.", href: "/projects", secondHref: links.github },
-  { title: "For funders/collaborators", body: "Read the grounded bio, roadmap, and contact route.", href: "/about", secondHref: "/contact" },
+  {
+    title: "Understand the architecture",
+    body: "Read the current projects as four separate programmes with explicit interfaces.",
+    href: "/projects",
+  },
+  {
+    title: "Inspect evidence",
+    body: "Start with experiment setup, receipts, failures, and limitations.",
+    href: "/proof-bank",
+  },
+  {
+    title: "Trace the history",
+    body: "See how the current stack emerged from 52 repositories.",
+    href: "/lineage",
+  },
+  {
+    title: "Read the research framing",
+    body: "Open the broader questions without inflating the claims.",
+    href: "/research",
+  },
 ];
 
 export default function StartHerePage() {
@@ -40,28 +84,26 @@ export default function StartHerePage() {
     <section className="page-shell">
       <div className="page-intro">
         <p className="field-label text-gold">Begin here</p>
-        <h1>The sober map of TS.</h1>
+        <h1>TS is a research programme, not one magical repository.</h1>
         <p>
-          TS is an engineering framework for modelling information transfer through
-          constraint graphs, tension, propagation, relaxation, contradiction handling,
-          and revision.
+          The current work separates human language, verifier authority,
+          learned mechanisms, adaptive compute, and deterministic systems so
+          each claim can be tested at the correct boundary.
         </p>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-[1fr_0.9fr]">
-        <ParchmentCard tone="dark">
-          <p className="field-label mb-4 text-gold">Public stack</p>
-          <div className="space-y-4 text-sm leading-7 text-cream/80">
-            <p><strong className="text-gold">TS-Reasoner</strong> = Bounded verifier-first reasoning runtime with typed traces, answer arenas, TS-Chat repair loops, and explanation traces.</p>
-            <p><strong className="text-gold">BOGBIN / BOGVM / BogOS</strong> = Deterministic verified byte/container/runtime substrate and workspace/user-space kernel contract direction. Not a host kernel or physical firmware.</p>
-            <p><strong className="text-gold">TensionLM</strong> = Model/candidate/tension experiments connected to TS-Reasoner through exported/candidate outputs. The verifier remains proof authority.</p>
-            <p><strong className="text-gold">TS-Core</strong> = graph/tension runtime.</p>
-            <p><strong className="text-gold">CIG</strong> = persistent provenance-aware claim/evidence graph.</p>
-            <p><strong className="text-gold">Proof Ranker</strong> = proof scoring, repair, and verifier loop experiments.</p>
-            <p><strong className="text-gold">BoggersTheAI / Mind / Pulse</strong> = experimental runtime/agent branches, secondary to the public core stack.</p>
-          </div>
-        </ParchmentCard>
-        <ProjectStackDiagram />
+      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        {programmes.map((programme) => (
+          <ParchmentCard key={programme.name} tone="dark">
+            <p className="field-label text-gold">{programme.name}</p>
+            <h2 className="mt-3 font-serif text-2xl font-semibold text-cream">
+              {programme.system}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-cream/76">
+              {programme.question}
+            </p>
+          </ParchmentCard>
+        ))}
       </div>
 
       <div className="mt-8">
@@ -72,57 +114,99 @@ export default function StartHerePage() {
         <ParchmentCard>
           <p className="field-label mb-4 text-brown">What TS is</p>
           <div className="space-y-2">
-            {isItems.map((item) => <p key={item} className="text-sm leading-7 text-ink/75">{item}</p>)}
+            {isItems.map((item) => (
+              <p key={item} className="text-sm leading-7 text-ink/75">
+                {item}
+              </p>
+            ))}
           </div>
         </ParchmentCard>
         <ParchmentCard>
           <p className="field-label mb-4 text-brown">What TS is not</p>
           <div className="space-y-2">
-            {isNotItems.map((item) => <p key={item} className="text-sm leading-7 text-ink/75">{item}</p>)}
+            {isNotItems.map((item) => (
+              <p key={item} className="text-sm leading-7 text-ink/75">
+                {item}
+              </p>
+            ))}
           </div>
         </ParchmentCard>
       </div>
 
-      <SectionHeading className="mt-14" title="Current Public Route">
-        <p>Start with the ecosystem map, then verify that runtime integrity, generated text, and confidence never become proof authority.</p>
+      <SectionHeading className="mt-14" title="The intended route">
+        <p>
+          A usable turn should pass through explicit boundaries rather than
+          hiding everything inside one model response.
+        </p>
       </SectionHeading>
-      <ParchmentCard>
-        <div className="grid gap-4 text-sm leading-7 text-ink/75 md:grid-cols-4">
-          <p><strong className="text-ink">Start Here</strong><br />Ecosystem map.</p>
-          <p><strong className="text-ink">TS-Reasoner</strong><br />Verifier-first reasoning runtime.</p>
-          <p><strong className="text-ink">BOGBIN/BOGVM/BogOS</strong><br />Deterministic verified container substrate.</p>
-          <p><strong className="text-ink">TensionLM</strong><br />Model/candidate experiments.</p>
+      <ParchmentCard tone="dark">
+        <div className="grid gap-4 text-sm leading-7 text-cream/78 md:grid-cols-5">
+          <p>
+            <strong className="text-gold">1. Compile</strong>
+            <br />
+            Human text becomes semantic frames and a MeaningGraph.
+          </p>
+          <p>
+            <strong className="text-gold">2. Verify</strong>
+            <br />
+            Typed checks decide what has support.
+          </p>
+          <p>
+            <strong className="text-gold">3. Update</strong>
+            <br />
+            Accepted state changes; rejected candidates do not contaminate it.
+          </p>
+          <p>
+            <strong className="text-gold">4. Plan</strong>
+            <br />
+            The system selects a response act from verified state.
+          </p>
+          <p>
+            <strong className="text-gold">5. Render</strong>
+            <br />
+            Language expresses the plan without inventing new authority.
+          </p>
         </div>
       </ParchmentCard>
 
       <SectionHeading className="mt-14" title="Where to go next">
-        <p>Pick the route that matches the kind of evidence you want first.</p>
+        <p>Pick the route matching the kind of understanding you want.</p>
       </SectionHeading>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {nextRoutes.map((route) => (
           <ParchmentCard key={route.title}>
-            <h2 className="font-serif text-2xl font-semibold text-ink">{route.title}</h2>
-            <p className="mt-3 text-sm leading-7 text-ink/75">{route.body}</p>
-            <div className="mt-5 flex flex-col gap-2">
-              <Link href={route.href} className="brass-link">
-                First route <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href={route.secondHref} className="brass-link">
-                Second route <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
+            <h2 className="font-serif text-2xl font-semibold text-ink">
+              {route.title}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-ink/75">
+              {route.body}
+            </p>
+            <Link href={route.href} className="brass-link mt-5">
+              Open route <ArrowRight className="h-4 w-4" />
+            </Link>
           </ParchmentCard>
         ))}
       </div>
 
-      <SectionHeading className="mt-14" title="Core project nodes">
-        <p>These are the public routes most claims should pass through.</p>
+      <SectionHeading className="mt-14" title="Active project nodes">
+        <p>
+          These carry the current code. Historical repositories live in the
+          lineage rather than competing on this page.
+        </p>
       </SectionHeading>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {projects.map((project) => (
-          <Link key={project.slug} href={project.href} className="parchment-card rounded-md border p-4 transition hover:-translate-y-1">
-            <h3 className="font-serif text-xl font-semibold text-ink">{project.title}</h3>
-            <p className="mt-2 text-sm leading-6 text-ink/70">{project.shortDescription}</p>
+          <Link
+            key={project.slug}
+            href={project.href}
+            className="parchment-card rounded-md border p-4 transition hover:-translate-y-1"
+          >
+            <h3 className="font-serif text-xl font-semibold text-ink">
+              {project.title}
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-ink/70">
+              {project.shortDescription}
+            </p>
             <span className="brass-link mt-4">
               Open node
               <ArrowRight className="h-4 w-4" />

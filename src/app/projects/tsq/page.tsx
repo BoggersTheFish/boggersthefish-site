@@ -3,12 +3,12 @@ import { ProjectDetail } from "@/components/ProjectDetail";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "TS-Reasoner",
+  title: "TSQ",
   description:
-    "Typed verifier authority, containment, repair, memory, risk gates, replay, and receipt-backed state transitions.",
-  path: "/projects/ts-reasoner",
+    "Experimental tension- and verifier-driven adaptive-precision inference runtime.",
+  path: "/projects/tsq",
 });
 
 export default function ProjectPage() {
-  return <ProjectDetail slug="ts-reasoner" />;
+  return <ProjectDetail slug="tsq" />;
 }
