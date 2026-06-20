@@ -113,11 +113,10 @@ export const lineageGroups: LineageGroup[] = [
       },
       {
         "name": "BoggersTheCIG",
-        "status": "Supporting",
+        "status": "Superseded",
         "idea": "Large provenance-aware claim, evidence, confidence, contradiction, and revision graph.",
         "survives": "The durable knowledge-graph vision and provenance discipline.",
-        "successor": "cig-ts-engine and this website",
-        "repoUrl": "https://github.com/BoggersTheFish/BoggersTheCIG"
+        "successor": "cig-ts-engine and this website"
       },
       {
         "name": "cig-ts-engine",
@@ -129,27 +128,24 @@ export const lineageGroups: LineageGroup[] = [
       },
       {
         "name": "TS-Codex-OS",
-        "status": "Supporting",
+        "status": "Historical",
         "idea": "Project graph, tension ledger, planner, and receipts for local coding workflows.",
         "survives": "Engineering state and planned transitions should be explicit and reviewable.",
-        "successor": "Verifier-first development tooling",
-        "repoUrl": "https://github.com/BoggersTheFish/TS-Codex-OS"
+        "successor": "Verifier-first development tooling"
       },
       {
         "name": "3b_solution",
-        "status": "Supporting",
+        "status": "Historical",
         "idea": "Tension-adaptive integration applied to the three-body problem.",
         "survives": "A concrete application and an honest loss against DOP853 in the tested setup.",
-        "successor": "Application evidence",
-        "repoUrl": "https://github.com/BoggersTheFish/3b_solution"
+        "successor": "Application evidence"
       },
       {
         "name": "BogOS-Native",
-        "status": "Supporting",
+        "status": "Historical",
         "idea": "Native-oriented exploration of lower-level BogOS execution.",
         "survives": "The boundary between user-space verified prototypes and future native work.",
-        "successor": "bogbin",
-        "repoUrl": "https://github.com/BoggersTheFish/BogOS-Native"
+        "successor": "bogbin"
       }
     ]
   },
@@ -161,11 +157,10 @@ export const lineageGroups: LineageGroup[] = [
     "entries": [
       {
         "name": "TS-Start-Here",
-        "status": "Supporting",
+        "status": "Superseded",
         "idea": "Credibility-first ecosystem map.",
         "survives": "The need for one canonical explanation.",
-        "successor": "This website",
-        "repoUrl": "https://github.com/BoggersTheFish/TS-Start-Here"
+        "successor": "This website"
       },
       {
         "name": "BoggersTheFish",

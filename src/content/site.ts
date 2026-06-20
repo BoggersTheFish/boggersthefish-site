@@ -25,7 +25,6 @@ export const links = {
   email: `mailto:${site.email}`,
   domainEmail: `mailto:${site.domainEmail}`,
   repos: {
-    tsStartHere: "https://github.com/BoggersTheFish/TS-Start-Here",
     tsReasoner: "https://github.com/BoggersTheFish/TS-Reasoner-v0",
     tsChatLanguage: "https://github.com/BoggersTheFish/ts-chat-language",
     tenSon: "https://github.com/BoggersTheFish/Ten-SON-LM",
@@ -35,7 +34,6 @@ export const links = {
     tsCore: "https://github.com/BoggersTheFish/TS-Core",
     tensionlm: "https://github.com/BoggersTheFish/TensionLM",
     cig: "https://github.com/BoggersTheFish/cig-ts-engine",
-    fullCig: "https://github.com/BoggersTheFish/BoggersTheCIG",
     proofRanker: "https://github.com/BoggersTheFish",
     bogbin: "https://github.com/BoggersTheFish/bogbin",
     website: "https://github.com/BoggersTheFish/boggersthefish-site",
