@@ -55,8 +55,8 @@ const fieldNotes = [
     body: "Routing, repair, evaluation, data, and adapter tooling exist. Genuine adaptive-precision evidence waits for materially different low/high numerical backends.",
   },
   {
-    title: "TSLC: language substrate before chatbot claims",
-    body: "MeaningGraph, graph-diff memory, language packs, and declarative rules exist. End-to-end verifier integration is the next credibility milestone.",
+    title: "TSLC + TS-Reasoner: first complete vertical slice",
+    body: "Bounded text now reaches MeaningGraph, deterministic bridging, verifier-gated accept/repair/reject, deterministic rendering, and unified turn receipts. The 30-case evaluation passes every hard gate without an external language model.",
   },
 ];
 

@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "TS Chat Language",
   description:
-    "Deterministic text-to-MeaningGraph compilation, graph-diff memory, response planning, and rendering.",
+    "Deterministic text-to-MeaningGraph compilation with TS-Reasoner-gated decisions, rendering, memory, and unified turn receipts.",
   path: "/projects/ts-chat-language",
 });
 

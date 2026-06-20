@@ -61,15 +61,15 @@ export const projects: Project[] = [
       "Runtime integrity is not claim truth. Generated text and model confidence are not proof. The public experiments are bounded and domain-specific.",
     repoUrl: links.repos.tsReasoner,
     hfUrls: [{ label: "TS-TinyVerifier-v0", href: links.models.tsTinyVerifierV0 }],
-    proofIds: [],
+    proofIds: ["TS-024"],
     installCommand:
       "git clone https://github.com/BoggersTheFish/TS-Reasoner-v0 && cd TS-Reasoner-v0",
     inspectCommand:
       "Run the test suite and inspect verifier decisions, support types, repair receipts, memory writes, and abstentions.",
     currentState:
-      "The strongest mature TS component: a broad verifier-first research stack with explicit non-claims and auditable state transitions.",
+      "The structured ReasoningRequest boundary now receives TSLC MeaningGraphs through a deterministic bridge and returns verifier-gated ACCEPT, REPAIR, or REJECT decisions.",
     nextMilestone:
-      "Connect ts-chat-language MeaningGraphs to typed verification and produce one unified turn receipt across compilation, checking, state, planning, and rendering.",
+      "Expand the deterministic grammar while preserving the same typed verifier and renderer-support boundary.",
     tags: ["typed verification", "operation firewall", "receipts"],
     focus: ["Verifier authority", "Containment", "Repair and memory"],
     notes: [
@@ -93,20 +93,20 @@ export const projects: Project[] = [
     method:
       "Compile text through normalisation, dialogue acts, semantic frames, stable graph identities, state transitions, response planning, and language-specific rendering.",
     evidence:
-      "The repository contains a working compiler shell, MeaningGraph, stable IDs, graph-driven state/planning, graph-diff memory, language packs, and declarative graph/topic rules.",
+      "The complete vertical slice has 81 passing repository tests and a 30-case evaluation with zero unsupported accepts, contamination failures, replay failures, or renderer support violations.",
     limits:
-      "The current compiler is pattern-backed and bounded. It is not broad natural-language understanding and is not yet integrated end-to-end with TS-Reasoner.",
+      "The grammar and reasoning families are deliberately bounded. This is not broad natural-language understanding or a general-purpose chatbot, and it uses no external language model.",
     repoUrl: links.repos.tsChatLanguage,
     hfUrls: [],
-    proofIds: [],
+    proofIds: ["TS-024"],
     installCommand:
-      "git clone https://github.com/BoggersTheFish/ts-chat-language && cd ts-chat-language",
+      "Clone TS-Reasoner-v0 and ts-chat-language as siblings, then run: cd ts-chat-language && ./scripts/run_vertical_slice.sh",
     inspectCommand:
       "Run the golden dialogue cases and inspect compiled frames, graph diffs, remembered corrections, plans, and rendered responses.",
     currentState:
-      "A coherent deterministic dialogue substrate exists through v0.8, but its most important proof will be integration with verifier authority.",
+      "The first complete language-to-verifier path is live: parsing, MeaningGraph, bridge, verification, bounded repair, rendering, verified memory, and unified receipts.",
     nextMilestone:
-      "Build the TSLC → TS-Reasoner bridge and test 50–100 adversarial multi-turn conversations with persistent corrections and unsupported-claim abstention.",
+      "Expand the deterministic grammar without weakening verifier authority or introducing silent language-model fallback.",
     tags: ["meaning graph", "dialogue compiler", "deterministic language"],
     focus: ["Semantic compilation", "Graph-diff memory", "Response planning"],
     notes: [

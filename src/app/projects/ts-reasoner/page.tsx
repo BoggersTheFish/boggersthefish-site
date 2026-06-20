@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "TS-Reasoner",
   description:
-    "Typed verifier authority, containment, repair, memory, risk gates, replay, and receipt-backed state transitions.",
+    "Typed verifier authority for structured language requests, bounded repair, rejection, replay, and receipt-backed state transitions.",
   path: "/projects/ts-reasoner",
 });
 

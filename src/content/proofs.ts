@@ -325,6 +325,28 @@ export const proofs: Proof[] = [
     updatedAt: "2026-05-20",
     route: route("TS-023"),
   },
+  {
+    id: "TS-024",
+    title: "Verifier-first language vertical slice",
+    status: "receipt",
+    summary: "Complete bounded path from human text through MeaningGraph and TS-Reasoner to deterministic response and unified receipt.",
+    claim: "The language substrate and verifier operate together end to end without an external language model or an unverified rendering fallback.",
+    setup: "Thirty fixed relational, Boolean, ambiguity, unsupported-inference, and planning cases, each replayed three times through the deterministic bridge and structured verifier.",
+    result: "30/30 decisions passed; unsupported accepts, rejected-claim contamination, renderer support violations, and deterministic replay failures were all zero; receipt generation was 100%.",
+    limit: "Bounded deterministic grammar and reasoning families only. This is not a general-purpose chatbot, broad NLP result, or learned language-generation system.",
+    reproduce: "Clone TS-Reasoner-v0 and ts-chat-language as siblings, run ./scripts/run_vertical_slice.sh, then python -m ts_vertical_slice.evaluation.",
+    relatedRepo: { label: "ts-chat-language", href: links.repos.tsChatLanguage },
+    relatedArtifacts: [
+      { label: "Runnable instructions", href: `${links.repos.tsChatLanguage}/blob/master/docs/vertical_slice.md` },
+      { label: "Evaluation report", href: `${links.repos.tsChatLanguage}/blob/master/artifacts/vertical_slice/evaluation_report.md` },
+      { label: "Example ACCEPT receipt", href: `${links.repos.tsChatLanguage}/blob/master/tests/fixtures/vertical_slice/accept.json` },
+      { label: "Structured verifier source", href: `${links.repos.tsReasoner}/blob/main/ts_reasoner/structured_request.py` },
+    ],
+    confidence: "Strong within toy scope",
+    tags: ["language", "verifier", "receipts", "deterministic replay"],
+    updatedAt: "2026-06-20",
+    route: route("TS-024"),
+  },
 ];
 
 export const proofFilters = ["All", "receipt", "draft", "replication", "toy", "benchmark", "planned", "cig", "tensionlm", "ts-core"];
