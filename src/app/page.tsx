@@ -55,8 +55,8 @@ const fieldNotes = [
     body: "Routing, repair, evaluation, data, and adapter tooling exist. Genuine adaptive-precision evidence waits for materially different low/high numerical backends.",
   },
   {
-    title: "TSLC + TS-Reasoner: first complete vertical slice",
-    body: "Bounded text now reaches MeaningGraph, deterministic bridging, verifier-gated accept/repair/reject, deterministic rendering, and unified turn receipts. The 30-case evaluation passes every hard gate without an external language model.",
+    title: "TS Habitat v2: signed world and verified plans",
+    body: "The verifier-first slice now maintains a bounded symbolic habitat with signed evidence, contradiction-preserving state, semantic merge, query-relevant clusters, deterministic events, bounded causal chains, verified action plans, and TurnReceipt v2. It uses no external language model.",
   },
 ];
 

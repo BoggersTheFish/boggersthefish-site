@@ -59,7 +59,7 @@ export const links = {
 export const currentStatus = [
   {
     label: "Reasoning and language",
-    body: "TS-Reasoner provides typed verifier authority; ts-chat-language compiles human language into inspectable semantic state and response plans.",
+    body: "Habitat v2 joins deterministic language, signed semantic memory, query-relevant clusters, event transitions, bounded causal inference, and verified planning under TS-Reasoner authority.",
   },
   {
     label: "Model science",

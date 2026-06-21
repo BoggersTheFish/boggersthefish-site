@@ -347,6 +347,31 @@ export const proofs: Proof[] = [
     updatedAt: "2026-06-20",
     route: route("TS-024"),
   },
+  {
+    id: "TS-025",
+    title: "Habitat v2 signed world and verified planning",
+    status: "receipt",
+    summary: "Bounded persistent symbolic world with signed evidence, semantic merge, cluster activation, deterministic transitions, causal closure, and verifier-gated plans.",
+    claim: "Within the frozen Habitat grammar and action schemas, TSLC and TS-Reasoner can remember, update, query, derive, and plan without unsupported affirmative output or rejected-memory contamination.",
+    setup: "120 functional cases across six required families plus 102 adversarial cases across 17 attack categories, each replayed twice through TurnReceipt v2.",
+    result: "Functional decisions were 100 ACCEPT and 20 REJECT. Adversarial decisions were 30 ACCEPT, 12 REPAIR, and 60 REJECT. Every required hard-gate metric was zero and receipt generation was 100%.",
+    limit: "Deterministic symbolic toy habitat only: bounded grammar, four-valued state, turn-order events, positive causal rules, fixed action schemas, open-topology movement, and process-local memory. Not a general chatbot, biological model, or real-world knowledge system.",
+    reproduce: "Clone the habitat-v2 branches as siblings, run ./scripts/run_vertical_slice.sh, then PYTHONPATH=../TS-Reasoner-v0:. .venv/bin/python -m ts_vertical_slice.habitat_evaluation.",
+    relatedRepo: { label: "ts-chat-language", href: `${links.repos.tsChatLanguage}/tree/habitat-v2` },
+    relatedArtifacts: [
+      { label: "Habitat v2 guide", href: `${links.repos.tsChatLanguage}/blob/habitat-v2/docs/habitat_v2.md` },
+      { label: "Functional evaluation", href: `${links.repos.tsChatLanguage}/blob/habitat-v2/artifacts/habitat_v2/habitat_v2_evaluation_report.md` },
+      { label: "Adversarial evaluation", href: `${links.repos.tsChatLanguage}/blob/habitat-v2/artifacts/habitat_v2/habitat_v2_adversarial_report.md` },
+      { label: "Continuous demo transcript", href: `${links.repos.tsChatLanguage}/blob/habitat-v2/artifacts/habitat_v2_demo/habitat_v2_demo.typescript` },
+      { label: "Example plan receipt", href: `${links.repos.tsChatLanguage}/blob/habitat-v2/tests/fixtures/habitat_v2/verified_plan.json` },
+      { label: "Limitations", href: `${links.repos.tsChatLanguage}/blob/habitat-v2/docs/habitat_v2_limitations.md` },
+      { label: "Reasoner Habitat source", href: `${links.repos.tsReasoner}/blob/habitat-v2/ts_reasoner/habitat.py` },
+    ],
+    confidence: "Strong within toy scope",
+    tags: ["habitat", "signed state", "planning", "receipts", "deterministic replay"],
+    updatedAt: "2026-06-21",
+    route: route("TS-025"),
+  },
 ];
 
 export const proofFilters = ["All", "receipt", "draft", "replication", "toy", "benchmark", "planned", "cig", "tensionlm", "ts-core"];
