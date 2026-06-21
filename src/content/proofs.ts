@@ -372,6 +372,32 @@ export const proofs: Proof[] = [
     updatedAt: "2026-06-21",
     route: route("TS-025"),
   },
+  {
+    id: "TS-026",
+    title: "Habitat v3 verifier-first symbolic agent loop",
+    status: "receipt",
+    summary: "Bounded deterministic agent cycle with persistent goals, tension-directed effort, explicit topology, verified execution, effect checking, replanning, reflection, lesson approval, multi-agent scheduling, and whole-run replay.",
+    claim: "Within the frozen Habitat v3 grammar, environment, action schemas, and execution budgets, the system can pursue explicit goals through verified symbolic actions without treating desire, tension, plans, expected effects, or reflection as proof authority.",
+    setup: "240 frozen functional cases, 240 frozen adversarial cases, ten continuous demonstrations, 633 TS-Reasoner tests, 109 TSLC tests, and all 30/165/120/102 legacy evaluation cases.",
+    result: "The final functional and adversarial reports have zero unsupported accepts, goal satisfactions, action authorizations/executions, plan steps, unverified commits, contamination, silent overwrites, topology duplicates, tension-as-evidence violations, stale executions, missed replans, unauthorized lesson activations/transfers, scheduling nondeterminism, renderer violations, replay failures, or execution errors. Receipt generation is 100%.",
+    limit: "In-process simulated environment only; bounded regex language, topology, goals, planning, tension, reflection, agents, events, actions, receipts, and execution budgets. No external model, network knowledge, real-world actuation, self-modifying code, biological equivalence, or AGI claim.",
+    reproduce: "Clone the habitat-v3-agent-loop branches as siblings, run scripts/run_habitat_v3.sh, then PYTHONPATH=../TS-Reasoner-v0:$PYTHONPATH python3 -m ts_vertical_slice.habitat_v3_evaluation.",
+    relatedRepo: { label: "ts-chat-language", href: `${links.repos.tsChatLanguage}/tree/habitat-v3-agent-loop` },
+    relatedArtifacts: [
+      { label: "Architecture", href: `${links.repos.tsChatLanguage}/blob/habitat-v3-agent-loop/docs/habitat_v3.md` },
+      { label: "Functional report", href: `${links.repos.tsChatLanguage}/blob/habitat-v3-agent-loop/artifacts/habitat_v3/habitat_v3_functional_report.md` },
+      { label: "Adversarial baseline", href: `${links.repos.tsChatLanguage}/blob/habitat-v3-agent-loop/artifacts/habitat_v3/habitat_v3_adversarial_baseline_report.md` },
+      { label: "Final adversarial report", href: `${links.repos.tsChatLanguage}/blob/habitat-v3-agent-loop/artifacts/habitat_v3/habitat_v3_adversarial_report.md` },
+      { label: "Continuous demo", href: `${links.repos.tsChatLanguage}/blob/habitat-v3-agent-loop/artifacts/habitat_v3_demo/habitat_v3_demo.typescript` },
+      { label: "Replay fixture", href: `${links.repos.tsChatLanguage}/blob/habitat-v3-agent-loop/artifacts/habitat_v3_demo/replay_fixture.json` },
+      { label: "Limitations", href: `${links.repos.tsChatLanguage}/blob/habitat-v3-agent-loop/docs/habitat_v3_limitations.md` },
+      { label: "Reasoner runtime", href: `${links.repos.tsReasoner}/blob/habitat-v3-agent-loop/ts_reasoner/agent_runtime.py` },
+    ],
+    confidence: "Strong within toy scope",
+    tags: ["habitat", "agent loop", "transactional execution", "replanning", "multi-agent", "deterministic replay"],
+    updatedAt: "2026-06-21",
+    route: route("TS-026"),
+  },
 ];
 
 export const proofFilters = ["All", "receipt", "draft", "replication", "toy", "benchmark", "planned", "cig", "tensionlm", "ts-core"];

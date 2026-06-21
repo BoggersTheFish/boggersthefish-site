@@ -55,8 +55,8 @@ const fieldNotes = [
     body: "Routing, repair, evaluation, data, and adapter tooling exist. Genuine adaptive-precision evidence waits for materially different low/high numerical backends.",
   },
   {
-    title: "TS Habitat v2: signed world and verified plans",
-    body: "The verifier-first slice now maintains a bounded symbolic habitat with signed evidence, contradiction-preserving state, semantic merge, query-relevant clusters, deterministic events, bounded causal chains, verified action plans, and TurnReceipt v2. It uses no external language model.",
+    title: "TS Habitat v3: verified symbolic agent loop",
+    body: "The bounded simulated habitat now maintains explicit goals, uses deterministic graph tension to allocate capped effort, navigates declared topology, verifies and executes one symbolic action at a time, checks observed effects, replans stale assumptions, and emits whole-run TurnReceipt v3 evidence. It uses no external model or real-world actuation.",
   },
 ];
 

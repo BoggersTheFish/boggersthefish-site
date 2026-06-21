@@ -59,7 +59,7 @@ export const links = {
 export const currentStatus = [
   {
     label: "Reasoning and language",
-    body: "Habitat v2 joins deterministic language, signed semantic memory, query-relevant clusters, event transitions, bounded causal inference, and verified planning under TS-Reasoner authority.",
+    body: "Habitat v3 extends the signed world into a bounded verifier-first agent loop with explicit goals, deterministic tension, declared topology, transactional symbolic actions, effect verification, replanning, reflection, and replay.",
   },
   {
     label: "Model science",

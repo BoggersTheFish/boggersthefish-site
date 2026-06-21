@@ -58,16 +58,16 @@ export const lineageGroups: LineageGroup[] = [
       {
         "name": "ts-chat-language",
         "status": "Current",
-        "idea": "Deterministic text-to-MeaningGraph compilation, graph-diff memory, planning, and rendering.",
-        "survives": "Stable semantic identities, persistent corrections, and a non-LLM language boundary.",
+        "idea": "Deterministic text-to-MeaningGraph compilation and a bounded verifier-first symbolic agent loop.",
+        "survives": "Stable semantic identities, explicit goals/topology, transactional execution, replanning, replay, and a non-LLM language boundary.",
         "successor": "Current language/interface line",
         "repoUrl": "https://github.com/BoggersTheFish/ts-chat-language"
       },
       {
         "name": "TS-Reasoner-v0",
         "status": "Current",
-        "idea": "Typed verifier authority over candidate acceptance, repair, memory, and rejection.",
-        "survives": "The verifier-first operation firewall and receipt-backed state transitions.",
+        "idea": "Typed verifier authority over conclusions, goals, plans, actions, effects, lessons, memory, and rejection.",
+        "survives": "The verifier-first operation firewall, transactional symbolic environment, and receipt-backed agent transitions.",
         "successor": "Current verifier/reasoning line",
         "repoUrl": "https://github.com/BoggersTheFish/TS-Reasoner-v0"
       },

@@ -56,20 +56,20 @@ export const projects: Project[] = [
     method:
       "Keep proposal generation outside the proof boundary. Candidates enter typed verifiers, risk gates, repair loops, and receipt-backed memory transitions.",
     evidence:
-      "Habitat v2 adds four-valued signed projection, bounded causal closure, event-precondition authority, and step-verified planning. The 120-case functional and 102-case adversarial suites clear every safety hard gate.",
+      "Habitat v3 adds verifier-gated goals, explicit topology, deterministic tension, plan verification, transactional symbolic execution, effect checking, replanning, reflection, lesson approval, multi-agent scheduling, and whole-run replay. The frozen 240-case functional and 240-case adversarial suites clear every safety hard gate.",
     limits:
       "Runtime integrity is not claim truth. Generated text and model confidence are not proof. The public experiments are bounded and domain-specific.",
     repoUrl: links.repos.tsReasoner,
     hfUrls: [{ label: "TS-TinyVerifier-v0", href: links.models.tsTinyVerifierV0 }],
-    proofIds: ["TS-024", "TS-025"],
+    proofIds: ["TS-024", "TS-025", "TS-026"],
     installCommand:
       "git clone https://github.com/BoggersTheFish/TS-Reasoner-v0 && cd TS-Reasoner-v0",
     inspectCommand:
       "Run the test suite and inspect verifier decisions, support types, repair receipts, memory writes, and abstentions.",
     currentState:
-      "ReasoningRequest now additively carries activated Habitat state into signed projection, bounded causal inference, deterministic transitions, and verifier-gated action planning.",
+      "The Habitat v3 runtime separates planning from execution: every action is revalidated, executed only in an in-process symbolic environment, observed, effect-checked, and transactionally committed with pre/post hashes.",
     nextMilestone:
-      "Expand the deterministic grammar while preserving the same typed verifier and renderer-support boundary.",
+      "Measure and reduce conservative unreachable outcomes without weakening action, effect, replay, or renderer authority.",
     tags: ["typed verification", "operation firewall", "receipts"],
     focus: ["Verifier authority", "Containment", "Repair and memory"],
     notes: [
@@ -93,20 +93,20 @@ export const projects: Project[] = [
     method:
       "Compile text through normalisation, dialogue acts, semantic frames, stable graph identities, state transitions, response planning, and language-specific rendering.",
     evidence:
-      "The repository has 102 passing tests. Habitat v2 passes 120 functional and 102 adversarial cases with zero unsupported accepts, contamination, silent overwrites, duplicate semantic items, cluster leaks, unsupported plan steps, renderer violations, replay failures, or execution errors.",
+      "The repository has 109 passing tests. Habitat v3 runs 240 frozen functional and 240 frozen adversarial cases with zero safety hard-gate violations, 100% receipt generation, ten recorded demonstrations, and preserved v1/v2 regressions.",
     limits:
       "The grammar and reasoning families are deliberately bounded. This is not broad natural-language understanding or a general-purpose chatbot, and it uses no external language model.",
     repoUrl: links.repos.tsChatLanguage,
     hfUrls: [],
-    proofIds: ["TS-024", "TS-025"],
+    proofIds: ["TS-024", "TS-025", "TS-026"],
     installCommand:
-      "Clone TS-Reasoner-v0 and ts-chat-language as siblings, then run: cd ts-chat-language && ./scripts/run_vertical_slice.sh",
+      "Clone TS-Reasoner-v0 and ts-chat-language as siblings, check out habitat-v3-agent-loop, then run: cd ts-chat-language && ./scripts/run_habitat_v3.sh",
     inspectCommand:
       "Run the golden dialogue cases and inspect compiled frames, graph diffs, remembered corrections, plans, and rendered responses.",
     currentState:
-      "Habitat v2 extends the released path with semantic merge, signed persistent state, query-relevant cluster activation, deterministic events, causal chains, verified plans, and TurnReceipt v2.",
+      "Habitat v3 extends the preserved v2 path with persistent goals, deterministic tension, explicit topology, an agent-loop state machine, verified symbolic execution, replanning, reflection, lessons, multi-agent scheduling, and TurnReceipt v3.",
     nextMilestone:
-      "Expand the deterministic grammar around the observed conservative rejection boundary while preserving the same verifier and renderer authority.",
+      "Target the measured conservative rejection boundary with general grammar and planner extensions while preserving every verifier hard gate.",
     tags: ["meaning graph", "dialogue compiler", "deterministic language"],
     focus: ["Semantic compilation", "Graph-diff memory", "Response planning"],
     notes: [
