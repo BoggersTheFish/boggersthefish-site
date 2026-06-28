@@ -13,7 +13,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gold/30 bg-forest-dark/94 shadow-scene backdrop-blur-md">
-      <nav className="mx-auto flex max-w-[96rem] items-center justify-between gap-5 px-4 py-2.5 sm:px-6 lg:px-8">
+      <nav aria-label="Primary" className="mx-auto flex max-w-[96rem] items-center justify-between gap-5 px-4 py-2.5 sm:px-6 lg:px-8">
         <Link href="/" className="group flex min-w-0 items-center gap-3">
           <span className="brand-mark" aria-hidden="true">
             <FishCrestIcon className="h-10 w-14" />

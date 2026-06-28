@@ -51,8 +51,8 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "TS-Reasoner v3.5.0",
-    body: "A tiny learned candidate model proposes/ranks structured claims while typed channels remain proof authority.",
+    label: "TS-Reasoner v4.5.0",
+    body: "Milestone receipt pack: candidate chains, tension telemetry, rejected alternatives, and typed-channel verification with zero graph contamination.",
   },
   {
     label: "TensionLM",

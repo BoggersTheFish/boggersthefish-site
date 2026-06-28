@@ -27,6 +27,20 @@
     color-scheme: dark;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
     min-height: 100vh;
     background:
@@ -195,6 +209,10 @@
 
   .diagram-icon {
     @apply flex h-12 w-12 items-center justify-center rounded-md border border-brown/30 bg-forest/10 text-brown;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:border focus:border-gold/50 focus:bg-forest-dark focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-gold;
   }
 
   .page-shell {

@@ -65,10 +65,10 @@ const receipts = [
     href: links.models.tsReasonerV10,
   },
   {
-    title: "TS-Reasoner v3.5 learned candidate model",
+    title: "TS-Reasoner v4.5.0 milestone receipt",
     badge: "local verified",
-    body: "Release receipt shows a tiny learned candidate model proposing/ranking structured claims while typed channels retain verifier authority.",
-    limit: "Structured synthetic examples; not a chatbot, theorem prover, or live model integration into the verifier.",
+    body: "v4.5.0 milestone receipt: 114 known cases, 0 wrong accepts, 0 candidate-graph contamination, all gates passed.",
+    limit: "Bounded synthetic verifier ladder; not a chatbot, theorem prover, or live TensionLM runtime integration.",
     href: "/projects/ts-reasoner",
   },
   {

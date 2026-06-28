@@ -12,7 +12,7 @@ export function QuickLinks() {
       <p className="field-label mb-4 text-gold">Quick Links</p>
       <div className="space-y-3">
         {quickLinks.map((link, index) => {
-          const Icon = icons[index] ?? BookOpen;
+          const Icon = icons[index] ?? FishCrestIcon;
           return (
             <Link
               key={link.href}

@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ParchmentCard } from "@/components/ParchmentCard";
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Page not found",
+  description: "The requested archive card is not in the public field guide.",
+  path: "/404",
+});
 
 export default function NotFound() {
   return (
