@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import { LegacyRedirectPage, legacyRedirectMetadata } from "@/components/LegacyRedirectPage";
+
+export const metadata = legacyRedirectMetadata("/evidence");
 
 export default function EvidencePage() {
-  permanentRedirect("/proof-bank");
+  return <LegacyRedirectPage path="/evidence" />;
 }

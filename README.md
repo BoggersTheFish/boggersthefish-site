@@ -2,7 +2,10 @@
 
 > Public archive for bounded TS reasoning receipts, current model artifacts, and sober project routing.
 
-Live at [boggersthefish.com](https://boggersthefish.com) · truth-sync route for TS-Reasoner, TensionLM v10/v11, CIG, and Proof Ranker.
+Live at [boggersthefish.com](https://www.boggersthefish.com) · truth-sync route for TS-Reasoner, TensionLM v10/v11, CIG, and Proof Ranker.
+
+**Canonical repo path:** `~/BoggersSpace/boggersthefish-site`  
+**Workspace mirror:** `~/workspace/boggersthefish-site` (sync with `scripts/reconcile-workspace.sh`)
 
 ---
 
@@ -11,20 +14,11 @@ Live at [boggersthefish.com](https://boggersthefish.com) · truth-sync route for
 Requires **Node.js 18+** and **npm 9+**.
 
 ```bash
-# Install Node.js first if needed:
-# https://nodejs.org/en/download
+cd ~/BoggersSpace/boggersthefish-site
 
-# Clone or enter the project
-cd boggersthefish-site
-
-# Install dependencies
 npm install
+cp .env.example .env.local   # optional: GITHUB_TOKEN for GitHub-backed routes
 
-# Copy env vars
-cp .env.example .env.local
-# Edit .env.local and add your GITHUB_TOKEN
-
-# Run dev server
 npm run dev
 # → http://localhost:3000
 ```
@@ -32,11 +26,19 @@ npm run dev
 ## Build & Deploy
 
 ```bash
-npm run build    # Production build
-npm run start    # Start production server
+npm run lint
+npx tsc --noEmit
+npm run build
 
-# Deploy to Vercel (one command):
 npx vercel --prod
+```
+
+## Workspace sync
+
+If you maintain a mirror copy under `~/workspace/boggersthefish-site`:
+
+```bash
+./scripts/reconcile-workspace.sh
 ```
 
 ## Site Structure
@@ -50,16 +52,14 @@ The site is organized around current public evidence routes:
 - `/proof-bank`: bounded proof notes, receipts, and known limits.
 - `/support`: legally cautious support and BGC language.
 
+Legacy bookmark routes (`/lab`, `/waves`, `/network`, `/receipts`, `/evidence`, `/ts-os`) 301 to canonical paths via `vercel.json` and show a noindex fallback page.
+
 ## Tech Stack
 
-- **Next.js 15** App Router + TypeScript
+- **Next.js 15** App Router + TypeScript (static export)
 - **Tailwind CSS 3** with custom TS archive theme
-- **Framer Motion** — scroll + activation animations
-- **Zustand** — global wave cycle state
-- **shadcn/ui** — base UI components
 - **lucide-react** — icons
-- **react-force-graph-2d** for graph views where enabled
-- **@octokit/rest** for GitHub-backed routes where configured
+- **shadcn/ui** — base UI components
 
 ## TS Philosophy
 
@@ -77,9 +77,8 @@ they are not broad AGI, general reasoning, or production reliability claims.
 
 ---
 
-© 2026 BoggersTheFish. All nodes reserved.
-
-
 ## Current TS-Reasoner flagship
 
-TS-Reasoner v3.5.0 is now the flagship verifier-first reasoning release: LLMs propose, TS verifies, confidence is not proof, and typed traces show why. Release: https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v3.5.0
+TS-Reasoner v4.5.0 is the flagship verifier-first reasoning release: LLMs propose, TS verifies, confidence is not proof, and typed traces show why. Release: https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v4.5.0
+
+© 2026 BoggersTheFish. All nodes reserved.

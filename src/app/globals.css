@@ -1297,6 +1297,26 @@
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
+  .archive-hero {
+    min-height: auto;
+  }
+
+  .archive-hero-image {
+    object-position: 60% center;
+    opacity: 0.72;
+  }
+
+  .archive-hero-scrim {
+    background:
+      linear-gradient(180deg, rgba(5, 10, 5, 0.82), rgba(5, 10, 5, 0.5) 40%, rgba(5, 10, 5, 0.88)),
+      radial-gradient(circle at 58% 28%, rgba(201, 164, 92, 0.1), transparent 16rem);
+  }
+
+  .hero-archive-panel {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .storybook-hero {
     min-height: 780px;
     padding-inline: 1.5rem;

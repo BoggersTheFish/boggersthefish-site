@@ -19,7 +19,7 @@ export function MobileNav() {
     <div>
       <button
         type="button"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gold/45 bg-forest/75 text-gold"
+        className="inline-flex h-11 min-h-11 w-11 min-w-11 items-center justify-center rounded-md border border-gold/45 bg-forest/75 text-gold"
         aria-label="Toggle navigation"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
@@ -35,7 +35,7 @@ export function MobileNav() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "block rounded px-3 py-2 font-serif text-lg text-cream transition",
+                  "block min-h-11 rounded px-3 py-3 font-serif text-lg text-cream transition",
                   active ? "bg-parchment text-ink" : "hover:bg-gold/10"
                 )}
               >

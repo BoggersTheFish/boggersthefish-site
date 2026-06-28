@@ -6,6 +6,7 @@ import { ParchmentCard } from "@/components/ParchmentCard";
 import { cn } from "@/lib/utils";
 
 const iconMap = {
+  "ts-reasoner": ParchmentIcon,
   "ts-core": NodeGraphIcon,
   tensionlm: FishCrestIcon,
   cig: CrownSketchIcon,

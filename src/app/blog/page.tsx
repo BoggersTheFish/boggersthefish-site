@@ -20,7 +20,7 @@ export default function BlogPage() {
       </div>
       <ParchmentCard tone="dark" className="mb-8">
         <p className="field-label mb-3 text-gold">Growing archive</p>
-        <p className="text-sm leading-7 text-cream/78">
+        <p className="text-sm leading-7 text-cream/85">
           These are field notes, not release announcements. Claims inside posts
           should still route back to proof-bank entries, source repos, or visible
           limitations.

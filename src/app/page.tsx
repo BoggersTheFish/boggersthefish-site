@@ -22,7 +22,7 @@ const currentStack = [
   {
     name: "TS-Reasoner",
     role: "Verifier/control loop",
-    evidence: "v2.0 learned-candidate receipt, typed-channel verification, zero candidate graph contamination.",
+    evidence: "v4.5.0 milestone receipt: 114 known cases, zero wrong accepts, zero candidate-graph contamination.",
     href: "/projects/ts-reasoner",
     status: "verified local repo",
   },
@@ -43,9 +43,9 @@ const currentStack = [
   {
     name: "Proof Ranker",
     role: "Proof scoring / repair ladder",
-    evidence: "Published artifact ladder is linked; exact receipt sync remains a TODO.",
+    evidence: "HF v0–v4 artifact ladder is published and linked; proof-bank verifier receipts are not yet synced.",
     href: "/projects/proof-ranker",
-    status: "receipt sync needed",
+    status: "HF ladder live",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function HomePage() {
 
       <section className="page-shell pb-4">
         <div className="grid gap-5 lg:grid-cols-[1.45fr_0.75fr]">
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {projects.map((project) => (
               <ProjectCard key={project.slug} project={project} compact />
             ))}
@@ -116,9 +116,9 @@ export default function HomePage() {
                 </span>
               </div>
               <p className="field-label text-gold/85">Role</p>
-              <p className="mt-2 text-sm leading-6 text-cream/78">{item.role}</p>
+              <p className="mt-2 text-sm leading-6 text-cream/85">{item.role}</p>
               <p className="field-label mt-5 text-gold/85">Evidence</p>
-              <p className="mt-2 text-sm leading-6 text-cream/72">{item.evidence}</p>
+              <p className="mt-2 text-sm leading-6 text-cream/80">{item.evidence}</p>
             </Link>
           ))}
         </div>
@@ -141,8 +141,8 @@ export default function HomePage() {
                   {receipt.badge}
                 </span>
               </div>
-              <p className="text-sm leading-7 text-cream/78">{receipt.body}</p>
-              <p className="mt-4 border-l-2 border-gold/45 pl-3 text-sm leading-6 text-cream/70">
+              <p className="text-sm leading-7 text-cream/85">{receipt.body}</p>
+              <p className="mt-4 border-l-2 border-gold/45 pl-3 text-sm leading-6 text-cream/80">
                 {receipt.limit}
               </p>
               <Link
@@ -174,7 +174,7 @@ export default function HomePage() {
               "No broad benchmark numbers without linked receipts.",
               "Dates and versions are verified or labelled local/draft.",
             ].map((item) => (
-              <p key={item} className="flex gap-3 rounded-md border border-gold/20 bg-black/20 p-3 text-sm leading-6 text-cream/78">
+              <p key={item} className="flex gap-3 rounded-md border border-gold/20 bg-black/20 p-3 text-sm leading-6 text-cream/85">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 {item}
               </p>

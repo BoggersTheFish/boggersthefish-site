@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import { LegacyRedirectPage, legacyRedirectMetadata } from "@/components/LegacyRedirectPage";
+
+export const metadata = legacyRedirectMetadata("/lab");
 
 export default function LabPage() {
-  permanentRedirect("/run-ts-reasoner");
+  return <LegacyRedirectPage path="/lab" />;
 }

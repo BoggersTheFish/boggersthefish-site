@@ -65,7 +65,7 @@ export default function AboutPage() {
             systems-arc personality. Public research claims still have to pass
             through repos, traces, artifacts, or an explicit local-only label.
           </p>
-          <p className="mt-4 text-sm leading-7 text-cream/70">
+          <p className="mt-4 text-sm leading-7 text-cream/80">
             Read the early experiments as a historical project arc. Dates are
             only treated as firm when tied to a GitHub repo, release, commit, or
             local verification artifact.

@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import { LegacyRedirectPage, legacyRedirectMetadata } from "@/components/LegacyRedirectPage";
+
+export const metadata = legacyRedirectMetadata("/network");
 
 export default function NetworkPage() {
-  permanentRedirect("/about");
+  return <LegacyRedirectPage path="/network" />;
 }

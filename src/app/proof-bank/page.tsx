@@ -1,9 +1,20 @@
+import dynamic from "next/dynamic";
 import { ClaimDiscipline } from "@/components/ClaimDiscipline";
 import { ReceiptAnatomyDiagram } from "@/components/Diagrams";
-import { ProofBankExplorer } from "@/components/ProofBankExplorer";
 import { SectionHeading } from "@/components/SectionHeading";
 import { proofs } from "@/content/proofs";
 import { pageMetadata } from "@/lib/metadata";
+
+const ProofBankExplorer = dynamic(
+  () => import("@/components/ProofBankExplorer").then((mod) => mod.ProofBankExplorer),
+  {
+    loading: () => (
+      <p className="rounded-md border border-gold/25 bg-forest/60 px-4 py-6 text-sm text-cream/80">
+        Loading proof bank explorer…
+      </p>
+    ),
+  }
+);
 
 export const metadata = pageMetadata({
   title: "Proof Bank",

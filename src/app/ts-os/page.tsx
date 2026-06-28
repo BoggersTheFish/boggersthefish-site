@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import { LegacyRedirectPage, legacyRedirectMetadata } from "@/components/LegacyRedirectPage";
+
+export const metadata = legacyRedirectMetadata("/ts-os");
 
 export default function TsOsPage() {
-  permanentRedirect("/projects/ts-core");
+  return <LegacyRedirectPage path="/ts-os" />;
 }

@@ -26,7 +26,7 @@ export default function DocsPage() {
       <SectionHeading title="Guides" />
       <ParchmentCard tone="dark" className="mb-8">
         <p className="field-label mb-3 text-gold">Growing archive</p>
-        <p className="text-sm leading-7 text-cream/78">
+        <p className="text-sm leading-7 text-cream/85">
           Docs are intentionally compact while the replay layer is being tightened.
           Stubbed topics are marked as guides, not abandoned pages, and should link
           back to real project routes or proof-bank receipts.

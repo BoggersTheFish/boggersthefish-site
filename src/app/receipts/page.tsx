@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import { LegacyRedirectPage, legacyRedirectMetadata } from "@/components/LegacyRedirectPage";
+
+export const metadata = legacyRedirectMetadata("/receipts");
 
 export default function ReceiptsPage() {
-  permanentRedirect("/proof-bank");
+  return <LegacyRedirectPage path="/receipts" />;
 }

@@ -40,7 +40,7 @@ const config: Config = {
         background: "#10170d",
         foreground: "#f3e7c5",
         muted: "#182312",
-        "muted-foreground": "rgba(243, 231, 197, 0.62)",
+        "muted-foreground": "rgba(243, 231, 197, 0.75)",
         card: "#182312",
         "card-foreground": "#f3e7c5",
         accent: "#c9a45c",

@@ -1,4 +1,5 @@
 import { links } from "@/content/site";
+import { tsReasonerV45Update } from "@/content/updates/ts-reasoner-v4-5";
 
 export type ProjectStatus = "Live" | "Active" | "Experimental" | "Published" | "In Progress" | "Planned";
 
@@ -37,23 +38,23 @@ export const tsFrameworkStatement =
 export const projects: Project[] = [
   {
     slug: "ts-reasoner",
-    title: "TS-Reasoner v4.5.0 v3.5.0",
+    title: "TS-Reasoner v4.5.0",
     name: "TS-Reasoner",
     href: "/projects/ts-reasoner",
     status: "Live",
-    summary: "Typed verification reasoner with a tiny learned candidate model, candidate containment, and preserved failure receipts.",
-    shortDescription: "Runnable learned-candidate receipt with typed verifier authority.",
+    summary: "Verifier-first reasoner with typed channels, candidate containment, milestone receipts, and visible failure modes.",
+    shortDescription: "v4.5.0 milestone receipt: 114 known cases, zero wrong accepts, zero contamination.",
     problem: "Reasoning demos often blend proof completion, identity collapse, reverse inference, quantifier scope, contradiction, and confidence into one opaque score.",
     method: "Represent reasoning work as typed tension channels over graph state. Learned/model outputs enter only as candidate data: TS-Reasoner verifies channel traces, resolver events, abstentions, and receipts.",
-    evidence: "v2.0.0 trains a tiny pure-Python candidate model that ranks/proposes structured candidate claims. The receipt preserves typed support, bad-candidate rejection, verifier-over-confidence behavior, and zero candidate graph contamination.",
-    limits: "Still narrow: the learned candidate data is structured and synthetic, the verifier remains parser-controlled, and this is not a chatbot, theorem prover, or live TensionLM integration into TS-Reasoner.",
+    evidence: `v4.5.0 packages the verifier-first ladder into one cold-reader receipt: ${tsReasonerV45Update.metrics.knownCases} known cases, ${tsReasonerV45Update.metrics.wrongAccepts} wrong accepts, ${tsReasonerV45Update.metrics.candidateGraphContamination} candidate-graph contamination, all gates passed.`,
+    limits: "Bounded synthetic verifier ladder; confidence is not proof, generated text is not proof, and this is not a chatbot, theorem prover, or live TensionLM runtime integration.",
     repoUrl: links.repos.tsReasoner,
     hfUrls: [{ label: "TS-TinyVerifier-v0", href: links.models.tsTinyVerifierV0 }],
     proofIds: [],
     installCommand: "git clone https://github.com/BoggersTheFish/TS-Reasoner-v0 && cd TS-Reasoner-v0",
-    inspectCommand: "python3 -m unittest discover && python3 scripts/evaluate_learned_candidate_model.py",
-    currentState: "v2.0.0 release is live with learned candidate model assets and HF artifact.",
-    nextMilestone: "Expand from structured learned candidates toward larger exported/model candidate sets without weakening verifier authority.",
+    inspectCommand: "python3 -m unittest discover && python3 scripts/evaluate_v45_milestone_receipt.py",
+    currentState: "v4.5.0 milestone receipt pack is live with 8 input reports, 114 known cases, and zero wrong accepts.",
+    nextMilestone: "Expand exported/model candidate sets without weakening typed verifier authority.",
     tags: ["typed tension", "learned candidates", "receipts"],
     focus: ["Typed channels", "Learned candidate model", "Release receipts"],
     notes: [
@@ -63,6 +64,7 @@ export const projects: Project[] = [
       "v1.6.0 evaluates a small exported set and preserves parse failures and deeper-chain limits as receipt evidence.",
       "v1.7.0 repairs the deeper-chain support gap exposed by the v1.6 receipt.",
       "v2.0.0 adds a tiny learned candidate/channel model while typed channels remain proof authority.",
+      "v4.5.0 packages the verifier-first ladder from v3.6 through v4.4 into one cold-reader milestone receipt.",
     ],
   },
   {
@@ -179,7 +181,7 @@ export const projects: Project[] = [
     installCommand: "Open the Hugging Face model cards and pair them with verifier scripts before use.",
     inspectCommand: "Compare v0-v4 model cards and verifier-loop notes.",
     currentState: "Published model ladder exists; repo-level routing still needs exact confirmation.",
-    nextMilestone: "TS-Reasoner v3.5.0 public verifier-first surface and proposer-boundary release.",
+    nextMilestone: "Wire HF v0–v4 artifact ladder to proof-bank verifier receipts.",
     tags: ["proof ranking", "verifiers", "repair"],
     focus: ["Proof scoring", "Trace repair", "Verifier-backed loops"],
     notes: [

@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import { LegacyRedirectPage, legacyRedirectMetadata } from "@/components/LegacyRedirectPage";
+
+export const metadata = legacyRedirectMetadata("/waves");
 
 export default function WavesPage() {
-  permanentRedirect("/research");
+  return <LegacyRedirectPage path="/waves" />;
 }

@@ -46,7 +46,7 @@ export function ProofBankExplorer({ proofs }: { proofs: Proof[] }) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search by ID, claim, result, tag, or limitation"
-            className="min-h-12 w-full rounded-md border border-gold/35 bg-forest/70 pl-11 pr-4 text-sm text-cream outline-none placeholder:text-cream/45 focus:border-gold focus:ring-2 focus:ring-gold/25"
+            className="min-h-12 w-full rounded-md border border-gold/35 bg-forest/70 pl-11 pr-4 text-sm text-cream outline-none placeholder:text-cream/60 focus:border-gold focus:ring-2 focus:ring-gold/25"
           />
         </label>
         <div className="flex flex-wrap gap-2">
@@ -67,11 +67,20 @@ export function ProofBankExplorer({ proofs }: { proofs: Proof[] }) {
         </div>
       </div>
 
-      <div className="mb-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {filteredProofs.map((proof) => (
-          <ProofCard key={proof.id} proof={proof} />
-        ))}
-      </div>
+      {filteredProofs.length === 0 ? (
+        <ParchmentCard tone="dark" className="mb-12">
+          <p className="field-label text-gold">No matches</p>
+          <p className="mt-3 text-sm leading-7 text-cream/85">
+            No proof entries match the current search or filter. Try clearing the query or selecting &ldquo;All&rdquo;.
+          </p>
+        </ParchmentCard>
+      ) : (
+        <div className="mb-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {filteredProofs.map((proof) => (
+            <ProofCard key={proof.id} proof={proof} />
+          ))}
+        </div>
+      )}
 
       <div className="space-y-6">
         {filteredProofs.map((proof) => (

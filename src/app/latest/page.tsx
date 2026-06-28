@@ -73,7 +73,7 @@ export default function LatestPage() {
                 {artifact.status}
               </span>
             </div>
-            <p className="text-sm leading-7 text-cream/78">{artifact.body}</p>
+            <p className="text-sm leading-7 text-cream/85">{artifact.body}</p>
             <div className="mt-5 grid gap-3">
               <p className="rounded-md border border-gold/20 bg-black/20 p-3 text-sm leading-6 text-cream/76">
                 <strong className="text-gold">Receipt:</strong> {artifact.receipt}

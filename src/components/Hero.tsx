@@ -22,7 +22,7 @@ export function Hero() {
         aria-hidden="true"
       />
       <div className="archive-hero-scrim" aria-hidden="true" />
-      <div className="relative mx-auto grid min-h-[760px] max-w-7xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[0.78fr_0.52fr] lg:px-8 lg:py-20">
+      <div className="relative mx-auto grid min-h-0 max-w-7xl items-center gap-8 px-4 py-14 sm:min-h-[520px] sm:px-6 md:grid-cols-1 lg:min-h-[760px] lg:grid-cols-[0.78fr_0.52fr] lg:px-8 lg:py-20">
         <div className="relative z-10 max-w-2xl">
           <p className="field-label mb-5 text-gold">BoggersTheFish / TS Research Archive</p>
           <h1 className="font-serif text-5xl font-semibold leading-[0.96] text-cream sm:text-6xl lg:text-7xl">
@@ -32,7 +32,7 @@ export function Hero() {
             Graph-based reasoning. Tension telemetry. Constraint propagation.
             Reproducible traces.
           </p>
-          <p className="mt-4 max-w-lg text-base leading-7 text-cream/78">
+          <p className="mt-4 max-w-lg text-base leading-7 text-cream/85">
             Exploring small, inspectable foundations for interpretable and
             reliable AI.
           </p>

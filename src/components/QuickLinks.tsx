@@ -27,7 +27,7 @@ export function QuickLinks() {
                   {link.label}
                   {link.external ? <ArrowUpRight className="h-3.5 w-3.5" /> : null}
                 </span>
-                <span className="mt-1 block text-xs leading-5 text-cream/70">{link.note}</span>
+                <span className="mt-1 block text-xs leading-5 text-cream/80">{link.note}</span>
               </span>
             </Link>
           );
