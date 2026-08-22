@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   keywords: [
     "BoggersTheFish",
     "Ben Michalek",
+    "PRIME verifier-governed architecture",
+    "selective epistemic control",
+    "adaptive state abstraction",
+    "bounded cognition",
+    "Zenodo research software",
+    "Enthusia SMP",
+    "Minecraft plugin development",
     "Thinking System",
     "verifier-first systems",
     "typed verification",
@@ -92,12 +99,46 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${site.url}/#ben-michalek`,
+        name: "Ben Michalek",
+        alternateName: "BoggersTheFish",
+        url: site.url,
+        sameAs: [site.github, site.huggingFace, site.zenodo, site.enthusia],
+        knowsAbout: [
+          "Verifier-first artificial intelligence",
+          "Adaptive state abstraction",
+          "Research software",
+          "Minecraft server development",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${site.url}/#website`,
+        url: site.url,
+        name: site.name,
+        description: site.description,
+        author: { "@id": `${site.url}/#ben-michalek` },
+      },
+    ],
+  };
+
   return (
     <html
       lang="en"
       className={`${inter.variable} ${ebGaramond.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="min-h-screen overflow-x-hidden bg-forest-dark font-sans text-cream antialiased">
         <SiteHeader />
         <main>{children}</main>

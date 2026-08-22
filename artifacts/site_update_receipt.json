@@ -13,7 +13,6 @@
     "src/app/page.tsx",
     "src/app/run-ts-reasoner/page.tsx",
     "src/app/sitemap.ts",
-    "src/app/support/page.tsx",
     "src/components/hero/HeroSection.tsx",
     "src/components/layout/Footer.tsx",
     "src/content/nav.ts",
@@ -26,7 +25,6 @@
     "/latest",
     "/run-ts-reasoner",
     "/about",
-    "/support",
     "/projects",
     "/sitemap.xml"
   ],
@@ -76,8 +74,7 @@
     "Removed README claim that the site is itself a running TS instance.",
     "Changed legacy live-instance/wave/test-count language to local archive or receipt-needed wording.",
     "Changed homepage framing to verifier-first bounded receipts and explicit non-claims.",
-    "Added explicit v11 limitation that raw exact answer/rule generation is not solved.",
-    "Added BGC support language that BGC is not cryptocurrency, not investment, not legal tender, not redeemable for cash, and may remain off-chain forever."
+    "Added explicit v11 limitation that raw exact answer/rule generation is not solved."
   ],
   "remaining_tensions": [
     "Deploy is still needed for the public website to reflect these changes.",

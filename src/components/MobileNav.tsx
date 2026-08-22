@@ -27,7 +27,7 @@ export function MobileNav() {
         {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
       {open ? (
-        <div className="absolute left-4 right-4 top-[4.75rem] rounded-md border border-gold/45 bg-forest-dark/98 p-3 shadow-scene">
+        <div className="absolute left-4 right-4 top-[4.6rem] rounded-lg border border-gold/45 bg-[#081008] p-3 shadow-2xl">
           {navItems.map((item) => {
             const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
@@ -35,7 +35,7 @@ export function MobileNav() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "block rounded px-3 py-2 font-serif text-lg text-cream transition",
+                  "block rounded-md px-3 py-2.5 font-serif text-lg text-cream transition",
                   active ? "bg-parchment text-ink" : "hover:bg-gold/10"
                 )}
               >

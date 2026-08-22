@@ -14,7 +14,6 @@ The public surface was truth-synced around a verifier-first TS story:
 - `/latest` was added for the HF-visible v10/v11 model-line artifacts.
 - `/run-ts-reasoner` now has one verified golden-path command and one trace checklist.
 - `/about` now separates personal origin story, historical project arc, and verified dates.
-- `/support` and shared BGC copy now include explicit non-financial safety language.
 - Stale live-instance, hard wave-date, and 200+ tests language was softened.
 
 ## Files Changed
@@ -29,7 +28,6 @@ The public surface was truth-synced around a verifier-first TS story:
 - `src/app/page.tsx`
 - `src/app/run-ts-reasoner/page.tsx`
 - `src/app/sitemap.ts`
-- `src/app/support/page.tsx`
 - `src/components/hero/HeroSection.tsx`
 - `src/components/layout/Footer.tsx`
 - `src/content/nav.ts`
@@ -85,7 +83,6 @@ Initial lint found JSX quote escaping in `/run-ts-reasoner`; fixed and reran suc
 - Softened Wave 12 / 200+ tests / THIS SITE language to local archive / receipt-needed language.
 - Homepage now states toy and bounded receipts are real, broad claims are not.
 - About page now marks personal background and project arc separately.
-- BGC copy now says support funds research/docs/compute/time, not financial return.
 
 ## Remaining Tensions
 

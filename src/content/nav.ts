@@ -5,45 +5,45 @@ export type NavItem = {
 
 export const navItems: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/start-here", label: "Start Here" },
-  { href: "/projects", label: "Current Work" },
-  { href: "/lineage", label: "Lineage" },
-  { href: "/proof-bank", label: "Proof Bank" },
   { href: "/research", label: "Research" },
+  { href: "/publications", label: "Publications" },
+  { href: "/projects", label: "Open Source" },
+  { href: "/enthusia", label: "Enthusia SMP" },
   { href: "/about", label: "About" },
 ];
 
 export const quickLinks = [
   {
-    label: "Current Work",
+    label: "PRIME v1.0.0",
+    href: "https://doi.org/10.5281/zenodo.22058441",
+    note: "The current verifier-governed architecture and sealed release.",
+    external: true,
+  },
+  {
+    label: "Publications",
+    href: "/publications",
+    note: "Permanent Zenodo records, versions, DOIs, and artifact boundaries.",
+  },
+  {
+    label: "Open Source",
     href: "/projects",
-    note: "The eight projects carrying the active research.",
+    note: "Current repositories plus the preserved research lineage.",
   },
   {
-    label: "Project Lineage",
-    href: "/lineage",
-    note: "The ideas, failures, and successors behind 52 repositories.",
-  },
-  {
-    label: "Proof Bank",
-    href: "/proof-bank",
-    note: "Experiments, receipts, negative results, and limitations.",
-  },
-  {
-    label: "Start Here",
-    href: "/start-here",
-    note: "A plain-language map of the current architecture.",
+    label: "Enthusia SMP",
+    href: "/enthusia",
+    note: "Minecraft server development, plugins, and community systems.",
   },
   {
     label: "GitHub",
     href: "https://github.com/BoggersTheFish",
-    note: "The reduced source surface after the repository cleanup.",
+    note: "Public research software and server-development work.",
     external: true,
   },
   {
     label: "Hugging Face",
     href: "https://huggingface.co/BoggersTheFish",
-    note: "Model artifacts, checkpoints, and research receipts.",
+    note: "Earlier model artifacts, checkpoints, and research receipts.",
     external: true,
   },
 ];

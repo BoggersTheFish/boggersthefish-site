@@ -7,9 +7,9 @@ import { links } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Latest Models",
+  title: "Model Archive",
   description:
-    "Current Hugging Face-visible TensionLM / TS-Reasoner v10 and TS Trace Distilled v11 artifacts, with receipts and limits.",
+    "Archived Hugging Face-visible TensionLM / TS-Reasoner v10 and TS Trace Distilled v11 artifacts, with receipts and limits.",
   path: "/latest",
 });
 
@@ -55,12 +55,13 @@ export default function LatestPage() {
   return (
     <section className="page-shell">
       <div className="page-intro">
-        <p className="field-label text-gold">Latest visible artifacts</p>
+        <p className="field-label text-gold">Preserved model archive</p>
         <h1>TensionLM / TS-Reasoner v10 and TS Trace Distilled v11.</h1>
         <p>
-          These are the newest Hugging Face-visible model-line artifacts verified
-          during this site sync. The claim boundary is part of the page: exact
-          eval metrics are shown only where public cards or metadata expose them.
+          These are preserved Hugging Face model-line artifacts from the earlier
+          TS programme. They are no longer the current release authority; PRIME
+          and the published adaptive-state work now carry that role. Exact eval
+          metrics remain visible where public cards or metadata expose them.
         </p>
       </div>
 

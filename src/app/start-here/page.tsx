@@ -1,219 +1,123 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { ParchmentCard } from "@/components/ParchmentCard";
-import { TSCycleDiagram } from "@/components/Diagrams";
-import { SectionHeading } from "@/components/SectionHeading";
-import { projects } from "@/content/projects";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  currentProgramme,
+  researchPrinciple,
+  verifiedLinks,
+} from "@/content/current";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Start Here",
   description:
-    "A plain-language guide to the current BoggersTheFish verifier-first systems research.",
+    "A plain-language guide to PRIME, the current verifier-first research programme, published artifacts, open source, and project lineage.",
   path: "/start-here",
 });
 
-const programmes = [
+const steps = [
   {
-    name: "Reasoning and language",
-    system: "ts-chat-language → TS-Reasoner",
-    question:
-      "Can human language become explicit semantic state, then pass through typed verification without a chatbot bypass?",
+    title: "A system proposes",
+    body: "A learned field, heuristic, or working belief can suggest where to look and what representation may need repair.",
   },
   {
-    name: "Model science",
-    system: "Ten-SON-LM ← TensionLM",
-    question:
-      "Does a tension signal causally improve revision and routing, or is it only an ordinary learned gate with a dramatic name?",
+    title: "Evidence constrains it",
+    body: "Fresh observations, risk filters, and sequential tests decide whether the proposal has earned support.",
   },
   {
-    name: "Adaptive inference",
-    system: "TSQ",
-    question:
-      "Can tension and verifier failures allocate precision more efficiently than always-low or always-high execution?",
+    title: "A verifier authorises",
+    body: "Only declared authority may change canonical state, restore a representation, or record abstention.",
   },
   {
-    name: "Verified computing",
-    system: "bogbin + TensionForge",
-    question:
-      "Can storage, execution, training, persistence, and rollback expose exact state transitions and receipts?",
-  },
-];
-
-const isItems = [
-  "A verifier-first engineering programme",
-  "A collection of falsifiable model and runtime experiments",
-  "A way to expose semantic, graph, compute, and state transitions",
-  "A public archive that keeps negative results and superseded ideas visible",
-];
-
-const isNotItems = [
-  "Not a finished AGI",
-  "Not a theory-of-everything proof",
-  "Not a general theorem prover",
-  "Not a production operating system",
-  "Not proof that tension beats standard methods",
-  "Not permission to treat confidence as evidence",
-];
-
-const nextRoutes = [
-  {
-    title: "Understand the architecture",
-    body: "Read the current projects as four separate programmes with explicit interfaces.",
-    href: "/projects",
-  },
-  {
-    title: "Inspect evidence",
-    body: "Start with experiment setup, receipts, failures, and limitations.",
-    href: "/proof-bank",
-  },
-  {
-    title: "Trace the history",
-    body: "See how the current stack emerged from 52 repositories.",
-    href: "/lineage",
-  },
-  {
-    title: "Read the research framing",
-    body: "Open the broader questions without inflating the claims.",
-    href: "/research",
+    title: "A receipt preserves the boundary",
+    body: "The accepted transition keeps its inputs, provenance, hashes, limitations, and replay path.",
   },
 ];
 
 export default function StartHerePage() {
   return (
     <section className="page-shell">
-      <div className="page-intro">
-        <p className="field-label text-gold">Begin here</p>
-        <h1>TS is a research programme, not one magical repository.</h1>
+      <div className="page-intro max-w-4xl">
+        <p className="field-label text-gold">Start here</p>
+        <h1>PRIME is the current programme. TS is its wider lineage.</h1>
         <p>
-          The current work separates human language, verifier authority,
-          learned mechanisms, adaptive compute, and deterministic systems so
-          each claim can be tested at the correct boundary.
+          The simplest way to understand the work is through one rule:
+          {" " + researchPrinciple} Everything else—selective information,
+          representation repair, abstention, receipts, and replay—exists to make
+          that boundary operational.
         </p>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-        {programmes.map((programme) => (
-          <ParchmentCard key={programme.name} tone="dark">
-            <p className="field-label text-gold">{programme.name}</p>
-            <h2 className="mt-3 font-serif text-2xl font-semibold text-cream">
-              {programme.system}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {steps.map((step, index) => (
+          <article key={step.title} className="modern-card">
+            <span className="index-mark">0{index + 1}</span>
+            <h2 className="mt-7 font-serif text-2xl font-semibold text-cream">
+              {step.title}
             </h2>
-            <p className="mt-3 text-sm leading-7 text-cream/76">
-              {programme.question}
-            </p>
-          </ParchmentCard>
+            <p className="mt-4 text-sm leading-7 text-cream/62">{step.body}</p>
+          </article>
         ))}
       </div>
 
-      <div className="mt-8">
-        <TSCycleDiagram />
-      </div>
-
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        <ParchmentCard>
-          <p className="field-label mb-4 text-brown">What TS is</p>
-          <div className="space-y-2">
-            {isItems.map((item) => (
-              <p key={item} className="text-sm leading-7 text-ink/75">
-                {item}
-              </p>
-            ))}
-          </div>
-        </ParchmentCard>
-        <ParchmentCard>
-          <p className="field-label mb-4 text-brown">What TS is not</p>
-          <div className="space-y-2">
-            {isNotItems.map((item) => (
-              <p key={item} className="text-sm leading-7 text-ink/75">
-                {item}
-              </p>
-            ))}
-          </div>
-        </ParchmentCard>
-      </div>
-
-      <SectionHeading className="mt-14" title="The intended route">
-        <p>
-          A usable turn should pass through explicit boundaries rather than
-          hiding everything inside one model response.
-        </p>
-      </SectionHeading>
-      <ParchmentCard tone="dark">
-        <div className="grid gap-4 text-sm leading-7 text-cream/78 md:grid-cols-5">
-          <p>
-            <strong className="text-gold">1. Compile</strong>
-            <br />
-            Human text becomes semantic frames and a MeaningGraph.
-          </p>
-          <p>
-            <strong className="text-gold">2. Verify</strong>
-            <br />
-            Typed checks decide what has support.
-          </p>
-          <p>
-            <strong className="text-gold">3. Update</strong>
-            <br />
-            Accepted state changes; rejected candidates do not contaminate it.
-          </p>
-          <p>
-            <strong className="text-gold">4. Plan</strong>
-            <br />
-            The system selects a response act from verified state.
-          </p>
-          <p>
-            <strong className="text-gold">5. Render</strong>
-            <br />
-            Language expresses the plan without inventing new authority.
-          </p>
-        </div>
-      </ParchmentCard>
-
-      <SectionHeading className="mt-14" title="Where to go next">
-        <p>Pick the route matching the kind of understanding you want.</p>
-      </SectionHeading>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {nextRoutes.map((route) => (
-          <ParchmentCard key={route.title}>
-            <h2 className="font-serif text-2xl font-semibold text-ink">
-              {route.title}
-            </h2>
-            <p className="mt-3 text-sm leading-7 text-ink/75">
-              {route.body}
-            </p>
-            <Link href={route.href} className="brass-link mt-5">
-              Open route <ArrowRight className="h-4 w-4" />
+      <div className="mt-16 grid gap-5 lg:grid-cols-3">
+        {currentProgramme.map((item) => (
+          <article key={item.title} className="modern-card">
+            <p className="field-label text-gold">{item.kicker}</p>
+            <h2 className="mt-3 font-serif text-3xl font-semibold text-cream">{item.title}</h2>
+            <p className="mt-4 text-sm leading-7 text-cream/62">{item.body}</p>
+            <Link
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-gold"
+            >
+              {item.action}
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
-          </ParchmentCard>
+          </article>
         ))}
       </div>
 
-      <SectionHeading className="mt-14" title="Active project nodes">
-        <p>
-          These carry the current code. Historical repositories live in the
-          lineage rather than competing on this page.
-        </p>
-      </SectionHeading>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {projects.map((project) => (
-          <Link
-            key={project.slug}
-            href={project.href}
-            className="parchment-card rounded-md border p-4 transition hover:-translate-y-1"
-          >
-            <h3 className="font-serif text-xl font-semibold text-ink">
-              {project.title}
-            </h3>
-            <p className="mt-2 text-sm leading-6 text-ink/70">
-              {project.shortDescription}
-            </p>
-            <span className="brass-link mt-4">
-              Open node
-              <ArrowRight className="h-4 w-4" />
-            </span>
+      <div className="mt-16 grid gap-4 md:grid-cols-2">
+        {[
+          {
+            title: "Research programme",
+            body: "Understand the current architecture, evidence, and claim boundary.",
+            href: "/research",
+          },
+          {
+            title: "Published artifacts",
+            body: "Open the permanent Zenodo records and citation details.",
+            href: "/publications",
+          },
+          {
+            title: "Open source",
+            body: "See current repositories separated from preserved predecessors.",
+            href: "/projects",
+          },
+          {
+            title: "Project lineage",
+            body: "Trace earlier TS, model, graph, systems, and verifier work.",
+            href: "/lineage",
+          },
+        ].map((route) => (
+          <Link key={route.href} href={route.href} className="legacy-row group">
+            <div>
+              <h2 className="font-serif text-2xl font-semibold text-cream">{route.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-cream/56">{route.body}</p>
+            </div>
+            <ArrowRight className="h-4 w-4 text-gold transition group-hover:translate-x-1" />
           </Link>
         ))}
       </div>
+
+      <p className="mt-14 max-w-4xl border-t border-gold/15 pt-8 text-sm leading-7 text-cream/52">
+        Looking for the exact current release? Start with{" "}
+        <Link href={verifiedLinks.prime} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-4">
+          PRIME v1.0.0 on Zenodo
+        </Link>
+        .
+      </p>
     </section>
   );
 }

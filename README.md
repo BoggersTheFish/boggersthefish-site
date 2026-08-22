@@ -1,8 +1,11 @@
-# BoggersTheFish — TS Research Surface
+# BoggersTheFish — Verifier-First Research Portfolio
 
-> Public archive for bounded TS reasoning receipts, current model artifacts, and sober project routing.
+> Public portfolio for verifier-first AI, published research software,
+> open-source systems, and Enthusia SMP development.
 
-Live at [boggersthefish.com](https://boggersthefish.com) · truth-sync route for TS-Reasoner, TensionLM v10/v11, CIG, and Proof Ranker.
+Live at [boggersthefish.com](https://boggersthefish.com). The primary research
+surface is PRIME v1.0.0, with permanent Zenodo records and the wider Thinking
+System lineage kept visible behind explicit evidence boundaries.
 
 ---
 
@@ -39,16 +42,17 @@ npm run start    # Start production server
 npx vercel --prod
 ```
 
-## Site Structure
+## Primary Routes
 
-The site is organized around current public evidence routes:
+The site is organized around the current public programme:
 
-- `/run-ts-reasoner`: one bounded command, one JSON trace, one refusal/repair path.
-- `/latest`: Hugging Face-visible TensionLM / TS-Reasoner v10 and TS Trace Distilled v11.
-- `/start-here`: sober TS map and claim boundaries.
-- `/projects`: TS-Reasoner/TensionLM/CIG/Proof Ranker routing and limits.
-- `/proof-bank`: bounded proof notes, receipts, and known limits.
-- `/support`: legally cautious support and BGC language.
+- `/research`: PRIME, verifier authority, selective epistemic control, and
+  current claim boundaries.
+- `/publications`: versioned Zenodo software records and DOI links.
+- `/projects`: current open-source work separated from preserved predecessors.
+- `/enthusia`: Minecraft server development and the visible plugin ecosystem.
+- `/about`: concise current biography and selected verified milestones.
+- `/lineage` and `/proof-bank`: retained historical and evidence surfaces.
 
 ## Tech Stack
 
@@ -80,6 +84,13 @@ they are not broad AGI, general reasoning, or production reliability claims.
 © 2026 BoggersTheFish. All nodes reserved.
 
 
-## Current TS-Reasoner flagship
+## Current Flagship
 
-TS-Reasoner v10.0.0 is now the flagship verifier-first reasoning release: runtime policy contracts, replay, ledger, checkpoint/restore, recovery drill, and typed proof-boundary receipts. Release: https://github.com/BoggersTheFish/TS-Reasoner-v0/releases/tag/v10.0.0
+PRIME v1.0.0 is the current flagship release:
+https://doi.org/10.5281/zenodo.22058441
+
+The release corresponds internally to scientific generation v18. It is a
+verifier-governed finite research architecture for selective information
+acquisition, persistent representation repair, bounded cognition, and auditable
+abstention. TS-Reasoner, TensionLM, and related projects remain available as
+predecessor evidence and lineage rather than current release authority.

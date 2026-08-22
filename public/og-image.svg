@@ -1,15 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="BoggersTheFish research archive">
-  <rect width="1200" height="630" fill="#102015"/>
-  <path d="M0 480 C200 410 340 520 520 450 C720 370 850 450 1200 340 L1200 630 L0 630 Z" fill="#20351f"/>
-  <g fill="none" stroke="#b8944d" stroke-width="2" opacity=".5">
-    <path d="M150 170 H1050"/>
-    <path d="M150 250 H1050"/>
-    <path d="M150 330 H1050"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="BoggersTheFish — verifier-first AI, research software, and open systems">
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="28%" r="70%">
+      <stop offset="0" stop-color="#31522f"/>
+      <stop offset=".52" stop-color="#172515"/>
+      <stop offset="1" stop-color="#091009"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#c9a45c" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="72" y="68" width="1056" height="494" rx="22" fill="#071007" fill-opacity=".38" stroke="#c9a45c" stroke-opacity=".35"/>
+  <text x="112" y="145" fill="#c9a45c" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="4">BEN MICHALEK / BOGGERSTHEFISH</text>
+  <text x="112" y="250" fill="#f3e7c5" font-family="Georgia, serif" font-size="72" font-weight="700">AI systems that must</text>
+  <text x="112" y="332" fill="#c9a45c" font-family="Georgia, serif" font-size="72" font-weight="700">show their work.</text>
+  <text x="112" y="408" fill="#f3e7c5" fill-opacity=".72" font-family="Arial, sans-serif" font-size="27">Verifier-first AI · Published research software · Open systems</text>
+  <g transform="translate(112 474)">
+    <rect width="260" height="48" rx="24" fill="#c9a45c" fill-opacity=".13" stroke="#c9a45c" stroke-opacity=".55"/>
+    <text x="24" y="31" fill="#f3e7c5" font-family="Arial, sans-serif" font-size="18" font-weight="700">PRIME v1.0.0 · ZENODO</text>
   </g>
-  <text x="120" y="190" fill="#b8944d" font-family="Georgia, serif" font-size="74" font-weight="700">BoggersTheFish</text>
-  <text x="120" y="270" fill="#f3ead0" font-family="Inter, Arial, sans-serif" font-size="34">Independent AI research archive</text>
-  <text x="120" y="340" fill="#f3ead0" opacity=".78" font-family="Inter, Arial, sans-serif" font-size="26">constraint graphs • tension dynamics • proof receipts</text>
-  <circle cx="940" cy="190" r="34" fill="#b8944d" opacity=".75"/>
-  <circle cx="1015" cy="255" r="22" fill="#efe1b8" opacity=".65"/>
-  <circle cx="880" cy="300" r="18" fill="#4f6f39" opacity=".9"/>
+  <g transform="translate(941 164)" fill="none" stroke="#c9a45c">
+    <circle r="64" stroke-opacity=".7"/>
+    <circle r="30" stroke-opacity=".42"/>
+    <path d="M-110 34L-42 10M42-6l86-52M-4 66l50 84" stroke-opacity=".42"/>
+    <circle cx="-110" cy="34" r="9" fill="#c9a45c"/>
+    <circle cx="128" cy="-58" r="9" fill="#8ab883"/>
+    <circle cx="46" cy="150" r="9" fill="#f3e7c5"/>
+  </g>
 </svg>

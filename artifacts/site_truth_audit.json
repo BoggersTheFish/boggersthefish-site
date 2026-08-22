@@ -29,7 +29,6 @@
     "/roadmap",
     "/run-ts-reasoner",
     "/start-here",
-    "/support",
     "/ts-os",
     "/waves"
   ],
@@ -150,12 +149,6 @@
       "locations": ["README.md:3", "src/lib/tsData.ts:646", "src/components/layout/Footer.tsx:168"],
       "status": "should be softened",
       "basis": "Softened/removed in this update; local archive labels now replace hard date/test/live-instance claims."
-    },
-    {
-      "claim": "BGC support safety terms.",
-      "locations": ["src/content/site.ts:16", "src/content/site.ts:19", "src/app/support/page.tsx:16", "src/app/support/page.tsx:24", "src/app/support/page.tsx:25"],
-      "status": "verified",
-      "basis": "Site language now explicitly says BGC is experimental, off-chain, not cryptocurrency, not investment, not legal tender, not redeemable for cash, may remain off-chain forever, and support funds work rather than return."
     }
   ],
   "softened_or_removed": [

@@ -12,7 +12,7 @@ The worktree was already dirty before this pass. Existing user changes were pres
 
 ## Detected Routes
 
-`/`, `/about`, `/blog`, `/blog/[slug]`, `/contact`, `/docs`, `/docs/[slug]`, `/evidence`, `/lab`, `/latest`, `/network`, `/projects`, `/projects/cig`, `/projects/proof-ranker`, `/projects/tensionlm`, `/projects/ts-core`, `/proof-bank`, `/receipts`, `/research`, `/roadmap`, `/run-ts-reasoner`, `/start-here`, `/support`, `/ts-os`, `/waves`.
+`/`, `/about`, `/blog`, `/blog/[slug]`, `/contact`, `/docs`, `/docs/[slug]`, `/evidence`, `/lab`, `/latest`, `/network`, `/projects`, `/projects/cig`, `/projects/proof-ranker`, `/projects/tensionlm`, `/projects/ts-core`, `/proof-bank`, `/receipts`, `/research`, `/roadmap`, `/run-ts-reasoner`, `/start-here`, `/ts-os`, `/waves`.
 
 ## External Links Checked
 
@@ -73,7 +73,6 @@ Observed output: `Answer: Not enough information.`, `Selected chain: candidate_c
 | Proof Ranker has a published artifact ladder. | `src/app/page.tsx:39`, `src/app/page.tsx:41`, `src/content/projects.ts:137` | Locally asserted, not externally verified | Site links exist; exact HF health was not rechecked. |
 | Proof-bank and blog dates/results dated `2026-05-20`. | `src/content/proofs.ts:53`, `:70`, `:87`, `:104`, `:121`, `:138`, `:155`, `:172`, `:189`, `:206`, `:223`, `:240`, `:257`, `:274`, `:291`, `:308`, `:325`; `src/content/blog.ts:21`, `:45`, `:69` | Locally asserted, not externally verified | Local content only in this pass. |
 | Historical wave dates, Wave 12, 200+ tests, and live-site-as-TS-instance framing. | Previously `README.md:3`, `src/lib/tsData.ts:646`, `src/components/layout/Footer.tsx:168` | Should be softened | Removed or reframed as local archive / receipt-needed. |
-| BGC support safety terms. | `src/content/site.ts:16`, `src/content/site.ts:19`, `src/app/support/page.tsx:16`-`:25` | Verified in source | Explicitly says BGC is experimental, off-chain, not cryptocurrency, not investment, not legal tender, not redeemable for cash, may remain off-chain forever, and support funds work rather than return. |
 
 ## Softened Claims
 

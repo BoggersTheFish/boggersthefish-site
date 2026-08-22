@@ -1,14 +1,23 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { BGCNotice } from "@/components/BGCNotice";
-import { ContributorPaths } from "@/components/ContributorPaths";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Blocks,
+  BookOpenCheck,
+  Braces,
+  ExternalLink,
+  Gamepad2,
+  Github,
+} from "lucide-react";
 import { Hero } from "@/components/Hero";
-import { ParchmentCard } from "@/components/ParchmentCard";
-import { ProjectCard } from "@/components/ProjectCard";
-import { QuickLinks } from "@/components/QuickLinks";
 import { SectionHeading } from "@/components/SectionHeading";
-import { projects } from "@/content/projects";
-import { lineageCount } from "@/content/lineage";
+import {
+  bio,
+  currentProgramme,
+  openSourceProjects,
+  publications,
+  verifiedLinks,
+} from "@/content/current";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/content/site";
 
@@ -18,46 +27,11 @@ export const metadata = pageMetadata({
   path: "/",
 });
 
-const programmes = [
-  {
-    title: "Reasoning and language",
-    body: "ts-chat-language compiles human input into explicit semantic state. TS-Reasoner decides what may be accepted, repaired, remembered, or rejected.",
-    route: "/projects/ts-chat-language",
-  },
-  {
-    title: "Model science",
-    body: "Ten-SON-LM asks whether learned tension causally improves a recurrent semantic workspace. TensionLM remains the earlier attention-based evidence line.",
-    route: "/projects/ten-son-lm",
-  },
-  {
-    title: "Adaptive inference",
-    body: "TSQ explores precision escalation driven by tension and verifier failure. It does not claim an efficiency win until distinct numerical paths are measured.",
-    route: "/projects/tsq",
-  },
-  {
-    title: "Verified computing",
-    body: "bogbin develops deterministic state, capabilities, persistence, and rollback. TensionForge tests verified training on legacy commodity hardware.",
-    route: "/projects/bogos",
-  },
-];
-
-const fieldNotes = [
-  {
-    title: "Ten-SON Milestone 1: Partial",
-    body: "Delayed recall, balanced brackets, and a synthetic next-token task learned. Copy missed threshold. Tension evidence is promising on one task and mixed elsewhere.",
-  },
-  {
-    title: "TensionForge: correct, currently slow",
-    body: "The RX 480 path has forward, backward, optimizer, and recurrent parity receipts, but the tested runtime is substantially slower than PyTorch CPU.",
-  },
-  {
-    title: "TSQ: runtime before quantization proof",
-    body: "Routing, repair, evaluation, data, and adapter tooling exist. Genuine adaptive-precision evidence waits for materially different low/high numerical backends.",
-  },
-  {
-    title: "TS Habitat v3: verified symbolic agent loop",
-    body: "The bounded simulated habitat now maintains explicit goals, uses deterministic graph tension to allocate capped effort, navigates declared topology, verifies and executes one symbolic action at a time, checks observed effects, replans stale assumptions, and emits whole-run TurnReceipt v3 evidence. It uses no external model or real-world actuation.",
-  },
+const standards = [
+  "Model confidence is never accepted as proof by itself.",
+  "Failed gates and negative results remain part of the record.",
+  "Public claims link to source, a DOI, a receipt, or a visible limitation.",
+  "Version names are separated from the evidence that supports them.",
 ];
 
 export default function HomePage() {
@@ -65,124 +39,229 @@ export default function HomePage() {
     <>
       <Hero />
 
-      <section className="page-shell pb-4">
-        <div className="grid gap-5 lg:grid-cols-[1.45fr_0.75fr]">
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {projects.slice(0, 4).map((project) => (
-              <ProjectCard key={project.slug} project={project} compact />
-            ))}
-          </div>
-          <QuickLinks />
-          <div className="lg:col-span-2">
-            <BGCNotice />
+      <section className="page-shell">
+        <SectionHeading
+          eyebrow="Current programme"
+          title="One research direction, three public surfaces"
+        >
+          <p>
+            PRIME is the current synthesis. The adaptive-state publication
+            establishes its evidence lineage; the Thinking System repository
+            carries the wider open-source programme.
+          </p>
+        </SectionHeading>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {currentProgramme.map((item, index) => (
+            <article key={item.title} className="modern-card group">
+              <div className="flex items-start justify-between gap-4">
+                <span className="index-mark">0{index + 1}</span>
+                <span className="rounded-full border border-gold/20 px-2.5 py-1 text-[0.67rem] font-bold uppercase tracking-[0.12em] text-cream/50">
+                  {item.status}
+                </span>
+              </div>
+              <p className="field-label mt-8 text-gold">{item.kicker}</p>
+              <h2 className="mt-3 font-serif text-3xl font-semibold text-cream">
+                {item.title}
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-cream/68">{item.body}</p>
+              <Link
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-gold"
+              >
+                {item.action}
+                <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y border-gold/15 bg-black/15">
+        <div className="page-shell">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="field-label text-gold">Evidence standard</p>
+              <h2 className="mt-4 max-w-lg font-serif text-4xl font-semibold leading-tight text-cream sm:text-5xl">
+                Credibility lives in the boundary, not the branding.
+              </h2>
+              <p className="mt-5 max-w-lg text-base leading-8 text-cream/66">
+                The archive deliberately distinguishes implemented mechanisms,
+                frozen benchmark results, historical lineage, and open
+                hypotheses.
+              </p>
+              <Link href="/proof-bank" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-gold">
+                Open the proof bank <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {standards.map((standard, index) => (
+                <div key={standard} className="evidence-rule">
+                  <span className="font-mono text-xs text-gold">R{index + 1}</span>
+                  <p className="text-sm leading-6 text-cream/72">{standard}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <section className="page-shell">
-        <SectionHeading eyebrow="Current architecture" title="Four programmes, one evidence rule">
+        <SectionHeading eyebrow="Published research software" title="Permanent records, not launch-post claims">
           <p>
-            Each programme has a different job. None may convert fluency,
-            confidence, naming, or version count into proof.
+            The current programme is deposited on Zenodo with versioned
+            metadata, stable DOIs, artifact files, and explicit claim boundaries.
           </p>
         </SectionHeading>
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {programmes.map((programme) => (
-            <Link
-              key={programme.title}
-              href={programme.route}
-              className="ts-card p-5 hover:-translate-y-0.5"
-            >
-              <h2 className="font-serif text-2xl font-semibold text-cream">
-                {programme.title}
-              </h2>
-              <p className="mt-3 text-sm leading-7 text-cream/76">
-                {programme.body}
-              </p>
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-gold">
-                Open programme <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
+        <div className="space-y-4">
+          {publications.map((publication) => (
+            <article key={publication.doi} className="publication-row">
+              <div className="lg:col-span-2">
+                <p className="field-label text-gold">{publication.date}</p>
+                <p className="mt-2 text-xs text-cream/46">{publication.type}</p>
+              </div>
+              <div className="lg:col-span-7">
+                <h2 className="font-serif text-2xl font-semibold text-cream">
+                  {publication.title}
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm leading-7 text-cream/64">
+                  {publication.summary}
+                </p>
+              </div>
+              <div className="flex flex-col items-start gap-3 lg:col-span-3 lg:items-end">
+                <code className="text-xs text-cream/48">{publication.doi}</code>
+                <Link
+                  href={publication.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-gold"
+                >
+                  Zenodo record <ExternalLink className="h-4 w-4" />
+                </Link>
+              </div>
+            </article>
           ))}
+        </div>
+        <div className="mt-6">
+          <Link href="/publications" className="plaque-button secondary">
+            <BookOpenCheck className="h-4 w-4" />
+            Publication details
+          </Link>
         </div>
       </section>
 
       <section className="page-shell pt-2">
-        <SectionHeading eyebrow="Current evidence" title="Field notes, including the failures">
-          <p>
-            The archive records what happened, not just what sounds impressive.
-          </p>
-        </SectionHeading>
-        <div className="grid gap-5 md:grid-cols-2">
-          {fieldNotes.map((note) => (
-            <ParchmentCard key={note.title} tone="dark">
-              <h2 className="font-serif text-2xl font-semibold text-cream">
-                {note.title}
-              </h2>
-              <p className="mt-3 text-sm leading-7 text-cream/76">{note.body}</p>
-            </ParchmentCard>
-          ))}
-        </div>
-      </section>
-
-      <section className="page-shell pt-2">
-        <ParchmentCard
-          tone="dark"
-          className="grid gap-6 md:grid-cols-[0.75fr_1.25fr]"
-        >
-          <div>
-            <p className="field-label text-gold">Permanent lineage</p>
-            <h2 className="mt-3 font-serif text-3xl font-semibold text-cream">
-              {lineageCount} repositories become one readable history.
+        <div className="enthusia-feature">
+          <div className="relative z-10 max-w-2xl">
+            <p className="field-label text-emerald-200">Applied systems · Minecraft</p>
+            <h2 className="mt-4 font-serif text-4xl font-semibold text-white sm:text-5xl">
+              Developer on Enthusia SMP
             </h2>
-          </div>
-          <div>
-            <p className="text-sm leading-7 text-cream/78">
-              Old repositories can be deleted without pretending they never
-              existed. The lineage archive records each meaningful idea, what
-              survived, what failed, and which current project inherited it.
+            <p className="mt-5 text-base leading-8 text-white/72">
+              Enthusia is a permanent, vanilla-based semi-anarchy survival
+              server for Java and Bedrock. Ben contributes to the server and its
+              plugin ecosystem, including market, currency, guild, and framework
+              work.
             </p>
-            <Link href="/lineage" className="brass-link mt-5 text-gold">
-              Explore the project lineage
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </ParchmentCard>
-      </section>
-
-      <section className="page-shell pt-2">
-        <ParchmentCard
-          tone="dark"
-          className="grid gap-5 md:grid-cols-[0.8fr_1.2fr]"
-        >
-          <div>
-            <p className="field-label text-gold">Claim boundary</p>
-            <h2 className="mt-3 font-serif text-3xl font-semibold text-cream">
-              Runnable mechanisms are real. Broad conclusions still need proof.
-            </h2>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {[
-              "Not a finished AGI.",
-              "Not a general theorem prover.",
-              "Not a production operating system.",
-              "Not an adaptive-quantization win yet.",
-              "Verifier authority is separate from model confidence.",
-              "Negative results and regressions stay visible.",
-            ].map((item) => (
-              <p
-                key={item}
-                className="flex gap-3 rounded-md border border-gold/20 bg-black/20 p-3 text-sm leading-6 text-cream/78"
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/enthusia" className="plaque-button">
+                <Gamepad2 className="h-4 w-4" />
+                View the work
+              </Link>
+              <Link
+                href={verifiedLinks.enthusia}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="plaque-button secondary"
               >
-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                {item}
-              </p>
+                Enthusia SMP <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+          <div className="server-map relative z-10" aria-label="Enthusia development areas">
+            {[
+              ["Permanent world", "Long-lived community systems"],
+              ["Player economy", "Markets and raw-gold trade"],
+              ["Guild systems", "Identity and progression"],
+              ["Crossplay", "Java and Bedrock support"],
+            ].map(([title, body]) => (
+              <div key={title} className="server-node">
+                <span />
+                <div>
+                  <p className="text-sm font-bold text-white">{title}</p>
+                  <p className="mt-1 text-xs text-white/50">{body}</p>
+                </div>
+              </div>
             ))}
           </div>
-        </ParchmentCard>
+        </div>
       </section>
 
-      <ContributorPaths />
+      <section className="page-shell pt-6">
+        <SectionHeading eyebrow="Open source" title="Research code and real-world systems">
+          <p>
+            Current work spans verifier-governed research, language and state
+            tooling, GPU experiments, web software, and Minecraft plugins.
+          </p>
+        </SectionHeading>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {openSourceProjects.map((project) => (
+            <Link
+              key={project.title}
+              href={project.href}
+              target={project.href.startsWith("http") ? "_blank" : undefined}
+              rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="repo-card group"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <Braces className="h-5 w-5 text-gold" />
+                <span className="text-[0.67rem] font-bold uppercase tracking-[0.12em] text-cream/42">
+                  {project.language}
+                </span>
+              </div>
+              <p className="field-label mt-6 text-gold">{project.role}</p>
+              <h3 className="mt-2 font-mono text-base font-bold text-cream">
+                {project.title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-cream/62">{project.body}</p>
+              <ArrowUpRight className="mt-6 h-4 w-4 text-gold transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          ))}
+        </div>
+        <div className="mt-7 flex flex-wrap gap-3">
+          <Link href="/projects" className="plaque-button secondary">
+            <Blocks className="h-4 w-4" />
+            Browse open source
+          </Link>
+          <Link
+            href={verifiedLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="plaque-button secondary"
+          >
+            <Github className="h-4 w-4" />
+            GitHub profile
+          </Link>
+        </div>
+      </section>
+
+      <section className="page-shell pt-3">
+        <div className="bio-strip">
+          <div className="bio-monogram" aria-hidden="true">BM</div>
+          <div>
+            <p className="field-label text-gold">About Ben</p>
+            <h2 className="mt-2 font-serif text-3xl font-semibold text-cream">
+              Independent researcher. Software developer. Server builder.
+            </h2>
+            <p className="mt-4 max-w-4xl text-sm leading-7 text-cream/66">{bio.short}</p>
+          </div>
+          <Link href="/about" className="plaque-button secondary shrink-0">
+            About
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

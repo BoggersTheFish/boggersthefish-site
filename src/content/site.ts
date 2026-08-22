@@ -1,22 +1,18 @@
 export const site = {
   name: "BoggersTheFish",
-  tagline: "Verifier-First Systems & Experimental Computing",
-  title: "A field archive of systems, experiments, and evidence.",
+  tagline: "Verifier-first AI · Research software · Open systems",
+  title: "Verifier-first AI, published research, and open-source systems",
   description:
-    "Ben Michalek / BoggersTheFish builds verifier-first reasoning systems, tension-driven model experiments, deterministic language tools, and verified computing prototypes. This site is the canonical record of current work and historical ideas.",
+    "Ben Michalek / BoggersTheFish builds verifier-first AI and reproducible research software, publishes PRIME and related work on Zenodo, contributes to Enthusia SMP, and develops open-source systems.",
   url: "https://www.boggersthefish.com",
   email: "boggersthefish@gmail.com",
   domainEmail: "boggersthefish@boggersthefish.com",
   github: "https://github.com/BoggersTheFish",
   huggingFace: "https://huggingface.co/BoggersTheFish",
+  zenodo: "https://zenodo.org/search?q=creators.name%3A%22Michalek%2C%20Ben%22",
+  enthusia: "https://enthusia.info",
   ogImage: "/og-image.svg",
 };
-
-export const bgcShortNotice =
-  "Donations are donations. Boggers Credits (BGC) are experimental off-chain community credits: not cryptocurrency, not an investment, not legal tender, not equity, not redeemable for cash, may remain off-chain forever, and not financial advice.";
-
-export const bgcFullNotice =
-  "Donations support independent TS research, compute, hosting, writing, documentation, open-source development, and time. Donations are donations, not a promise of financial return. Supporters may receive Boggers Credits as non-financial community credits. BGC is experimental, off-chain, not cryptocurrency, not an investment, not legal tender, not equity, not redeemable for money or cash, may remain off-chain forever, not guaranteed to convert to any future token, and nothing on this site is financial advice.";
 
 export const links = {
   home: `${site.url}/`,
@@ -58,42 +54,42 @@ export const links = {
 
 export const currentStatus = [
   {
-    label: "Reasoning and language",
-    body: "Habitat v3 extends the signed world into a bounded verifier-first agent loop with explicit goals, deterministic tension, declared topology, transactional symbolic actions, effect verification, replanning, reflection, and replay.",
+    label: "Current flagship",
+    body: "PRIME v1.0.0 is the public verifier-governed architecture for selective epistemic control, persistent representation repair, and auditable abstention.",
   },
   {
-    label: "Model science",
-    body: "Ten-SON-LM tests whether learned tension causally improves recurrent semantic-workspace behaviour. TensionLM remains the earlier attention-based evidence line.",
+    label: "Published foundation",
+    body: "Anytime-Valid Adaptive State Abstraction v0.2.0 provides the permanent evidence lineage and preserves its failed initial gate.",
   },
   {
-    label: "Adaptive inference",
-    body: "TSQ explores tension- and verifier-driven precision escalation, but efficiency claims wait for genuinely distinct numerical execution paths.",
+    label: "Canonical source",
+    body: "The thinking-system monorepo is the current public TS code authority; older repositories are predecessors or satellites.",
   },
   {
-    label: "Verified computing",
-    body: "bogbin develops deterministic containers, filesystems, processes, persistent workspaces, journals, and receipts. TensionForge tests verified training on legacy AMD hardware.",
+    label: "Applied systems",
+    body: "Enthusia SMP development carries the software practice into live Minecraft plugins, economy, market, guild, and framework systems.",
   },
 ];
 
 export const contributorPaths = [
   {
-    label: "I'm new",
+    label: "Start here",
     href: "/start-here",
     body: "Read the plain-language map before opening source repositories.",
   },
   {
-    label: "I want current work",
-    href: "/projects",
-    body: "Inspect the active programmes, evidence boundaries, and next experiments.",
+    label: "I want the research",
+    href: "/research",
+    body: "Inspect PRIME, verifier authority, evidence boundaries, and current results.",
+  },
+  {
+    label: "I want publications",
+    href: "/publications",
+    body: "Open the permanent Zenodo records, versions, and DOI metadata.",
   },
   {
     label: "I want the full history",
     href: "/lineage",
-    body: "See how 52 repositories became the current modular stack.",
-  },
-  {
-    label: "I want evidence",
-    href: "/proof-bank",
-    body: "Start with claims, setups, results, limitations, and replay notes.",
+    body: "See how earlier TS, model, graph, and systems work became the current programme.",
   },
 ];

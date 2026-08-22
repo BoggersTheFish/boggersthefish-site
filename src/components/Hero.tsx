@@ -1,105 +1,122 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Archive, ArrowRight, FlaskConical, Terminal } from "lucide-react";
-
-const architecture = `human language
-  → semantic graph
-  → typed verification
-  → accepted state
-  → response plan
-
-model proposals never become proof by confidence alone`;
+import {
+  ArrowUpRight,
+  CheckCircle2,
+  Database,
+  FileCheck2,
+  Github,
+  ShieldCheck,
+} from "lucide-react";
+import {
+  primeEvidence,
+  researchPrinciple,
+  verifiedLinks,
+} from "@/content/current";
 
 export function Hero() {
   return (
-    <section className="archive-hero relative overflow-hidden border-b border-gold/35 bg-forest-dark">
-      <Image
-        src="/images/ts-field-guide-archive.png"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="archive-hero-image"
-        aria-hidden="true"
-      />
-      <div className="archive-hero-scrim" aria-hidden="true" />
-      <div className="relative mx-auto grid min-h-[760px] max-w-7xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[0.78fr_0.52fr] lg:px-8 lg:py-20">
-        <div className="relative z-10 max-w-2xl">
-          <p className="field-label mb-5 text-gold">
+    <section className="new-hero relative overflow-hidden border-b border-gold/25">
+      <div className="hero-coordinate-grid" aria-hidden="true" />
+      <div className="relative mx-auto grid min-h-[700px] max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
+        <div className="relative z-10">
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-gold/35 bg-black/25 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-gold">
+            <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_14px_rgba(110,231,183,0.8)]" />
+            Independent research · Current August 2026
+          </div>
+          <p className="field-label mb-4 text-cream/60">
             Ben Michalek / BoggersTheFish
           </p>
-          <h1 className="font-serif text-5xl font-semibold leading-[0.96] text-cream sm:text-6xl lg:text-7xl">
-            A living archive of systems that make reasoning inspectable.
+          <h1 className="max-w-4xl font-serif text-5xl font-semibold leading-[0.94] text-cream sm:text-6xl lg:text-[5.2rem]">
+            Building AI systems that must{" "}
+            <span className="text-gold">show their work.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-cream/90">
-            Verifier-first reasoning. Deterministic language. Tension-driven
-            model experiments. Verified computing.
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-cream/78 sm:text-xl">
+            Verifier-first AI, adaptive state abstraction, and reproducible
+            research software—alongside open-source systems and Minecraft server
+            development.
           </p>
-          <p className="mt-4 max-w-lg text-base leading-7 text-cream/78">
-            The code may change or disappear. The questions, evidence, failures,
-            and useful mechanisms remain recorded here.
+          <p className="mt-5 max-w-xl border-l border-gold/50 pl-4 text-sm leading-7 text-cream/64">
+            {researchPrinciple}
           </p>
 
-          <div className="terminal-artifact mt-7">
-            <div className="terminal-artifact-top">
-              <span />
-              <span />
-              <span />
-              <p>current architecture boundary</p>
-            </div>
-            <pre className="overflow-x-auto p-4 text-xs leading-6 text-cream/82">
-              <code>{architecture}</code>
-            </pre>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/start-here" className="plaque-button">
-              Start Here
-              <ArrowRight className="h-4 w-4" />
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link
+              href={verifiedLinks.prime}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="plaque-button"
+            >
+              Read PRIME v1.0.0
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
-            <Link href="/projects" className="plaque-button secondary">
-              <Terminal className="h-4 w-4" />
-              Current Work
+            <Link href="/research" className="plaque-button secondary">
+              Explore the programme
             </Link>
-            <Link href="/lineage" className="plaque-button secondary">
-              <Archive className="h-4 w-4" />
-              Project Lineage
+            <Link
+              href={verifiedLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="plaque-button secondary"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
             </Link>
           </div>
         </div>
 
-        <aside className="hero-archive-panel relative z-10">
-          <div className="hero-archive-panel-section">
-            <p className="field-label text-brown">Current focus</p>
-            <h2 className="mt-2 font-serif text-2xl font-semibold text-ink">
-              Prove what tension actually contributes
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-ink/76">
-              Ten-SON Milestone 1.1 tests learned tension against frozen,
-              shuffled, constant, inverted, and ordinary learned-gate controls.
-            </p>
+        <aside className="research-console relative z-10" aria-label="PRIME release summary">
+          <div className="flex items-center justify-between border-b border-gold/20 px-5 py-4">
+            <div>
+              <p className="field-label text-gold">Current flagship</p>
+              <h2 className="mt-1 font-serif text-3xl font-semibold text-cream">
+                PRIME v1.0.0
+              </h2>
+            </div>
+            <span className="rounded-full border border-emerald-300/35 bg-emerald-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-emerald-200">
+              Published
+            </span>
           </div>
-          <div className="hero-archive-panel-section">
-            <p className="field-label text-brown">Current integration</p>
-            <h2 className="mt-2 font-serif text-2xl font-semibold text-ink">
-              Language → verifier → persistent state
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-ink/76">
-              The next usable system joins ts-chat-language to TS-Reasoner
-              without allowing templates or model confidence to bypass checks.
-            </p>
-            <Link href="/projects" className="brass-link mt-4">
-              Inspect the active stack
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+
+          <div className="space-y-3 p-5">
+            {[
+              {
+                icon: ShieldCheck,
+                title: "Proposal is not authority",
+                body: "Learned fields rank candidates; declared verifiers control promotion.",
+              },
+              {
+                icon: Database,
+                title: "Persistent representation repair",
+                body: "Repair, retirement, restoration, and abstention stay explicit and auditable.",
+              },
+              {
+                icon: FileCheck2,
+                title: "Frozen evidence package",
+                body: "Tests, negative results, hashes, replay tools, and claim boundaries ship together.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="console-row">
+                <item.icon className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+                <div>
+                  <h3 className="text-sm font-bold text-cream">{item.title}</h3>
+                  <p className="mt-1 text-xs leading-5 text-cream/58">{item.body}</p>
+                </div>
+                <CheckCircle2 className="ml-auto h-4 w-4 shrink-0 text-emerald-200/80" />
+              </div>
+            ))}
           </div>
-          <div className="hero-archive-panel-section">
-            <p className="field-label text-brown">Evidence discipline</p>
-            <p className="mt-2 flex gap-2 text-sm leading-6 text-ink/76">
-              <FlaskConical className="mt-1 h-4 w-4 shrink-0" />
-              TensionForge proves real RX 480 training parity and also reports
-              that the current runtime is slower than CPU.
-            </p>
+
+          <div className="grid grid-cols-2 border-t border-gold/20 sm:grid-cols-4">
+            {primeEvidence.map((item) => (
+              <div key={item.label} className="border-b border-r border-gold/15 p-4 last:border-r-0 sm:border-b-0">
+                <p className="font-mono text-xl font-bold text-gold">{item.value}</p>
+                <p className="mt-1 text-[0.67rem] leading-4 text-cream/48">{item.label}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center justify-between gap-4 border-t border-gold/20 bg-black/20 px-5 py-3 text-xs text-cream/48">
+            <span>DOI 10.5281/zenodo.22058441</span>
+            <span>MIT · software</span>
           </div>
         </aside>
       </div>

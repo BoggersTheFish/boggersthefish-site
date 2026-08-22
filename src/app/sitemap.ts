@@ -30,6 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${base}/publications`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${base}/enthusia`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: `${base}/lineage`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -100,12 +112,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.65,
-    },
-    {
-      url: `${base}/support`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.55,
     },
   ];
 }
